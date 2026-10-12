@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 777 773" width="777" height="773" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif">
+<defs><marker id="tri" viewBox="0 0 14 12" refX="13.2" refY="6" markerWidth="10" markerHeight="8.6" orient="auto"><path d="M0.8 0.9 L13.2 6 L0.8 11.1 z" fill="#ffffff" stroke="#4b5563" stroke-width="1.3"/></marker><marker id="open" viewBox="0 0 12 12" refX="10.4" refY="6" markerWidth="8.4" markerHeight="8.4" orient="auto"><path d="M1.2 1.2 L10.8 6 L1.2 10.8" fill="none" stroke="#4b5563" stroke-width="1.5"/></marker><marker id="diaF" viewBox="0 0 18 12" refX="2" refY="6" markerWidth="10" markerHeight="6.8" orient="auto"><path d="M1 6 L9 1.7 L17 6 L9 10.3 z" fill="#4b5563" stroke="#4b5563" stroke-width="1.2"/></marker><marker id="diaH" viewBox="0 0 18 12" refX="2" refY="6" markerWidth="10" markerHeight="6.8" orient="auto"><path d="M1 6 L9 1.7 L17 6 L9 10.3 z" fill="#ffffff" stroke="#4b5563" stroke-width="1.3"/></marker></defs>
+<rect x="0.5" y="0.5" width="777.0" height="781.0" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="388.5" y="42" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">SS-3 比对子系统 设计类图</text>
+<line x1="44" y1="80" x2="733.0" y2="80" stroke="#e5e7eb" stroke-width="1"/>
+<text x="44" y="715.0" font-size="10.5" fill="#6b7280">CompareEngine 由 TestService（UC-08）与 DiffService（UC-10）共同调用——FR-6.5「两种判定模式复用同一比对引擎」的唯一落点</text>
+<text x="44" y="732.0" font-size="10.5" fill="#6b7280">Divergence : StateRecord = 1 : 2（本内核侧 / 基准侧各一份快照）</text>
+<text x="44" y="749.0" font-size="10.5" fill="#6b7280">CompareEngine 与两个上层服务之间是「被依赖」关系，故本图不画连线，见《核心对象关系图》。</text>
+<rect x="44.0" y="104.0" width="247.8" height="95.0" rx="4" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+<path d="M48.0 104.0 h239.8 a4 4 0 0 1 4 4 v33.0 h-247.8 v-33.0 a4 4 0 0 1 4 -4 z" fill="#6b7280" opacity="0.13"/>
+<text x="167.9" y="115.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«interface»</text>
+<text x="167.9" y="139.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">IComparator</text>
+<line x1="44.0" y1="145.0" x2="291.8" y2="145.0" stroke="#6b7280" stroke-width="1"/>
+<text x="55.0" y="158.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> compareSeq(a, b, scope) : Divergence</text>
+<text x="55.0" y="173.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> compareFinal(a, b, scope) : Verdict</text>
+<text x="55.0" y="188.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> compare(exp, act, scope) : Verdict</text>
+<rect x="44.0" y="221.0" width="247.8" height="149.0" rx="4" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M48.0 221.0 h239.8 a4 4 0 0 1 4 4 v33.0 h-247.8 v-33.0 a4 4 0 0 1 4 -4 z" fill="#0891b2" opacity="0.13"/>
+<text x="167.9" y="232.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«service»</text>
+<text x="167.9" y="256.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">CompareEngine</text>
+<line x1="44.0" y1="262.0" x2="291.8" y2="262.0" stroke="#0891b2" stroke-width="1"/>
+<text x="55.0" y="275.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_scope : DiffScope*</text>
+<line x1="44.0" y1="286.0" x2="291.8" y2="286.0" stroke="#d1d5db" stroke-width="1"/>
+<text x="55.0" y="299.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> compareSeq(a, b, scope) : Divergence</text>
+<text x="55.0" y="314.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> compareFinal(a, b, scope) : Verdict</text>
+<text x="55.0" y="329.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> compare(exp, act, scope) : Verdict</text>
+<text x="55.0" y="344.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> firstDiff(x, y, scope) : uint64</text>
+<text x="55.0" y="359.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> eq(x, y, scope) : bool</text>
+<rect x="461.8" y="104.0" width="200.0" height="179.0" rx="4" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M465.8 104.0 h192.0 a4 4 0 0 1 4 4 v33.0 h-200.0 v-33.0 a4 4 0 0 1 4 -4 z" fill="#0891b2" opacity="0.13"/>
+<text x="561.8" y="115.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="561.8" y="139.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">DiffScope</text>
+<line x1="461.8" y1="145.0" x2="661.8" y2="145.0" stroke="#0891b2" stroke-width="1"/>
+<text x="472.8" y="158.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_pc : bool = true</text>
+<text x="472.8" y="173.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_gpr : bool = true</text>
+<text x="472.8" y="188.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_memWrite : bool = true</text>
+<text x="472.8" y="203.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_csr : bool = false</text>
+<text x="472.8" y="218.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_insnLimit : uint64 = 0</text>
+<line x1="461.8" y1="229.0" x2="661.8" y2="229.0" stroke="#d1d5db" stroke-width="1"/>
+<text x="472.8" y="242.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> includes(field) : bool</text>
+<text x="472.8" y="257.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> fields() : string[]</text>
+<text x="472.8" y="272.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> preset(kind) : DiffScope</text>
+<rect x="461.8" y="305.0" width="271.2" height="209.0" rx="4" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M465.8 305.0 h263.2 a4 4 0 0 1 4 4 v33.0 h-271.2 v-33.0 a4 4 0 0 1 4 -4 z" fill="#0891b2" opacity="0.13"/>
+<text x="597.4" y="316.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="597.4" y="340.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">Divergence</text>
+<line x1="461.8" y1="346.0" x2="733.0" y2="346.0" stroke="#0891b2" stroke-width="1"/>
+<text x="472.8" y="359.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_id : uint64</text>
+<text x="472.8" y="374.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_stepNo : uint64</text>
+<text x="472.8" y="389.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_ours : StateRecord</text>
+<text x="472.8" y="404.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_ref : StateRecord</text>
+<text x="472.8" y="419.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_fields : DiffField[]</text>
+<text x="472.8" y="434.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_tag : DivergenceTag = Unclassified</text>
+<text x="472.8" y="449.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> m_note : string</text>
+<line x1="461.8" y1="460.0" x2="733.0" y2="460.0" stroke="#d1d5db" stroke-width="1"/>
+<text x="472.8" y="473.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> static create(stepNo, a, b) : Divergence</text>
+<text x="472.8" y="488.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> diffFields() : DiffDetail</text>
+<text x="472.8" y="503.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> setAttribution(tag, note)</text>
+<rect x="461.8" y="536.0" width="224.5" height="149.0" rx="4" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M465.8 536.0 h216.5 a4 4 0 0 1 4 4 v33.0 h-224.5 v-33.0 a4 4 0 0 1 4 -4 z" fill="#0891b2" opacity="0.13"/>
+<text x="574.1" y="547.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«struct»</text>
+<text x="574.1" y="571.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">StateRecord</text>
+<line x1="461.8" y1="577.0" x2="686.3" y2="577.0" stroke="#0891b2" stroke-width="1"/>
+<text x="472.8" y="590.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> stepNo : uint64</text>
+<text x="472.8" y="605.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> pc : uint32</text>
+<text x="472.8" y="620.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> gpr : uint32[32]</text>
+<text x="472.8" y="635.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> memWrite : MemWrite[]</text>
+<text x="472.8" y="650.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> csr : map&lt;uint16, uint32&gt;</text>
+<line x1="461.8" y1="661.0" x2="686.3" y2="661.0" stroke="#d1d5db" stroke-width="1"/>
+<text x="472.8" y="674.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> diff(other, scope) : DiffField[]</text>
+<path d="M167.9 221.0 V199.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#tri)"/>
+<path d="M291.8 283.5 H351.8 V193.5 H461.8" fill="none" stroke="#4b5563" stroke-width="1.35"/>
+<text x="298.8" y="278.5" text-anchor="start" font-size="10" fill="#374151">1</text>
+<text x="454.8" y="188.5" text-anchor="end" font-size="10" fill="#374151">1</text>
+<path d="M291.8 307.5 H401.8 V409.5 H461.8" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="454.8" y="404.5" text-anchor="end" font-size="10" fill="#374151">0..n</text>
+<path d="M597.4 514.0 V536.0" fill="none" stroke="#4b5563" stroke-width="1.35" marker-start="url(#diaF)"/>
+<text x="608.4" y="508.0" text-anchor="middle" font-size="10" fill="#374151">1</text>
+<text x="585.1" y="549.0" text-anchor="middle" font-size="10" fill="#374151">2</text>
+</svg>

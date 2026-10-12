@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1938 901" width="1938" height="901" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif">
+<defs><marker id="tri" viewBox="0 0 14 12" refX="13.2" refY="6" markerWidth="10" markerHeight="8.6" orient="auto"><path d="M0.8 0.9 L13.2 6 L0.8 11.1 z" fill="#ffffff" stroke="#4b5563" stroke-width="1.3"/></marker><marker id="open" viewBox="0 0 12 12" refX="10.4" refY="6" markerWidth="8.4" markerHeight="8.4" orient="auto"><path d="M1.2 1.2 L10.8 6 L1.2 10.8" fill="none" stroke="#4b5563" stroke-width="1.5"/></marker><marker id="diaF" viewBox="0 0 18 12" refX="2" refY="6" markerWidth="10" markerHeight="6.8" orient="auto"><path d="M1 6 L9 1.7 L17 6 L9 10.3 z" fill="#4b5563" stroke="#4b5563" stroke-width="1.2"/></marker><marker id="diaH" viewBox="0 0 18 12" refX="2" refY="6" markerWidth="10" markerHeight="6.8" orient="auto"><path d="M1 6 L9 1.7 L17 6 L9 10.3 z" fill="#ffffff" stroke="#4b5563" stroke-width="1.3"/></marker></defs>
+<rect x="0.5" y="0.5" width="1938.0" height="899.0" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="969.0" y="42" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">数据模型 · 实体关系图（12 张表）</text>
+<line x1="44" y1="80" x2="1894.0" y2="80" stroke="#e5e7eb" stroke-width="1"/>
+<text x="44" y="733.0" font-size="10.5" fill="#6b7280">标记：PK 主键、FK 外键、UQ 唯一约束；虚线箭尾为基数 n（子表），箭首为 1（被引用的父表）</text>
+<text x="44" y="750.0" font-size="10.5" fill="#6b7280">共 12 张表 = 8 张数据实体表（user / session / workspace / program / test_suite / test_case / case_result / isa_meta）</text>
+<text x="44" y="767.0" font-size="10.5" fill="#6b7280">                 + 3 张补充表（test_report 报告汇总、divergence 分歧现场、breakpoint 断点）+ 1 张 n:m 交叉表（suite_isa）</text>
+<text x="44" y="784.0" font-size="10.5" fill="#6b7280">颜色分组：蓝＝账号域　紫＝工作区域　绿＝测试域　橙＝对拍域　黄＝ISA 域　红＝调试域</text>
+<text x="44" y="801.0" font-size="10.5" fill="#6b7280">状态快照类字段（ours_snap / ref_snap / snap / expect_*）以 JSON 文本整体落库——它们是只读值对象，不做跨行查询，不另建行</text>
+<text x="44" y="818.0" font-size="10.5" fill="#6b7280">所有 uint32 地址字段统一用 BIGINT：uint32 上界 4294967295 超过有符号 INT 上限，用 INT 会在高位地址上溢出</text>
+<text x="44" y="835.0" font-size="10.5" fill="#6b7280">n:m 关系的落点：suite_isa 以 (suite_id, spec_id) 联合主键存两端外键，附 is_default 标记该用例集的默认 ISA</text>
+<text x="44" y="851.0" font-size="10.5" fill="#6b7280">1:n 关系的落点：外键一律建在 n 端（子表）—— session / workspace / program / test_suite / test_case / test_report / case_result / divergence / breakpoint</text>
+<text x="44" y="867.0" font-size="10.5" fill="#6b7280">1:2 组合的落点：Divergence 与本内核侧、基准侧各一份 StateRecord，本设计不建行，而以 divergence 的两个 JSON 列承载</text>
+<rect x="44.0" y="104.0" width="250.0" height="173.0" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M48.0 104.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#2563eb" opacity="0.12"/>
+<text x="55.0" y="124.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">user</text>
+<text x="284.0" y="124.0" text-anchor="end" font-size="9.5" fill="#6b7280">用户</text>
+<line x1="44.0" y1="136.0" x2="294.0" y2="136.0" stroke="#2563eb" stroke-width="1"/>
+<rect x="51.0" y="138.5" width="19.5" height="12.5" rx="3" fill="#fee2e2"/>
+<text x="60.7" y="148.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#b91c1c">PK</text>
+<text x="73.5" y="148.0" font-size="10" fill="#1f2937">uid</text>
+<text x="285.0" y="148.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="51.0" y="153.5" width="19.5" height="12.5" rx="3" fill="#f3f4f6"/>
+<text x="60.7" y="163.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4b5563">UQ</text>
+<text x="73.5" y="163.0" font-size="10" fill="#1f2937">name</text>
+<text x="285.0" y="163.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(64)</text>
+<text x="73.5" y="178.0" font-size="10" fill="#1f2937">pwd_hash</text>
+<text x="285.0" y="178.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(128)</text>
+<text x="73.5" y="193.0" font-size="10" fill="#1f2937">role</text>
+<text x="285.0" y="193.0" text-anchor="end" font-size="9.5" fill="#6b7280">SMALLINT</text>
+<text x="73.5" y="208.0" font-size="10" fill="#1f2937">quota_sessions</text>
+<text x="285.0" y="208.0" text-anchor="end" font-size="9.5" fill="#6b7280">INT</text>
+<text x="73.5" y="223.0" font-size="10" fill="#1f2937">quota_insns</text>
+<text x="285.0" y="223.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="73.5" y="238.0" font-size="10" fill="#1f2937">quota_mem_mb</text>
+<text x="285.0" y="238.0" text-anchor="end" font-size="9.5" fill="#6b7280">INT</text>
+<text x="73.5" y="253.0" font-size="10" fill="#1f2937">status</text>
+<text x="285.0" y="253.0" text-anchor="end" font-size="9.5" fill="#6b7280">SMALLINT</text>
+<text x="73.5" y="268.0" font-size="10" fill="#1f2937">created_at</text>
+<text x="285.0" y="268.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="444.0" y="104.0" width="250.0" height="113.0" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M448.0 104.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#2563eb" opacity="0.12"/>
+<text x="455.0" y="124.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">session</text>
+<text x="684.0" y="124.0" text-anchor="end" font-size="9.5" fill="#6b7280">登录会话</text>
+<line x1="444.0" y1="136.0" x2="694.0" y2="136.0" stroke="#2563eb" stroke-width="1"/>
+<rect x="451.0" y="138.5" width="19.5" height="12.5" rx="3" fill="#fee2e2"/>
+<text x="460.7" y="148.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#b91c1c">PK</text>
+<text x="473.5" y="148.0" font-size="10" fill="#1f2937">token</text>
+<text x="685.0" y="148.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(64)</text>
+<rect x="451.0" y="153.5" width="19.5" height="12.5" rx="3" fill="#dbeafe"/>
+<text x="460.7" y="163.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="473.5" y="163.0" font-size="10" fill="#1f2937">uid</text>
+<text x="685.0" y="163.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="473.5" y="178.0" font-size="10" fill="#1f2937">expires_at</text>
+<text x="685.0" y="178.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="473.5" y="193.0" font-size="10" fill="#1f2937">revoked</text>
+<text x="685.0" y="193.0" text-anchor="end" font-size="9.5" fill="#6b7280">BOOLEAN</text>
+<text x="473.5" y="208.0" font-size="10" fill="#1f2937">created_at</text>
+<text x="685.0" y="208.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="444.0" y="241.0" width="250.0" height="128.0" rx="4" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<path d="M448.0 241.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#7c3aed" opacity="0.12"/>
+<text x="455.0" y="261.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">workspace</text>
+<text x="684.0" y="261.0" text-anchor="end" font-size="9.5" fill="#6b7280">工作区</text>
+<line x1="444.0" y1="273.0" x2="694.0" y2="273.0" stroke="#7c3aed" stroke-width="1"/>
+<rect x="451.0" y="275.5" width="19.5" height="12.5" rx="3" fill="#fee2e2"/>
+<text x="460.7" y="285.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#b91c1c">PK</text>
+<text x="473.5" y="285.0" font-size="10" fill="#1f2937">ws_id</text>
+<text x="685.0" y="285.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="451.0" y="290.5" width="19.5" height="12.5" rx="3" fill="#dbeafe"/>
+<text x="460.7" y="300.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="473.5" y="300.0" font-size="10" fill="#1f2937">uid</text>
+<text x="685.0" y="300.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="451.0" y="305.5" width="19.5" height="12.5" rx="3" fill="#f3f4f6"/>
+<text x="460.7" y="315.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4b5563">UQ</text>
+<text x="473.5" y="315.0" font-size="10" fill="#1f2937">(uid, name)</text>
+<text x="473.5" y="330.0" font-size="10" fill="#1f2937">name</text>
+<text x="685.0" y="330.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(64)</text>
+<text x="473.5" y="345.0" font-size="10" fill="#1f2937">created_at</text>
+<text x="685.0" y="345.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="473.5" y="360.0" font-size="10" fill="#1f2937">updated_at</text>
+<text x="685.0" y="360.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="444.0" y="393.0" width="250.0" height="218.0" rx="4" fill="#ffffff" stroke="#ea580c" stroke-width="1.6"/>
+<path d="M448.0 393.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#ea580c" opacity="0.12"/>
+<text x="455.0" y="413.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">divergence</text>
+<text x="684.0" y="413.0" text-anchor="end" font-size="9.5" fill="#6b7280">对拍分歧</text>
+<line x1="444.0" y1="425.0" x2="694.0" y2="425.0" stroke="#ea580c" stroke-width="1"/>
+<rect x="451.0" y="427.5" width="19.5" height="12.5" rx="3" fill="#fee2e2"/>
+<text x="460.7" y="437.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#b91c1c">PK</text>
+<text x="473.5" y="437.0" font-size="10" fill="#1f2937">div_id</text>
+<text x="685.0" y="437.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="451.0" y="442.5" width="19.5" height="12.5" rx="3" fill="#dbeafe"/>
+<text x="460.7" y="452.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="473.5" y="452.0" font-size="10" fill="#1f2937">uid</text>
+<text x="685.0" y="452.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="451.0" y="457.5" width="19.5" height="12.5" rx="3" fill="#dbeafe"/>
+<text x="460.7" y="467.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="473.5" y="467.0" font-size="10" fill="#1f2937">prog_id</text>
+<text x="685.0" y="467.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="451.0" y="472.5" width="19.5" height="12.5" rx="3" fill="#dbeafe"/>
+<text x="460.7" y="482.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="473.5" y="482.0" font-size="10" fill="#1f2937">spec_id</text>
+<text x="685.0" y="482.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="473.5" y="497.0" font-size="10" fill="#1f2937">step_no</text>
+<text x="685.0" y="497.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="473.5" y="512.0" font-size="10" fill="#1f2937">scope_json</text>
+<text x="685.0" y="512.0" text-anchor="end" font-size="9.5" fill="#6b7280">TEXT</text>
+<text x="473.5" y="527.0" font-size="10" fill="#1f2937">ours_snap</text>
+<text x="685.0" y="527.0" text-anchor="end" font-size="9.5" fill="#6b7280">TEXT</text>
+<text x="473.5" y="542.0" font-size="10" fill="#1f2937">ref_snap</text>
+<text x="685.0" y="542.0" text-anchor="end" font-size="9.5" fill="#6b7280">TEXT</text>
+<text x="473.5" y="557.0" font-size="10" fill="#1f2937">fields_json</text>
+<text x="685.0" y="557.0" text-anchor="end" font-size="9.5" fill="#6b7280">TEXT</text>
+<text x="473.5" y="572.0" font-size="10" fill="#1f2937">tag</text>
+<text x="685.0" y="572.0" text-anchor="end" font-size="9.5" fill="#6b7280">SMALLINT</text>
+<text x="473.5" y="587.0" font-size="10" fill="#1f2937">note</text>
+<text x="685.0" y="587.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(512)</text>
+<text x="473.5" y="602.0" font-size="10" fill="#1f2937">created_at</text>
+<text x="685.0" y="602.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="844.0" y="104.0" width="250.0" height="173.0" rx="4" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<path d="M848.0 104.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#7c3aed" opacity="0.12"/>
+<text x="855.0" y="124.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">program</text>
+<text x="1084.0" y="124.0" text-anchor="end" font-size="9.5" fill="#6b7280">程序与映像</text>
+<line x1="844.0" y1="136.0" x2="1094.0" y2="136.0" stroke="#7c3aed" stroke-width="1"/>
+<rect x="851.0" y="138.5" width="19.5" height="12.5" rx="3" fill="#fee2e2"/>
+<text x="860.7" y="148.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#b91c1c">PK</text>
+<text x="873.5" y="148.0" font-size="10" fill="#1f2937">prog_id</text>
+<text x="1085.0" y="148.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="851.0" y="153.5" width="19.5" height="12.5" rx="3" fill="#dbeafe"/>
+<text x="860.7" y="163.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="873.5" y="163.0" font-size="10" fill="#1f2937">ws_id</text>
+<text x="1085.0" y="163.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="851.0" y="168.5" width="19.5" height="12.5" rx="3" fill="#f3f4f6"/>
+<text x="860.7" y="178.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4b5563">UQ</text>
+<text x="873.5" y="178.0" font-size="10" fill="#1f2937">(ws_id, name)</text>
+<text x="873.5" y="193.0" font-size="10" fill="#1f2937">name</text>
+<text x="1085.0" y="193.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(128)</text>
+<text x="873.5" y="208.0" font-size="10" fill="#1f2937">base_addr</text>
+<text x="1085.0" y="208.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="873.5" y="223.0" font-size="10" fill="#1f2937">entry_addr</text>
+<text x="1085.0" y="223.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="873.5" y="238.0" font-size="10" fill="#1f2937">sp_init</text>
+<text x="1085.0" y="238.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="873.5" y="253.0" font-size="10" fill="#1f2937">image</text>
+<text x="1085.0" y="253.0" text-anchor="end" font-size="9.5" fill="#6b7280">BLOB</text>
+<text x="873.5" y="268.0" font-size="10" fill="#1f2937">created_at</text>
+<text x="1085.0" y="268.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="844.0" y="301.0" width="250.0" height="128.0" rx="4" fill="#ffffff" stroke="#059669" stroke-width="1.6"/>
+<path d="M848.0 301.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#059669" opacity="0.12"/>
+<text x="855.0" y="321.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">test_suite</text>
+<text x="1084.0" y="321.0" text-anchor="end" font-size="9.5" fill="#6b7280">用例集</text>
+<line x1="844.0" y1="333.0" x2="1094.0" y2="333.0" stroke="#059669" stroke-width="1"/>
+<rect x="851.0" y="335.5" width="19.5" height="12.5" rx="3" fill="#fee2e2"/>
+<text x="860.7" y="345.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#b91c1c">PK</text>
+<text x="873.5" y="345.0" font-size="10" fill="#1f2937">suite_id</text>
+<text x="1085.0" y="345.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="851.0" y="350.5" width="19.5" height="12.5" rx="3" fill="#dbeafe"/>
+<text x="860.7" y="360.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="873.5" y="360.0" font-size="10" fill="#1f2937">ws_id</text>
+<text x="1085.0" y="360.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="851.0" y="365.5" width="19.5" height="12.5" rx="3" fill="#f3f4f6"/>
+<text x="860.7" y="375.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4b5563">UQ</text>
+<text x="873.5" y="375.0" font-size="10" fill="#1f2937">(ws_id, name)</text>
+<text x="873.5" y="390.0" font-size="10" fill="#1f2937">name</text>
+<text x="1085.0" y="390.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(128)</text>
+<text x="873.5" y="405.0" font-size="10" fill="#1f2937">tags</text>
+<text x="1085.0" y="405.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(512)</text>
+<text x="873.5" y="420.0" font-size="10" fill="#1f2937">updated_at</text>
+<text x="1085.0" y="420.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="844.0" y="453.0" width="250.0" height="158.0" rx="4" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
+<path d="M848.0 453.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#d97706" opacity="0.12"/>
+<text x="855.0" y="473.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">isa_meta</text>
+<text x="1084.0" y="473.0" text-anchor="end" font-size="9.5" fill="#6b7280">ISA 描述元数据</text>
+<line x1="844.0" y1="485.0" x2="1094.0" y2="485.0" stroke="#d97706" stroke-width="1"/>
+<rect x="851.0" y="487.5" width="19.5" height="12.5" rx="3" fill="#fee2e2"/>
+<text x="860.7" y="497.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#b91c1c">PK</text>
+<text x="873.5" y="497.0" font-size="10" fill="#1f2937">spec_id</text>
+<text x="1085.0" y="497.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="851.0" y="502.5" width="19.5" height="12.5" rx="3" fill="#f3f4f6"/>
+<text x="860.7" y="512.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4b5563">UQ</text>
+<text x="873.5" y="512.0" font-size="10" fill="#1f2937">(name, version)</text>
+<text x="873.5" y="527.0" font-size="10" fill="#1f2937">name</text>
+<text x="1085.0" y="527.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(64)</text>
+<text x="873.5" y="542.0" font-size="10" fill="#1f2937">version</text>
+<text x="1085.0" y="542.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(32)</text>
+<text x="873.5" y="557.0" font-size="10" fill="#1f2937">xlen</text>
+<text x="1085.0" y="557.0" text-anchor="end" font-size="9.5" fill="#6b7280">SMALLINT</text>
+<text x="873.5" y="572.0" font-size="10" fill="#1f2937">path</text>
+<text x="1085.0" y="572.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(512)</text>
+<text x="873.5" y="587.0" font-size="10" fill="#1f2937">content_hash</text>
+<text x="1085.0" y="587.0" text-anchor="end" font-size="9.5" fill="#6b7280">CHAR(64)</text>
+<text x="873.5" y="602.0" font-size="10" fill="#1f2937">installed_at</text>
+<text x="1085.0" y="602.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="1244.0" y="104.0" width="250.0" height="128.0" rx="4" fill="#ffffff" stroke="#be123c" stroke-width="1.6"/>
+<path d="M1248.0 104.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#be123c" opacity="0.12"/>
+<text x="1255.0" y="124.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">breakpoint</text>
+<text x="1484.0" y="124.0" text-anchor="end" font-size="9.5" fill="#6b7280">断点</text>
+<line x1="1244.0" y1="136.0" x2="1494.0" y2="136.0" stroke="#be123c" stroke-width="1"/>
+<rect x="1251.0" y="138.5" width="19.5" height="12.5" rx="3" fill="#fee2e2"/>
+<text x="1260.7" y="148.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#b91c1c">PK</text>
+<text x="1273.5" y="148.0" font-size="10" fill="#1f2937">bp_id</text>
+<text x="1485.0" y="148.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="1251.0" y="153.5" width="19.5" height="12.5" rx="3" fill="#dbeafe"/>
+<text x="1260.7" y="163.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="1273.5" y="163.0" font-size="10" fill="#1f2937">prog_id</text>
+<text x="1485.0" y="163.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="1251.0" y="168.5" width="19.5" height="12.5" rx="3" fill="#f3f4f6"/>
+<text x="1260.7" y="178.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4b5563">UQ</text>
+<text x="1273.5" y="178.0" font-size="10" fill="#1f2937">(prog_id, addr)</text>
+<text x="1273.5" y="193.0" font-size="10" fill="#1f2937">addr</text>
+<text x="1485.0" y="193.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="1273.5" y="208.0" font-size="10" fill="#1f2937">enabled</text>
+<text x="1485.0" y="208.0" text-anchor="end" font-size="9.5" fill="#6b7280">BOOLEAN</text>
+<text x="1273.5" y="223.0" font-size="10" fill="#1f2937">note</text>
+<text x="1485.0" y="223.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(256)</text>
+<rect x="1244.0" y="256.0" width="250.0" height="158.0" rx="4" fill="#ffffff" stroke="#059669" stroke-width="1.6"/>
+<path d="M1248.0 256.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#059669" opacity="0.12"/>
+<text x="1255.0" y="276.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">test_case</text>
+<text x="1484.0" y="276.0" text-anchor="end" font-size="9.5" fill="#6b7280">测试用例</text>
+<line x1="1244.0" y1="288.0" x2="1494.0" y2="288.0" stroke="#059669" stroke-width="1"/>
+<rect x="1251.0" y="290.5" width="19.5" height="12.5" rx="3" fill="#fee2e2"/>
+<text x="1260.7" y="300.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#b91c1c">PK</text>
+<text x="1273.5" y="300.0" font-size="10" fill="#1f2937">case_id</text>
+<text x="1485.0" y="300.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="1251.0" y="305.5" width="19.5" height="12.5" rx="3" fill="#dbeafe"/>
+<text x="1260.7" y="315.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="1273.5" y="315.0" font-size="10" fill="#1f2937">suite_id</text>
+<text x="1485.0" y="315.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="1251.0" y="320.5" width="19.5" height="12.5" rx="3" fill="#dbeafe"/>
+<text x="1260.7" y="330.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="1273.5" y="330.0" font-size="10" fill="#1f2937">prog_id</text>
+<text x="1485.0" y="330.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="1273.5" y="345.0" font-size="10" fill="#1f2937">name</text>
+<text x="1485.0" y="345.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(128)</text>
+<text x="1273.5" y="360.0" font-size="10" fill="#1f2937">judge_mode</text>
+<text x="1485.0" y="360.0" text-anchor="end" font-size="9.5" fill="#6b7280">SMALLINT</text>
+<text x="1273.5" y="375.0" font-size="10" fill="#1f2937">insn_limit</text>
+<text x="1485.0" y="375.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="1273.5" y="390.0" font-size="10" fill="#1f2937">expect_final</text>
+<text x="1485.0" y="390.0" text-anchor="end" font-size="9.5" fill="#6b7280">TEXT</text>
+<text x="1273.5" y="405.0" font-size="10" fill="#1f2937">expect_commits</text>
+<text x="1485.0" y="405.0" text-anchor="end" font-size="9.5" fill="#6b7280">TEXT</text>
+<rect x="1244.0" y="438.0" width="250.0" height="158.0" rx="4" fill="#ffffff" stroke="#059669" stroke-width="1.6"/>
+<path d="M1248.0 438.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#059669" opacity="0.12"/>
+<text x="1255.0" y="458.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">test_report</text>
+<text x="1484.0" y="458.0" text-anchor="end" font-size="9.5" fill="#6b7280">执行报告</text>
+<line x1="1244.0" y1="470.0" x2="1494.0" y2="470.0" stroke="#059669" stroke-width="1"/>
+<rect x="1251.0" y="472.5" width="19.5" height="12.5" rx="3" fill="#fee2e2"/>
+<text x="1260.7" y="482.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#b91c1c">PK</text>
+<text x="1273.5" y="482.0" font-size="10" fill="#1f2937">report_id</text>
+<text x="1485.0" y="482.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="1251.0" y="487.5" width="19.5" height="12.5" rx="3" fill="#dbeafe"/>
+<text x="1260.7" y="497.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="1273.5" y="497.0" font-size="10" fill="#1f2937">suite_id</text>
+<text x="1485.0" y="497.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="1273.5" y="512.0" font-size="10" fill="#1f2937">judge_mode</text>
+<text x="1485.0" y="512.0" text-anchor="end" font-size="9.5" fill="#6b7280">SMALLINT</text>
+<text x="1273.5" y="527.0" font-size="10" fill="#1f2937">total</text>
+<text x="1485.0" y="527.0" text-anchor="end" font-size="9.5" fill="#6b7280">INT</text>
+<text x="1273.5" y="542.0" font-size="10" fill="#1f2937">passed</text>
+<text x="1485.0" y="542.0" text-anchor="end" font-size="9.5" fill="#6b7280">INT</text>
+<text x="1273.5" y="557.0" font-size="10" fill="#1f2937">started_at</text>
+<text x="1485.0" y="557.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="1273.5" y="572.0" font-size="10" fill="#1f2937">finished_at</text>
+<text x="1485.0" y="572.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="1273.5" y="587.0" font-size="10" fill="#1f2937">triggered_by</text>
+<text x="1485.0" y="587.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(64)</text>
+<rect x="1244.0" y="620.0" width="250.0" height="83.0" rx="4" fill="#ffffff" stroke="#c026d3" stroke-width="1.6"/>
+<path d="M1248.0 620.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#c026d3" opacity="0.12"/>
+<text x="1255.0" y="640.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">suite_isa</text>
+<text x="1484.0" y="640.0" text-anchor="end" font-size="9.5" fill="#6b7280">交叉表 n:m</text>
+<line x1="1244.0" y1="652.0" x2="1494.0" y2="652.0" stroke="#c026d3" stroke-width="1"/>
+<rect x="1251.0" y="654.5" width="33.6" height="12.5" rx="3" fill="#ede9fe"/>
+<text x="1267.8" y="664.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#6d28d9">PK/FK</text>
+<text x="1287.6" y="664.0" font-size="10" fill="#1f2937">suite_id</text>
+<text x="1485.0" y="664.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="1251.0" y="669.5" width="33.6" height="12.5" rx="3" fill="#ede9fe"/>
+<text x="1267.8" y="679.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#6d28d9">PK/FK</text>
+<text x="1287.6" y="679.0" font-size="10" fill="#1f2937">spec_id</text>
+<text x="1485.0" y="679.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="1287.6" y="694.0" font-size="10" fill="#1f2937">is_default</text>
+<text x="1485.0" y="694.0" text-anchor="end" font-size="9.5" fill="#6b7280">BOOLEAN</text>
+<rect x="1644.0" y="104.0" width="250.0" height="158.0" rx="4" fill="#ffffff" stroke="#059669" stroke-width="1.6"/>
+<path d="M1648.0 104.0 h242.0 a4 4 0 0 1 4 4 v24.0 h-250.0 v-24.0 a4 4 0 0 1 4 -4 z" fill="#059669" opacity="0.12"/>
+<text x="1655.0" y="124.0" font-size="12" font-weight="700" fill="#111827" font-family="Consolas, Courier New, monospace">case_result</text>
+<text x="1884.0" y="124.0" text-anchor="end" font-size="9.5" fill="#6b7280">失败现场</text>
+<line x1="1644.0" y1="136.0" x2="1894.0" y2="136.0" stroke="#059669" stroke-width="1"/>
+<rect x="1651.0" y="138.5" width="33.6" height="12.5" rx="3" fill="#ede9fe"/>
+<text x="1667.8" y="148.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#6d28d9">PK/FK</text>
+<text x="1687.6" y="148.0" font-size="10" fill="#1f2937">report_id</text>
+<text x="1885.0" y="148.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<rect x="1651.0" y="153.5" width="33.6" height="12.5" rx="3" fill="#ede9fe"/>
+<text x="1667.8" y="163.0" text-anchor="middle" font-size="8.5" font-weight="700" fill="#6d28d9">PK/FK</text>
+<text x="1687.6" y="163.0" font-size="10" fill="#1f2937">case_id</text>
+<text x="1885.0" y="163.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="1687.6" y="178.0" font-size="10" fill="#1f2937">verdict</text>
+<text x="1885.0" y="178.0" text-anchor="end" font-size="9.5" fill="#6b7280">SMALLINT</text>
+<text x="1687.6" y="193.0" font-size="10" fill="#1f2937">snap</text>
+<text x="1885.0" y="193.0" text-anchor="end" font-size="9.5" fill="#6b7280">TEXT</text>
+<text x="1687.6" y="208.0" font-size="10" fill="#1f2937">diff_step</text>
+<text x="1885.0" y="208.0" text-anchor="end" font-size="9.5" fill="#6b7280">BIGINT</text>
+<text x="1687.6" y="223.0" font-size="10" fill="#1f2937">diff_field</text>
+<text x="1885.0" y="223.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(64)</text>
+<text x="1687.6" y="238.0" font-size="10" fill="#1f2937">ours_val</text>
+<text x="1885.0" y="238.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(64)</text>
+<text x="1687.6" y="253.0" font-size="10" fill="#1f2937">ref_val</text>
+<text x="1885.0" y="253.0" text-anchor="end" font-size="9.5" fill="#6b7280">VARCHAR(64)</text>
+<path d="M444.0 160.5 H369.0 V166.5 H294.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="437.0" y="155.5" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="301.0" y="161.5" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M444.0 305.0 H369.0 V190.5 H294.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="437.0" y="300.0" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="301.0" y="185.5" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M444.0 502.0 H369.0 V214.5 H294.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="437.0" y="497.0" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="301.0" y="209.5" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M844.0 178.5 H769.0 V293.0 H694.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="837.0" y="173.5" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="701.0" y="288.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M844.0 365.0 H769.0 V317.0 H694.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="837.0" y="360.0" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="701.0" y="312.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M1244.0 323.0 H1169.0 V341.0 H1094.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="1237.0" y="318.0" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="1101.0" y="336.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M1244.0 517.0 H1169.0 V365.0 H1094.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="1237.0" y="512.0" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="1101.0" y="360.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M1644.0 171.0 H1569.0 V517.0 H1494.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="1637.0" y="166.0" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="1501.0" y="512.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M1644.0 195.0 H1569.0 V335.0 H1494.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="1637.0" y="190.0" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="1501.0" y="330.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M1244.0 347.0 H1169.0 V178.5 H1094.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="1237.0" y="342.0" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="1101.0" y="173.5" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M1244.0 168.0 H1169.0 V202.5 H1094.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="1237.0" y="163.0" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="1101.0" y="197.5" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M694.0 490.0 H769.0 V202.5 H844.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="701.0" y="485.0" text-anchor="start" font-size="10" fill="#374151">n</text>
+<text x="837.0" y="197.5" text-anchor="end" font-size="10" fill="#374151">1</text>
+<path d="M694.0 514.0 H769.0 V532.0 H844.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="701.0" y="509.0" text-anchor="start" font-size="10" fill="#374151">n</text>
+<text x="837.0" y="527.0" text-anchor="end" font-size="10" fill="#374151">1</text>
+<path d="M1244.0 649.5 H1169.0 V389.0 H1094.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="1237.0" y="644.5" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="1101.0" y="384.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M1244.0 673.5 H1169.0 V532.0 H1094.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="1237.0" y="668.5" text-anchor="end" font-size="10" fill="#374151">n</text>
+<text x="1101.0" y="527.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+</svg>

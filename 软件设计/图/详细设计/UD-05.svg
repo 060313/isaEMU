@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 932 680" width="932" height="680" font-family="Microsoft YaHei, Segoe UI, sans-serif">
+<defs><marker id="call" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="10" markerHeight="10" orient="auto"><path d="M1 1 L11 6 L1 11 z" fill="#374151"/></marker><marker id="ret" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="10" markerHeight="10" orient="auto"><path d="M1.5 1.5 L11 6 L1.5 10.5" fill="none" stroke="#6b7280" stroke-width="1.3"/></marker></defs>
+<rect x="0" y="0" width="932" height="680" fill="#ffffff"/>
+<text x="24" y="26" font-size="15.5" font-weight="700" fill="#111827">UC-05 设置与管理断点 · 用例设计顺序图</text>
+<line x1="0" y1="40" x2="932" y2="40" stroke="#d1d5db" stroke-width="1"/>
+<rect x="30" y="58" width="132" height="58" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.1"/>
+<text x="96" y="78" text-anchor="middle" font-size="12" font-weight="600" fill="#4b5563">注册用户</text>
+<text x="96" y="94" text-anchor="middle" font-size="9.5" fill="#6b7280">«actor»</text>
+<line x1="96" y1="116" x2="96" y2="652" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="178" y="58" width="132" height="58" rx="6" fill="#dbeafe" stroke="#60a5fa" stroke-width="1.1"/>
+<text x="244" y="74" text-anchor="middle" font-size="9.5" fill="#1e40af">«view»</text>
+<text x="244" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">调试界面</text>
+<text x="244" y="107" text-anchor="middle" font-size="9.5" fill="#6b7280">DebugView</text>
+<line x1="244" y1="116" x2="244" y2="652" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="326" y="58" width="132" height="58" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.1"/>
+<text x="392" y="74" text-anchor="middle" font-size="9.5" fill="#92400e">«service»</text>
+<text x="392" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">调试服务</text>
+<text x="392" y="107" text-anchor="middle" font-size="9.5" fill="#6b7280">DebugService</text>
+<line x1="392" y1="116" x2="392" y2="652" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="474" y="58" width="132" height="58" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.1"/>
+<text x="540" y="74" text-anchor="middle" font-size="9.5" fill="#334155">«entity»</text>
+<text x="540" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">断点表</text>
+<text x="540" y="107" text-anchor="middle" font-size="9.5" fill="#6b7280">BreakpointTable</text>
+<line x1="540" y1="116" x2="540" y2="652" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="622" y="58" width="132" height="58" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.1"/>
+<text x="688" y="74" text-anchor="middle" font-size="9.5" fill="#92400e">«service»</text>
+<text x="688" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">模拟内核</text>
+<text x="688" y="107" text-anchor="middle" font-size="9.5" fill="#6b7280">EmulatorCore</text>
+<line x1="688" y1="116" x2="688" y2="652" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="770" y="58" width="132" height="58" rx="6" fill="#ede9fe" stroke="#a78bfa" stroke-width="1.1"/>
+<text x="836" y="74" text-anchor="middle" font-size="9.5" fill="#5b21b6">«dao»</text>
+<text x="836" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">持久化 DAO</text>
+<text x="836" y="107" text-anchor="middle" font-size="9.5" fill="#6b7280">Persistence</text>
+<line x1="836" y1="116" x2="836" y2="652" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="98" y1="178" x2="242" y2="178" stroke="#374151" stroke-width="1.3" marker-end="url(#call)"/>
+<text x="170" y="171" text-anchor="middle" font-size="10.5" fill="#1f2937">setBreakpoint(addr)</text>
+<line x1="246" y1="222" x2="390" y2="222" stroke="#374151" stroke-width="1.3" marker-end="url(#call)"/>
+<text x="318" y="215" text-anchor="middle" font-size="10.5" fill="#1f2937">registerBreakpoint(addr) : BpId</text>
+<line x1="394" y1="266" x2="538" y2="266" stroke="#374151" stroke-width="1.3" marker-end="url(#call)"/>
+<text x="466" y="259" text-anchor="middle" font-size="10.5" fill="#1f2937">add(addr) : BpId</text>
+<line x1="538" y1="310" x2="394" y2="310" stroke="#6b7280" stroke-width="1.1" stroke-dasharray="6 4" marker-end="url(#ret)"/>
+<text x="466" y="303" text-anchor="middle" font-size="10.5" fill="#1f2937">BpId</text>
+<line x1="394" y1="354" x2="834" y2="354" stroke="#374151" stroke-width="1.3" marker-end="url(#call)"/>
+<text x="614" y="347" text-anchor="middle" font-size="10.5" fill="#1f2937">saveBreakpoint(bp)</text>
+<line x1="390" y1="398" x2="246" y2="398" stroke="#6b7280" stroke-width="1.1" stroke-dasharray="6 4" marker-end="url(#ret)"/>
+<text x="318" y="391" text-anchor="middle" font-size="10.5" fill="#1f2937">BpId</text>
+<line x1="246" y1="442" x2="390" y2="442" stroke="#374151" stroke-width="1.3" marker-end="url(#call)"/>
+<text x="318" y="435" text-anchor="middle" font-size="10.5" fill="#1f2937">execute(RUN) : StepDelta</text>
+<line x1="394" y1="486" x2="686" y2="486" stroke="#374151" stroke-width="1.3" marker-end="url(#call)"/>
+<text x="540" y="479" text-anchor="middle" font-size="10.5" fill="#1f2937">checkHit(pc) : bool</text>
+<line x1="686" y1="530" x2="394" y2="530" stroke="#6b7280" stroke-width="1.1" stroke-dasharray="6 4" marker-end="url(#ret)"/>
+<text x="540" y="523" text-anchor="middle" font-size="10.5" fill="#1f2937">hit</text>
+<line x1="390" y1="574" x2="246" y2="574" stroke="#6b7280" stroke-width="1.1" stroke-dasharray="6 4" marker-end="url(#ret)"/>
+<text x="318" y="567" text-anchor="middle" font-size="10.5" fill="#1f2937">pause(hitAddr)</text>
+<line x1="242" y1="618" x2="98" y2="618" stroke="#6b7280" stroke-width="1.1" stroke-dasharray="6 4" marker-end="url(#ret)"/>
+<text x="170" y="611" text-anchor="middle" font-size="10.5" fill="#1f2937">highlight(breakpoint)</text>
+</svg>

@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 822" width="1120" height="822" font-family="Microsoft YaHei,PingFang SC,Segoe UI,sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker><marker id="aro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#6b7280" stroke-width="1.6"/></marker><marker id="diam" viewBox="0 0 12 8" refX="1" refY="4" markerWidth="12" markerHeight="8" orient="auto"><path d="M 1 1 L 6 4 L 1 7 L 1 1 z" fill="#6b7280"/></marker></defs>
+<rect x="0" y="0" width="1120" height="822" fill="#ffffff"/>
+<text x="560" y="23" text-anchor="middle" font-size="14.5" font-weight="600" fill="#111827">ISA 模拟系统 分析类图</text>
+<line x1="48" y1="32" x2="1072" y2="32" stroke="#e5e7eb" stroke-width="1"/>
+<g transform="translate(0,40)">
+<text x="130" y="34" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">边界类 boundary</text>
+<rect x="10" y="62" width="240" height="42" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="130" y="77" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«boundary»</text>
+<text x="130" y="95" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1e40af">SessionView</text>
+<rect x="10" y="124" width="240" height="42" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="130" y="139" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«boundary»</text>
+<text x="130" y="157" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1e40af">IsaView</text>
+<rect x="10" y="186" width="240" height="42" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="130" y="201" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«boundary»</text>
+<text x="130" y="219" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1e40af">LoadView</text>
+<rect x="10" y="248" width="240" height="42" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="130" y="263" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«boundary»</text>
+<text x="130" y="281" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1e40af">DebugView</text>
+<rect x="10" y="310" width="240" height="42" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="130" y="325" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«boundary»</text>
+<text x="130" y="343" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1e40af">TestView</text>
+<rect x="10" y="372" width="240" height="42" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="130" y="387" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«boundary»</text>
+<text x="130" y="405" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1e40af">DiffView</text>
+<rect x="10" y="434" width="240" height="42" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="130" y="449" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«boundary»</text>
+<text x="130" y="467" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1e40af">WorkspaceView</text>
+<rect x="10" y="496" width="240" height="42" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="130" y="511" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«boundary»</text>
+<text x="130" y="529" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1e40af">ApiEndpoint</text>
+<rect x="10" y="558" width="240" height="42" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="130" y="573" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«boundary»</text>
+<text x="130" y="591" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1e40af">ToolchainAdapter</text>
+<rect x="10" y="620" width="240" height="42" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="130" y="635" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«boundary»</text>
+<text x="130" y="653" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1e40af">RefSimAdapter</text>
+<text x="410" y="34" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">控制类 control</text>
+<rect x="290" y="62" width="240" height="42" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<text x="410" y="77" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«control»</text>
+<text x="410" y="95" text-anchor="middle" font-size="12.5" font-weight="600" fill="#b45309">SessionController</text>
+<rect x="290" y="124" width="240" height="42" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<text x="410" y="139" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«control»</text>
+<text x="410" y="157" text-anchor="middle" font-size="12.5" font-weight="600" fill="#b45309">IsaController</text>
+<rect x="290" y="186" width="240" height="42" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<text x="410" y="201" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«control»</text>
+<text x="410" y="219" text-anchor="middle" font-size="12.5" font-weight="600" fill="#b45309">LoadController</text>
+<rect x="290" y="248" width="240" height="42" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<text x="410" y="263" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«control»</text>
+<text x="410" y="281" text-anchor="middle" font-size="12.5" font-weight="600" fill="#b45309">DebugController</text>
+<rect x="290" y="310" width="240" height="42" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<text x="410" y="325" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«control»</text>
+<text x="410" y="343" text-anchor="middle" font-size="12.5" font-weight="600" fill="#b45309">TestController</text>
+<rect x="290" y="372" width="240" height="42" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<text x="410" y="387" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«control»</text>
+<text x="410" y="405" text-anchor="middle" font-size="12.5" font-weight="600" fill="#b45309">DiffController</text>
+<rect x="290" y="434" width="240" height="42" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<text x="410" y="449" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«control»</text>
+<text x="410" y="467" text-anchor="middle" font-size="12.5" font-weight="600" fill="#b45309">WorkspaceController</text>
+<rect x="290" y="496" width="240" height="42" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<text x="410" y="511" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«control»</text>
+<text x="410" y="529" text-anchor="middle" font-size="12.5" font-weight="600" fill="#b45309">ApiController</text>
+<text x="830" y="34" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">实体类 entity</text>
+<rect x="570" y="62" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="690" y="77" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="690" y="95" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">EmulatorCore</text>
+<rect x="570" y="124" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="690" y="139" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="690" y="157" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">ArchState</text>
+<rect x="570" y="186" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="690" y="201" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="690" y="219" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">IsaSpec</text>
+<rect x="570" y="248" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="690" y="263" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="690" y="281" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">Program</text>
+<rect x="570" y="310" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="690" y="325" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="690" y="343" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">Trace</text>
+<rect x="570" y="372" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="690" y="387" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="690" y="405" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">BreakpointTable</text>
+<rect x="850" y="62" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="970" y="77" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="970" y="95" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">TestSuite</text>
+<rect x="850" y="124" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="970" y="139" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="970" y="157" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">TestReport</text>
+<rect x="850" y="186" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="970" y="201" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="970" y="219" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">DiffScope</text>
+<rect x="850" y="248" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="970" y="263" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="970" y="281" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">CompareEngine</text>
+<rect x="850" y="310" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="970" y="325" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="970" y="343" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">Divergence</text>
+<rect x="850" y="372" width="240" height="42" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="970" y="387" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="970" y="405" text-anchor="middle" font-size="12.5" font-weight="600" fill="#374151">User / Session / Workspace</text>
+<line x1="244" y1="83" x2="296" y2="83" stroke="#6b7280" stroke-width="1.4" marker-end="url(#ar)"/>
+<line x1="244" y1="145" x2="296" y2="145" stroke="#6b7280" stroke-width="1.4" marker-end="url(#ar)"/>
+<line x1="244" y1="207" x2="296" y2="207" stroke="#6b7280" stroke-width="1.4" marker-end="url(#ar)"/>
+<line x1="244" y1="269" x2="296" y2="269" stroke="#6b7280" stroke-width="1.4" marker-end="url(#ar)"/>
+<line x1="244" y1="331" x2="296" y2="331" stroke="#6b7280" stroke-width="1.4" marker-end="url(#ar)"/>
+<line x1="244" y1="393" x2="296" y2="393" stroke="#6b7280" stroke-width="1.4" marker-end="url(#ar)"/>
+<line x1="244" y1="455" x2="296" y2="455" stroke="#6b7280" stroke-width="1.4" marker-end="url(#ar)"/>
+<line x1="244" y1="517" x2="296" y2="517" stroke="#6b7280" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M 296 207 L 272 207 L 272 579 L 246 579" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#aro)"/>
+<path d="M 296 393 L 282 393 L 282 641 L 246 641" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#aro)"/>
+<line x1="566" y1="83" x2="540" y2="83" stroke="#6b7280" stroke-width="1.2"/>
+<line x1="540" y1="83" x2="540" y2="331" stroke="#6b7280" stroke-width="1.2"/>
+<line x1="540" y1="145" x2="566" y2="145" stroke="#6b7280" stroke-width="1.2" marker-start="url(#diam)"/>
+<line x1="540" y1="207" x2="566" y2="207" stroke="#6b7280" stroke-width="1.2"/>
+<line x1="540" y1="269" x2="566" y2="269" stroke="#6b7280" stroke-width="1.2"/>
+<line x1="540" y1="331" x2="566" y2="331" stroke="#6b7280" stroke-width="1.2" marker-start="url(#diam)"/>
+<line x1="970" y1="104" x2="970" y2="124" stroke="#6b7280" stroke-width="1.2" marker-end="url(#aro)"/>
+<line x1="970" y1="290" x2="970" y2="186" stroke="#6b7280" stroke-width="1.2" marker-end="url(#aro)"/>
+<line x1="970" y1="352" x2="970" y2="248" stroke="#6b7280" stroke-width="1.2" marker-end="url(#aro)"/>
+<rect x="40" y="690" width="600" height="76" rx="6" fill="#fafafa" stroke="#e5e7eb"/>
+<text x="54" y="712" font-size="11.5" font-weight="600" fill="#374151">图例</text>
+<line x1="54" y1="730" x2="114" y2="730" stroke="#6b7280" stroke-width="1.4" marker-end="url(#ar)"/>
+<text x="122" y="734" font-size="11" fill="#6b7280">调用 / 关联</text>
+<line x1="240" y1="730" x2="300" y2="730" stroke="#6b7280" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#aro)"/>
+<text x="308" y="734" font-size="11" fill="#6b7280">反向调用（控制器驱动适配器）</text>
+<line x1="54" y1="752" x2="114" y2="752" stroke="#6b7280" stroke-width="1.4" marker-start="url(#diam)"/>
+<text x="122" y="756" font-size="11" fill="#6b7280">组合（◆ 端为整体）</text>
+<text x="240" y="756" font-size="11" fill="#6b7280">控制类对实体类的使用依赖数量较多，不逐条连线，完整映射见《分析类模型说明.md》</text>
+</g>
+</svg>

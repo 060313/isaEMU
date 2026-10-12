@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1038" width="760" height="1038" font-family="Microsoft YaHei,PingFang SC,Segoe UI,sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker><marker id="aro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#6b7280" stroke-width="1.6"/></marker><marker id="diam" viewBox="0 0 12 8" refX="1" refY="4" markerWidth="12" markerHeight="8" orient="auto"><path d="M 1 1 L 6 4 L 1 7 L 1 1 z" fill="#6b7280"/></marker></defs>
+<rect x="0" y="0" width="760" height="1038" fill="#ffffff"/>
+<text x="380" y="23" text-anchor="middle" font-size="14.5" font-weight="600" fill="#111827">ISA 模拟系统 分析类图 · 实体类详图</text>
+<line x1="48" y1="32" x2="712" y2="32" stroke="#e5e7eb" stroke-width="1"/>
+<g transform="translate(0,40)">
+<text x="380" y="40" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">实体类 entity（12 类，含属性与职责）</text>
+<rect x="50" y="74" width="300" height="155" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="200" y="87" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="200" y="102" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">EmulatorCore</text>
+<line x1="50" y1="106" x2="350" y2="106" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="119" font-size="11.5" fill="#374151">- pc: word</text>
+<text x="60" y="132" font-size="11.5" fill="#374151">- gpr[32]: word</text>
+<text x="60" y="145" font-size="11.5" fill="#374151">- mem: byte[]</text>
+<text x="60" y="158" font-size="11.5" fill="#374151">- csr: word</text>
+<line x1="50" y1="162" x2="350" y2="162" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="175" font-size="11.5" fill="#374151">+ loadImage(prog)</text>
+<text x="60" y="188" font-size="11.5" fill="#374151">+ step()</text>
+<text x="60" y="201" font-size="11.5" fill="#374151">+ run(n)</text>
+<text x="60" y="214" font-size="11.5" fill="#374151">+ reset()</text>
+<text x="60" y="227" font-size="11.5" fill="#374151">+ snapshot()</text>
+<rect x="50" y="251" width="300" height="142" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="200" y="264" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="200" y="279" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">ArchState</text>
+<line x1="50" y1="283" x2="350" y2="283" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="296" font-size="11.5" fill="#374151">- pc: word</text>
+<text x="60" y="309" font-size="11.5" fill="#374151">- gpr[32]: word</text>
+<text x="60" y="322" font-size="11.5" fill="#374151">- memory: byte[]</text>
+<text x="60" y="335" font-size="11.5" fill="#374151">- csr: word</text>
+<line x1="50" y1="339" x2="350" y2="339" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="352" font-size="11.5" fill="#374151">+ update(delta)</text>
+<text x="60" y="365" font-size="11.5" fill="#374151">+ query(fields)</text>
+<text x="60" y="378" font-size="11.5" fill="#374151">+ snapshot()</text>
+<text x="60" y="391" font-size="11.5" fill="#374151">+ restore(snap)</text>
+<rect x="50" y="415" width="300" height="142" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="200" y="428" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="200" y="443" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">IsaSpec</text>
+<line x1="50" y1="447" x2="350" y2="447" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="460" font-size="11.5" fill="#374151">- name: string</text>
+<text x="60" y="473" font-size="11.5" fill="#374151">- instructions[]</text>
+<text x="60" y="486" font-size="11.5" fill="#374151">- registers[]</text>
+<text x="60" y="499" font-size="11.5" fill="#374151">- encodingFields[]</text>
+<line x1="50" y1="503" x2="350" y2="503" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="516" font-size="11.5" fill="#374151">+ parse(file)</text>
+<text x="60" y="529" font-size="11.5" fill="#374151">+ validate()</text>
+<text x="60" y="542" font-size="11.5" fill="#374151">+ activate()</text>
+<text x="60" y="555" font-size="11.5" fill="#374151">+ fetchDecode(enc)</text>
+<rect x="50" y="579" width="300" height="116" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="200" y="592" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="200" y="607" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">Program</text>
+<line x1="50" y1="611" x2="350" y2="611" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="624" font-size="11.5" fill="#374151">- image: byte[]</text>
+<text x="60" y="637" font-size="11.5" fill="#374151">- baseAddr: addr</text>
+<text x="60" y="650" font-size="11.5" fill="#374151">- entryPC: addr</text>
+<text x="60" y="663" font-size="11.5" fill="#374151">- stackPointer: addr</text>
+<line x1="50" y1="667" x2="350" y2="667" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="680" font-size="11.5" fill="#374151">+ loadImage(img, base)</text>
+<text x="60" y="693" font-size="11.5" fill="#374151">+ getWord(addr)</text>
+<rect x="50" y="717" width="300" height="116" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="200" y="730" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="200" y="745" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">Trace</text>
+<line x1="50" y1="749" x2="350" y2="749" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="762" font-size="11.5" fill="#374151">- records[]</text>
+<text x="60" y="775" font-size="11.5" fill="#374151">- count: int</text>
+<line x1="50" y1="779" x2="350" y2="779" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="792" font-size="11.5" fill="#374151">+ append(rec)</text>
+<text x="60" y="805" font-size="11.5" fill="#374151">+ query(range)</text>
+<text x="60" y="818" font-size="11.5" fill="#374151">+ getSnapshot(stepNo)</text>
+<text x="60" y="831" font-size="11.5" fill="#374151">+ registerSequence(seq)</text>
+<rect x="50" y="855" width="300" height="103" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="200" y="868" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="200" y="883" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">BreakpointTable</text>
+<line x1="50" y1="887" x2="350" y2="887" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="900" font-size="11.5" fill="#374151">- items[]</text>
+<line x1="50" y1="904" x2="350" y2="904" stroke="#4b5563" stroke-width="1"/>
+<text x="60" y="917" font-size="11.5" fill="#374151">+ add(addr)</text>
+<text x="60" y="930" font-size="11.5" fill="#374151">+ remove(addr)</text>
+<text x="60" y="943" font-size="11.5" fill="#374151">+ toggle(addr)</text>
+<text x="60" y="956" font-size="11.5" fill="#374151">+ list()</text>
+<rect x="430" y="74" width="300" height="142" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="580" y="87" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="580" y="102" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">TestSuite</text>
+<line x1="430" y1="106" x2="730" y2="106" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="119" font-size="11.5" fill="#374151">- cases[]</text>
+<text x="440" y="132" font-size="11.5" fill="#374151">- group: string</text>
+<text x="440" y="145" font-size="11.5" fill="#374151">- tags[]</text>
+<text x="440" y="158" font-size="11.5" fill="#374151">- expectedMode: enum</text>
+<line x1="430" y1="162" x2="730" y2="162" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="175" font-size="11.5" fill="#374151">+ load(id)</text>
+<text x="440" y="188" font-size="11.5" fill="#374151">+ list()</text>
+<text x="440" y="201" font-size="11.5" fill="#374151">+ getExpected(case, mode)</text>
+<text x="440" y="214" font-size="11.5" fill="#374151">+ addCase(case)</text>
+<rect x="430" y="238" width="300" height="116" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="580" y="251" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="580" y="266" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">TestReport</text>
+<line x1="430" y1="270" x2="730" y2="270" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="283" font-size="11.5" fill="#374151">- passRate: float</text>
+<text x="440" y="296" font-size="11.5" fill="#374151">- failures[]</text>
+<text x="440" y="309" font-size="11.5" fill="#374151">- snapshots{}</text>
+<line x1="430" y1="313" x2="730" y2="313" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="326" font-size="11.5" fill="#374151">+ summarize(results)</text>
+<text x="440" y="339" font-size="11.5" fill="#374151">+ getSummary()</text>
+<text x="440" y="352" font-size="11.5" fill="#374151">+ getFailureSnapshot(caseId)</text>
+<rect x="430" y="376" width="300" height="77" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="580" y="389" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="580" y="404" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">DiffScope</text>
+<line x1="430" y1="408" x2="730" y2="408" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="421" font-size="11.5" fill="#374151">- fields[4]: bool</text>
+<line x1="430" y1="425" x2="730" y2="425" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="438" font-size="11.5" fill="#374151">+ configure(fields)</text>
+<text x="440" y="451" font-size="11.5" fill="#374151">+ includes(field)</text>
+<rect x="430" y="475" width="300" height="77" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="580" y="488" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="580" y="503" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">CompareEngine</text>
+<line x1="430" y1="507" x2="730" y2="507" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="520" font-size="11.5" fill="#374151">- scope: DiffScope</text>
+<line x1="430" y1="524" x2="730" y2="524" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="537" font-size="11.5" fill="#374151">+ compareSeq(a, b, scope)</text>
+<text x="440" y="550" font-size="11.5" fill="#374151">+ compareFinal(actual, exp)</text>
+<rect x="430" y="574" width="300" height="142" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="580" y="587" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="580" y="602" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">Divergence</text>
+<line x1="430" y1="606" x2="730" y2="606" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="619" font-size="11.5" fill="#374151">- divId: string</text>
+<text x="440" y="632" font-size="11.5" fill="#374151">- stepNo: int</text>
+<text x="440" y="645" font-size="11.5" fill="#374151">- stateA: ArchState</text>
+<text x="440" y="658" font-size="11.5" fill="#374151">- stateB: ArchState</text>
+<text x="440" y="671" font-size="11.5" fill="#374151">- attribution: enum</text>
+<line x1="430" y1="675" x2="730" y2="675" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="688" font-size="11.5" fill="#374151">+ create(point, a, b)</text>
+<text x="440" y="701" font-size="11.5" fill="#374151">+ getFields()</text>
+<text x="440" y="714" font-size="11.5" fill="#374151">+ updateAttribution(kind, note)</text>
+<rect x="430" y="738" width="300" height="155" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="580" y="751" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="580" y="766" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">User / Session / Workspace</text>
+<line x1="430" y1="770" x2="730" y2="770" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="783" font-size="11.5" fill="#374151">- uid: string</text>
+<text x="440" y="796" font-size="11.5" fill="#374151">- credential: hash</text>
+<text x="440" y="809" font-size="11.5" fill="#374151">- quota: int</text>
+<text x="440" y="822" font-size="11.5" fill="#374151">- token: string</text>
+<text x="440" y="835" font-size="11.5" fill="#374151">- files[]</text>
+<line x1="430" y1="839" x2="730" y2="839" stroke="#4b5563" stroke-width="1"/>
+<text x="440" y="852" font-size="11.5" fill="#374151">+ create(uid)</text>
+<text x="440" y="865" font-size="11.5" fill="#374151">+ verify(pwd)</text>
+<text x="440" y="878" font-size="11.5" fill="#374151">+ persist()</text>
+<text x="440" y="891" font-size="11.5" fill="#374151">+ queryUsage()</text>
+<line x1="580" y1="216" x2="580" y2="238" stroke="#6b7280" stroke-width="1.3" marker-end="url(#aro)"/>
+<line x1="580" y1="475" x2="580" y2="453" stroke="#6b7280" stroke-width="1.3" marker-end="url(#aro)"/>
+<line x1="580" y1="574" x2="580" y2="552" stroke="#6b7280" stroke-width="1.3" marker-end="url(#aro)"/>
+<path d="M 430 145 L 390 145 L 390 637 L 354 637" fill="none" stroke="#6b7280" stroke-width="1.3" marker-end="url(#aro)"/>
+<path d="M 350 775 L 390 775 L 390 645 L 426 645" fill="none" stroke="#6b7280" stroke-width="1.3" marker-end="url(#aro)"/>
+<line x1="50" y1="151" x2="24" y2="151" stroke="#6b7280" stroke-width="1.2"/>
+<line x1="24" y1="151" x2="24" y2="775" stroke="#6b7280" stroke-width="1.2"/>
+<line x1="24" y1="322" x2="46" y2="322" stroke="#6b7280" stroke-width="1.2" marker-start="url(#diam)"/>
+<line x1="24" y1="775" x2="46" y2="775" stroke="#6b7280" stroke-width="1.2" marker-start="url(#diam)"/>
+<line x1="50" y1="151" x2="24" y2="151" stroke="#6b7280" stroke-width="1.2"/>
+<line x1="24" y1="151" x2="24" y2="637" stroke="#6b7280" stroke-width="1.2"/>
+<line x1="24" y1="486" x2="46" y2="486" stroke="#6b7280" stroke-width="1.2"/>
+<line x1="24" y1="637" x2="46" y2="637" stroke="#6b7280" stroke-width="1.2"/>
+<rect x="30" y="968" width="700" height="24" rx="5" fill="#fafafa" stroke="#e5e7eb"/>
+<text x="42" y="984" font-size="11" fill="#6b7280">◆ = 组合（◆ 端为整体）；→ = 关联 / 有向依赖；类间不存在继承关系。</text>
+</g>
+</svg>

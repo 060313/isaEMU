@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>ISA 模拟系统 · 子系统/构件设计图件纵览</title>
+<style>
+  body{margin:0;padding:28px 32px;background:#f8fafc;font-family:"Microsoft YaHei","Segoe UI",sans-serif;color:#111827}
+  h1{font-size:22px;margin:0 0 6px}
+  .sub{color:#6b7280;font-size:13px;margin-bottom:22px}
+  h2{font-size:16px;margin:30px 0 12px;padding-left:10px;border-left:4px solid #c026d3}
+  .card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;margin-bottom:18px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .cap{font-size:13.5px;font-weight:700;margin-bottom:8px}
+  .note{font-size:12.5px;color:#6b7280;margin:0 0 10px;line-height:1.7}
+  img{width:100%;height:auto;display:block;border:1px solid #f1f5f9;border-radius:6px;background:#fff}
+  table{border-collapse:collapse;width:100%;font-size:13px;background:#fff}
+  th,td{border:1px solid #e5e7eb;padding:7px 10px;text-align:left;vertical-align:top}
+  th{background:#f3f4f6;font-weight:600}
+  code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:12.5px}
+  .kpi{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+  .kpi div{flex:1 1 150px;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px}
+  .kpi b{display:block;font-size:21px;color:#c026d3;line-height:1.25}
+  .kpi span{font-size:12px;color:#6b7280}
+</style>
+</head>
+<body>
+<h1>ISA 模拟系统 · 软件详细设计（阶段四：子系统/构件设计）图件纵览</h1>
+<div class="sub">2 张构件图 + 1 张构建产物图 + 1 张构件状态图 + 1 张构件活动图，共 5 张；配套《子系统构件设计说明.md》</div>
+
+<div class="kpi">
+  <div><b>7 / 35</b><span>子系统 / 构件（新增加组合根 <code>Bootstrapper</code>）</span></div>
+  <div><b>7 个</b><span>类级接口（新增 <code>IDecodeTable</code>）</span></div>
+  <div><b>4 条</b><span>构建断言，把分层规则变成编译期约束</span></div>
+  <div><b>4 处</b><span>架构层评审修正（DD-11 ~ DD-14）</span></div>
+</div>
+
+<h2>一、子系统与接口总览</h2>
+<div class="card">
+  <div class="cap">构件图-子系统接口总览.svg · 7 个子系统的职责与构件清单、提供/需求接口</div>
+  <p class="note">
+    框内上栏为职责、下栏为构件清单；连线标注为「使用者<b>需求接口</b> → 提供者<b>提供接口</b>」。<br>
+    <b>SS-1 与 SS-2 之间只有一条边</b>：<code>IDecodeTable</code> 由内核定义、由 SS-2 的 <code>DecodeTable</code> 实现（依赖倒置）。<br>
+    SS-3 与 SS-4 只被 SS-5 使用，彼此不互相依赖；二者都只依赖内核的公共头（<code>Snapshot</code> / <code>DiffField</code> / <code>StateRecord</code>）。<br>
+    SS-7 只经 HTTP / WebSocket 访问 SS-6，前端与内核之间<b>不存在编译期依赖</b>。
+  </p>
+  <img src="构件图-子系统接口总览.svg" alt="子系统与构件接口总览">
+</div>
+
+<h2>二、译码边界（DD-11）</h2>
+<div class="card">
+  <div class="cap">构件图-内核与ISA译码边界.svg · SS-1 与 SS-2 之间的唯一接口</div>
+  <p class="note">
+    描述层（<code>InsnDef</code>：位域 + 语义字符串）在 <code>DecodeTable::build()</code> 中被一次性<b>编译</b>为执行层语义 <code>InsnSemantic</code>（<code>OpClass</code> + 字段位置 + 辅助选择子）。<br>
+    <code>IDecodeTable</code> 与 <code>InsnSemantic</code> 定义在 <code>libisa_core</code> 的公共头（SS-1），<code>DecodeTable</code> 在 <code>libisa_isa</code> 中实现（SS-2）——因此链接方向是 <code>isa → core</code>，<b>单向无环</b>。<br>
+    结果：内核链接依赖归零，且不再认识 <code>funct7</code> / 掩码 / JSON。<br>
+    <b>现实限制 L5</b>：新增指令若落在既有 10 类 <code>OpClass</code> 之内是纯数据工作；需要新语义类别时须扩展内核模板表——这是 NFR-I1 的边界，不是无边界。
+  </p>
+  <img src="构件图-内核与ISA译码边界.svg" alt="内核与 ISA 抽象的译码边界">
+</div>
+
+<h2>三、构建产物与链接方向</h2>
+<div class="card">
+  <div class="cap">构件图-构建产物与链接方向.svg · 四条断言的落点</div>
+  <p class="note">
+    断言 A（NFR-I2）：<code>libisa_core</code> 的链接行只允许 C++ 标准库 · 断言 B（分层单向）：禁止 <code>libisa_core → 任何库</code> 的链接边 · 断言 C：<code>web/dist</code> 下不得出现 C++ 目标 · 断言 D：<code>core_only</code> 目标在无网络、无数据库环境下必须跑通 doctest。<br>
+    <code>libisa_svc</code> 对 <code>libisa_core</code> 的直接依赖由 CMake 的 <code>PUBLIC</code> 传递闭包解析，构建文件中不重复声明。
+  </p>
+  <img src="构件图-构建产物与链接方向.svg" alt="构建产物与链接方向">
+</div>
+
+<h2>四、有状态构件与装配过程</h2>
+<div class="card">
+  <div class="cap">状态图-DebugService构件.svg · 调试会话级状态机</div>
+  <p class="note">
+    与阶段二的 <code>状态图-EmulatorCore.svg</code> 是<b>叠加</b>关系：本图描述「调试会话」对外可见处于什么阶段（决定哪些请求合法），内核状态机描述「执行体」内部处于什么阶段（决定 <code>step()</code> 的前置条件）。<br>
+    终止态可经 <code>reset()</code> 回到 Idle；<code>loadProgram()</code> 把构件直接带回 Loaded，同一调试会话可反复使用。<br>
+    跨请求存活的数据只有 <code>BreakpointTable</code>（会话级）。
+  </p>
+  <img src="状态图-DebugService构件.svg" alt="DebugService 构件状态图">
+</div>
+<div class="card">
+  <div class="cap">活动图-服务端构件装配与启动.svg · Bootstrapper 的装配次序（DD-14）</div>
+  <p class="note">
+    装配顺序即依赖顺序：驱动 → 模式迁移 → ISA 注册表 → 内核工厂与限额 → 服务 → 网关 → 监听并自检。<br>
+    任一环节失败以<b>分段退出码</b>结束进程，不进入半可用状态；<code>QuotaGuard.enable()</code> 在本地形态直接关闭，两形态差异收敛为这一个开关。<br>
+    新增组合根构件 <code>Bootstrapper</code>（SS-6）：所有单例构件在此装配，业务代码中不允许出现单例的 <code>new</code>。
+  </p>
+  <img src="活动图-服务端构件装配与启动.svg" alt="服务端构件装配与启动">
+</div>
+
+<h2>五、图件清单</h2>
+<table>
+  <tr><th>文件</th><th>内容</th><th>《子系统构件设计说明.md》对应章节</th></tr>
+  <tr><td><code>构件图-子系统接口总览.svg</code></td><td>7 个子系统的职责、构件清单、提供/需求接口与依赖方向</td><td>三 ~ 九章</td></tr>
+  <tr><td><code>构件图-内核与ISA译码边界.svg</code></td><td><code>IsaSpec</code>/<code>InsnDef</code> → <code>DecodeTable</code> → <code>IDecodeTable</code>/<code>InsnSemantic</code> → <code>EmulatorCore</code></td><td>三、四章；第十二章 DD-11</td></tr>
+  <tr><td><code>构件图-构建产物与链接方向.svg</code></td><td>5 个静态库 + 可执行 + 前端产物；四条构建断言</td><td>三、九、十二章</td></tr>
+  <tr><td><code>状态图-DebugService构件.svg</code></td><td>调试会话级状态机与迁移事件</td><td>11.1</td></tr>
+  <tr><td><code>活动图-服务端构件装配与启动.svg</code></td><td>组合根装配次序、三个拒绝启动出口</td><td>八章；第十二章 DD-14</td></tr>
+</table>
+
+<h2>六、本阶段评审修正（4 处，DD-11 ~ DD-14）</h2>
+<table>
+  <tr><th>#</th><th>发现的问题</th><th>处置</th></tr>
+  <tr><td>DD-11</td><td>内核与 ISA 抽象之间<b>双向依赖</b>；若内核链接 SS-2 就会间接引入 JSON 库，与 DD-7 / NFR-I2 冲突</td><td>引入 <code>IDecodeTable</code> + <code>InsnSemantic</code> 反转依赖，链接方向 <code>isa → core</code></td></tr>
+  <tr><td>DD-12</td><td><code>ICoreService</code> 粒度太粗（执行 / 状态 / 创建 / 装载 / 断点注入混在一起）；<code>loadImage()</code> 与阶段二的 <code>init()</code> 重复</td><td>拆为 <code>ICoreService</code> / <code>ICoreFactory</code> / <code>IBreakpointSink</code>，删去 <code>loadImage()</code></td></tr>
+  <tr><td>DD-13</td><td>SAD 让「内核调用点」也调用 <code>QuotaGuard</code>，等于让内核反向依赖 SS-6</td><td>限额只在 <code>HttpGateway</code> 前置检查；上限改为 <code>RunSpec.maxSteps</code> 参数</td></tr>
+  <tr><td>DD-14</td><td>双形态差异散落在各服务构造函数里，没有唯一装配点</td><td>新增组合根构件 <code>Bootstrapper</code></td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 676" width="1260" height="676" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif">
+<defs><marker id="arr" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="8.6" markerHeight="8.6" orient="auto"><path d="M1 1 L11 6 L1 11 z" fill="#4b5563"/></marker></defs>
+<rect x="0.5" y="0.5" width="1259.0" height="675.0" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="630.0" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">DebugService 构件状态图（调试会话）</text>
+<text x="630.0" y="61" text-anchor="middle" font-size="11.5" fill="#6b7280">与内核的类对象状态机叠加使用：本图描述「调试会话」的外部可见状态，内核状态机描述「执行体」的内部状态</text>
+<line x1="44" y1="78" x2="1216.0" y2="78" stroke="#e5e7eb"/>
+<circle cx="120" cy="150" r="10" fill="#111827"/>
+<rect x="80.0" y="170.0" width="200.0" height="52.0" rx="10" fill="#ffffff" stroke="#6b7280" stroke-width="1.6"/>
+<text x="180.0" y="200.5" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Idle 无程序</text>
+<rect x="80.0" y="268.0" width="200.0" height="52.0" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="180.0" y="298.5" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Loaded 已装载</text>
+<rect x="80.0" y="366.0" width="200.0" height="52.0" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.6"/>
+<text x="180.0" y="396.5" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Ready 可执行</text>
+<rect x="400.0" y="366.0" width="200.0" height="52.0" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.6"/>
+<text x="500.0" y="396.5" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Running 执行中</text>
+<rect x="400.0" y="240.0" width="200.0" height="52.0" rx="10" fill="#ffffff" stroke="#b45309" stroke-width="1.6"/>
+<text x="500.0" y="270.5" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Paused 已暂停</text>
+<rect x="820.0" y="150.0" width="200.0" height="52.0" rx="10" fill="#ffffff" stroke="#374151" stroke-width="1.6"/>
+<text x="920.0" y="180.5" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Finished 正常终止</text>
+<rect x="820.0" y="430.0" width="200.0" height="52.0" rx="10" fill="#ffffff" stroke="#be123c" stroke-width="1.6"/>
+<text x="920.0" y="460.5" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Faulted 异常终止</text>
+<path d="M120.0 160.0 L120.0 170.0" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<path d="M180.0 222.0 L180.0 268.0" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<path d="M180.0 320.0 L180.0 366.0" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<path d="M280.0 392.0 L400.0 392.0" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<path d="M500.0 366.0 L500.0 292.0" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<path d="M560.0 292.0 L560.0 366.0" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<path d="M450.0 240.0 L450.0 212.0 L550.0 212.0 L550.0 240.0" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<path d="M600.0 404.0 L1180.0 404.0 L1180.0 176.0 L1020.0 176.0" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<path d="M470.0 418.0 L470.0 456.0 L820.0 456.0" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<path d="M920.0 150.0 L920.0 112.0 L196.0 112.0 L196.0 170.0" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<path d="M920.0 482.0 L920.0 540.0 L60.0 540.0 L60.0 196.0 L80.0 196.0" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<rect x="296.0" y="237.0" width="91.4" height="16" rx="3" fill="#ffffff"/>
+<text x="300.0" y="249.0" text-anchor="start" font-size="10" fill="#b45309">loadProgram(ok)</text>
+<rect x="296.0" y="335.0" width="124.8" height="16" rx="3" fill="#ffffff"/>
+<text x="300.0" y="347.0" text-anchor="start" font-size="10" fill="#b45309">initCore(entryPC, sp)</text>
+<rect x="294.3" y="370.0" width="91.4" height="16" rx="3" fill="#ffffff"/>
+<text x="340.0" y="382.0" text-anchor="middle" font-size="10" fill="#b45309">run(n) / step()</text>
+<rect x="331.1" y="320.0" width="160.9" height="16" rx="3" fill="#ffffff"/>
+<text x="488.0" y="332.0" text-anchor="end" font-size="10" fill="#b45309">pause() 或 checkHit(pc) 命中</text>
+<rect x="434.6" y="344.0" width="117.4" height="16" rx="3" fill="#ffffff"/>
+<text x="548.0" y="356.0" text-anchor="end" font-size="10" fill="#b45309">step() / run(n) 恢复</text>
+<rect x="395.9" y="192.0" width="208.2" height="16" rx="3" fill="#ffffff"/>
+<text x="500.0" y="204.0" text-anchor="middle" font-size="10" fill="#b45309">registerBreakpoint(bp) / readState()</text>
+<rect x="762.9" y="384.0" width="234.2" height="16" rx="3" fill="#ffffff"/>
+<text x="880.0" y="396.0" text-anchor="middle" font-size="10" fill="#b45309">终止序列命中（TrapUnit::checkTermination）</text>
+<rect x="553.6" y="436.0" width="212.8" height="16" rx="3" fill="#ffffff"/>
+<text x="660.0" y="448.0" text-anchor="middle" font-size="10" fill="#b45309">运行期异常（TrapUnit::checkException）</text>
+<rect x="536.5" y="92.0" width="46.9" height="16" rx="3" fill="#ffffff"/>
+<text x="560.0" y="104.0" text-anchor="middle" font-size="10" fill="#b45309">reset()</text>
+<rect x="262.1" y="520.0" width="135.9" height="16" rx="3" fill="#ffffff"/>
+<text x="330.0" y="532.0" text-anchor="middle" font-size="10" fill="#b45309">reset() / loadProgram()</text>
+<text x="44" y="596.0" font-size="10.5" fill="#6b7280">Running → Paused 有两个触发源：用户 pause()，以及执行前 checkHit(pc) 命中启用断点；Paused 是唯一允许登记 / 删除断点的状态</text>
+<text x="44" y="612.0" font-size="10.5" fill="#6b7280">Finished 命中终止序列（TrapUnit::checkTermination），Faulted 命中运行期异常（TrapUnit::checkException）——两者都是终态</text>
+<text x="44" y="628.0" font-size="10.5" fill="#6b7280">任何终止态经 reset() 回到 Idle；loadProgram() 把构件直接带回 Loaded，因此同一调试会话可反复使用（UC-03 重新装载）</text>
+<text x="44" y="644.0" font-size="10.5" fill="#6b7280">装载失败时不迁移状态：构件停在 Idle 并返回问题清单，不进入半可用状态</text>
+<text x="44" y="660.0" font-size="10.5" fill="#6b7280">跨请求存活的数据只有 BreakpointTable（会话级）；ArchState / Trace / RunContext / StepResult 都随 RunContext 一起销毁</text>
+</svg>

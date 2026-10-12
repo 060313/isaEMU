@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>ISA 模拟系统 · 软件需求图件全集</title>
+<style>
+  :root { --line:#e5e7eb; --text:#111827; --sub:#6b7280; --card:#ffffff; --bg:#f6f7f9; --accent:#185FA5; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:32px 40px 72px; background:var(--bg); color:var(--text);
+         font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  .lead { color:var(--sub); font-size:13px; line-height:1.9; margin:0 0 24px; }
+  h2 { font-size:16px; margin:38px 0 4px; padding-bottom:8px; border-bottom:2px solid var(--accent); }
+  .note { color:var(--sub); font-size:12.5px; line-height:1.8; margin:8px 0 16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px;
+          padding:14px 16px; margin:0 0 18px; }
+  .cap { font-size:13px; font-weight:600; margin:0 0 10px; color:#374151; }
+  .cap span { font-weight:400; color:var(--sub); }
+  .card img { max-width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:6px; }
+  table { border-collapse:collapse; font-size:12.5px; margin:6px 0 0; }
+  th,td { border:1px solid var(--line); padding:5px 10px; text-align:left; }
+  th { background:#f3f4f6; font-weight:600; }
+</style>
+</head>
+<body>
+<h1>ISA 模拟系统 · 软件需求图件全集</h1>
+<p class="lead">
+  共 17 张图：UML 用例图 1 张、用例交互模型（顺序图）14 张、分析类图 2 张。<br>
+  图为矢量 SVG，白底，可直接拖入 Word / WPS 或经 markdown-pdf 扩展导出 PDF。
+</p>
+
+<h2>一、UML 用例图</h2>
+<p class="note">含 14 个用例、5 组执行者关联，以及 4 条用例间关系（2 条 «include»、2 条 «extend»）。
+UC-03 与外部汇编工具链之间的联系按执行者关联绘制，对应需求文档 4.4 节第 5 条关系。</p>
+<div class="card">
+  <p class="cap">用例图 <span>· 图例、泛化说明见图内</span></p>
+  <img src="../用例图.svg" alt="用例图">
+</div>
+
+<h2>二、用例交互模型（UML 顺序图）</h2>
+<p class="note">图例：灰色 = 执行者，蓝色 = 边界类，琥珀色 = 控制类，灰白 = 实体类；实线三角箭头 = 调用，虚线开放箭头 = 返回，折线 = 自调用。</p>
+<div class="card"><p class="cap">UC-01 注册与登录</p><img src="UC-01.svg" alt="UC-01"></div>
+<div class="card"><p class="cap">UC-02 装载与管理 ISA 指令集</p><img src="UC-02.svg" alt="UC-02"></div>
+<div class="card"><p class="cap">UC-03 装载并配置待模拟程序 <span>· 含外部工具链分支</span></p><img src="UC-03.svg" alt="UC-03"></div>
+<div class="card"><p class="cap">UC-04 单步与连续执行 <span>· 内循环，被 UC-08 / UC-10 / UC-13 复用</span></p><img src="UC-04.svg" alt="UC-04"></div>
+<div class="card"><p class="cap">UC-05 设置与管理断点</p><img src="UC-05.svg" alt="UC-05"></div>
+<div class="card"><p class="cap">UC-06 查看架构状态与执行轨迹</p><img src="UC-06.svg" alt="UC-06"></div>
+<div class="card"><p class="cap">UC-07 回退执行历史</p><img src="UC-07.svg" alt="UC-07"></div>
+<div class="card"><p class="cap">UC-08 管理并批量执行测试用例 <span>· 最长链路，执行者直连集成 API 接口</span></p><img src="UC-08.svg" alt="UC-08"></div>
+<div class="card"><p class="cap">UC-09 查看测试报告</p><img src="UC-09.svg" alt="UC-09"></div>
+<div class="card"><p class="cap">UC-10 发起 ISA 一致性对拍 <span>· 唯一跨外部系统（参考模拟器适配器）</span></p><img src="UC-10.svg" alt="UC-10"></div>
+<div class="card"><p class="cap">UC-11 分析与标注分歧归因</p><img src="UC-11.svg" alt="UC-11"></div>
+<div class="card"><p class="cap">UC-12 保存与加载工作区 <span>· 保存与加载两段合成一张图</span></p><img src="UC-12.svg" alt="UC-12"></div>
+<div class="card"><p class="cap">UC-13 通过集成 API 驱动模拟</p><img src="UC-13.svg" alt="UC-13"></div>
+<div class="card"><p class="cap">UC-14 管理用户与资源配额</p><img src="UC-14.svg" alt="UC-14"></div>
+
+<h2>三、软件需求的分析类模型</h2>
+<p class="note">共 30 个分析类：边界类 10、控制类 8、实体类 12。分析类层面不存在继承关系。</p>
+<div class="card">
+  <p class="cap">分析类图（全貌） <span>· 实体类跨两列，栏头居中于两列之间</span></p>
+  <img src="分析类图.svg" alt="分析类图">
+</div>
+<div class="card">
+  <p class="cap">分析类图 · 实体类详图 <span>· 12 个实体类，含关键属性与主要职责</span></p>
+  <img src="分析类图-实体类.svg" alt="分析类图-实体类">
+</div>
+
+<h2>附：图件清单</h2>
+<table>
+  <tr><th>文件</th><th>内容</th><th>被引用位置</th></tr>
+  <tr><td>../用例图.svg</td><td>UML 用例图</td><td>说明书 3.3.1</td></tr>
+  <tr><td>UC-01.svg ~ UC-14.svg</td><td>14 张用例顺序图</td><td>说明书 3.3.2</td></tr>
+  <tr><td>分析类图.svg</td><td>分析类图全貌</td><td>说明书 3.3.3</td></tr>
+  <tr><td>分析类图-实体类.svg</td><td>实体类详图</td><td>说明书 3.3.3</td></tr>
+  <tr><td>交互模型说明.md</td><td>各用例参与对象表与消息序列表</td><td>说明书 3.3.2 素材</td></tr>
+  <tr><td>分析类模型说明.md</td><td>30 个分析类职责 / 属性 / 关系</td><td>说明书 3.3.3 素材</td></tr>
+</table>
+</body>
+</html>

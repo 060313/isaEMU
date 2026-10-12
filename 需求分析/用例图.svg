@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 856" width="960" height="856" font-family="Microsoft YaHei,PingFang SC,Segoe UI,sans-serif">
+<defs>
+<marker id="odot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#6b7280" stroke-width="1.6"/></marker>
+</defs>
+<rect x="0" y="0" width="960" height="856" fill="#ffffff"/>
+<rect x="230" y="26" width="530" height="700" rx="14" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.8"/>
+<text x="495" y="50" text-anchor="middle" font-size="13.5" font-weight="600" fill="#444441">ISA 模拟系统</text>
+<ellipse cx="430" cy="92" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="92" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-01</tspan><tspan dx="4">注册与登录</tspan></text>
+<ellipse cx="430" cy="138" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="138" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-02</tspan><tspan dx="4">装载与管理 ISA 指令集</tspan></text>
+<ellipse cx="430" cy="184" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="184" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-03</tspan><tspan dx="4">装载并配置待模拟程序</tspan></text>
+<ellipse cx="430" cy="230" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="230" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-04</tspan><tspan dx="4">单步与连续执行</tspan></text>
+<ellipse cx="430" cy="276" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="276" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-05</tspan><tspan dx="4">设置与管理断点</tspan></text>
+<ellipse cx="430" cy="322" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="322" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-06</tspan><tspan dx="4">查看架构状态与执行轨迹</tspan></text>
+<ellipse cx="430" cy="368" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="368" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-07</tspan><tspan dx="4">回退执行历史</tspan></text>
+<ellipse cx="430" cy="414" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="414" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-08</tspan><tspan dx="4">管理并批量执行测试用例</tspan></text>
+<ellipse cx="430" cy="460" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="460" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-09</tspan><tspan dx="4">查看测试报告</tspan></text>
+<ellipse cx="430" cy="506" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="506" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-10</tspan><tspan dx="4">发起 ISA 一致性对拍</tspan></text>
+<ellipse cx="430" cy="552" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="552" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-11</tspan><tspan dx="4">分析与标注分歧归因</tspan></text>
+<ellipse cx="430" cy="598" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="598" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-12</tspan><tspan dx="4">保存与加载工作区</tspan></text>
+<ellipse cx="430" cy="644" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="644" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-13</tspan><tspan dx="4">通过集成 API 驱动模拟</tspan></text>
+<ellipse cx="430" cy="690" rx="110" ry="17" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+<text x="430" y="690" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0C447C"><tspan fill="#8FA3B8" font-size="9.5">UC-14</tspan><tspan dx="4">管理用户与资源配额</tspan></text>
+<g stroke="#888780" stroke-width="0.9" fill="none">
+<path d="M178 92 V644"/>
+<path d="M178 92 H320"/>
+<path d="M178 184 H320"/>
+<path d="M178 230 H320"/>
+<path d="M178 276 H320"/>
+<path d="M178 322 H320"/>
+<path d="M178 368 H320"/>
+<path d="M178 414 H320"/>
+<path d="M178 460 H320"/>
+<path d="M178 506 H320"/>
+<path d="M178 552 H320"/>
+<path d="M178 598 H320"/>
+<path d="M178 644 H320"/>
+<path d="M108 322 H178"/>
+<path d="M108 690 H320"/>
+</g>
+<g stroke="#888780" stroke-width="0.9" fill="none">
+<path d="M872 184 H540"/>
+<path d="M872 506 H540"/>
+<path d="M872 644 H540"/>
+</g>
+<path d="M527.1 406.0 H565 V224.0 H532.9" fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="6 4" marker-end="url(#odot)"/>
+<text x="558" y="315.0" text-anchor="middle" font-size="8.5" fill="#4b5563" transform="rotate(-90 558 315.0)">«include»</text>
+<path d="M523.3 497.0 H610 V218.0 H507.9" fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="6 4" marker-end="url(#odot)"/>
+<text x="620" y="357.5" text-anchor="middle" font-size="8.5" fill="#4b5563" transform="rotate(-90 620 357.5)">«include»</text>
+<path d="M519.0 470.0 H595 V422.0 H527.1" fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="6 4" marker-end="url(#odot)"/>
+<text x="588" y="446.0" text-anchor="middle" font-size="8.5" fill="#4b5563" transform="rotate(-90 588 446.0)">«extend»</text>
+<path d="M519.0 562.0 H640 V518.0 H507.9" fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="6 4" marker-end="url(#odot)"/>
+<text x="650" y="540.0" text-anchor="middle" font-size="8.5" fill="#4b5563" transform="rotate(-90 650 540.0)">«extend»</text>
+<g stroke="#444441" stroke-width="1" fill="none">
+<circle cx="100" cy="322" r="6"/>
+<path d="M100 328 V342"/>
+<path d="M92 333 H108"/>
+<path d="M100 342 L93 354"/>
+<path d="M100 342 L107 354"/>
+</g>
+<g stroke="#444441" stroke-width="1" fill="none">
+<circle cx="100" cy="690" r="6"/>
+<path d="M100 696 V710"/>
+<path d="M92 701 H108"/>
+<path d="M100 710 L93 722"/>
+<path d="M100 710 L107 722"/>
+</g>
+<g stroke="#444441" stroke-width="1" fill="none">
+<circle cx="880" cy="184" r="6"/>
+<path d="M880 190 V204"/>
+<path d="M872 195 H888"/>
+<path d="M880 204 L873 216"/>
+<path d="M880 204 L887 216"/>
+</g>
+<g stroke="#444441" stroke-width="1" fill="none">
+<circle cx="880" cy="506" r="6"/>
+<path d="M880 512 V526"/>
+<path d="M872 517 H888"/>
+<path d="M880 526 L873 538"/>
+<path d="M880 526 L887 538"/>
+</g>
+<g stroke="#444441" stroke-width="1" fill="none">
+<circle cx="880" cy="644" r="6"/>
+<path d="M880 650 V664"/>
+<path d="M872 655 H888"/>
+<path d="M880 664 L873 676"/>
+<path d="M880 664 L887 676"/>
+</g>
+<g text-anchor="middle" font-size="12" fill="#2C2C2A">
+<text x="100" y="368">注册用户</text>
+<text x="100" y="736">平台管理员</text>
+<text x="880" y="230">外部汇编工具链</text>
+<text x="880" y="552">外部参考模拟器</text>
+<text x="880" y="690">集成 API 客户端</text>
+</g>
+<rect x="120" y="744" width="800" height="94" rx="8" fill="#fafafa" stroke="#e5e7eb"/>
+<text x="136" y="768" font-size="11.5" font-weight="600" fill="#374151">图例</text>
+<path d="M136 788 H186" stroke="#888780" stroke-width="0.9" fill="none"/>
+<text x="196" y="792" font-size="11" fill="#6b7280">执行者关联</text>
+<path d="M310 788 H360" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="6 4" fill="none" marker-end="url(#odot)"/>
+<text x="370" y="792" font-size="11" fill="#6b7280">«include» / «extend» 关系（虚线开放箭头，由扩展或包含方指向被依赖用例）</text>
+<text x="136" y="812" font-size="10.5" fill="#6b7280">「注册用户」泛化出 ISA 学习者、工业芯片工程师、ISA 工程师、机器语言程序员四类子执行者，本图将其合并表示为抽象执行者。</text>
+<text x="136" y="828" font-size="10.5" fill="#6b7280">UC-03 与外部汇编工具链之间的联系按执行者关联绘制，对应需求文档 4.4 节第 5 条关系。</text>
+</svg>

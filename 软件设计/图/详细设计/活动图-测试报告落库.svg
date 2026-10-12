@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 1340" width="1300" height="1340" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif">
+<defs><marker id="arr" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="8.6" markerHeight="8.6" orient="auto"><path d="M1 1 L11 6 L1 11 z" fill="#4b5563"/></marker></defs>
+<rect x="0.5" y="0.5" width="1299.0" height="1339.0" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="650.0" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">UC-08 执行用例集 —— 数据操作活动图</text>
+<text x="650.0" y="61" text-anchor="middle" font-size="11.5" fill="#6b7280">读取侧只有三条 SELECT，写入侧集中在一个事务内完成；循环体为每个用例独占一个 RunContext</text>
+<line x1="44" y1="78" x2="1256.0" y2="78" stroke="#e5e7eb"/>
+<circle cx="300.0" cy="108.0" r="10" fill="#111827"/>
+<path d="M300.0 118.0 L300.0 142.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="140.0" y="142.0" width="320.0" height="40.0" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="145.0" y="149.0" width="3.5" height="26.0" rx="1.8" fill="#2563eb" opacity="0.75"/>
+<text x="300.0" y="166.0" text-anchor="middle" font-size="10.5" fill="#1f2937">接收执行请求 (suiteId, judgeMode)</text>
+<path d="M300.0 182.0 L300.0 210.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="140.0" y="210.0" width="320.0" height="54.0" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="145.0" y="217.0" width="3.5" height="40.0" rx="1.8" fill="#2563eb" opacity="0.75"/>
+<text x="300.0" y="232.5" text-anchor="middle" font-size="10.5" fill="#1f2937">① SELECT 用例集与默认 ISA</text>
+<text x="300.0" y="249.5" text-anchor="middle" font-size="10.5" fill="#1f2937">loadSuite(id) → suite_isa.is_default</text>
+<path d="M300.0 264.0 L300.0 290.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<polygon points="300.0,290.0 425.0,328.0 300.0,366.0 175.0,328.0" fill="#fffbeb" stroke="#b45309" stroke-width="1.5"/>
+<text x="300.0" y="332.0" text-anchor="middle" font-size="10.5" fill="#1f2937">用例集为空或不存在？</text>
+<path d="M300.0 366.0 L300.0 392.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="320.9" y="374.0" width="18.2" height="17" rx="3" fill="#ffffff"/>
+<text x="330.0" y="386.0" text-anchor="start" font-size="10" fill="#b45309">否</text>
+<rect x="140.0" y="392.0" width="320.0" height="54.0" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<rect x="145.0" y="399.0" width="3.5" height="40.0" rx="1.8" fill="#7c3aed" opacity="0.75"/>
+<text x="300.0" y="414.5" text-anchor="middle" font-size="10.5" fill="#1f2937">② 每用例 CoreFactory::create()</text>
+<text x="300.0" y="431.5" text-anchor="middle" font-size="10.5" fill="#1f2937">独占内核与轨迹（NFR-Q2）</text>
+<path d="M300.0 446.0 L300.0 472.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="140.0" y="472.0" width="320.0" height="54.0" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="145.0" y="479.0" width="3.5" height="40.0" rx="1.8" fill="#2563eb" opacity="0.75"/>
+<text x="300.0" y="494.5" text-anchor="middle" font-size="10.5" fill="#1f2937">③ 执行并判定</text>
+<text x="300.0" y="511.5" text-anchor="middle" font-size="10.5" fill="#1f2937">CompareEngine::compare(exp, act, scope)</text>
+<path d="M300.0 526.0 L300.0 552.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="140.0" y="552.0" width="320.0" height="54.0" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="145.0" y="559.0" width="3.5" height="40.0" rx="1.8" fill="#2563eb" opacity="0.75"/>
+<text x="300.0" y="574.5" text-anchor="middle" font-size="10.5" fill="#1f2937">④ 收集 CaseResult</text>
+<text x="300.0" y="591.5" text-anchor="middle" font-size="10.5" fill="#1f2937">通过计数、失败留存现场</text>
+<path d="M300.0 606.0 L300.0 632.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<polygon points="300.0,632.0 418.0,670.0 300.0,708.0 182.0,670.0" fill="#fffbeb" stroke="#b45309" stroke-width="1.5"/>
+<text x="300.0" y="674.0" text-anchor="middle" font-size="10.5" fill="#1f2937">还有下一个用例？</text>
+<path d="M300.0 708.0 L300.0 734.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="320.9" y="716.0" width="18.2" height="17" rx="3" fill="#ffffff"/>
+<text x="330.0" y="728.0" text-anchor="start" font-size="10" fill="#b45309">否</text>
+<path d="M182.0 670.0 L92.0 670.0 L92.0 419.0 L140.0 419.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="136.9" y="648.0" width="18.2" height="17" rx="3" fill="#ffffff"/>
+<text x="146.0" y="660.0" text-anchor="start" font-size="10" fill="#b45309">是</text>
+<rect x="140.0" y="734.0" width="320.0" height="54.0" rx="9" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<rect x="145.0" y="741.0" width="3.5" height="40.0" rx="1.8" fill="#059669" opacity="0.75"/>
+<text x="300.0" y="756.5" text-anchor="middle" font-size="10.5" fill="#1f2937">⑤ TestReport::summarize()</text>
+<text x="300.0" y="773.5" text-anchor="middle" font-size="10.5" fill="#1f2937">求 total / passed / failures</text>
+<path d="M300.0 788.0 L300.0 814.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="140.0" y="814.0" width="320.0" height="40.0" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<rect x="145.0" y="821.0" width="3.5" height="26.0" rx="1.8" fill="#7c3aed" opacity="0.75"/>
+<text x="300.0" y="838.0" text-anchor="middle" font-size="10.5" fill="#1f2937">⑥ BEGIN 事务</text>
+<path d="M300.0 854.0 L300.0 880.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="140.0" y="880.0" width="320.0" height="54.0" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="145.0" y="887.0" width="3.5" height="40.0" rx="1.8" fill="#2563eb" opacity="0.75"/>
+<text x="300.0" y="902.5" text-anchor="middle" font-size="10.5" fill="#1f2937">⑦ INSERT test_report</text>
+<text x="300.0" y="919.5" text-anchor="middle" font-size="10.5" fill="#1f2937">(suite_id, judge_mode, total, passed)</text>
+<path d="M300.0 934.0 L300.0 960.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="140.0" y="960.0" width="320.0" height="54.0" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="145.0" y="967.0" width="3.5" height="40.0" rx="1.8" fill="#2563eb" opacity="0.75"/>
+<text x="300.0" y="982.5" text-anchor="middle" font-size="10.5" fill="#1f2937">⑧ 批量 INSERT case_result</text>
+<text x="300.0" y="999.5" text-anchor="middle" font-size="10.5" fill="#1f2937">仅失败用例；snap 以 JSON 文本落库</text>
+<path d="M300.0 1014.0 L300.0 1040.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="140.0" y="1040.0" width="320.0" height="40.0" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<rect x="145.0" y="1047.0" width="3.5" height="26.0" rx="1.8" fill="#7c3aed" opacity="0.75"/>
+<text x="300.0" y="1064.0" text-anchor="middle" font-size="10.5" fill="#1f2937">⑨ COMMIT</text>
+<path d="M300.0 1080.0 L300.0 1106.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="140.0" y="1106.0" width="320.0" height="40.0" rx="9" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<rect x="145.0" y="1113.0" width="3.5" height="26.0" rx="1.8" fill="#059669" opacity="0.75"/>
+<text x="300.0" y="1130.0" text-anchor="middle" font-size="10.5" fill="#1f2937">⑩ 返回 report_id 与通过率</text>
+<path d="M300.0 1146.0 L300.0 1170.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="300.0" cy="1183.0" r="13" fill="none" stroke="#111827" stroke-width="1.6"/>
+<circle cx="300.0" cy="1183.0" r="6.5" fill="#111827"/>
+<rect x="620.0" y="301.0" width="300.0" height="54.0" rx="9" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<rect x="625.0" y="308.0" width="3.5" height="40.0" rx="1.8" fill="#be123c" opacity="0.75"/>
+<text x="770.0" y="323.5" text-anchor="middle" font-size="10.5" fill="#1f2937">返回错误：用例集不存在</text>
+<text x="770.0" y="340.5" text-anchor="middle" font-size="10.5" fill="#1f2937">不产生任何落库副作用</text>
+<path d="M425.0 328.0 L620.0 328.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="513.4" y="306.0" width="18.2" height="17" rx="3" fill="#ffffff"/>
+<text x="522.5" y="318.0" text-anchor="middle" font-size="10" fill="#b45309">是</text>
+<rect x="960.0" y="960.0" width="300.0" height="54.0" rx="9" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<rect x="965.0" y="967.0" width="3.5" height="40.0" rx="1.8" fill="#be123c" opacity="0.75"/>
+<text x="1110.0" y="982.5" text-anchor="middle" font-size="10.5" fill="#1f2937">ROLLBACK 回滚事务</text>
+<text x="1110.0" y="999.5" text-anchor="middle" font-size="10.5" fill="#1f2937">返回 500 错误码</text>
+<path d="M460.0 987.0 L960.0 987.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<rect x="667.3" y="965.0" width="65.5" height="17" rx="3" fill="#ffffff"/>
+<text x="700.0" y="977.0" text-anchor="middle" font-size="10" fill="#b45309">⑦⑧ 写入失败</text>
+<path d="M770.0 355.0 L770.0 1215.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1110.0 1014.0 L1110.0 1215.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="720.0" y1="1215.0" x2="1150.0" y2="1215.0" stroke="#374151" stroke-width="4"/>
+<path d="M935.0 1215.0 L935.0 1221.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="935.0" cy="1235.0" r="13" fill="none" stroke="#111827" stroke-width="1.6"/>
+<circle cx="935.0" cy="1235.0" r="6.5" fill="#111827"/>
+<text x="44" y="1276.0" font-size="10.5" fill="#6b7280">读取：loadSuite 连带读 suite_isa 取默认 ISA，再逐用例读 program 映像；写入：test_report 一行 + case_result 若干行</text>
+<text x="44" y="1292.0" font-size="10.5" fill="#6b7280">循环回边走的是一次执行内的内存迭代，不落库——只有最终报告与失败现场落库，避免 N 次事务开销（NFR-Q1）</text>
+<text x="44" y="1308.0" font-size="10.5" fill="#6b7280">case_result 只写失败用例（通过者仅由 test_report.passed 计数），与类设计「只存失败明细」一致</text>
+<text x="44" y="1324.0" font-size="10.5" fill="#6b7280">每个用例一个独立 RunContext（CoreFactory::create），单用例异常不回滚已通过用例的判定结果（NFR-Q2）</text>
+</svg>

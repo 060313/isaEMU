@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1330" width="1280" height="1330" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif">
+<defs><marker id="arr" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="8.6" markerHeight="8.6" orient="auto"><path d="M1 1 L11 6 L1 11 z" fill="#4b5563"/></marker></defs>
+<rect x="0.5" y="0.5" width="1279.0" height="1329.0" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="640.0" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">服务端构件装配与启动 —— 构件活动图</text>
+<text x="640.0" y="61" text-anchor="middle" font-size="11.5" fill="#6b7280">自上而下是 Bootstrapper 的装配顺序；右侧为三个拒绝启动出口，全部汇入进程退出</text>
+<line x1="44" y1="78" x2="1236.0" y2="78" stroke="#e5e7eb"/>
+<circle cx="340.0" cy="110.0" r="10" fill="#111827"/>
+<path d="M340.0 120.0 L340.0 146.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="190.0" y="146.0" width="300.0" height="37.0" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="195.0" y="153.0" width="3.5" height="23.0" rx="1.8" fill="#2563eb" opacity="0.75"/>
+<text x="340.0" y="168.5" text-anchor="middle" font-size="10.5" fill="#1f2937">① 读取配置：形态判定 cloud / local</text>
+<path d="M340.0 183.0 L340.0 213.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="190.0" y="213.0" width="300.0" height="54.0" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="195.0" y="220.0" width="3.5" height="40.0" rx="1.8" fill="#2563eb" opacity="0.75"/>
+<text x="340.0" y="235.5" text-anchor="middle" font-size="10.5" fill="#1f2937">② 构建 DbConfig → DbDriver</text>
+<text x="340.0" y="252.5" text-anchor="middle" font-size="10.5" fill="#1f2937">PgDriver（连接池）/ SqliteDriver（WAL）</text>
+<path d="M340.0 267.0 L340.0 297.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<polygon points="340.0,297.0 455.0,335.0 340.0,373.0 225.0,335.0" fill="#fffbeb" stroke="#b45309" stroke-width="1.5"/>
+<text x="340.0" y="339.0" text-anchor="middle" font-size="10.5" fill="#1f2937">驱动连接成功？</text>
+<path d="M340.0 373.0 L340.0 393.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="190.0" y="433.0" width="300.0" height="54.0" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<rect x="195.0" y="440.0" width="3.5" height="40.0" rx="1.8" fill="#7c3aed" opacity="0.75"/>
+<text x="340.0" y="455.5" text-anchor="middle" font-size="10.5" fill="#1f2937">③ Persistence(cfg) → migrate()</text>
+<text x="340.0" y="472.5" text-anchor="middle" font-size="10.5" fill="#1f2937">SchemaMigrator 建表 / 升级模式</text>
+<path d="M340.0 487.0 L340.0 517.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<polygon points="340.0,517.0 455.0,555.0 340.0,593.0 225.0,555.0" fill="#fffbeb" stroke="#b45309" stroke-width="1.5"/>
+<text x="340.0" y="559.0" text-anchor="middle" font-size="10.5" fill="#1f2937">模式迁移成功？</text>
+<path d="M340.0 593.0 L340.0 623.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="190.0" y="623.0" width="300.0" height="54.0" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="195.0" y="630.0" width="3.5" height="40.0" rx="1.8" fill="#2563eb" opacity="0.75"/>
+<text x="340.0" y="645.5" text-anchor="middle" font-size="10.5" fill="#1f2937">④ 内置 RV32I 描述 → IsaRegistry.install()</text>
+<text x="340.0" y="662.5" text-anchor="middle" font-size="10.5" fill="#1f2937">自定义 ISA 元数据经 loadSpec 读回</text>
+<path d="M340.0 677.0 L340.0 707.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="190.0" y="707.0" width="300.0" height="54.0" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<rect x="195.0" y="714.0" width="3.5" height="40.0" rx="1.8" fill="#7c3aed" opacity="0.75"/>
+<text x="340.0" y="729.5" text-anchor="middle" font-size="10.5" fill="#1f2937">⑤ CoreFactory(traceEnabled) 建立</text>
+<text x="340.0" y="746.5" text-anchor="middle" font-size="10.5" fill="#1f2937">QuotaGuard.enable(cfg)：本地形态直接关闭</text>
+<path d="M340.0 761.0 L340.0 791.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="190.0" y="791.0" width="300.0" height="54.0" rx="9" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<rect x="195.0" y="798.0" width="3.5" height="40.0" rx="1.8" fill="#059669" opacity="0.75"/>
+<text x="340.0" y="813.5" text-anchor="middle" font-size="10.5" fill="#1f2937">⑥ AuthFilter + 7 个领域服务装配</text>
+<text x="340.0" y="830.5" text-anchor="middle" font-size="10.5" fill="#1f2937">注入 Persistence / CoreFactory / CompareEngine / 适配器</text>
+<path d="M340.0 845.0 L340.0 875.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="190.0" y="875.0" width="300.0" height="37.0" rx="9" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<rect x="195.0" y="882.0" width="3.5" height="23.0" rx="1.8" fill="#059669" opacity="0.75"/>
+<text x="340.0" y="897.5" text-anchor="middle" font-size="10.5" fill="#1f2937">⑦ HttpGateway 注册路由 · StatusChannel 绑定 /ws</text>
+<path d="M340.0 912.0 L340.0 942.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<polygon points="340.0,942.0 455.0,980.0 340.0,1018.0 225.0,980.0" fill="#fffbeb" stroke="#b45309" stroke-width="1.5"/>
+<text x="340.0" y="984.0" text-anchor="middle" font-size="10.5" fill="#1f2937">端口绑定成功？</text>
+<path d="M340.0 1018.0 L340.0 1048.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="190.0" y="1048.0" width="300.0" height="37.0" rx="9" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<rect x="195.0" y="1055.0" width="3.5" height="23.0" rx="1.8" fill="#059669" opacity="0.75"/>
+<text x="340.0" y="1070.5" text-anchor="middle" font-size="10.5" fill="#1f2937">⑧ 监听端口 · /healthz 自检通过后开放流量</text>
+<path d="M340.0 1085.0 L340.0 1111.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="340.0" cy="1124.0" r="13" fill="none" stroke="#111827" stroke-width="1.6"/>
+<circle cx="340.0" cy="1124.0" r="6.5" fill="#111827"/>
+<rect x="720.0" y="316.0" width="330.0" height="37.0" rx="9" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<rect x="725.0" y="323.0" width="3.5" height="23.0" rx="1.8" fill="#be123c" opacity="0.75"/>
+<text x="885.0" y="338.5" text-anchor="middle" font-size="10.5" fill="#1f2937">驱动不可用：记录诊断 → 退出（exit 4）</text>
+<path d="M455.0 335.0 L720.0 335.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="578.9" y="313.0" width="18.2" height="17" rx="3" fill="#ffffff"/>
+<text x="588.0" y="325.0" text-anchor="middle" font-size="10" fill="#b45309">否</text>
+<rect x="720.0" y="536.0" width="330.0" height="37.0" rx="9" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<rect x="725.0" y="543.0" width="3.5" height="23.0" rx="1.8" fill="#be123c" opacity="0.75"/>
+<text x="885.0" y="558.5" text-anchor="middle" font-size="10.5" fill="#1f2937">模式迁移失败：打印迁移日志 → 退出（exit 3）</text>
+<path d="M455.0 555.0 L720.0 555.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="578.9" y="533.0" width="18.2" height="17" rx="3" fill="#ffffff"/>
+<text x="588.0" y="545.0" text-anchor="middle" font-size="10" fill="#b45309">否</text>
+<rect x="720.0" y="961.0" width="330.0" height="37.0" rx="9" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<rect x="725.0" y="968.0" width="3.5" height="23.0" rx="1.8" fill="#be123c" opacity="0.75"/>
+<text x="885.0" y="983.5" text-anchor="middle" font-size="10.5" fill="#1f2937">端口被占用：绑定失败 → 退出（exit 5）</text>
+<path d="M455.0 980.0 L720.0 980.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="578.9" y="958.0" width="18.2" height="17" rx="3" fill="#ffffff"/>
+<text x="588.0" y="970.0" text-anchor="middle" font-size="10" fill="#b45309">否</text>
+<path d="M1050.0 335.0 L1130.0 335.0" fill="none" stroke="#4b5563" stroke-width="1.5"/>
+<path d="M1050.0 555.0 L1130.0 555.0" fill="none" stroke="#4b5563" stroke-width="1.5"/>
+<path d="M1050.0 980.0 L1130.0 980.0" fill="none" stroke="#4b5563" stroke-width="1.5"/>
+<path d="M1130.0 335.0 L1130.0 1078.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="1130.0" cy="1093.0" r="13" fill="none" stroke="#111827" stroke-width="1.6"/>
+<circle cx="1130.0" cy="1093.0" r="6.5" fill="#111827"/>
+<text x="1130.0" y="1124.0" text-anchor="middle" font-size="10.5" fill="#6b7280">启动失败：进程以分段退出码结束，由编排层重启</text>
+<text x="44" y="1234.0" font-size="10.5" fill="#6b7280">装配顺序即依赖顺序：驱动 → 模式 → ISA 注册表 → 内核工厂与限额 → 服务 → 网关。任一环节失败即拒绝启动，不进入半可用状态</text>
+<text x="44" y="1250.0" font-size="10.5" fill="#6b7280">驱动不可用时按配置重试（默认 3 次、间隔 2 秒）；重试耗尽才退出 —— 云端由容器编排重启整个实例</text>
+<text x="44" y="1266.0" font-size="10.5" fill="#6b7280">SchemaMigrator::migrate() 幂等：两套方言的 DDL 版本号写入 meta 表，重复启动不会重复建表</text>
+<text x="44" y="1282.0" font-size="10.5" fill="#6b7280">QuotaGuard.enable() 在本地形态直接关闭：单用户本地部署没有限额语义，两形态的差异收敛为这一个开关（FR-8.2）</text>
+<text x="44" y="1298.0" font-size="10.5" fill="#6b7280">Bootstrapper 是本次子系统/构件设计新增的组合根构件（SS-6）：所有单例构件在此装配，业务代码中不允许出现单例的 new</text>
+<text x="44" y="1314.0" font-size="10.5" fill="#6b7280">监听端口后先做 /healthz 自检，通过才开放流量 —— 避免容器就绪探针在模式迁移完成前放行请求</text>
+</svg>

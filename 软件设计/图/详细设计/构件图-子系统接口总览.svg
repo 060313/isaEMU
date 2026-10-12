@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 958 1244" width="958" height="1244" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif">
+<defs><marker id="tri" viewBox="0 0 14 12" refX="13.2" refY="6" markerWidth="10" markerHeight="8.6" orient="auto"><path d="M0.8 0.9 L13.2 6 L0.8 11.1 z" fill="#ffffff" stroke="#4b5563" stroke-width="1.3"/></marker><marker id="open" viewBox="0 0 12 12" refX="10.4" refY="6" markerWidth="8.4" markerHeight="8.4" orient="auto"><path d="M1.2 1.2 L10.8 6 L1.2 10.8" fill="none" stroke="#4b5563" stroke-width="1.5"/></marker><marker id="diaF" viewBox="0 0 18 12" refX="2" refY="6" markerWidth="10" markerHeight="6.8" orient="auto"><path d="M1 6 L9 1.7 L17 6 L9 10.3 z" fill="#4b5563" stroke="#4b5563" stroke-width="1.2"/></marker><marker id="diaH" viewBox="0 0 18 12" refX="2" refY="6" markerWidth="10" markerHeight="6.8" orient="auto"><path d="M1 6 L9 1.7 L17 6 L9 10.3 z" fill="#ffffff" stroke="#4b5563" stroke-width="1.3"/></marker></defs>
+<rect x="0.5" y="0.5" width="958.0" height="1242.0" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="479.0" y="42" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">子系统与构件接口总览</text>
+<text x="479.0" y="64" text-anchor="middle" font-size="11.5" fill="#6b7280">7 个子系统 · 35 个构件；框内上栏为职责、下栏为构件清单；连线标注「使用者需求接口 → 提供者提供接口」</text>
+<line x1="44" y1="80" x2="914.0" y2="80" stroke="#e5e7eb" stroke-width="1"/>
+<text x="44" y="1141.0" font-size="10.5" fill="#6b7280">接口名称与稳定性分级承 SAD 5.10：冻结级 / 稳定级 / 可演进级；本阶段补出 IQuotaGuard 与 IDecodeTable 两条端口</text>
+<text x="44" y="1158.0" font-size="10.5" fill="#6b7280">SS-6 与 SS-5 同属服务与集成层，为进程内直接调用；SS-7 只经 HTTP / WebSocket 访问 SS-6，不存在编译期依赖</text>
+<text x="44" y="1175.0" font-size="10.5" fill="#6b7280">SS-1 与 SS-2 之间只有一条边：IDecodeTable 由内核定义、由 SS-2 的 DecodeTable 实现（依赖倒置，见「构件图-内核与ISA译码边界.svg」）</text>
+<text x="44" y="1192.0" font-size="10.5" fill="#6b7280">SS-3 与 SS-4 只被 SS-5 使用，彼此不互相依赖；二者都只依赖内核的公共头（Snapshot / DiffField / StateRecord）</text>
+<text x="44" y="1209.0" font-size="10.5" fill="#6b7280">Bootstrapper 是本次子系统/构件设计新增的构件（SS-6）：全系统唯一的组合根，详见「活动图-服务端构件装配与启动.svg」</text>
+<rect x="44.0" y="104.0" width="300.0" height="221.0" rx="4" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+<path d="M48.0 104.0 h292.0 a4 4 0 0 1 4 4 v45.0 h-300.0 v-45.0 a4 4 0 0 1 4 -4 z" fill="#d97706" opacity="0.13"/>
+<text x="194.0" y="115.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«subsystem»</text>
+<text x="194.0" y="139.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">SS-7 Web 前端子系统</text>
+<text x="194.0" y="151.0" text-anchor="middle" font-size="9.5" fill="#9ca3af">表示层 · 前端静态资源</text>
+<line x1="44.0" y1="157.0" x2="344.0" y2="157.0" stroke="#d97706" stroke-width="1"/>
+<text x="55.0" y="170.0" font-size="10.5" fill="#1f2937">呈现四类状态视图与报告浏览；不链接内核</text>
+<text x="55.0" y="185.0" font-size="10.5" fill="#1f2937">全部能力经 HTTP / WebSocket 获得（DD-8）</text>
+<line x1="44.0" y1="196.0" x2="344.0" y2="196.0" stroke="#d1d5db" stroke-width="1"/>
+<text x="55.0" y="209.0" font-size="10.5" fill="#1f2937">HttpApiClient</text>
+<text x="55.0" y="224.0" font-size="10.5" fill="#1f2937">StateStore</text>
+<text x="55.0" y="239.0" font-size="10.5" fill="#1f2937">DebugView</text>
+<text x="55.0" y="254.0" font-size="10.5" fill="#1f2937">TestView</text>
+<text x="55.0" y="269.0" font-size="10.5" fill="#1f2937">DiffView</text>
+<text x="55.0" y="284.0" font-size="10.5" fill="#1f2937">LoadView</text>
+<text x="55.0" y="299.0" font-size="10.5" fill="#1f2937">IsaView</text>
+<text x="55.0" y="314.0" font-size="10.5" fill="#1f2937">AdminViews</text>
+<rect x="44.0" y="371.0" width="320.0" height="176.0" rx="4" fill="#ffffff" stroke="#c026d3" stroke-width="1.5"/>
+<path d="M48.0 371.0 h312.0 a4 4 0 0 1 4 4 v45.0 h-320.0 v-45.0 a4 4 0 0 1 4 -4 z" fill="#c026d3" opacity="0.13"/>
+<text x="204.0" y="382.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«subsystem»</text>
+<text x="204.0" y="406.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">SS-6 集成 API 子系统</text>
+<text x="204.0" y="418.0" text-anchor="middle" font-size="9.5" fill="#9ca3af">服务与集成层 · 服务端进程内</text>
+<line x1="44.0" y1="424.0" x2="364.0" y2="424.0" stroke="#c026d3" stroke-width="1"/>
+<text x="55.0" y="437.0" font-size="10.5" fill="#1f2937">请求路由、鉴权、限额、状态增量推送</text>
+<text x="55.0" y="452.0" font-size="10.5" fill="#1f2937">接口在迭代一冻结（工业接口路径）</text>
+<line x1="44.0" y1="463.0" x2="364.0" y2="463.0" stroke="#d1d5db" stroke-width="1"/>
+<text x="55.0" y="476.0" font-size="10.5" fill="#1f2937">HttpGateway</text>
+<text x="55.0" y="491.0" font-size="10.5" fill="#1f2937">StatusChannel</text>
+<text x="55.0" y="506.0" font-size="10.5" fill="#1f2937">AuthFilter</text>
+<text x="55.0" y="521.0" font-size="10.5" fill="#1f2937">QuotaGuard</text>
+<text x="55.0" y="536.0" font-size="10.5" fill="#1f2937">Bootstrapper（新增）</text>
+<rect x="44.0" y="593.0" width="320.0" height="266.0" rx="4" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<path d="M48.0 593.0 h312.0 a4 4 0 0 1 4 4 v45.0 h-320.0 v-45.0 a4 4 0 0 1 4 -4 z" fill="#059669" opacity="0.13"/>
+<text x="204.0" y="604.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«subsystem»</text>
+<text x="204.0" y="628.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">SS-5 领域服务子系统</text>
+<text x="204.0" y="640.0" text-anchor="middle" font-size="9.5" fill="#9ca3af">服务与集成层 · 服务端进程内</text>
+<line x1="44.0" y1="646.0" x2="364.0" y2="646.0" stroke="#059669" stroke-width="1"/>
+<text x="55.0" y="659.0" font-size="10.5" fill="#1f2937">承载 14 个用例的业务流程</text>
+<text x="55.0" y="674.0" font-size="10.5" fill="#1f2937">协调内核 / ISA / 比对 / 适配四个支撑子系统</text>
+<line x1="44.0" y1="685.0" x2="364.0" y2="685.0" stroke="#d1d5db" stroke-width="1"/>
+<text x="55.0" y="698.0" font-size="10.5" fill="#1f2937">ServiceBase（抽象基类）</text>
+<text x="55.0" y="713.0" font-size="10.5" fill="#1f2937">SessionService</text>
+<text x="55.0" y="728.0" font-size="10.5" fill="#1f2937">WorkspaceService</text>
+<text x="55.0" y="743.0" font-size="10.5" fill="#1f2937">LoadService</text>
+<text x="55.0" y="758.0" font-size="10.5" fill="#1f2937">DebugService</text>
+<text x="55.0" y="773.0" font-size="10.5" fill="#1f2937">TestService</text>
+<text x="55.0" y="788.0" font-size="10.5" fill="#1f2937">DiffService</text>
+<text x="55.0" y="803.0" font-size="10.5" fill="#1f2937">Persistence</text>
+<text x="55.0" y="818.0" font-size="10.5" fill="#1f2937">RunContext</text>
+<text x="55.0" y="833.0" font-size="10.5" fill="#1f2937">BreakpointTable</text>
+<text x="55.0" y="848.0" font-size="10.5" fill="#1f2937">TestReport</text>
+<rect x="44.0" y="905.0" width="320.0" height="206.0" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<path d="M48.0 905.0 h312.0 a4 4 0 0 1 4 4 v45.0 h-320.0 v-45.0 a4 4 0 0 1 4 -4 z" fill="#2563eb" opacity="0.13"/>
+<text x="204.0" y="916.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«subsystem»</text>
+<text x="204.0" y="940.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">SS-1 模拟执行内核子系统</text>
+<text x="204.0" y="952.0" text-anchor="middle" font-size="9.5" fill="#9ca3af">模拟执行内核层 · 静态库 libisa_core</text>
+<line x1="44.0" y1="958.0" x2="364.0" y2="958.0" stroke="#2563eb" stroke-width="1"/>
+<text x="55.0" y="971.0" font-size="10.5" fill="#1f2937">取指—译码—执行—写回，维护架构状态与轨迹</text>
+<text x="55.0" y="986.0" font-size="10.5" fill="#1f2937">零链接依赖，可独立编译并做单元测试（NFR-I2）</text>
+<line x1="44.0" y1="997.0" x2="364.0" y2="997.0" stroke="#d1d5db" stroke-width="1"/>
+<text x="55.0" y="1010.0" font-size="10.5" fill="#1f2937">EmulatorCore</text>
+<text x="55.0" y="1025.0" font-size="10.5" fill="#1f2937">ArchState</text>
+<text x="55.0" y="1040.0" font-size="10.5" fill="#1f2937">Trace</text>
+<text x="55.0" y="1055.0" font-size="10.5" fill="#1f2937">TrapUnit</text>
+<text x="55.0" y="1070.0" font-size="10.5" fill="#1f2937">ProgramImage</text>
+<text x="55.0" y="1085.0" font-size="10.5" fill="#1f2937">StepResult</text>
+<text x="55.0" y="1100.0" font-size="10.5" fill="#1f2937">CoreFactory</text>
+<rect x="614.0" y="104.0" width="300.0" height="176.0" rx="4" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<path d="M618.0 104.0 h292.0 a4 4 0 0 1 4 4 v45.0 h-300.0 v-45.0 a4 4 0 0 1 4 -4 z" fill="#7c3aed" opacity="0.13"/>
+<text x="764.0" y="115.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«subsystem»</text>
+<text x="764.0" y="139.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">SS-2 ISA 抽象子系统</text>
+<text x="764.0" y="151.0" text-anchor="middle" font-size="9.5" fill="#9ca3af">ISA 抽象层 · 静态库 libisa_isa</text>
+<line x1="614.0" y1="157.0" x2="914.0" y2="157.0" stroke="#7c3aed" stroke-width="1"/>
+<text x="625.0" y="170.0" font-size="10.5" fill="#1f2937">描述文件装载与校验、译码表生成</text>
+<text x="625.0" y="185.0" font-size="10.5" fill="#1f2937">「不硬编码指令」的物理落点（NFR-I1）</text>
+<line x1="614.0" y1="196.0" x2="914.0" y2="196.0" stroke="#d1d5db" stroke-width="1"/>
+<text x="625.0" y="209.0" font-size="10.5" fill="#1f2937">IsaSpec</text>
+<text x="625.0" y="224.0" font-size="10.5" fill="#1f2937">IsaValidator</text>
+<text x="625.0" y="239.0" font-size="10.5" fill="#1f2937">IsaRegistry</text>
+<text x="625.0" y="254.0" font-size="10.5" fill="#1f2937">DecodeTable</text>
+<text x="625.0" y="269.0" font-size="10.5" fill="#1f2937">InsnDef</text>
+<rect x="614.0" y="326.0" width="300.0" height="161.0" rx="4" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M618.0 326.0 h292.0 a4 4 0 0 1 4 4 v45.0 h-300.0 v-45.0 a4 4 0 0 1 4 -4 z" fill="#0891b2" opacity="0.13"/>
+<text x="764.0" y="337.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«subsystem»</text>
+<text x="764.0" y="361.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">SS-3 比对子系统</text>
+<text x="764.0" y="373.0" text-anchor="middle" font-size="9.5" fill="#9ca3af">支撑子系统 · 静态库 libisa_cmp</text>
+<line x1="614.0" y1="379.0" x2="914.0" y2="379.0" stroke="#0891b2" stroke-width="1"/>
+<text x="625.0" y="392.0" font-size="10.5" fill="#1f2937">状态序列与终态比对，定位首个分歧</text>
+<text x="625.0" y="407.0" font-size="10.5" fill="#1f2937">被 TestService 与 DiffService 共用（FR-6.5）</text>
+<line x1="614.0" y1="418.0" x2="914.0" y2="418.0" stroke="#d1d5db" stroke-width="1"/>
+<text x="625.0" y="431.0" font-size="10.5" fill="#1f2937">CompareEngine</text>
+<text x="625.0" y="446.0" font-size="10.5" fill="#1f2937">DiffScope</text>
+<text x="625.0" y="461.0" font-size="10.5" fill="#1f2937">Divergence</text>
+<text x="625.0" y="476.0" font-size="10.5" fill="#1f2937">StateRecord</text>
+<rect x="614.0" y="533.0" width="300.0" height="146.0" rx="4" fill="#ffffff" stroke="#ea580c" stroke-width="1.5"/>
+<path d="M618.0 533.0 h292.0 a4 4 0 0 1 4 4 v45.0 h-300.0 v-45.0 a4 4 0 0 1 4 -4 z" fill="#ea580c" opacity="0.13"/>
+<text x="764.0" y="544.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«subsystem»</text>
+<text x="764.0" y="568.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">SS-4 外部适配子系统</text>
+<text x="764.0" y="580.0" text-anchor="middle" font-size="9.5" fill="#9ca3af">支撑子系统 · 静态库 libisa_adapt</text>
+<line x1="614.0" y1="586.0" x2="914.0" y2="586.0" stroke="#ea580c" stroke-width="1"/>
+<text x="625.0" y="599.0" font-size="10.5" fill="#1f2937">端口—适配器封装工具链与参考模拟器</text>
+<text x="625.0" y="614.0" font-size="10.5" fill="#1f2937">接口变化不外溢到内核与业务逻辑（DD-4）</text>
+<line x1="614.0" y1="625.0" x2="914.0" y2="625.0" stroke="#d1d5db" stroke-width="1"/>
+<text x="625.0" y="638.0" font-size="10.5" fill="#1f2937">ToolchainAdapter</text>
+<text x="625.0" y="653.0" font-size="10.5" fill="#1f2937">RefSimAdapter</text>
+<text x="625.0" y="668.0" font-size="10.5" fill="#1f2937">ProcessRunner</text>
+<path d="M194.0 325.0 V371.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="205.0" y="339.0" text-anchor="middle" font-size="10" fill="#374151">HTTP / WS</text>
+<text x="215.0" y="365.0" text-anchor="middle" font-size="10" fill="#374151">REST·WS 契约（冻结级）</text>
+<path d="M204.0 547.0 V593.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="215.0" y="561.0" text-anchor="middle" font-size="10" fill="#374151">服务调用 / IStore</text>
+<path d="M204.0 859.0 V905.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="215.0" y="873.0" text-anchor="middle" font-size="10" fill="#374151">ICoreService</text>
+<path d="M364.0 702.0 H471.0 V180.0 H614.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="371.0" y="697.0" text-anchor="start" font-size="10" fill="#374151">IIsaProvider</text>
+<text x="607.0" y="175.0" text-anchor="end" font-size="10" fill="#374151">IIsaProvider（稳定级）</text>
+<path d="M364.0 726.0 H489.0 V406.5 H614.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="371.0" y="721.0" text-anchor="start" font-size="10" fill="#374151">IComparator</text>
+<text x="607.0" y="401.5" text-anchor="end" font-size="10" fill="#374151">IComparator（稳定级）</text>
+<path d="M364.0 750.0 H507.0 V606.0 H614.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="371.0" y="745.0" text-anchor="start" font-size="10" fill="#374151">IToolchainPort</text>
+<text x="607.0" y="601.0" text-anchor="end" font-size="10" fill="#374151">IRefSimPort</text>
+<path d="M364.0 1008.0 H449.0 V204.0 H614.0" fill="none" stroke="#4b5563" stroke-width="1.35" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="371.0" y="1003.0" text-anchor="start" font-size="10" fill="#374151">IDecodeTable</text>
+<text x="607.0" y="199.0" text-anchor="end" font-size="10" fill="#374151">实现（反向依赖）</text>
+</svg>

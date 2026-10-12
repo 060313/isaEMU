@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1796 682" width="1796" height="682" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif">
+<defs><marker id="tri" viewBox="0 0 14 12" refX="13.2" refY="6" markerWidth="10" markerHeight="8.6" orient="auto"><path d="M0.8 0.9 L13.2 6 L0.8 11.1 z" fill="#ffffff" stroke="#4b5563" stroke-width="1.3"/></marker><marker id="open" viewBox="0 0 12 12" refX="10.4" refY="6" markerWidth="8.4" markerHeight="8.4" orient="auto"><path d="M1.2 1.2 L10.8 6 L1.2 10.8" fill="none" stroke="#4b5563" stroke-width="1.5"/></marker><marker id="diaF" viewBox="0 0 18 12" refX="2" refY="6" markerWidth="10" markerHeight="6.8" orient="auto"><path d="M1 6 L9 1.7 L17 6 L9 10.3 z" fill="#4b5563" stroke="#4b5563" stroke-width="1.2"/></marker><marker id="diaH" viewBox="0 0 18 12" refX="2" refY="6" markerWidth="10" markerHeight="6.8" orient="auto"><path d="M1 6 L9 1.7 L17 6 L9 10.3 z" fill="#ffffff" stroke="#4b5563" stroke-width="1.3"/></marker></defs>
+<rect x="0.5" y="0.5" width="1795.8" height="690.0" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="897.9" y="42" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">核心对象关系图（含数量关系）</text>
+<line x1="44" y1="80" x2="1751.8" y2="80" stroke="#e5e7eb" stroke-width="1"/>
+<text x="44" y="591.0" font-size="10.5" fill="#6b7280">本图只画「持久化实体 + 运行时实体」之间的关联与数量关系，作为第 6 章数据设计的依据；行为类的依赖关系见类图</text>
+<text x="44" y="608.0" font-size="10.5" fill="#6b7280">数量关系标注在连线两端：1 : 0..n 表示在 n 端表中加外键；n : m 需新增交叉表</text>
+<text x="44" y="625.0" font-size="10.5" fill="#6b7280">TestSuite ↔ IsaMeta 为 n : m —— 一个用例集可验证多种 ISA 描述，一条 ISA 描述可被多个用例集引用</text>
+<text x="44" y="642.0" font-size="10.5" fill="#6b7280">TestCase : ProgramRecord = 0..n : 1（多用例引用同一程序）；TestReport : CaseResult = 1 : 0..n（一次批量执行产生一份报告）</text>
+<text x="44" y="658.0" font-size="10.5" fill="#6b7280">TestSuite : TestReport = 1 : 0..n（同一用例集可被多次执行，报告按时间累积）</text>
+<rect x="44.0" y="104.0" width="210.0" height="140.0" rx="4" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<path d="M48.0 104.0 h202.0 a4 4 0 0 1 4 4 v33.0 h-210.0 v-33.0 a4 4 0 0 1 4 -4 z" fill="#be123c" opacity="0.13"/>
+<text x="149.0" y="115.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="149.0" y="139.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">User</text>
+<line x1="44.0" y1="145.0" x2="254.0" y2="145.0" stroke="#be123c" stroke-width="1"/>
+<text x="55.0" y="158.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> uid : uint64</text>
+<text x="55.0" y="173.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> name : string</text>
+<text x="55.0" y="188.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> pwdHash : string</text>
+<text x="55.0" y="203.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> role : Role</text>
+<text x="55.0" y="218.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> quota : Quota</text>
+<text x="55.0" y="233.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> status : UserStatus</text>
+<line x1="44.0" y1="244.0" x2="254.0" y2="244.0" stroke="#d1d5db" stroke-width="1"/>
+<rect x="409.0" y="104.0" width="210.0" height="110.0" rx="4" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<path d="M413.0 104.0 h202.0 a4 4 0 0 1 4 4 v33.0 h-210.0 v-33.0 a4 4 0 0 1 4 -4 z" fill="#be123c" opacity="0.13"/>
+<text x="514.0" y="115.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="514.0" y="139.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">Session</text>
+<line x1="409.0" y1="145.0" x2="619.0" y2="145.0" stroke="#be123c" stroke-width="1"/>
+<text x="420.0" y="158.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> token : Token</text>
+<text x="420.0" y="173.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> uid : uint64</text>
+<text x="420.0" y="188.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> createdAt : time</text>
+<text x="420.0" y="203.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> expiresAt : time</text>
+<line x1="409.0" y1="214.0" x2="619.0" y2="214.0" stroke="#d1d5db" stroke-width="1"/>
+<rect x="409.0" y="240.0" width="210.0" height="110.0" rx="4" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<path d="M413.0 240.0 h202.0 a4 4 0 0 1 4 4 v33.0 h-210.0 v-33.0 a4 4 0 0 1 4 -4 z" fill="#be123c" opacity="0.13"/>
+<text x="514.0" y="251.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="514.0" y="275.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">Workspace</text>
+<line x1="409.0" y1="281.0" x2="619.0" y2="281.0" stroke="#be123c" stroke-width="1"/>
+<text x="420.0" y="294.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> wsId : uint64</text>
+<text x="420.0" y="309.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> uid : uint64</text>
+<text x="420.0" y="324.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> name : string</text>
+<text x="420.0" y="339.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> updatedAt : time</text>
+<line x1="409.0" y1="350.0" x2="619.0" y2="350.0" stroke="#d1d5db" stroke-width="1"/>
+<rect x="774.0" y="104.0" width="210.0" height="155.0" rx="4" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<path d="M778.0 104.0 h202.0 a4 4 0 0 1 4 4 v33.0 h-210.0 v-33.0 a4 4 0 0 1 4 -4 z" fill="#be123c" opacity="0.13"/>
+<text x="879.0" y="115.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="879.0" y="139.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">ProgramRecord</text>
+<line x1="774.0" y1="145.0" x2="984.0" y2="145.0" stroke="#be123c" stroke-width="1"/>
+<text x="785.0" y="158.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> progId : uint64</text>
+<text x="785.0" y="173.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> wsId : uint64</text>
+<text x="785.0" y="188.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> name : string</text>
+<text x="785.0" y="203.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> base : uint32</text>
+<text x="785.0" y="218.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> entry : uint32</text>
+<text x="785.0" y="233.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> sp : uint32</text>
+<text x="785.0" y="248.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> blob : bytes</text>
+<line x1="774.0" y1="259.0" x2="984.0" y2="259.0" stroke="#d1d5db" stroke-width="1"/>
+<rect x="774.0" y="285.0" width="210.0" height="110.0" rx="4" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<path d="M778.0 285.0 h202.0 a4 4 0 0 1 4 4 v33.0 h-210.0 v-33.0 a4 4 0 0 1 4 -4 z" fill="#be123c" opacity="0.13"/>
+<text x="879.0" y="296.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="879.0" y="320.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">TestSuite</text>
+<line x1="774.0" y1="326.0" x2="984.0" y2="326.0" stroke="#be123c" stroke-width="1"/>
+<text x="785.0" y="339.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> suiteId : uint64</text>
+<text x="785.0" y="354.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> wsId : uint64</text>
+<text x="785.0" y="369.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> name : string</text>
+<text x="785.0" y="384.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> tags : string[]</text>
+<line x1="774.0" y1="395.0" x2="984.0" y2="395.0" stroke="#d1d5db" stroke-width="1"/>
+<rect x="774.0" y="421.0" width="210.0" height="140.0" rx="4" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<path d="M778.0 421.0 h202.0 a4 4 0 0 1 4 4 v33.0 h-210.0 v-33.0 a4 4 0 0 1 4 -4 z" fill="#be123c" opacity="0.13"/>
+<text x="879.0" y="432.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="879.0" y="456.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">IsaMeta</text>
+<line x1="774.0" y1="462.0" x2="984.0" y2="462.0" stroke="#be123c" stroke-width="1"/>
+<text x="785.0" y="475.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> specId : uint64</text>
+<text x="785.0" y="490.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> name : string</text>
+<text x="785.0" y="505.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> version : string</text>
+<text x="785.0" y="520.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> xlen : uint8</text>
+<text x="785.0" y="535.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> path : string</text>
+<text x="785.0" y="550.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> installedAt : time</text>
+<line x1="774.0" y1="561.0" x2="984.0" y2="561.0" stroke="#d1d5db" stroke-width="1"/>
+<rect x="1139.0" y="104.0" width="247.8" height="140.0" rx="4" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+<path d="M1143.0 104.0 h239.8 a4 4 0 0 1 4 4 v33.0 h-247.8 v-33.0 a4 4 0 0 1 4 -4 z" fill="#be123c" opacity="0.13"/>
+<text x="1262.9" y="115.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="1262.9" y="139.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">TestCase</text>
+<line x1="1139.0" y1="145.0" x2="1386.8" y2="145.0" stroke="#be123c" stroke-width="1"/>
+<text x="1150.0" y="158.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> caseId : uint64</text>
+<text x="1150.0" y="173.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> suiteId : uint64</text>
+<text x="1150.0" y="188.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> progId : uint64</text>
+<text x="1150.0" y="203.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> mode : RunMode</text>
+<text x="1150.0" y="218.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> expectFinal : Snapshot | null</text>
+<text x="1150.0" y="233.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> expectCommits : StateRecord[] | null</text>
+<line x1="1139.0" y1="244.0" x2="1386.8" y2="244.0" stroke="#d1d5db" stroke-width="1"/>
+<rect x="1139.0" y="270.0" width="210.0" height="140.0" rx="4" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<path d="M1143.0 270.0 h202.0 a4 4 0 0 1 4 4 v33.0 h-210.0 v-33.0 a4 4 0 0 1 4 -4 z" fill="#059669" opacity="0.13"/>
+<text x="1244.0" y="281.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="1244.0" y="305.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">TestReport</text>
+<line x1="1139.0" y1="311.0" x2="1349.0" y2="311.0" stroke="#059669" stroke-width="1"/>
+<text x="1150.0" y="324.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> id : uint64</text>
+<text x="1150.0" y="339.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> suiteId : uint64</text>
+<text x="1150.0" y="354.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> total : uint32</text>
+<text x="1150.0" y="369.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> passed : uint32</text>
+<text x="1150.0" y="384.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> mode : RunMode</text>
+<text x="1150.0" y="399.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> startedAt : time</text>
+<line x1="1139.0" y1="410.0" x2="1349.0" y2="410.0" stroke="#d1d5db" stroke-width="1"/>
+<rect x="1541.8" y="104.0" width="210.0" height="125.0" rx="4" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<path d="M1545.8 104.0 h202.0 a4 4 0 0 1 4 4 v33.0 h-210.0 v-33.0 a4 4 0 0 1 4 -4 z" fill="#059669" opacity="0.13"/>
+<text x="1646.8" y="115.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="1646.8" y="139.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">CaseResult</text>
+<line x1="1541.8" y1="145.0" x2="1751.8" y2="145.0" stroke="#059669" stroke-width="1"/>
+<text x="1552.8" y="158.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> caseId : uint64</text>
+<text x="1552.8" y="173.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> reportId : uint64</text>
+<text x="1552.8" y="188.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> verdict : Verdict</text>
+<text x="1552.8" y="203.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> snap : Snapshot</text>
+<text x="1552.8" y="218.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> diffPoint : DiffPoint | null</text>
+<line x1="1541.8" y1="229.0" x2="1751.8" y2="229.0" stroke="#d1d5db" stroke-width="1"/>
+<rect x="1541.8" y="255.0" width="210.0" height="125.0" rx="4" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M1545.8 255.0 h202.0 a4 4 0 0 1 4 4 v33.0 h-210.0 v-33.0 a4 4 0 0 1 4 -4 z" fill="#0891b2" opacity="0.13"/>
+<text x="1646.8" y="266.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«entity»</text>
+<text x="1646.8" y="290.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">Divergence</text>
+<line x1="1541.8" y1="296.0" x2="1751.8" y2="296.0" stroke="#0891b2" stroke-width="1"/>
+<text x="1552.8" y="309.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> id : uint64</text>
+<text x="1552.8" y="324.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> stepNo : uint64</text>
+<text x="1552.8" y="339.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> ours / ref : StateRecord</text>
+<text x="1552.8" y="354.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> tag : DivergenceTag</text>
+<text x="1552.8" y="369.0" font-size="10.5" fill="#1f2937"><tspan fill="#b91c1c" font-weight="700">-</tspan> note : string</text>
+<line x1="1541.8" y1="380.0" x2="1751.8" y2="380.0" stroke="#d1d5db" stroke-width="1"/>
+<rect x="1541.8" y="406.0" width="210.0" height="110.0" rx="4" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M1545.8 406.0 h202.0 a4 4 0 0 1 4 4 v33.0 h-210.0 v-33.0 a4 4 0 0 1 4 -4 z" fill="#0891b2" opacity="0.13"/>
+<text x="1646.8" y="417.0" text-anchor="middle" font-size="9.5" fill="#6b7280">«struct»</text>
+<text x="1646.8" y="441.0" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">StateRecord</text>
+<line x1="1541.8" y1="447.0" x2="1751.8" y2="447.0" stroke="#0891b2" stroke-width="1"/>
+<text x="1552.8" y="460.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> stepNo : uint64</text>
+<text x="1552.8" y="475.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> pc : uint32</text>
+<text x="1552.8" y="490.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> gpr : uint32[32]</text>
+<text x="1552.8" y="505.0" font-size="10.5" fill="#1f2937"><tspan fill="#1d4ed8" font-weight="700">+</tspan> memWrite : MemWrite[]</text>
+<line x1="1541.8" y1="516.0" x2="1751.8" y2="516.0" stroke="#d1d5db" stroke-width="1"/>
+<path d="M254.0 162.0 H325.5 V159.0 H409.0" fill="none" stroke="#4b5563" stroke-width="1.35"/>
+<text x="261.0" y="157.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<text x="402.0" y="154.0" text-anchor="end" font-size="10" fill="#374151">0..n</text>
+<path d="M254.0 186.0 H337.5 V295.0 H409.0" fill="none" stroke="#4b5563" stroke-width="1.35"/>
+<text x="261.0" y="181.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<text x="402.0" y="290.0" text-anchor="end" font-size="10" fill="#374151">0..n</text>
+<path d="M619.0 283.0 H690.5 V181.5 H774.0" fill="none" stroke="#4b5563" stroke-width="1.35"/>
+<text x="626.0" y="278.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<text x="767.0" y="176.5" text-anchor="end" font-size="10" fill="#374151">0..n</text>
+<path d="M619.0 307.0 H702.5 V340.0 H774.0" fill="none" stroke="#4b5563" stroke-width="1.35"/>
+<text x="626.0" y="302.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<text x="767.0" y="335.0" text-anchor="end" font-size="10" fill="#374151">0..n</text>
+<path d="M984.0 328.0 H1055.5 V162.0 H1139.0" fill="none" stroke="#4b5563" stroke-width="1.35"/>
+<text x="991.0" y="323.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<text x="1132.0" y="157.0" text-anchor="end" font-size="10" fill="#374151">0..n</text>
+<path d="M1139.0 186.0 H1071.5 V181.5 H984.0" fill="none" stroke="#4b5563" stroke-width="1.35"/>
+<text x="1132.0" y="181.0" text-anchor="end" font-size="10" fill="#374151">0..n</text>
+<text x="991.0" y="176.5" text-anchor="start" font-size="10" fill="#374151">1</text>
+<path d="M984.0 352.0 H1067.5 V340.0 H1139.0" fill="none" stroke="#4b5563" stroke-width="1.35"/>
+<text x="991.0" y="347.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<text x="1132.0" y="335.0" text-anchor="end" font-size="10" fill="#374151">0..n</text>
+<path d="M879.0 395.0 V421.0" fill="none" stroke="#4b5563" stroke-width="1.35"/>
+<text x="890.0" y="389.0" text-anchor="middle" font-size="10" fill="#374151">n</text>
+<text x="890.0" y="434.0" text-anchor="middle" font-size="10" fill="#374151">m</text>
+<path d="M1349.0 340.0 H1445.4 V166.5 H1541.8" fill="none" stroke="#4b5563" stroke-width="1.35"/>
+<text x="1356.0" y="335.0" text-anchor="start" font-size="10" fill="#374151">1</text>
+<text x="1534.8" y="161.5" text-anchor="end" font-size="10" fill="#374151">0..n</text>
+<path d="M1646.8 380.0 V406.0" fill="none" stroke="#4b5563" stroke-width="1.35" marker-start="url(#diaF)"/>
+<text x="1657.8" y="374.0" text-anchor="middle" font-size="10" fill="#374151">1</text>
+<text x="1657.8" y="419.0" text-anchor="middle" font-size="10" fill="#374151">2</text>
+</svg>

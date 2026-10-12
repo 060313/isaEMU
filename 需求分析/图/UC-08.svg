@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1414 932" width="1414" height="932" font-family="Microsoft YaHei,PingFang SC,Segoe UI,sans-serif">
+<defs>
+<marker id="solid" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#374151"/></marker>
+<marker id="open" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#374151" stroke-width="1.6"/></marker>
+</defs>
+<rect x="0" y="0" width="1414" height="932" fill="#ffffff"/>
+<text x="707" y="23" text-anchor="middle" font-size="14.5" font-weight="600" fill="#111827">UC-08 管理并批量执行测试用例</text>
+<line x1="44" y1="33" x2="1370" y2="33" stroke="#e5e7eb" stroke-width="1"/>
+<g transform="translate(0,40)">
+<line x1="119" y1="88" x2="119" y2="910" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.55"/>
+<circle cx="119" cy="24" r="9" fill="#e5e7eb" stroke="#6b7280" stroke-width="1.6"/>
+<line x1="119" y1="33" x2="119" y2="54" stroke="#6b7280" stroke-width="1.6"/>
+<line x1="106" y1="42" x2="132" y2="42" stroke="#6b7280" stroke-width="1.6"/>
+<line x1="119" y1="54" x2="108" y2="70" stroke="#6b7280" stroke-width="1.6"/>
+<line x1="119" y1="54" x2="130" y2="70" stroke="#6b7280" stroke-width="1.6"/>
+<text x="119" y="86" text-anchor="middle" font-size="13" fill="#374151">工业芯片工程师</text>
+<line x1="287" y1="88" x2="287" y2="910" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.55"/>
+<rect x="212" y="28" width="150" height="60" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="287" y="46" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«boundary»</text>
+<text x="287" y="66" text-anchor="middle" font-size="12.5" fill="#1e40af">集成 API 接口</text>
+<text x="287" y="83" text-anchor="middle" font-size="11" fill="#6b7280">ApiEndpoint</text>
+<line x1="455" y1="88" x2="455" y2="910" stroke="#d97706" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.55"/>
+<rect x="380" y="28" width="150" height="60" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<text x="455" y="46" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«control»</text>
+<text x="455" y="66" text-anchor="middle" font-size="12.5" fill="#b45309">接口请求控制器</text>
+<text x="455" y="83" text-anchor="middle" font-size="11" fill="#6b7280">ApiController</text>
+<line x1="623" y1="88" x2="623" y2="910" stroke="#d97706" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.55"/>
+<rect x="548" y="28" width="150" height="60" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<text x="623" y="46" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«control»</text>
+<text x="623" y="66" text-anchor="middle" font-size="12.5" fill="#b45309">测试控制器</text>
+<text x="623" y="83" text-anchor="middle" font-size="11" fill="#6b7280">TestController</text>
+<line x1="791" y1="88" x2="791" y2="910" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.55"/>
+<rect x="716" y="28" width="150" height="60" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="791" y="46" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="791" y="66" text-anchor="middle" font-size="12.5" fill="#374151">测试用例与用例集</text>
+<text x="791" y="83" text-anchor="middle" font-size="11" fill="#6b7280">TestSuite</text>
+<line x1="959" y1="88" x2="959" y2="910" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.55"/>
+<rect x="884" y="28" width="150" height="60" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="959" y="46" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="959" y="66" text-anchor="middle" font-size="12.5" fill="#374151">模拟内核</text>
+<text x="959" y="83" text-anchor="middle" font-size="11" fill="#6b7280">EmulatorCore</text>
+<line x1="1127" y1="88" x2="1127" y2="910" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.55"/>
+<rect x="1052" y="28" width="150" height="60" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="1127" y="46" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="1127" y="66" text-anchor="middle" font-size="12.5" fill="#374151">比对引擎</text>
+<text x="1127" y="83" text-anchor="middle" font-size="11" fill="#6b7280">CompareEngine</text>
+<line x1="1295" y1="88" x2="1295" y2="910" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.55"/>
+<rect x="1220" y="28" width="150" height="60" rx="6" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.5"/>
+<text x="1295" y="46" text-anchor="middle" font-size="9.5" font-style="italic" fill="#6b7280">«entity»</text>
+<text x="1295" y="66" text-anchor="middle" font-size="12.5" fill="#374151">测试报告</text>
+<text x="1295" y="83" text-anchor="middle" font-size="11" fill="#6b7280">TestReport</text>
+<line x1="119" y1="158" x2="287" y2="158" stroke="#374151" stroke-width="1.4" marker-end="url(#solid)"/>
+<text x="203" y="150" text-anchor="middle" font-size="12.5" fill="#374151">提交批量测试请求（用例集、判定模式）</text>
+<line x1="287" y1="208" x2="455" y2="208" stroke="#374151" stroke-width="1.4" marker-end="url(#solid)"/>
+<text x="371" y="200" text-anchor="middle" font-size="12.5" fill="#374151">解析并鉴权（凭据、请求）</text>
+<line x1="455" y1="258" x2="623" y2="258" stroke="#374151" stroke-width="1.4" marker-end="url(#solid)"/>
+<text x="539" y="250" text-anchor="middle" font-size="12.5" fill="#374151">批量执行（用例集、判定模式）</text>
+<line x1="623" y1="308" x2="791" y2="308" stroke="#374151" stroke-width="1.4" marker-end="url(#solid)"/>
+<text x="707" y="300" text-anchor="middle" font-size="12.5" fill="#374151">加载用例集</text>
+<line x1="791" y1="358" x2="623" y2="358" stroke="#374151" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="707" y="350" text-anchor="middle" font-size="12.5" fill="#374151">用例列表</text>
+<line x1="623" y1="408" x2="959" y2="408" stroke="#374151" stroke-width="1.4" marker-end="url(#solid)"/>
+<text x="791" y="400" text-anchor="middle" font-size="12.5" fill="#374151">执行用例程序</text>
+<line x1="959" y1="458" x2="623" y2="458" stroke="#374151" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="791" y="450" text-anchor="middle" font-size="12.5" fill="#374151">执行结果与轨迹</text>
+<line x1="623" y1="508" x2="1127" y2="508" stroke="#374151" stroke-width="1.4" marker-end="url(#solid)"/>
+<text x="875" y="500" text-anchor="middle" font-size="12.5" fill="#374151">比对（实际、期望、判定模式）</text>
+<line x1="1127" y1="558" x2="623" y2="558" stroke="#374151" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="875" y="550" text-anchor="middle" font-size="12.5" fill="#374151">判定结果</text>
+<line x1="623" y1="608" x2="1295" y2="608" stroke="#374151" stroke-width="1.4" marker-end="url(#solid)"/>
+<text x="959" y="600" text-anchor="middle" font-size="12.5" fill="#374151">汇总（结果集）</text>
+<line x1="1295" y1="658" x2="623" y2="658" stroke="#374151" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="959" y="650" text-anchor="middle" font-size="12.5" fill="#374151">测试报告</text>
+<line x1="623" y1="708" x2="455" y2="708" stroke="#374151" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="539" y="700" text-anchor="middle" font-size="12.5" fill="#374151">结构化结果</text>
+<line x1="455" y1="758" x2="287" y2="758" stroke="#374151" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="371" y="750" text-anchor="middle" font-size="12.5" fill="#374151">响应</text>
+<line x1="287" y1="808" x2="119" y2="808" stroke="#374151" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<text x="203" y="800" text-anchor="middle" font-size="12.5" fill="#374151">返回结果</text>
+</g>
+</svg>

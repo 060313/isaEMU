@@ -1,0 +1,57 @@
+<svg viewBox="0 0 680 370" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img">
+<title>ISA 模拟系统云端部署图</title>
+<desc>用户终端与 CI 客户端经 HTTPS 访问云主机；云主机上以 Docker 运行 nginx、app-server、postgres 三个容器，app-server 以子进程调用工具链与 Spike。</desc>
+<defs>
+<marker id="ard" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<text x="40" y="26" font-size="14" font-weight="500" fill="#2C2C2A">云端部署形态 · 单机三容器</text>
+<text x="40" y="44" font-size="12" fill="#5F5E5A">节点内构件以 «artifact» 标注；容器之间经 Docker 内部网络通信，不对外暴露。</text>
+
+<rect x="110" y="56" width="200" height="76" rx="12" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="122" y="75" font-size="13" font-weight="500" fill="#2C2C2A">«device» 用户终端</text>
+<rect x="122" y="84" width="176" height="36" rx="8" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="0.5"/>
+<text x="210" y="99" font-size="13" fill="#2C2C2A" text-anchor="middle">浏览器</text>
+<text x="210" y="113" font-size="12" fill="#5F5E5A" text-anchor="middle">Chrome / Edge / Firefox</text>
+
+<rect x="330" y="56" width="200" height="76" rx="12" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="342" y="75" font-size="13" font-weight="500" fill="#2C2C2A">«device» CI 客户端</text>
+<rect x="342" y="84" width="176" height="36" rx="8" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="0.5"/>
+<text x="430" y="99" font-size="13" fill="#2C2C2A" text-anchor="middle">脚本 / CI 流水线</text>
+<text x="430" y="113" font-size="12" fill="#5F5E5A" text-anchor="middle">批量测试与对拍触发</text>
+
+<path d="M210 132L210 156" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#ard)"/>
+<path d="M430 132L430 156" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#ard)"/>
+<text x="442" y="150" font-size="11" fill="#5F5E5A">HTTPS / WSS（443）</text>
+
+<rect x="56" y="158" width="584" height="192" rx="12" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="68" y="176" font-size="13" font-weight="500" fill="#0C447C">«device» 云主机 · «executionEnvironment» Docker Engine</text>
+
+<rect x="68" y="186" width="172" height="64" rx="8" fill="#FFFFFF" stroke="#85B7EB" stroke-width="0.5"/>
+<text x="154" y="205" font-size="13" fill="#042C53" text-anchor="middle">容器 nginx</text>
+<text x="154" y="222" font-size="12" fill="#185FA5" text-anchor="middle">«artifact» 前端静态资源</text>
+<text x="154" y="238" font-size="12" fill="#185FA5" text-anchor="middle">对外 :443 · TLS 终结</text>
+
+<path d="M240 218L256 218" stroke="#185FA5" stroke-width="1" fill="none" marker-end="url(#ard)"/>
+
+<rect x="258" y="186" width="172" height="64" rx="8" fill="#FFFFFF" stroke="#85B7EB" stroke-width="0.5"/>
+<text x="344" y="205" font-size="13" fill="#042C53" text-anchor="middle">容器 app-server</text>
+<text x="344" y="222" font-size="12" fill="#185FA5" text-anchor="middle">«artifact» 服务端 · 内嵌内核</text>
+<text x="344" y="238" font-size="12" fill="#185FA5" text-anchor="middle">内网 :8080</text>
+
+<path d="M430 218L446 218" stroke="#185FA5" stroke-width="1" fill="none" marker-end="url(#ard)"/>
+
+<rect x="448" y="186" width="172" height="64" rx="8" fill="#FFFFFF" stroke="#85B7EB" stroke-width="0.5"/>
+<text x="534" y="205" font-size="13" fill="#042C53" text-anchor="middle">容器 postgres</text>
+<text x="534" y="222" font-size="12" fill="#185FA5" text-anchor="middle">«artifact» PostgreSQL</text>
+<text x="534" y="238" font-size="12" fill="#185FA5" text-anchor="middle">内网 :5432 · 数据卷</text>
+
+<path d="M344 250L344 268" stroke="#185FA5" stroke-width="1" fill="none" marker-end="url(#ard)"/>
+
+<rect x="68" y="270" width="552" height="64" rx="8" fill="#FFFFFF" stroke="#85B7EB" stroke-width="0.5" stroke-dasharray="5 3"/>
+<text x="344" y="291" font-size="12" fill="#042C53" text-anchor="middle">«artifact» 宿主机外部进程（由 app-server 以子进程方式调用）</text>
+<text x="344" y="308" font-size="12" fill="#185FA5" text-anchor="middle">riscv-gnu-toolchain（汇编） · Spike（--log-commits 对拍基准）</text>
+<text x="344" y="324" font-size="12" fill="#5F5E5A" text-anchor="middle">经 ProcessRunner 统一管理超时、输出回收与退出码</text>
+</svg>

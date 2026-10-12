@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>ISA 模拟系统 · 分析类模型</title>
+<style>
+  :root { --line:#e5e7eb; --text:#111827; --sub:#6b7280; --bg:#f6f7f9; }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:32px 40px 64px; background:var(--bg); color:var(--text);
+         font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  .lead { color:var(--sub); font-size:13px; line-height:1.9; margin:0 0 22px; }
+  .legend { display:flex; gap:18px; flex-wrap:wrap; margin:0 0 26px; font-size:12.5px; color:var(--sub); }
+  .legend i { display:inline-block; width:11px; height:11px; border-radius:3px; margin-right:6px;
+              vertical-align:-1px; border:1px solid rgba(0,0,0,.15); }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 16px 16px;
+          box-shadow:0 1px 2px rgba(16,24,40,.04); margin-bottom:26px; overflow-x:auto; }
+  .card h2 { font-size:14.5px; margin:0 0 10px; padding-bottom:8px; border-bottom:1px solid var(--line); font-weight:600; }
+  .card img { display:block; width:100%; height:auto; }
+</style>
+</head>
+<body>
+<h1>ISA 模拟系统 · 分析类模型</h1>
+<p class="lead">共 30 个分析类：边界类 10 个、控制类 8 个、实体类 12 个。属性、职责与用例对照见同目录 <code>分析类模型说明.md</code>。</p>
+<div class="legend">
+  <span><i style="background:#eff6ff;border-color:#2563eb"></i>边界类 boundary</span>
+  <span><i style="background:#fffbeb;border-color:#d97706"></i>控制类 control</span>
+  <span><i style="background:#f3f4f6;border-color:#4b5563"></i>实体类 entity</span>
+  <span>◆ 组合（◆ 端为整体）　→ 关联 / 依赖</span>
+</div>
+<div class="card">
+  <h2>分析类图（全貌）</h2>
+  <img src="分析类图.svg" alt="分析类图">
+</div>
+<div class="card">
+  <h2>分析类图 · 实体类（含属性与职责）</h2>
+  <img src="分析类图-实体类.svg" alt="分析类图·实体类">
+</div>
+</body>
+</html>

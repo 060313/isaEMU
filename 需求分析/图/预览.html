@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>ISA 模拟系统 · 用例交互模型（顺序图）</title>
+<style>
+  :root { --line:#e5e7eb; --text:#111827; --sub:#6b7280; --card:#ffffff; --bg:#f6f7f9; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:32px 40px 64px; background:var(--bg); color:var(--text);
+         font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  .lead { color:var(--sub); font-size:13px; line-height:1.9; margin:0 0 22px; }
+  .legend { display:flex; gap:18px; flex-wrap:wrap; margin:0 0 26px; font-size:12.5px; color:var(--sub); }
+  .legend i { display:inline-block; width:11px; height:11px; border-radius:3px; margin-right:6px;
+              vertical-align:-1px; border:1px solid rgba(0,0,0,.15); }
+  .grid { display:grid; gap:26px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px 16px;
+          box-shadow:0 1px 2px rgba(16,24,40,.04); overflow-x:auto; }
+  .card h2 { font-size:14.5px; margin:0 0 10px; padding-bottom:8px; border-bottom:1px solid var(--line); font-weight:600; }
+  .card img { display:block; width:100%; height:auto; }
+</style>
+</head>
+<body>
+<h1>ISA 模拟系统 · 用例交互模型（UML 顺序图）</h1>
+<p class="lead">共 14 张顺序图，对应 UC-01 ~ UC-14。消息名与参数、参与对象与分析类类别的完整对照见同目录 <code>交互模型说明.md</code>。</p>
+<div class="legend">
+  <span><i style="background:#e5e7eb;border-color:#6b7280"></i>执行者</span>
+  <span><i style="background:#eff6ff;border-color:#2563eb"></i>边界类 boundary</span>
+  <span><i style="background:#fffbeb;border-color:#d97706"></i>控制类 control</span>
+  <span><i style="background:#f3f4f6;border-color:#4b5563"></i>实体类 entity</span>
+</div>
+<div class="grid">
+  <div class="card"><h2>UC-01 注册与登录</h2><img src="UC-01.svg" alt="UC-01 顺序图"></div>
+  <div class="card"><h2>UC-02 装载与管理 ISA 指令集</h2><img src="UC-02.svg" alt="UC-02 顺序图"></div>
+  <div class="card"><h2>UC-03 装载并配置待模拟程序</h2><img src="UC-03.svg" alt="UC-03 顺序图"></div>
+  <div class="card"><h2>UC-04 单步与连续执行</h2><img src="UC-04.svg" alt="UC-04 顺序图"></div>
+  <div class="card"><h2>UC-05 设置与管理断点</h2><img src="UC-05.svg" alt="UC-05 顺序图"></div>
+  <div class="card"><h2>UC-06 查看架构状态与执行轨迹</h2><img src="UC-06.svg" alt="UC-06 顺序图"></div>
+  <div class="card"><h2>UC-07 回退执行历史</h2><img src="UC-07.svg" alt="UC-07 顺序图"></div>
+  <div class="card"><h2>UC-08 管理并批量执行测试用例</h2><img src="UC-08.svg" alt="UC-08 顺序图"></div>
+  <div class="card"><h2>UC-09 查看测试报告</h2><img src="UC-09.svg" alt="UC-09 顺序图"></div>
+  <div class="card"><h2>UC-10 发起 ISA 一致性对拍</h2><img src="UC-10.svg" alt="UC-10 顺序图"></div>
+  <div class="card"><h2>UC-11 分析与标注分歧归因</h2><img src="UC-11.svg" alt="UC-11 顺序图"></div>
+  <div class="card"><h2>UC-12 保存与加载工作区</h2><img src="UC-12.svg" alt="UC-12 顺序图"></div>
+  <div class="card"><h2>UC-13 通过集成 API 驱动模拟</h2><img src="UC-13.svg" alt="UC-13 顺序图"></div>
+  <div class="card"><h2>UC-14 管理用户与资源配额</h2><img src="UC-14.svg" alt="UC-14 顺序图"></div>
+</div>
+</body>
+</html>
