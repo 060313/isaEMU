@@ -1,0 +1,14 @@
+{
+  "name": "isa-sim-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "ISA 模拟系统前端骨架（SS-7 / 8 个构件）",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node -e \"require('fs').cpSync('index.html','dist/index.html')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

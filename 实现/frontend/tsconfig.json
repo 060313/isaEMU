@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ES2020",
+    "moduleResolution": "bundler",
+    "lib": ["ES2020", "DOM"],
+    "strict": true,
+    "noImplicitOverride": true,
+    // 骨架阶段刻意不开 noUnusedLocals / noUnusedParameters：
+    // 空实现的形参本身就是「方法契约」的书面表达，参数未用属预期；
+    // 二者不属于 strict，实现填充完成后可再开启。
+    "outDir": "dist",
+    "rootDir": "src",
+    "sourceMap": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

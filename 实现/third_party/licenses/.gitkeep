@@ -1,0 +1,8 @@
+# 许可证原文归档目录（NFR-C4）
+#
+# 发布前把各第三方依赖的许可证原文放到本目录，文件名与依赖名一致，例如
+# boost.txt / nlohmann-json.txt / elfio.txt / libpqxx.txt / sqlite3.txt /
+# spdlog.txt / nginx.txt / postgresql.txt / riscv-gnu-toolchain.txt
+#
+# 本文件（.gitkeep）仅用于让空目录进入版本库；归档开始后可以删除。
+# 清单与合规判定见上级目录的 README.md。

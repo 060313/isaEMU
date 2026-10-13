@@ -1,0 +1,26 @@
+# ============================================================================
+# 数据容器 —— PostgreSQL 16 + 初始化 DDL
+#
+# 设计依据：《软件体系结构设计文档》
+#   6.1 制品清单 —— 数据库：PostgreSQL 16 实例 + 初始化 DDL / 数据卷
+#   6.2 云端形态 —— 三容器之「数据容器（PostgreSQL 16）」，不发布宿主机端口
+#   6.5 节点间通信 —— 应用容器 ↔ 数据容器 走 TCP 5432，仅容器网络可达
+#   5.3.2 选定资源 —— PostgreSQL 16+ / PostgreSQL License（宽松许可）
+#
+# 构建上下文 = 实现/（见 docker-compose.yml 的 context），故 COPY 用仓库内相对路径。
+# ============================================================================
+
+FROM postgres:16
+
+LABEL org.opencontainers.image.title="isa-sim db" \
+      org.opencontainers.image.description="ISA 模拟系统 —— 数据容器（PostgreSQL 16 + 初始化 DDL）"
+
+# 初始化 DDL。官方 entrypoint 在数据卷为空时按文件名顺序执行
+# /docker-entrypoint-initdb.d/*.sql，因此这里无需自写初始化脚本。
+# 双形态同源（SA-09）：云端用本 DDL，本地形态用 schema/sqlite_schema.sql，
+# 9 个逻辑类型 / 7 处 DDL 差异由 SS-8 的 DbDriver 抽象吸收。
+COPY schema/postgres_schema.sql /docker-entrypoint-initdb.d/01_schema.sql
+
+# 仅声明监听端口，不向宿主机发布（SAD 6.2 / 6.5）。
+# 发布与否由 docker-compose.yml 决定：本服务不写 ports。
+EXPOSE 5432

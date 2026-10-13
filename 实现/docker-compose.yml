@@ -1,0 +1,89 @@
+# ============================================================================
+# 云端形态 —— 单台 Linux 主机 + 容器运行时，三个容器
+#
+# 设计依据：《软件体系结构设计文档》
+#   6.2 云端形态 —— 三个容器：边缘（nginx，唯一发布 443）/ 应用（不发布端口）/
+#                    数据（PostgreSQL 16，不发布端口）
+#   6.5 节点间通信 —— 边缘↔应用 走容器网络内 HTTP；应用↔数据 走 TCP 5432
+#   7.2 构建与制品 —— Dockerfile ×3
+#
+# 这不是集群编排：LIM-01 / LIM-06 / LIM-10 明确不做多主机调度、服务网格与副本伸缩。
+# 本文件只在一台主机上编排三个容器。
+#
+# 用法：
+#   cp .env.example .env      # 填入 POSTGRES_PASSWORD 等
+#   docker compose up --build
+#   浏览器访问 https://localhost       （自签名证书，需手动信任）
+# ============================================================================
+
+name: isa-sim
+
+services:
+  # -------------------------------------------------------------- 数据容器
+  db:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.db
+    image: isa-sim/db:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-isa_sim}
+      POSTGRES_USER: ${POSTGRES_USER:-isa_sim}
+      # 不设默认口令：未配置时直接报错退出，避免弱口令被带上线
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?请复制 .env.example 为 .env 并设置 POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks: [isa-net]
+    # 不发布宿主机端口（SAD 6.2 / 6.5）
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-isa_sim} -d ${POSTGRES_DB:-isa_sim}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  # -------------------------------------------------------------- 应用容器
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.app
+      args:
+        WITH_SPIKE: ${WITH_SPIKE:-0}
+    image: isa-sim/app:0.1
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # 双形态同源（SA-09）：形态只由配置项区分，其余代码完全一致
+      ISA_DB_DRIVER: postgres
+      ISA_DB_HOST: db
+      ISA_DB_PORT: "5432"
+      ISA_DB_NAME: ${POSTGRES_DB:-isa_sim}
+      ISA_DB_USER: ${POSTGRES_USER:-isa_sim}
+      ISA_DB_PASSWORD: ${POSTGRES_PASSWORD:?请复制 .env.example 为 .env 并设置 POSTGRES_PASSWORD}
+      ISA_AUTH_ENABLED: "true"
+      ISA_LISTEN_HOST: 0.0.0.0
+      ISA_LISTEN_PORT: "8080"
+    networks: [isa-net]
+    # 不发布宿主机端口（SAD 6.2）：仅容器网络可达，由边缘容器反向代理
+
+  # -------------------------------------------------------------- 边缘容器
+  edge:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.edge
+    image: isa-sim/edge:0.1
+    restart: unless-stopped
+    depends_on: [app]
+    ports:
+      # 唯一发布到宿主机的端口（SAD 6.2）
+      - "${HTTPS_PORT:-443}:443"
+    networks: [isa-net]
+
+networks:
+  isa-net:
+    driver: bridge
+
+volumes:
+  pgdata:
