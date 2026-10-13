@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="690" viewBox="0 0 1360 690">
+<rect x="0" y="0" width="1360" height="690" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1.2 L11,6 L1,10.8" fill="none" stroke="#6b7280" stroke-width="1.7"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">用例设计顺序图 · UC-06 查看架构状态与执行轨迹</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段一 · 用例设计　｜　参与设计类：SS-7 DebugView / AppShell、SS-5 DebugService、SS-1 ArchState / Trace</text>
+<line x1="40.0" y1="80.0" x2="1320.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="116.8" y="112.0" width="142.0" height="54.0" rx="6" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="187.8" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«actor»</text>
+<text x="187.8" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">注册用户</text>
+<rect x="312.5" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="383.5" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«page» SS-7</text>
+<text x="383.5" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">DebugView</text>
+<rect x="508.2" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="579.2" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-7</text>
+<text x="579.2" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">AppShell</text>
+<rect x="703.8" y="112.0" width="142.0" height="54.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="774.8" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«service» SS-5</text>
+<text x="774.8" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">DebugService</text>
+<rect x="899.5" y="112.0" width="142.0" height="54.0" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+<text x="970.5" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-1</text>
+<text x="970.5" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">ArchState</text>
+<rect x="1095.2" y="112.0" width="142.0" height="54.0" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+<text x="1166.2" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-1</text>
+<text x="1166.2" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">Trace</text>
+<line x1="187.8" y1="166.0" x2="187.8" y2="542.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="383.5" y1="166.0" x2="383.5" y2="542.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="579.2" y1="166.0" x2="579.2" y2="542.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="774.8" y1="166.0" x2="774.8" y2="542.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="970.5" y1="166.0" x2="970.5" y2="542.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1166.2" y1="166.0" x2="1166.2" y2="542.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="965.5" y="328.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="769.8" y="256.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="574.2" y="220.0" width="10.0" height="208.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="378.5" y="184.0" width="10.0" height="326.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="182.8" y="184.0" width="10.0" height="28.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<path d="M199.8 200.0 H371.5" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="167.9" y="183.2" width="235.5" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="285.7" y="192.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">① 切换视图（寄存器 / 内存 / 反汇编 / 轨迹）</text>
+<path d="M395.5 236.0 H567.2" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="425.1" y="219.2" width="112.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="481.3" y="228.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">② readState(scope)</text>
+<path d="M591.2 272.0 H762.8" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="562.6" y="255.2" width="228.7" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="677.0" y="264.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">③ snapshot()　查询 PC / GPR / 内存 / CSR</text>
+<path d="M762.8 308.0 H591.2" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="642.2" y="291.2" width="69.6" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="677.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">架构状态快照</text>
+<path d="M591.2 344.0 H958.5" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="729.6" y="327.2" width="90.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="774.8" y="336.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">④ query(range)</text>
+<path d="M958.5 380.0 H591.2" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="719.9" y="363.2" width="109.9" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="774.8" y="372.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">轨迹记录（差分序列）</text>
+<path d="M567.2 416.0 H395.5" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="451.6" y="399.2" width="59.5" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="481.3" y="408.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">状态与轨迹</text>
+<path d="M390.5 452.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="433.5" y="456.4" width="83.6" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="437.5" y="465.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑤ 渲染四类视图</text>
+<path d="M390.5 498.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="433.5" y="502.4" width="44.0" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="437.5" y="511.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑥ 呈现</text>
+<text x="40.0" y="594.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 实线黑＝设计类之间的调用；蓝色＝界面跳转（方向标注「替换 / 前进 / 返回」）；虚线开放箭头＝返回。编号对应用例交互模型的消息顺序。</text>
+<text x="40.0" y="610.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 与交互模型的差别：边界类与控制类之间插入 SS-6 的 HttpGateway（分析类 ApiEndpoint 与控制类 ApiController 合并），实体类按 SAD 5.4.3 落到对应子系统。</text>
+<text x="40.0" y="626.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 新增设计元素（TerminationGuard / AccessGuard / IStore / IIdGen / IProcessRunner 等 12 项）在图中以首次出现的调用标出，来源见 SAD 5.4.4。</text>
+<text x="40.0" y="642.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 分析类 `DebugController` 的「状态读取」职责落在 `DebugService.readState`（方式二：PC / GPR / 内存 / CSR 分项查询 + 轨迹范围查询）。</text>
+<text x="40.0" y="658.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ① 的「切换视图」在精化后变为**局部切换**：B 寄存器区 / C 内存区常驻，D 轨迹区 / E 断点区为选项卡（《界面精化设计说明》五·5.4）——消息仍成立、可切换范围收窄，**交互模型无需修改**。</text>
+<text x="40.0" y="674.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 读取只取只读快照、不产生写回；连续运行时按刷新节流合并请求（NFR-Q3）。</text>
+</svg>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="880" viewBox="0 0 1480 880">
+<rect x="0" y="0" width="1480" height="880" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1.2 L11,6 L1,10.8" fill="none" stroke="#6b7280" stroke-width="1.7"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">界面顺序图 · UC-03 装载程序与 UC-04 单步执行</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">uid 阶段三·精化设计　｜　参与界面：UI-03 程序装载与配置、UI-02 调试工作台　｜　跳转：J-13 返回　（编号对应《用户界面设计文档》第 6 章的跳转表）</text>
+<line x1="40.0" y1="80.0" x2="1440.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="25.0" y="110.0" width="130.0" height="52.0" rx="6" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="90.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«actor»</text>
+<text x="90.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">用户</text>
+<line x1="90.0" y1="162.0" x2="90.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="215.0" y="110.0" width="190.0" height="52.0" rx="6" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="310.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«page»</text>
+<text x="310.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">UI-03 程序装载与配置</text>
+<line x1="310.0" y1="162.0" x2="310.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="485.0" y="110.0" width="190.0" height="52.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="580.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«page» 主界面</text>
+<text x="580.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">UI-02 调试工作台</text>
+<line x1="580.0" y1="162.0" x2="580.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="745.0" y="110.0" width="170.0" height="52.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="830.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«service»</text>
+<text x="830.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">装载服务 LoadService</text>
+<line x1="830.0" y1="162.0" x2="830.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="965.0" y="110.0" width="190.0" height="52.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.6"/>
+<text x="1060.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«adapter»</text>
+<text x="1060.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">工具链适配器</text>
+<line x1="1060.0" y1="162.0" x2="1060.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="1220.0" y="110.0" width="200.0" height="52.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="1320.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«ICoreService»</text>
+<text x="1320.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">内核 EmulatorCore</text>
+<line x1="1320.0" y1="162.0" x2="1320.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="85.0" y="196.0" width="10.0" height="144.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<rect x="305.0" y="208.0" width="10.0" height="352.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<rect x="575.0" y="560.0" width="10.0" height="190.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<rect x="825.0" y="260.0" width="10.0" height="260.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<rect x="1055.0" y="300.0" width="10.0" height="56.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<rect x="1315.0" y="340.0" width="10.0" height="80.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<rect x="1315.0" y="620.0" width="10.0" height="80.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<path d="M102.0 200.0 H298.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="112.9" y="183.4" width="174.2" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="200.0" y="192.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">编辑汇编源或上传机器码 / ELF 映像</text>
+<path d="M102.0 236.0 H298.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="113.8" y="219.4" width="172.4" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="200.0" y="228.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">填基址、起始 PC、栈指针、内存初值</text>
+<path d="M317.0 272.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="358.0" y="276.4" width="181.5" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="362.0" y="285.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">③ 界面内校验：格式、对齐、映像范围</text>
+<path d="M322.0 316.0 H818.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="464.1" y="299.4" width="211.8" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="570.0" y="308.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">④ assemble(src)　〔点「装载并初始化」〕</text>
+<path d="M842.0 352.0 H1048.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="844.6" y="335.4" width="200.9" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="945.0" y="344.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑤ run(toolchain, src)　子进程 + 管道</text>
+<path d="M1048.0 388.0 H842.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="885.8" y="371.4" width="118.5" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="945.0" y="380.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑥ 机器码映像 / 错误行</text>
+<rect x="1198.0" y="392.0" width="272.0" height="48.0" rx="5" fill="#fffbeb" stroke="#dc2626" stroke-width="1.3" stroke-dasharray="7 4"/>
+<text x="1208.0" y="412.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">失败分支：错误行回填 UI-03 并停留本界面；</text>
+<text x="1208.0" y="428.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">工具链缺失给告警条提示（FR-2.2）</text>
+<path d="M842.0 446.0 H1308.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="980.0" y="429.4" width="189.9" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="1075.0" y="438.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑦ load(image, base, initialState)</text>
+<path d="M1308.0 482.0 H842.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="1053.5" y="465.4" width="43.0" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="1075.0" y="474.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑧ 就绪</text>
+<path d="M818.0 518.0 H322.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="505.8" y="501.4" width="128.4" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="570.0" y="510.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑨ 装载结果 + 反汇编预览</text>
+<path d="M317.0 554.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="358.0" y="558.4" width="122.1" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="362.0" y="567.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑩ 呈现摘要与就绪提示条</text>
+<path d="M322.0 598.0 H568.0" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ab)"/>
+<rect x="350.7" y="581.4" width="188.6" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="445.0" y="590.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑪ 跳转 J-13（返回，携带映像与初态）</text>
+<path d="M102.0 638.0 H568.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="229.0" y="621.4" width="212.0" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="335.0" y="630.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">点「单步」（或「连续运行」「运行 N 步」）</text>
+<path d="M592.0 674.0 H1308.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="919.6" y="657.4" width="60.9" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="950.0" y="666.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑬ step(1)</text>
+<path d="M1308.0 710.0 H592.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="840.5" y="693.4" width="218.9" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="950.0" y="702.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑭ 状态增量：PC / 写过的 GPR / 内存 / CSR</text>
+<path d="M587.0 746.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="628.0" y="750.4" width="203.8" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="632.0" y="759.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑮ 刷新四类视图并高亮本步变化（NFR-Q3）</text>
+<text x="40.0" y="818.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ③ 的界面内校验在提交前实时进行：十六进制格式、基址 4 字节对齐、起始 PC 落在映像范围内、栈指针对齐；不通过则提交按钮禁用。</text>
+<text x="40.0" y="834.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ⑤~⑥ 是 ② 的失败分支：工具链缺失或汇编报错时，把错误行回填到 UI-03 并停留在本界面，不发生跳转（FR-2.2 要求「给出明确提示而不静默失败」）。</text>
+<text x="40.0" y="850.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· J-13 的方向是「返回」：装载成功后回到主界面并刷新四类视图；携带机器码映像与初始 PC / SP / 内存初值。</text>
+<text x="40.0" y="866.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ⑬ 经调试服务转发给内核（图中省略 DebugService 这一跳，与 SAD 8.3 的单步热路径一致）；⑮ 的「高亮本步变化」是 NFR-Q3 的界面落点。</text>
+</svg>

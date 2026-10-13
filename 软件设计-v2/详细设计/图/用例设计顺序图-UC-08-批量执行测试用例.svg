@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="922" viewBox="0 0 1520 922">
+<rect x="0" y="0" width="1520" height="922" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1.2 L11,6 L1,10.8" fill="none" stroke="#6b7280" stroke-width="1.7"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">用例设计顺序图 · UC-08 管理并批量执行测试用例</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段一 · 用例设计　｜　参与设计类：SS-6 HttpGateway / AccessGuard、SS-5 TestService / TestSuite / TestReport、SS-1 EmulatorCore、SS-3 CompareEngine、SS-8 IStore</text>
+<line x1="40.0" y1="80.0" x2="1480.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="100.0" y="112.0" width="128.2" height="54.0" rx="6" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="164.1" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«actor»</text>
+<text x="164.1" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">工业芯片工程师</text>
+<rect x="248.2" y="112.0" width="128.2" height="54.0" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="312.3" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-6</text>
+<text x="312.3" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">HttpGateway</text>
+<rect x="396.4" y="112.0" width="128.2" height="54.0" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="460.6" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-6</text>
+<text x="460.6" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">AccessGuard</text>
+<rect x="544.7" y="112.0" width="128.2" height="54.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="608.8" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«service» SS-5</text>
+<text x="608.8" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">TestService</text>
+<rect x="692.9" y="112.0" width="128.2" height="54.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="757.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«entity» SS-5</text>
+<text x="757.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">TestSuite</text>
+<rect x="841.1" y="112.0" width="128.2" height="54.0" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+<text x="905.2" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-1</text>
+<text x="905.2" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">EmulatorCore</text>
+<rect x="989.3" y="112.0" width="128.2" height="54.0" rx="6" fill="#fdf4ff" stroke="#c026d3" stroke-width="1.6"/>
+<text x="1053.4" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-3</text>
+<text x="1053.4" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">CompareEngine</text>
+<rect x="1137.6" y="112.0" width="128.2" height="54.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="1201.7" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«entity» SS-5</text>
+<text x="1201.7" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">TestReport</text>
+<rect x="1285.8" y="112.0" width="128.2" height="54.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.6"/>
+<text x="1349.9" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«interface» SS-8</text>
+<text x="1349.9" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">IStore</text>
+<line x1="164.1" y1="166.0" x2="164.1" y2="758.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="312.3" y1="166.0" x2="312.3" y2="758.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="460.6" y1="166.0" x2="460.6" y2="758.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="608.8" y1="166.0" x2="608.8" y2="758.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="757.0" y1="166.0" x2="757.0" y2="758.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="905.2" y1="166.0" x2="905.2" y2="758.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1053.4" y1="166.0" x2="1053.4" y2="758.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1201.7" y1="166.0" x2="1201.7" y2="758.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1349.9" y1="166.0" x2="1349.9" y2="758.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="1344.9" y="626.0" width="10.0" height="28.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="1196.7" y="590.0" width="10.0" height="28.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="1048.4" y="518.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="900.2" y="446.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="752.0" y="328.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="603.8" y="292.0" width="10.0" height="398.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="455.6" y="220.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="307.3" y="184.0" width="10.0" height="542.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="159.1" y="184.0" width="10.0" height="542.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<path d="M176.1 200.0 H300.3" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="113.4" y="183.2" width="249.6" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="238.2" y="192.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">① POST /api/tests/run {suiteId, mode, cred}</text>
+<path d="M324.3 236.0 H448.6" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="272.6" y="219.2" width="227.6" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="386.4" y="228.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">② authorize(cred) / checkQuota(uid, op)</text>
+<path d="M448.6 272.0 H324.3" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="318.7" y="255.2" width="135.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="386.4" y="264.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">通过 / 拒绝（401 / 429）</text>
+<path d="M324.3 308.0 H596.8" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="385.2" y="291.2" width="150.8" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="460.6" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">③ runSuite(suiteId, mode)</text>
+<path d="M620.8 344.0 H745.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="634.9" y="327.2" width="95.9" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="682.9" y="336.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">④ load(suiteId)</text>
+<path d="M745.0 380.0 H620.8" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="658.2" y="363.2" width="49.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="682.9" y="372.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">用例列表</text>
+<path d="M615.8 416.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="658.8" y="420.4" width="188.7" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="662.8" y="429.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑤ 逐用例循环（下 ⑧~⑪ 为一个用例）</text>
+<path d="M620.8 462.0 H893.2" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="632.2" y="445.2" width="249.6" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="757.0" y="454.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑥ load(image, base, initState) + run(limit)</text>
+<path d="M893.2 498.0 H620.8" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="707.1" y="481.2" width="99.8" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="757.0" y="490.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">执行结果与状态序列</text>
+<path d="M620.8 534.0 H1041.4" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="733.8" y="517.2" width="194.7" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="831.1" y="526.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑦ compare(actual, expected, mode)</text>
+<path d="M1041.4 570.0 H620.8" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="739.5" y="553.2" width="183.2" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="831.1" y="562.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">判定结果（通过 / 失败 + 首个差异）</text>
+<path d="M620.8 606.0 H1189.7" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="843.5" y="589.2" width="123.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="905.2" y="598.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑧ summarize(results)</text>
+<path d="M620.8 642.0 H1337.9" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="934.1" y="625.2" width="90.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="979.3" y="634.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑨ save(report)</text>
+<path d="M596.8 678.0 H324.3" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="377.2" y="661.2" width="166.8" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="460.6" y="670.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">结构化结果（通过率 + 失败清单）</text>
+<path d="M300.3 714.0 H176.1" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="200.8" y="697.2" width="74.9" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="238.2" y="706.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">200 {report}</text>
+<text x="40.0" y="810.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 实线黑＝设计类之间的调用；蓝色＝界面跳转（方向标注「替换 / 前进 / 返回」）；虚线开放箭头＝返回。编号对应用例交互模型的消息顺序。</text>
+<text x="40.0" y="826.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 与交互模型的差别：边界类与控制类之间插入 SS-6 的 HttpGateway（分析类 ApiEndpoint 与控制类 ApiController 合并），实体类按 SAD 5.4.3 落到对应子系统。</text>
+<text x="40.0" y="842.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 新增设计元素（TerminationGuard / AccessGuard / IStore / IIdGen / IProcessRunner 等 12 项）在图中以首次出现的调用标出，来源见 SAD 5.4.4。</text>
+<text x="40.0" y="858.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 分析类 `ApiController` 的「鉴权 / 配额 / 分发」三段职责落在 `AccessGuard`（方式一：每段各由单个方法实现）与 `Router`（方式三，图中自 `HttpGateway` 内部分发，未单列生命线）。</text>
+<text x="40.0" y="874.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· `CompareEngine` 独立于 SS-3（SA-04）：UC-08 与 UC-10 复用同一引擎，这是 **FR-6.5 的唯一落点**；两种判定模式（终态 / 逐步）由 `DiffScope` 承载。</text>
+<text x="40.0" y="890.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ⑧~⑪ 是**逐用例循环**（图中以一个用例为例）；批量执行的用例级隔离由 IStore 的用户谓词保证（SA-05）。</text>
+<text x="40.0" y="906.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ⑫ 的报告持久化经 SS-8 的 IStore，报告由 UC-09 只读呈现，两条用例不交叉修改。</text>
+</svg>

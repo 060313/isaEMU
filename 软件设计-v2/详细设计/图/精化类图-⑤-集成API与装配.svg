@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<rect x="0" y="0" width="1400" height="900" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11" fill="none" stroke="#7c3aed" stroke-width="1.6"/></marker>
+<marker id="dt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">精化类图 ⑤　SS-6 集成 API 与装配关系</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段三 · 类设计　｜　四个构件在同一条调用链上；`Bootstrapper` 是全系统唯一的对象装配点（SA-08 组合根）</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="40.0" y="96.0" width="420.0" height="183.4" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<path d="M40.0 126.0 H460.0" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-6</text>
+<text x="50.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">HttpGateway</text>
+<text x="52.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- guard_  : AccessGuard*</text>
+<text x="52.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- router_ : Router*</text>
+<text x="52.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- ws_     : WsRegistry                 （连接 → 会话）</text>
+<text x="52.0" y="191.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- log_    : ILogger*</text>
+<path d="M40.0 196.4 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ handle(r: const HttpRequest&amp;) : HttpResponse</text>
+<text x="52.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ upgrade(r: const HttpRequest&amp;) : WsSession&amp;</text>
+<text x="52.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ push(id: WsId, e: const Event&amp;) : void</text>
+<text x="52.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- wrap(res: const Result&lt;Payload&gt;&amp;) : HttpResponse</text>
+<text x="52.0" y="267.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- unwrap(r: const HttpRequest&amp;) : Result&lt;Payload&gt;</text>
+<rect x="485.0" y="96.0" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<path d="M485.0 126.0 H905.0" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-6</text>
+<text x="495.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">Router</text>
+<text x="497.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- table_ : map&lt;RouteKey, Handler&gt;            = {}</text>
+<text x="497.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- svcs_  : ServiceSet   （7 个服务接口的引用集）</text>
+<text x="497.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- schema_: map&lt;RouteKey, Schema&gt;             = {}</text>
+<path d="M485.0 182.8 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ route(k: const RouteKey&amp;, p: Params,</text>
+<text x="497.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        caller: const Caller&amp;) : Result&lt;Payload&gt;</text>
+<text x="497.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ bind(p: Params, s: const Schema&amp;) : Result&lt;Bound&gt;</text>
+<text x="497.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ register(k: RouteKey, h: Handler) : void</text>
+<rect x="930.0" y="96.0" width="420.0" height="169.8" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<path d="M930.0 126.0 H1350.0" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-6</text>
+<text x="940.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">AccessGuard</text>
+<text x="942.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- cfg_  : IConfig*</text>
+<text x="942.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- store_: IStore*</text>
+<text x="942.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- rate_ : RateCounter          （会话数 / 请求数）</text>
+<text x="942.0" y="191.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- log_  : ILogger*</text>
+<path d="M930.0 196.4 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ authorize(c: const Credential&amp;) : Result&lt;Caller&gt;</text>
+<text x="942.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ checkQuota(u: UserId, op: OpKind) : Result&lt;void&gt;</text>
+<text x="942.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ checkInstrLimit(n: uint64_t) : Result&lt;void&gt;</text>
+<text x="942.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- limitOf(u: UserId) : uint64_t   从 IConfig/配额取</text>
+<rect x="40.0" y="303.4" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<path d="M40.0 333.4 H460.0" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="317.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-6（组合根）</text>
+<text x="50.0" y="329.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">Bootstrapper</text>
+<text x="52.0" y="358.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- cfg_  : unique_ptr&lt;IConfig&gt;</text>
+<text x="52.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- log_  : unique_ptr&lt;ILogger&gt;</text>
+<text x="52.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- graph_: Container                  （全部单例的持有者）</text>
+<path d="M40.0 390.2 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="407.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ build() : Container</text>
+<text x="52.0" y="420.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ selectDrivers(c: Container&amp;) : void</text>
+<text x="52.0" y="434.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ wire(c: Container&amp;) : void</text>
+<text x="52.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ start(c: Container&amp;) : void</text>
+<rect x="485.0" y="303.4" width="420.0" height="210.6" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.6"/>
+<path d="M485.0 333.4 H905.0" fill="none" stroke="#64748b" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="317.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«interface» SS-8</text>
+<text x="495.0" y="329.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">IConfig</text>
+<text x="497.0" y="358.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- 只读配置项（全部经 Bootstrapper 注入）</text>
+<text x="497.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- dbDriver : DriverKind        = Postgres | Sqlite</text>
+<text x="497.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- listenAddr : Endpoint       = 0.0.0.0:8443</text>
+<text x="497.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- authEnabled : bool               = true</text>
+<text x="497.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- instrLimit : uint64_t       = 100000000</text>
+<text x="497.0" y="426.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- sessionTimeout : Duration          = 30m</text>
+<text x="497.0" y="440.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- maxSessions : uint32_t             = 64</text>
+<text x="497.0" y="453.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- requestQuota : uint32_t           = 1000</text>
+<text x="497.0" y="467.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- traceCapacity : size_t        = 1048576</text>
+<text x="497.0" y="480.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- toolchainPath / spikePath : Path</text>
+<path d="M485.0 485.4 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="502.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ （具名只读访问器，见文档 5.8.2）</text>
+<rect x="930.0" y="303.4" width="420.0" height="197.0" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.6"/>
+<path d="M930.0 333.4 H1350.0" fill="none" stroke="#64748b" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="317.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«interface» SS-8</text>
+<text x="940.0" y="329.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">IStore</text>
+<text x="942.0" y="358.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- 每个方法首参一律是 `u: UserId`</text>
+<text x="942.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- 由实现类在**每条语句**上附加 owner 谓词</text>
+<text x="942.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- （SA-05：不依赖数据库行级安全）</text>
+<path d="M930.0 390.2 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="407.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ findUser / findUserByName / saveUser</text>
+<text x="942.0" y="420.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ queryUsers / queryUsage</text>
+<text x="942.0" y="434.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ saveSession / dropSession</text>
+<text x="942.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ putWorkspace / getWorkspace</text>
+<text x="942.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ saveReport / getReport</text>
+<text x="942.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ saveBreakpoints / loadBreakpoints</text>
+<text x="942.0" y="488.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ saveDivergence / queryDivergence</text>
+<rect x="930.0" y="430.0" width="430.0" height="191.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="940.0" y="448.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【装配顺序（`Bootstrapper.wire`）】</text>
+<text x="940.0" y="463.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">① 由 `IConfig` 选出驱动：`Postgres | Sqlite`；</text>
+<text x="940.0" y="478.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">② 构造 5 个基础服务并注入彼此（`ILogger` → `IStore`）；</text>
+<text x="940.0" y="493.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">③ 构造 SS-1 / SS-2 / SS-3 / SS-4 实现，注入 `IProcessRunner`；</text>
+<text x="940.0" y="508.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">④ 构造 7 个领域服务，注入 `IStore` / `ICoreService` /</text>
+<text x="940.0" y="523.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   `ICompareService` / `IAssembler` / `IRefSim` / `SessionService`；</text>
+<text x="940.0" y="538.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">⑤ 构造 `AccessGuard` → `Router` → `HttpGateway`；</text>
+<text x="940.0" y="553.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">⑥ 注册路由表（`Router.register`），冻结对外契约。</text>
+<text x="940.0" y="568.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start"></text>
+<text x="940.0" y="583.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">只有本类的 `build()` 里会出现 `new`；其他任何地方</text>
+<text x="940.0" y="598.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">不得构造内核、存储、适配器实例（SA-08）。</text>
+<text x="40.0" y="852.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 调用链固定为 `HttpGateway → AccessGuard → Router → 领域服务接口`；`Router` 的分发表可独立替换（增删接口不改鉴权代码，SAD 5.4.4）。</text>
+<text x="40.0" y="868.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `AccessGuard` 是 NFR-Q5 与鉴权的**唯一前置落点**（SA-05）；它的限额值来自 `IConfig`，与 UC-04 下发给内核的 `limit` 参数**同源** —— 这是 UID 评审 ⑦-1 那个悬空项在详细设计上的收口。</text>
+<text x="40.0" y="884.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `Bootstrapper` 是全系统唯一的对象装配点（SA-08）：全项目只有它的 `build()` 里出现 `new`，双形态差异（PostgreSQL ↔ SQLite、鉴权开 ↔ 关）只收敛在 `selectDrivers`。</text>
+</svg>

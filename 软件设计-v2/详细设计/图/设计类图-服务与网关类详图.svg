@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="748" viewBox="0 0 1400 748">
+<rect x="0" y="0" width="1400" height="748" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">设计类图（领域服务与集成 API 类详图）</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段一 · 用例设计　｜　SS-5 的 7 个领域服务 + SS-6 的 4 个集成构件　｜　领域服务均不持有业务状态，依赖以接口形式注入</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="40.0" y="96.0" width="312.0" height="161.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M40.0 130.0 H352.0" fill="none" stroke="#0891b2" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="111.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="50.0" y="125.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">SessionService</text>
+<text x="54.0" y="146.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- store : IStore</text>
+<text x="54.0" y="161.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- idgen : IIdGen</text>
+<text x="54.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- log : ILogger</text>
+<path d="M40.0 186.0 H352.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="54.0" y="204.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ login(cred) : Session</text>
+<text x="54.0" y="219.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ logout(token)</text>
+<text x="54.0" y="234.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ listUsers()</text>
+<text x="54.0" y="249.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ updateUser(uid, patch)</text>
+<rect x="374.0" y="96.0" width="312.0" height="131.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M374.0 130.0 H686.0" fill="none" stroke="#0891b2" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="384.0" y="111.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="384.0" y="125.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">IsaService</text>
+<text x="388.0" y="146.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- isa : IIsaProvider</text>
+<path d="M374.0 156.0 H686.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="388.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ loadSpec(file)</text>
+<text x="388.0" y="189.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ validate(spec)</text>
+<text x="388.0" y="204.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ current() : IsaSpec</text>
+<text x="388.0" y="219.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ switchTo(id)</text>
+<rect x="708.0" y="96.0" width="312.0" height="131.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M708.0 130.0 H1020.0" fill="none" stroke="#0891b2" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="718.0" y="111.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="718.0" y="125.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">LoadService</text>
+<text x="722.0" y="146.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- asm : IAssembler</text>
+<text x="722.0" y="161.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- core : ICoreService</text>
+<path d="M708.0 171.0 H1020.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="722.0" y="189.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ assemble(src)</text>
+<text x="722.0" y="204.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ loadProgram(src, base, init)</text>
+<text x="722.0" y="219.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ loadExample(id)</text>
+<rect x="1042.0" y="96.0" width="312.0" height="146.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M1042.0 130.0 H1354.0" fill="none" stroke="#0891b2" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="1052.0" y="111.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="1052.0" y="125.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">DebugService</text>
+<text x="1056.0" y="146.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- core : ICoreService</text>
+<text x="1056.0" y="161.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- bp : BreakpointTable</text>
+<path d="M1042.0 171.0 H1354.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="1056.0" y="189.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ execute(mode, n, limit)</text>
+<text x="1056.0" y="204.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ readState(scope)</text>
+<text x="1056.0" y="219.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ rollback(step)</text>
+<text x="1056.0" y="234.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ registerBreakpoint(a, op)</text>
+<rect x="40.0" y="292.0" width="312.0" height="146.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M40.0 326.0 H352.0" fill="none" stroke="#0891b2" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="307.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="50.0" y="321.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">TestService</text>
+<text x="54.0" y="342.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- core : ICoreService</text>
+<text x="54.0" y="357.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- cmp : ICompareService</text>
+<text x="54.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- store : IStore</text>
+<path d="M40.0 382.0 H352.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="54.0" y="400.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ runSuite(suiteId, mode)</text>
+<text x="54.0" y="415.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ getReport(id) : TestReport</text>
+<text x="54.0" y="430.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ snapshotOf(caseId)</text>
+<rect x="374.0" y="292.0" width="312.0" height="146.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M374.0 326.0 H686.0" fill="none" stroke="#0891b2" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="384.0" y="307.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="384.0" y="321.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">DiffService</text>
+<text x="388.0" y="342.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- core : ICoreService</text>
+<text x="388.0" y="357.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- ref : IRefSim</text>
+<text x="388.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- cmp : ICompareService</text>
+<path d="M374.0 382.0 H686.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="388.0" y="400.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ start(program, subset)</text>
+<text x="388.0" y="415.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ annotate(divIds, cat, note)</text>
+<text x="388.0" y="430.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ degrade() : DegradeInfo</text>
+<rect x="708.0" y="292.0" width="312.0" height="116.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M708.0 326.0 H1020.0" fill="none" stroke="#0891b2" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="718.0" y="307.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="718.0" y="321.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">WorkspaceService</text>
+<text x="722.0" y="342.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- store : IStore</text>
+<path d="M708.0 352.0 H1020.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="722.0" y="370.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ save(selection)</text>
+<text x="722.0" y="385.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ load(workspaceId)</text>
+<text x="722.0" y="400.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ listWorkspaces()</text>
+<rect x="1042.0" y="292.0" width="312.0" height="131.0" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<path d="M1042.0 326.0 H1354.0" fill="none" stroke="#7c3aed" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="1052.0" y="307.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="start">«component» SS-6</text>
+<text x="1052.0" y="321.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">HttpGateway</text>
+<text x="1056.0" y="342.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- router : Router</text>
+<text x="1056.0" y="357.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- guard : AccessGuard</text>
+<path d="M1042.0 367.0 H1354.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="1056.0" y="385.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ handle(req) : Response</text>
+<text x="1056.0" y="400.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ upgrade(ws)</text>
+<text x="1056.0" y="415.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ push(event)</text>
+<rect x="40.0" y="488.0" width="312.0" height="116.0" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<path d="M40.0 522.0 H352.0" fill="none" stroke="#7c3aed" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="503.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="start">«component» SS-6</text>
+<text x="50.0" y="517.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">Router</text>
+<text x="54.0" y="538.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- routes : RouteMap</text>
+<path d="M40.0 548.0 H352.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="54.0" y="566.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ route(op, params)</text>
+<text x="54.0" y="581.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ bind(schema)</text>
+<text x="54.0" y="596.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ register(path, handler)</text>
+<rect x="374.0" y="488.0" width="312.0" height="131.0" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<path d="M374.0 522.0 H686.0" fill="none" stroke="#7c3aed" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="384.0" y="503.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="start">«component» SS-6</text>
+<text x="384.0" y="517.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">AccessGuard</text>
+<text x="388.0" y="538.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- config : IConfig</text>
+<text x="388.0" y="553.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- store : IStore</text>
+<path d="M374.0 563.0 H686.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="388.0" y="581.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ authorize(cred) : bool</text>
+<text x="388.0" y="596.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ checkQuota(uid, op)</text>
+<text x="388.0" y="611.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ checkInstrLimit(n)</text>
+<rect x="708.0" y="488.0" width="312.0" height="116.0" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<path d="M708.0 522.0 H1020.0" fill="none" stroke="#7c3aed" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="718.0" y="503.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="start">«component» SS-6</text>
+<text x="718.0" y="517.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">Bootstrapper</text>
+<text x="722.0" y="538.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#1f2937" text-anchor="start">- config : IConfig</text>
+<path d="M708.0 548.0 H1020.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="722.0" y="566.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ build() : Container</text>
+<text x="722.0" y="581.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ selectDrivers()</text>
+<text x="722.0" y="596.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">+ wire(services)</text>
+<rect x="1042.0" y="488.0" width="312.0" height="161.0" rx="7" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="6 4"/>
+<text x="1052.0" y="508.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#475569" text-anchor="start" font-weight="700">SS-6 集成 API 的调用链</text>
+<text x="1052.0" y="530.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#64748b" text-anchor="start">HttpGateway → AccessGuard → Router</text>
+<text x="1052.0" y="545.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#64748b" text-anchor="start">→ 7 个领域服务接口</text>
+<text x="1052.0" y="560.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#64748b" text-anchor="start"></text>
+<text x="1052.0" y="575.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#64748b" text-anchor="start">· Bootstrapper 是组合根（SA-08），</text>
+<text x="1052.0" y="590.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#64748b" text-anchor="start">  仅在启动期装配一次</text>
+<text x="1052.0" y="605.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#64748b" text-anchor="start">· 双形态差异收敛在 selectDrivers</text>
+<text x="1052.0" y="620.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#64748b" text-anchor="start">  （PostgreSQL ↔ SQLite）</text>
+<text x="40.0" y="684.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 7 个领域服务与 7 个控制类**一一对应**（SAD 5.4.1 的「按控制类归并」）：`DebugService` 是唯一持有 `BreakpointTable` 的服务，内核不持有断点状态（UC-05）。</text>
+<text x="40.0" y="700.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 领域服务一律不持有业务状态，依赖（`IStore` / `ICoreService` / `ICompareService` / `IASSembler` / `IRefSim`）以接口注入——这是内核层「零第三方链接」与 SS-8 横切复用的前提。</text>
+<text x="40.0" y="716.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `AccessGuard` 是 NFR-Q5 限额与鉴权的**唯一前置落点**（SA-05）：`checkInstrLimit` 的限额值来自 `IConfig` 的运行配置，与 UI-02 状态栏显示的「上限」同源。</text>
+<text x="40.0" y="732.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `Bootstrapper` 是全系统唯一的对象装配点（SA-08 组合根）：按 `IConfig` 选择 PostgreSQL / SQLite 驱动与服务实现，双形态差异只收敛在此处。</text>
+</svg>

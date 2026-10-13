@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850">
+<rect x="0" y="0" width="1200" height="850" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="a2" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#ea580c"/></marker>
+<marker id="a3" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#0891b2"/></marker>
+</defs>
+<text x="48.0" y="40.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="19.0" fill="#111827" text-anchor="start" font-weight="700">ISA 模拟系统 · 可重用资源与体系结构模块映射</text>
+<text x="48.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start">SAD 阶段二 · 重用可用的软件资源　|　四类检索：可重用 SDK · 互联网云服务 · 开源软件 · 遗留系统</text>
+<rect x="56.0" y="112.0" width="360.0" height="104.0" rx="7" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="44.0" y="142.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="15.0" fill="#2563eb" text-anchor="end" font-weight="700">L4</text>
+<text x="72.0" y="140.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#111827" text-anchor="start" font-weight="700">表示层（Web 前端）</text>
+<text x="72.0" y="164.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#374151" text-anchor="start">四类状态视图 · 调试交互</text>
+<text x="72.0" y="181.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#374151" text-anchor="start">测试与对拍报告呈现</text>
+<text x="72.0" y="204.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#2563eb" text-anchor="start">局部风格：MVC</text>
+<rect x="440.0" y="112.0" width="704.0" height="104.0" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.2"/>
+<text x="456.0" y="136.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· Vue 3（MIT）· Vite（MIT）· Vue Router（MIT）· Pinia（MIT）</text>
+<text x="456.0" y="154.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· CodeMirror 6（MIT）— 汇编源编辑器</text>
+<text x="456.0" y="172.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· TypeScript 5（Apache-2.0）— 前端实现语言</text>
+<text x="456.0" y="190.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· 视图渲染自绘（Canvas / SVG），不引入第三方图表库</text>
+<rect x="56.0" y="246.0" width="360.0" height="104.0" rx="7" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="44.0" y="276.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="15.0" fill="#0891b2" text-anchor="end" font-weight="700">L3</text>
+<text x="72.0" y="274.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#111827" text-anchor="start" font-weight="700">应用服务层（服务端）</text>
+<text x="72.0" y="298.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#374151" text-anchor="start">会话管理 · 调试控制 · 测试编排 · 对拍调度</text>
+<text x="72.0" y="315.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#374151" text-anchor="start">集成 API（HTTP / WebSocket）</text>
+<text x="72.0" y="338.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#0891b2" text-anchor="start">接口先行冻结</text>
+<rect x="440.0" y="246.0" width="704.0" height="104.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.2"/>
+<text x="456.0" y="270.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· Boost.Beast / Boost.Asio 1.92（BSL-1.0）— HTTP/1 · WebSocket</text>
+<text x="456.0" y="288.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· nlohmann/json（MIT）— 报文序列化 · ELFIO 3.12（MIT）— ELF 载入</text>
+<text x="456.0" y="306.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· libpqxx（BSD-3-Clause）· SQLite3（Public Domain）— 双驱动</text>
+<text x="456.0" y="324.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· GoogleTest（BSD-3-Clause）· Google Benchmark（Apache-2.0）</text>
+<text x="456.0" y="342.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· CMake（BSD-3-Clause）· spdlog（MIT，可选）— 构建与日志</text>
+<rect x="56.0" y="380.0" width="360.0" height="104.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="44.0" y="410.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="15.0" fill="#7c3aed" text-anchor="end" font-weight="700">L2</text>
+<text x="72.0" y="408.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#111827" text-anchor="start" font-weight="700">ISA 抽象层</text>
+<text x="72.0" y="432.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#374151" text-anchor="start">ISA 描述装载与完备性校验</text>
+<text x="72.0" y="449.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#374151" text-anchor="start">译码表构建</text>
+<text x="72.0" y="472.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#7c3aed" text-anchor="start">抽象边界落点</text>
+<rect x="440.0" y="380.0" width="704.0" height="104.0" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="456.0" y="404.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· 复用 nlohmann/json（MIT）解析 ISA 描述文件</text>
+<text x="456.0" y="422.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· 描述校验与译码表构建逻辑自研，不引入第三方译码器</text>
+<text x="456.0" y="440.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· 描述文件格式自定（JSON），可随 ISA 扩展</text>
+<rect x="56.0" y="514.0" width="360.0" height="104.0" rx="7" fill="#ecfdf5" stroke="#059669" stroke-width="1.6"/>
+<text x="44.0" y="544.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="15.0" fill="#059669" text-anchor="end" font-weight="700">L1</text>
+<text x="72.0" y="542.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#111827" text-anchor="start" font-weight="700">模拟执行内核层（独立库）</text>
+<text x="72.0" y="566.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#374151" text-anchor="start">取指—译码—执行—写回 · 架构状态</text>
+<text x="72.0" y="583.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#374151" text-anchor="start">执行轨迹 · 终止判定 · 运行期异常</text>
+<text x="72.0" y="606.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#059669" text-anchor="start">局部风格：管道 / 过滤器</text>
+<rect x="440.0" y="514.0" width="704.0" height="104.0" rx="7" fill="#ffffff" stroke="#059669" stroke-width="1.2"/>
+<text x="456.0" y="538.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· 零第三方链接：仅使用 C++17 标准库（NFR-I2 硬约束）</text>
+<text x="456.0" y="556.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· 不链接网络库 / JSON 库 / 数据库库 / 日志库</text>
+<text x="456.0" y="574.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">· 接口以纯 C++ 抽象类暴露，供上层经依赖倒置调用</text>
+<polyline points="236.0,219.0 236.0,242.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#a1)"/>
+<polyline points="236.0,353.0 236.0,376.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#a1)"/>
+<polyline points="236.0,487.0 236.0,510.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#a1)"/>
+<rect x="56.0" y="626.0" width="520.0" height="100.0" rx="7" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="72.0" y="650.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#9a3412" text-anchor="start" font-weight="700">适配层 · 外部进程调用（不链接、不分发）</text>
+<text x="72.0" y="671.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">riscv-gnu-toolchain（GPLv2）— 汇编 / 链接 / 反汇编</text>
+<text x="72.0" y="689.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">Spike / riscv-isa-sim 1.1.0（BSD-3-Clause）— 对拍基准</text>
+<text x="72.0" y="708.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#ea580c" text-anchor="start">经适配器转成系统内部统一的“逐步状态序列”格式</text>
+<rect x="624.0" y="626.0" width="520.0" height="100.0" rx="7" fill="#f9fafb" stroke="#6b7280" stroke-width="1.6"/>
+<text x="640.0" y="650.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#374151" text-anchor="start" font-weight="700">基础服务 · 基础设施与公共依赖</text>
+<text x="640.0" y="671.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">PostgreSQL 16+（PostgreSQL License）— 云端形态主库</text>
+<text x="640.0" y="689.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">SQLite3（Public Domain）— 本地形态嵌入式库</text>
+<text x="640.0" y="708.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#374151" text-anchor="start">Docker / Podman（Apache-2.0）· nginx（BSD-2-Clause）</text>
+<rect x="48.0" y="742.0" width="1104.0" height="84.0" rx="7" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="64.0" y="764.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="start" font-weight="700">检索结论与许可合规</text>
+<text x="64.0" y="784.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#4b5563" text-anchor="start">互联网云服务：无适用候选——双形态功能对等（FR-9.2）与数据不出校园（NFR-Q5）共同排除公有云托管；遗留系统：无——本系统为全新建设，无既有系统可复用</text>
+<text x="64.0" y="803.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#b91c1c" text-anchor="start">许可合规（NFR-C4）：产品链路只链接宽松许可（MIT / BSD / BSL-1.0 / PostgreSQL / 公有领域）；GPL 组件（riscv-gnu-toolchain）仅以外部进程方式调用，不参与链接与分发</text>
+<text x="64.0" y="821.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#9a3412" text-anchor="start">集成方式：实线箭头 = 层间调用与依赖　|　各层右侧资源为编译期链接或运行时内嵌（内核层除外）；外部工具一律经适配器隔离</text>
+</svg>

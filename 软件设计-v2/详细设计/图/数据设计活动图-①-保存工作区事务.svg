@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1100" viewBox="0 0 1400 1100">
+<rect x="0" y="0" width="1400" height="1100" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="as" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#94a3b8"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">数据设计活动图 ①　保存工作区的事务（UC-12 / 事务 T-1）</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段四 · 数据设计　｜　前四步校验失败即返回，事务一旦开启就必然走到 COMMIT —— 半套用例集的中间态不存在</text>
+<circle cx="400.0" cy="109.0" r="9.0" fill="#4b5563"/>
+<rect x="120.0" y="130.0" width="560.0" height="44.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="400.0" y="156.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">前置校验：会话令牌有效；工作区归属 = :u（SA-05 谓词）</text>
+<path d="M400.0 174.0 V202.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<polygon points="400.0,202.0 570.0,246.0 400.0,290.0 230.0,246.0" fill="#fefce8" stroke="#ca8a04" stroke-width="1.4"/>
+<text x="400.0" y="250.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#713f12" text-anchor="middle">(owner_id, name) 已有同名行？</text>
+<path d="M400.0 290.0 V318.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="407.4" y="299.0" width="17.3" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="416.0" y="307.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="middle">否</text>
+<path d="M570.0 246.0 H900.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="900.0" y="216.0" width="480.0" height="56.0" rx="9" fill="#fef2f2" stroke="#b91c1c" stroke-width="1.4"/>
+<text x="1140.0" y="241.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">是 → 返回 Err(NameTaken)</text>
+<text x="1140.0" y="255.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">UC-12 E1：提示覆盖或另存（唯一约束 IX-04）</text>
+<rect x="120.0" y="318.0" width="560.0" height="56.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="400.0" y="343.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">读当前 version，与 :expected_version 比对（V-05）；</text>
+<text x="400.0" y="357.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">并判定请求数配额与 :new_size 存储上限（V-06 / V-07）</text>
+<path d="M400.0 374.0 V402.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<polygon points="400.0,402.0 580.0,446.0 400.0,490.0 220.0,446.0" fill="#fefce8" stroke="#ca8a04" stroke-width="1.4"/>
+<text x="400.0" y="450.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#713f12" text-anchor="middle">任一校验不通过？</text>
+<path d="M400.0 490.0 V518.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="407.4" y="499.0" width="17.3" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="416.0" y="507.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="middle">否</text>
+<path d="M580.0 446.0 H900.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="900.0" y="406.0" width="480.0" height="66.0" rx="9" fill="#fef2f2" stroke="#b91c1c" stroke-width="1.4"/>
+<text x="1140.0" y="436.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">是 → Err(VersionConflict) ｜ Err(QuotaExceeded)</text>
+<text x="1140.0" y="450.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">UC-12 E3 版本不兼容 / E2 配额不足；均不含写操作</text>
+<rect x="120.0" y="518.0" width="560.0" height="40.0" rx="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="400.0" y="542.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">BEGIN　事务 T-1</text>
+<path d="M400.0 558.0 V584.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="120.0" y="584.0" width="560.0" height="44.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="400.0" y="610.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">① UPSERT workspaces：version + 1，按 blob 长度重算 size_bytes</text>
+<path d="M400.0 628.0 V654.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="120.0" y="654.0" width="560.0" height="44.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="400.0" y="680.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">② DELETE test_cases WHERE suite_id ∈ (owner_id = :u AND ws_id = :id 的用例集)</text>
+<path d="M400.0 698.0 V724.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="120.0" y="724.0" width="560.0" height="56.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="400.0" y="749.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">③ UPSERT test_suites 一行</text>
+<text x="400.0" y="763.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">④ 批量 INSERT test_cases（按 seq_no 有序）</text>
+<path d="M400.0 780.0 V806.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="120.0" y="806.0" width="560.0" height="40.0" rx="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="400.0" y="830.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">COMMIT</text>
+<path d="M400.0 846.0 V872.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="120.0" y="872.0" width="560.0" height="44.0" rx="9" fill="#f0fdfa" stroke="#0f766e" stroke-width="1.4"/>
+<text x="400.0" y="898.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">返回 Version(v + 1)；界面刷新工作区列表（UI-09）</text>
+<path d="M400.0 916.0 V946.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<circle cx="400.0" cy="958.0" r="12.0" fill="none" stroke="#4b5563" stroke-width="1.8"/>
+<circle cx="400.0" cy="958.0" r="7.0" fill="#4b5563"/>
+<rect x="880.0" y="550.0" width="480.0" height="221.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="890.0" y="568.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">为什么 ②③④ 必须在同一事务里</text>
+<text x="890.0" y="583.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">UC-12 的保存语义是「整体替换」：先用例集被删、</text>
+<text x="890.0" y="598.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">新用例集写入。任何一步失败都会留下半套用例，</text>
+<text x="890.0" y="613.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">而 test_suites.checksum 是整套的校验和 —— 半套</text>
+<text x="890.0" y="628.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">数据会让校验永久失败（V-09）。</text>
+<text x="890.0" y="643.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start"></text>
+<text x="890.0" y="658.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">事务保证了两种结果之一：要么整套新用例集生效，</text>
+<text x="890.0" y="673.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">要么整套旧数据保留。中间态不存在。</text>
+<text x="890.0" y="688.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start"></text>
+<text x="890.0" y="703.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">不加事务的操作（5.3）：saveSession / dropSession</text>
+<text x="890.0" y="718.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">单语句；saveDivergence 是追加型；saveBreakpoints</text>
+<text x="890.0" y="733.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">的中断后果是「断点表为空」—— 而空断点是合法</text>
+<text x="890.0" y="748.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">初值，不值得为它付出事务开销。</text>
+<rect x="40.0" y="1000.0" width="1300.0" height="56.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="50.0" y="1018.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">复用的事务包装：DbStore::tx(Fn)（类设计 §5.3.8）—— 唯一的原子性入口，业务层看不到 BEGIN / COMMIT。</text>
+<text x="50.0" y="1033.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">乐观并发：version 作为前提条件而非锁；冲突时返回 Err 让界面重载（UC-12 E3 的「保持当前工作区不变」）。</text>
+</svg>

@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="940" viewBox="0 0 1400 940">
+<rect x="0" y="0" width="1400" height="940" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11" fill="none" stroke="#7c3aed" stroke-width="1.6"/></marker>
+<marker id="dt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">精化类图 ⑦　SS-7 前端构件（TypeScript）</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段三 · 类设计　｜　`AppShell` 是 11 个界面共用的外壳；7 个 `«page»` 与其承载的 12 个界面（UID 阶段已定）</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="40.0" y="96.0" width="420.0" height="210.6" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M40.0 126.0 H460.0" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» 外壳（export）</text>
+<text x="50.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">AppShell</text>
+<text x="52.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- store : RouteState          （Pinia：token/ws/isa/ui）</text>
+<text x="52.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- api   : ApiClient            （REST + WS，注入 token）</text>
+<text x="52.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- pump  : RefreshThrottle      （NFR-Q3 合并刷新）</text>
+<text x="52.0" y="191.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- idle  : IdleTracker          （空闲回收提示 S-8）</text>
+<text x="52.0" y="205.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- theme : ThemeTokens          （UID 六·6.2 色彩令牌）</text>
+<path d="M40.0 210.0 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ login(c: Credential) : Promise&lt;void&gt;</text>
+<text x="52.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ auth(): Session                // 本地形态直构</text>
+<text x="52.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ nav(ui: UiId, p?: Params) : void</text>
+<text x="52.0" y="267.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ exec(ui: UiId, act: string, p?: Params) : void</text>
+<text x="52.0" y="281.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ throttledRefresh(cb: () =&gt; void) : void</text>
+<text x="52.0" y="295.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ toast(kind: Kind, msg: string) : void</text>
+<rect x="485.0" y="96.0" width="420.0" height="142.6" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M485.0 126.0 H905.0" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«page» 承载 UI-01 / UI-10</text>
+<text x="495.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">SessionView</text>
+<text x="497.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- form   : LoginForm             （用户名/口令/二次）</text>
+<text x="497.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- users  : UserRow[]            （UI-10 用户与配额表）</text>
+<text x="497.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- loading: boolean</text>
+<path d="M485.0 182.8 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onSubmit() : void            UC-01 · J-01</text>
+<text x="497.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onFeedback(r: Result) : void  成功 3s / 失败常驻</text>
+<text x="497.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ loadUsers() / onQuota(uid) : void</text>
+<rect x="930.0" y="96.0" width="420.0" height="142.6" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M930.0 126.0 H1350.0" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«page» 承载 UI-04</text>
+<text x="940.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">IsaView</text>
+<text x="942.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- file    : FileRef</text>
+<text x="942.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- issues  : IssueRow[]          （问题清单 + C-10）</text>
+<text x="942.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- status  : LoadStatus</text>
+<path d="M930.0 182.8 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onUpload(f: FileRef) : void   UC-02</text>
+<text x="942.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onIssues(is: Issue[]) : void</text>
+<text x="942.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ revalidate() : void           C-10 重新校验</text>
+<rect x="40.0" y="330.6" width="420.0" height="169.8" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M40.0 360.6 H460.0" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="344.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«page» 承载 UI-03 / UI-12</text>
+<text x="50.0" y="356.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">LoadView</text>
+<text x="52.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- src     : SourceRef          （汇编源 / 映像）</text>
+<text x="52.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- cfg     : LoadForm           （基址/PC/SP/内存初值）</text>
+<text x="52.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- preview : Disasm              （仅汇编预览）</text>
+<text x="52.0" y="426.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- samples : SampleItem[]        （UI-12 示例 + 分类）</text>
+<path d="M40.0 431.0 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onAssembleOnly() : void        不装载，仅出反汇编</text>
+<text x="52.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onLoad() : void               UC-03 · J-13 回调</text>
+<text x="52.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onPasteMem(bytes: string) : void   C-08 批量粘贴</text>
+<text x="52.0" y="488.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onSample(id: SampleId) : void</text>
+<rect x="485.0" y="330.6" width="420.0" height="237.8" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M485.0 360.6 H905.0" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="344.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«page» 承载 UI-02（主界面）</text>
+<text x="495.0" y="356.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">DebugView</text>
+<text x="497.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- ctl    : ControlBar          （单步/运行/模式/上限）</text>
+<text x="497.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- regs   : RegPanel             （B 区，常驻）</text>
+<text x="497.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- mem    : MemPanel             （C 区，常驻）</text>
+<text x="497.0" y="426.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- disasm : DisasmPanel          （A 区）</text>
+<text x="497.0" y="440.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- trace  : TracePanel           （D 区，选项卡）</text>
+<text x="497.0" y="453.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- bps    : BpPanel              （E 区，选项卡）</text>
+<text x="497.0" y="467.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- editor : AsmEditor            （汇编编辑器）</text>
+<text x="497.0" y="480.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- marks  : DiffMark[]           （本步变化高亮 NFR-Q3）</text>
+<path d="M485.0 485.4 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="502.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onStep() / onRun(mode, n) / onPause() : void</text>
+<text x="497.0" y="516.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onRollback(step: StepNo) : void   UC-07</text>
+<text x="497.0" y="529.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onToggleBp(a: Addr) : void        UC-05</text>
+<text x="497.0" y="543.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ applyDelta(d: StepDelta) : void   增量渲染（SA-11）</text>
+<text x="497.0" y="556.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onShortcut(k: Key) : void         C-05</text>
+<rect x="930.0" y="330.6" width="420.0" height="169.8" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M930.0 360.6 H1350.0" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="344.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«page» 承载 UI-05 / UI-06</text>
+<text x="940.0" y="356.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">TestView</text>
+<text x="942.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- suites   : SuiteRow[]         （用例集 + 增删改 C-11）</text>
+<text x="942.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- checks   : CheckItem[]        （完整性校验 C-12）</text>
+<text x="942.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- report   : ReportModel        （通过率 + 失败清单）</text>
+<text x="942.0" y="426.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- snapshot : CaseSnapshot?      （只读失败现场）</text>
+<path d="M930.0 431.0 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ runSuite(id: SuiteId, m: DiffMode) : void  UC-08</text>
+<text x="942.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ loadReport(id: ReportId) : void             UC-09</text>
+<text x="942.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ openCase(c: CaseId) : void</text>
+<text x="942.0" y="488.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ reproduceInDebug(c: CaseId) : void           C-13</text>
+<rect x="40.0" y="592.4" width="420.0" height="183.4" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M40.0 622.4 H460.0" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="606.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«page» 承载 UI-07 / UI-08</text>
+<text x="50.0" y="618.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">DiffView</text>
+<text x="52.0" y="647.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- scope   : DiffScope           （比对子集配置）</text>
+<text x="52.0" y="661.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- job     : JobHandle?          （可取消）</text>
+<text x="52.0" y="674.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- divs    : DivergenceRow[]     （分歧列表 + 端点搜索 C-15）</text>
+<text x="52.0" y="688.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- detail  : DivergenceDetail?</text>
+<path d="M40.0 692.8 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="709.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onStart() : void              UC-10</text>
+<text x="52.0" y="723.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onCancel() : void             取消对拍（S 项）</text>
+<text x="52.0" y="737.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onAnnotate(ids: DivergenceId[],</text>
+<text x="52.0" y="750.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">             c: Category, note: string) : void  C-14 批量</text>
+<text x="52.0" y="764.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onLocate(id: DivergenceId) : void   J-28</text>
+<rect x="485.0" y="592.4" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M485.0 622.4 H905.0" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="606.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«page» 承载 UI-09 / UI-11</text>
+<text x="495.0" y="618.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">WorkspaceView</text>
+<text x="497.0" y="647.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- items   : WorkspaceRow[]</text>
+<text x="497.0" y="661.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- sel     : SaveSelection       （选择性保存）</text>
+<text x="497.0" y="674.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- apidoc  : EndpointNode[]      （UI-11 目录树）</text>
+<text x="497.0" y="688.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- tryIt   : TryForm?            （在线试调）</text>
+<path d="M485.0 692.8 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="709.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onSave(sel: SaveSelection) : void  UC-12</text>
+<text x="497.0" y="723.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onLoad(id: WorkspaceId) : void</text>
+<text x="497.0" y="737.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ onDocSearch(q: string) : void</text>
+<rect x="40.0" y="800.0" width="1320.0" height="86.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="50.0" y="818.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【前端的三个统一约定（本步确定）】</text>
+<text x="50.0" y="833.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">① **所有跨界面导航与业务动作只经 `AppShell` 一个出口**（`nav` / `exec`）：视图不直接持有 `ApiClient`，也不直接改路由 —— 这是 28 条跳转与 11 项共享状态（UID 阶段）能被单点管理的原因。</text>
+<text x="50.0" y="848.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">② **状态更新只走增量**：`applyDelta(d: StepDelta)` 接收内核回推的差分（SA-11），不是全量状态；`RefreshThrottle` 合并高频刷新（NFR-Q3）。</text>
+<text x="50.0" y="863.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">③ **视图不含业务规则**：所有校验（基址对齐、口令强度、用例完整性）在界面内做**即时反馈**，但真正的判定一律在服务端重做一遍 —— 前端校验只为体验，不作为正确性依据。</text>
+<text x="40.0" y="892.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 7 个 `«page»` 与 UID 阶段的 12 个界面是**多对一**映射：UI-01/10 → `SessionView`、UI-03/12 → `LoadView`、UI-05/06 → `TestView`、UI-07/08 → `DiffView`、UI-09/11 → `WorkspaceView`；UI-11 的静态文档页归 `AppShell`。</text>
+<text x="40.0" y="908.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `DebugView` 的 8 个子区域不是 8 个构件，而是同一构件的内部构成（对应 UI-02 的八区布局与 B/C 常驻、D/E 选项卡的界面决策）。</text>
+<text x="40.0" y="924.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 前端构件的类目录与 SAD 5.5.2 的 SS-7 构件清单一一对应，未新增构件。</text>
+</svg>

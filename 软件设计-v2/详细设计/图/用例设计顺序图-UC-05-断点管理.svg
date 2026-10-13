@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="844" viewBox="0 0 1360 844">
+<rect x="0" y="0" width="1360" height="844" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1.2 L11,6 L1,10.8" fill="none" stroke="#6b7280" stroke-width="1.7"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">用例设计顺序图 · UC-05 设置与管理断点</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段一 · 用例设计　｜　参与设计类：SS-7 DebugView / AppShell、SS-5 DebugService / BreakpointTable、SS-1 EmulatorCore</text>
+<line x1="40.0" y1="80.0" x2="1320.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="116.8" y="112.0" width="142.0" height="54.0" rx="6" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="187.8" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«actor»</text>
+<text x="187.8" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">注册用户</text>
+<rect x="312.5" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="383.5" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«page» SS-7</text>
+<text x="383.5" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">DebugView</text>
+<rect x="508.2" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="579.2" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-7</text>
+<text x="579.2" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">AppShell</text>
+<rect x="703.8" y="112.0" width="142.0" height="54.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="774.8" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«service» SS-5</text>
+<text x="774.8" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">DebugService</text>
+<rect x="899.5" y="112.0" width="142.0" height="54.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="970.5" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«entity» SS-5</text>
+<text x="970.5" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">BreakpointTable</text>
+<rect x="1095.2" y="112.0" width="142.0" height="54.0" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+<text x="1166.2" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-1</text>
+<text x="1166.2" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">EmulatorCore</text>
+<line x1="187.8" y1="166.0" x2="187.8" y2="696.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="383.5" y1="166.0" x2="383.5" y2="696.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="579.2" y1="166.0" x2="579.2" y2="696.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="774.8" y1="166.0" x2="774.8" y2="696.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="970.5" y1="166.0" x2="970.5" y2="696.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1166.2" y1="166.0" x2="1166.2" y2="696.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="1161.2" y="492.0" width="10.0" height="28.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="965.5" y="528.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="769.8" y="256.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="574.2" y="220.0" width="10.0" height="408.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="378.5" y="184.0" width="10.0" height="480.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="182.8" y="184.0" width="10.0" height="218.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<path d="M199.8 200.0 H371.5" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="190.0" y="183.2" width="191.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="285.7" y="192.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">① 设 / 删 / 启用 / 禁用 / 清除断点</text>
+<path d="M395.5 236.0 H567.2" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="392.2" y="219.2" width="178.2" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="481.3" y="228.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">② registerBreakpoint(addr, op)</text>
+<path d="M591.2 272.0 H762.8" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="590.6" y="255.2" width="172.8" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="677.0" y="264.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">③ add / remove / toggle(addr)</text>
+<path d="M762.8 308.0 H591.2" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="652.3" y="291.2" width="49.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="677.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">断点列表</text>
+<path d="M390.5 344.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="433.5" y="348.4" width="241.6" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="437.5" y="357.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">④ 刷新断点列表（C-03 全部启用 / 禁用 / 清除）</text>
+<path d="M199.8 390.0 H371.5" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="238.0" y="373.2" width="95.2" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="285.7" y="382.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑤ 点「连续运行」</text>
+<path d="M395.5 426.0 H567.2" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="436.1" y="409.2" width="90.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="481.3" y="418.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑥ execute(RUN)</text>
+<path d="M586.2 462.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="629.2" y="466.4" width="149.2" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="633.2" y="475.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑦ 循环：逐步执行 + 查断点表</text>
+<path d="M591.2 508.0 H1154.2" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="841.2" y="491.2" width="63.0" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="872.7" y="500.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑧ step(1)</text>
+<path d="M591.2 544.0 H958.5" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="729.6" y="527.2" width="90.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="774.8" y="536.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑨ checkHit(pc)</text>
+<path d="M958.5 580.0 H591.2" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="729.5" y="563.2" width="90.6" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="774.8" y="572.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">命中 → 退出循环</text>
+<path d="M567.2 616.0 H395.5" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="436.5" y="599.2" width="89.8" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="481.3" y="608.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">暂停并高亮命中行</text>
+<path d="M390.5 652.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="433.5" y="656.4" width="83.6" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="437.5" y="665.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑩ 断点命中呈现</text>
+<rect x="1050.0" y="470.0" width="220.0" height="64.0" rx="5" fill="#fffbeb" stroke="#b45309" stroke-width="1.3" stroke-dasharray="7 4"/>
+<text x="1060.0" y="490.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">断点表不进内核：</text>
+<text x="1060.0" y="506.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">SA-05 精神的延续</text>
+<text x="1060.0" y="522.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">（内核零业务概念）</text>
+<text x="40.0" y="748.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 实线黑＝设计类之间的调用；蓝色＝界面跳转（方向标注「替换 / 前进 / 返回」）；虚线开放箭头＝返回。编号对应用例交互模型的消息顺序。</text>
+<text x="40.0" y="764.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 与交互模型的差别：边界类与控制类之间插入 SS-6 的 HttpGateway（分析类 ApiEndpoint 与控制类 ApiController 合并），实体类按 SAD 5.4.3 落到对应子系统。</text>
+<text x="40.0" y="780.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 新增设计元素（TerminationGuard / AccessGuard / IStore / IIdGen / IProcessRunner 等 12 项）在图中以首次出现的调用标出，来源见 SAD 5.4.4。</text>
+<text x="40.0" y="796.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 断点表落在 SS-5 而非 SS-1：**内核不持有断点状态**（沿用 SA-05 的精神），由 `DebugService` 在每步之后调用 `checkHit` 判定，命中则停止循环。</text>
+<text x="40.0" y="812.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ⑨~⑫ 的循环是设计层新增的展开：交互模型只给「检查断点命中」一条消息，此处显式化为「执行一步 + 查断点表」的循环，是「一项职责由多个设计元素协作完成」（方式三）。</text>
+<text x="40.0" y="828.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 断点表的增删启停由 `BreakpointTable` 承担（方式二），其持久化经 SS-8 的 IStore（跨会话保留断点）。</text>
+</svg>

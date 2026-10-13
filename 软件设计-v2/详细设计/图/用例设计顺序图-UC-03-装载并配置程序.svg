@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="868" viewBox="0 0 1460 868">
+<rect x="0" y="0" width="1460" height="868" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1.2 L11,6 L1,10.8" fill="none" stroke="#6b7280" stroke-width="1.7"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">用例设计顺序图 · UC-03 装载并配置待模拟程序</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段一 · 用例设计　｜　参与设计类：SS-7 LoadView / AppShell、SS-5 LoadService、SS-4 ToolchainAdapter、SS-8 IProcessRunner、SS-1 EmulatorCore</text>
+<line x1="40.0" y1="80.0" x2="1420.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="110.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="181.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«actor»</text>
+<text x="181.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">注册用户</text>
+<rect x="292.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="363.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«page» SS-7</text>
+<text x="363.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">LoadView</text>
+<rect x="474.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="545.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-7</text>
+<text x="545.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">AppShell</text>
+<rect x="656.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="727.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«service» SS-5</text>
+<text x="727.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">LoadService</text>
+<rect x="838.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#f7fee7" stroke="#65a30d" stroke-width="1.6"/>
+<text x="909.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-4</text>
+<text x="909.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">ToolchainAdapter</text>
+<rect x="1020.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.6"/>
+<text x="1091.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«interface» SS-8</text>
+<text x="1091.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">IProcessRunner</text>
+<rect x="1202.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+<text x="1273.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-1</text>
+<text x="1273.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">EmulatorCore</text>
+<line x1="181.0" y1="166.0" x2="181.0" y2="720.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="363.0" y1="166.0" x2="363.0" y2="720.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="545.0" y1="166.0" x2="545.0" y2="720.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="727.0" y1="166.0" x2="727.0" y2="720.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="909.0" y1="166.0" x2="909.0" y2="720.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1091.0" y1="166.0" x2="1091.0" y2="720.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1273.0" y1="166.0" x2="1273.0" y2="720.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="1268.0" y="492.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="904.0" y="338.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="722.0" y="302.0" width="10.0" height="136.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="540.0" y="266.0" width="10.0" height="422.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="358.0" y="184.0" width="10.0" height="504.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="176.0" y="184.0" width="10.0" height="28.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<path d="M193.0 200.0 H351.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="112.0" y="183.2" width="320.0" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="272.0" y="192.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">① 提交汇编源或机器码映像 / 填基址、起始 PC、栈指针、内存初值</text>
+<path d="M370.0 236.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="413.0" y="240.4" width="272.3" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="417.0" y="249.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">② 界面内校验：格式、4 字节对齐、映像范围、栈指针对齐</text>
+<path d="M375.0 282.0 H533.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="342.9" y="265.2" width="222.2" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="454.0" y="274.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">③ loadProgram(src, base, initialState)</text>
+<path d="M557.0 318.0 H715.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="588.0" y="301.2" width="95.9" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="636.0" y="310.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">④ assemble(src)</text>
+<path d="M739.0 354.0 H897.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="710.0" y="337.2" width="216.0" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="818.0" y="346.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑤ run(toolchain, src)　起子进程 + 管道</text>
+<path d="M897.0 390.0 H739.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="764.9" y="373.2" width="106.2" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="818.0" y="382.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">机器码映像 / 错误行</text>
+<path d="M715.0 426.0 H557.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="598.0" y="409.2" width="75.9" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="636.0" y="418.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">映像 / 错误行</text>
+<path d="M552.0 462.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="595.0" y="466.4" width="306.3" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="599.0" y="475.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑥ 失败分支：错误行回填 UI-03；工具链缺失给告警条（FR-2.2）</text>
+<path d="M557.0 508.0 H1261.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="811.6" y="491.2" width="194.7" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="909.0" y="500.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑦ load(image, base, initialState)</text>
+<path d="M1261.0 544.0 H557.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="799.1" y="527.2" width="219.7" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="909.0" y="536.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">就绪：PC / SP / 内存初值已写入 ArchState</text>
+<path d="M533.0 580.0 H375.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="395.8" y="563.2" width="116.3" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="454.0" y="572.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">装载结果 + 反汇编预览</text>
+<path d="M370.0 616.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="413.0" y="620.4" width="199.5" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="417.0" y="629.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑧ 呈现摘要与就绪提示条（C-09 进度条）</text>
+<path d="M375.0 676.0 H533.0" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#ab)"/>
+<rect x="329.4" y="659.2" width="249.3" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="454.0" y="668.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1d4ed8" text-anchor="middle">⑨ 跳转 J-13（返回）→ 回到主界面并刷新四类视图</text>
+<rect x="1100.0" y="596.0" width="260.0" height="48.0" rx="5" fill="#fffbeb" stroke="#dc2626" stroke-width="1.3" stroke-dasharray="7 4"/>
+<text x="1110.0" y="616.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">失败分支：错误行回填 UI-03 并停留；</text>
+<text x="1110.0" y="632.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">工具链缺失给告警条提示（FR-2.2）</text>
+<text x="40.0" y="772.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 实线黑＝设计类之间的调用；蓝色＝界面跳转（方向标注「替换 / 前进 / 返回」）；虚线开放箭头＝返回。编号对应用例交互模型的消息顺序。</text>
+<text x="40.0" y="788.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 与交互模型的差别：边界类与控制类之间插入 SS-6 的 HttpGateway（分析类 ApiEndpoint 与控制类 ApiController 合并），实体类按 SAD 5.4.3 落到对应子系统。</text>
+<text x="40.0" y="804.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 新增设计元素（TerminationGuard / AccessGuard / IStore / IIdGen / IProcessRunner 等 12 项）在图中以首次出现的调用标出，来源见 SAD 5.4.4。</text>
+<text x="40.0" y="820.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 分析类 `LoadController.assemble` 的职责经 SS-4 的 `ToolchainAdapter` 下沉到 `IProcessRunner`（方式三）：外部工具链一律**以子进程方式**调用、不由产品链接（SA-06、LIM-04）。</text>
+<text x="40.0" y="836.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 失败分支（FR-2.2）：工具链缺失或汇编报错时把错误行回填到 UI-03 并**停留本界面**，不静默失败、不发生跳转。</text>
+<text x="40.0" y="852.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ⑨ 的 `load` 把映像写入 `ArchState` 并把 PC / SP / 内存初值就位；「仅汇编不装载」时只走 ④~⑦，不调用 ⑨（转自 uid 的 S 项）。</text>
+</svg>

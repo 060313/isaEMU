@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="870" viewBox="0 0 1360 870">
+<rect x="0" y="0" width="1360" height="870" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1.2 L11,6 L1,10.8" fill="none" stroke="#6b7280" stroke-width="1.7"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">用例设计顺序图 · UC-12 保存与加载工作区</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段一 · 用例设计　｜　参与设计类：SS-7 WorkspaceView / AppShell、SS-5 WorkspaceService、SS-8 IStore、SS-1 EmulatorCore</text>
+<line x1="40.0" y1="80.0" x2="1320.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="116.8" y="112.0" width="142.0" height="54.0" rx="6" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="187.8" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«actor»</text>
+<text x="187.8" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">注册用户</text>
+<rect x="312.5" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="383.5" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«page» SS-7</text>
+<text x="383.5" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">WorkspaceView</text>
+<rect x="508.2" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="579.2" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-7</text>
+<text x="579.2" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">AppShell</text>
+<rect x="703.8" y="112.0" width="142.0" height="54.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="774.8" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«service» SS-5</text>
+<text x="774.8" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">WorkspaceService</text>
+<rect x="899.5" y="112.0" width="142.0" height="54.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.6"/>
+<text x="970.5" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«interface» SS-8</text>
+<text x="970.5" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">IStore</text>
+<rect x="1095.2" y="112.0" width="142.0" height="54.0" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+<text x="1166.2" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-1</text>
+<text x="1166.2" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">EmulatorCore</text>
+<line x1="187.8" y1="166.0" x2="187.8" y2="722.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="383.5" y1="166.0" x2="383.5" y2="722.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="579.2" y1="166.0" x2="579.2" y2="722.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="774.8" y1="166.0" x2="774.8" y2="722.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="970.5" y1="166.0" x2="970.5" y2="722.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1166.2" y1="166.0" x2="1166.2" y2="722.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="965.5" y="554.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="769.8" y="256.0" width="10.0" height="290.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="574.2" y="220.0" width="10.0" height="434.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="378.5" y="184.0" width="10.0" height="506.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="182.8" y="184.0" width="10.0" height="254.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<path d="M199.8 200.0 H371.5" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="156.0" y="183.2" width="259.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="285.7" y="192.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">① 保存工作区（选择性保存：程序 / 用例集 / 配置）</text>
+<path d="M395.5 236.0 H567.2" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="427.9" y="219.2" width="106.9" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="481.3" y="228.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">② save(selection)</text>
+<path d="M591.2 272.0 H762.8" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="570.8" y="255.2" width="212.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="677.0" y="264.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">③ put(workspace)　含程序与用例集序列化</text>
+<path d="M762.8 308.0 H591.2" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="622.0" y="291.2" width="109.9" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="677.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">保存结果（含版本号）</text>
+<path d="M567.2 344.0 H395.5" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="461.7" y="327.2" width="39.3" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="481.3" y="336.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">已保存</text>
+<path d="M390.5 380.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="433.5" y="384.4" width="83.6" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="437.5" y="393.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">④ 呈现确认提示</text>
+<path d="M199.8 426.0 H371.5" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="248.1" y="409.2" width="75.1" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="285.7" y="418.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑤ 加载工作区</text>
+<path d="M395.5 462.0 H567.2" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="422.4" y="445.2" width="117.9" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="481.3" y="454.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑥ load(workspaceId)</text>
+<path d="M591.2 498.0 H762.8" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="620.8" y="481.2" width="112.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="677.0" y="490.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑦ get(workspaceId)</text>
+<path d="M762.8 534.0 H591.2" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="647.3" y="517.2" width="59.5" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="677.0" y="526.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">工作区数据</text>
+<path d="M591.2 570.0 H958.5" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="648.1" y="553.2" width="253.5" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="774.8" y="562.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑧ restore(program, initState)　恢复程序与初态</text>
+<path d="M958.5 606.0 H591.2" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="760.2" y="589.2" width="29.2" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="774.8" y="598.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">就绪</text>
+<path d="M567.2 642.0 H395.5" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="461.7" y="625.2" width="39.3" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="481.3" y="634.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">已恢复</text>
+<path d="M390.5 678.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="433.5" y="682.4" width="63.8" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="437.5" y="691.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑨ 视图刷新</text>
+<text x="40.0" y="774.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 实线黑＝设计类之间的调用；蓝色＝界面跳转（方向标注「替换 / 前进 / 返回」）；虚线开放箭头＝返回。编号对应用例交互模型的消息顺序。</text>
+<text x="40.0" y="790.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 与交互模型的差别：边界类与控制类之间插入 SS-6 的 HttpGateway（分析类 ApiEndpoint 与控制类 ApiController 合并），实体类按 SAD 5.4.3 落到对应子系统。</text>
+<text x="40.0" y="806.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 新增设计元素（TerminationGuard / AccessGuard / IStore / IIdGen / IProcessRunner 等 12 项）在图中以首次出现的调用标出，来源见 SAD 5.4.4。</text>
+<text x="40.0" y="822.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 分析类 `WorkspaceController` 的持久化职责经 SS-8 的 `IStore`（方式三）：`WorkspaceService` 只负责领域语义（哪些制品入包、版本与冲突规则），数据访问不下沉到业务服务（SAD 5.7）。</text>
+<text x="40.0" y="838.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 恢复程序后**不自动执行**，只把内核置于该工作区的初态；程序与用例集通过 ⑪ / ⑫ 分别恢复到 Program 与 TestSuite（Program / TestSuite 为 SS-5 内的数据对象，图中不单列生命线）。</text>
+<text x="40.0" y="854.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 本地形态 `IStore` 走 SQLite（`workspace.db`），云端形态走 PostgreSQL，其余逻辑完全一致（**FR-9.2 双形态对等**）。</text>
+</svg>

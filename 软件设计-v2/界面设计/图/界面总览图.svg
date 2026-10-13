@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1232" height="726" viewBox="0 0 1232 726">
+<rect x="0" y="0" width="1232" height="726" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+</defs>
+<text x="48.0" y="40.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="19.0" fill="#111827" text-anchor="start" font-weight="700">ISA 模拟系统 · 用户界面总览</text>
+<text x="48.0" y="62.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start">uid 阶段一 · 12 个用户界面按业务域组织　|　标注主要使用者、对应边界类与承载用例</text>
+<rect x="44.0" y="80.0" width="1144.0" height="42.0" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="60.0" y="106.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#111827" text-anchor="start" font-weight="700">人工执行者：</text>
+<text x="140.0" y="106.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#374151" text-anchor="start">ISA 学习者 · 工业芯片工程师 · ISA 工程师 · 机器语言程序员（四者均为「注册用户」的特化，共享同一套界面）</text>
+<text x="1010.0" y="106.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#b45309" text-anchor="start">平台管理员</text>
+<text x="1188.0" y="106.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#1f2937" text-anchor="start"></text>
+<rect x="44.0" y="146.0" width="274.0" height="36.0" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1.5"/>
+<text x="57.0" y="170.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#ffffff" text-anchor="start" font-weight="700">调试与观测域</text>
+<text x="306.0" y="170.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#f3f4f6" text-anchor="end">4 个界面</text>
+<rect x="44.0" y="194.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="49.0" y="202.0" width="3.6" height="58.0" rx="1.8" fill="#2563eb" opacity="0.8"/>
+<text x="59.0" y="214.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start" font-weight="700">UI-02　调试工作台（主界面）</text>
+<text x="59.0" y="234.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：注册用户 · 全部调试操作</text>
+<text x="59.0" y="252.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#2563eb" text-anchor="start">UC-04 / 05 / 06 / 07　FR-5.1~5.4</text>
+<rect x="44.0" y="280.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="49.0" y="288.0" width="3.6" height="58.0" rx="1.8" fill="#2563eb" opacity="0.8"/>
+<text x="59.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start">UI-03　程序装载与配置界面</text>
+<text x="59.0" y="320.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：注册用户 · 机器语言程序员</text>
+<text x="59.0" y="338.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#2563eb" text-anchor="start">UC-03　FR-2.1~2.3</text>
+<rect x="44.0" y="366.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="49.0" y="374.0" width="3.6" height="58.0" rx="1.8" fill="#2563eb" opacity="0.8"/>
+<text x="59.0" y="386.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start">UI-12　内置示例与新手引导界面</text>
+<text x="59.0" y="406.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：ISA 学习者 · 新用户</text>
+<text x="59.0" y="424.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#2563eb" text-anchor="start">FR-2.4　NFR-Q3</text>
+<rect x="44.0" y="452.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.2"/>
+<rect x="49.0" y="460.0" width="3.6" height="58.0" rx="1.8" fill="#2563eb" opacity="0.8"/>
+<text x="59.0" y="472.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start">UI-04　ISA 管理界面</text>
+<text x="59.0" y="492.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：ISA 工程师</text>
+<text x="59.0" y="510.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#2563eb" text-anchor="start">UC-02　FR-1.2 / 1.3</text>
+<rect x="334.0" y="146.0" width="274.0" height="36.0" rx="6" fill="#0891b2" stroke="#0891b2" stroke-width="1.5"/>
+<text x="347.0" y="170.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#ffffff" text-anchor="start" font-weight="700">测试与验证域</text>
+<text x="596.0" y="170.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#f3f4f6" text-anchor="end">2 个界面</text>
+<rect x="334.0" y="194.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#0891b2" stroke-width="1.2"/>
+<rect x="339.0" y="202.0" width="3.6" height="58.0" rx="1.8" fill="#0891b2" opacity="0.8"/>
+<text x="349.0" y="214.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start">UI-05　测试用例管理界面</text>
+<text x="349.0" y="234.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：ISA 工程师 · 工业芯片工程师</text>
+<text x="349.0" y="252.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#0891b2" text-anchor="start">FR-6.1 / 6.2</text>
+<rect x="334.0" y="280.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#0891b2" stroke-width="1.2"/>
+<rect x="339.0" y="288.0" width="3.6" height="58.0" rx="1.8" fill="#0891b2" opacity="0.8"/>
+<text x="349.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start">UI-06　测试报告界面</text>
+<text x="349.0" y="320.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：工业芯片工程师</text>
+<text x="349.0" y="338.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#0891b2" text-anchor="start">UC-09　FR-6.3 / 6.5</text>
+<rect x="624.0" y="146.0" width="274.0" height="36.0" rx="6" fill="#7c3aed" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="637.0" y="170.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#ffffff" text-anchor="start" font-weight="700">一致性对拍域</text>
+<text x="886.0" y="170.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#f3f4f6" text-anchor="end">2 个界面</text>
+<rect x="624.0" y="194.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.2"/>
+<rect x="629.0" y="202.0" width="3.6" height="58.0" rx="1.8" fill="#7c3aed" opacity="0.8"/>
+<text x="639.0" y="214.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start">UI-07　一致性对拍界面</text>
+<text x="639.0" y="234.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：ISA 工程师</text>
+<text x="639.0" y="252.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#7c3aed" text-anchor="start">UC-10　FR-7.1~7.3 / 7.5</text>
+<rect x="624.0" y="280.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.2"/>
+<rect x="629.0" y="288.0" width="3.6" height="58.0" rx="1.8" fill="#7c3aed" opacity="0.8"/>
+<text x="639.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start">UI-08　分歧分析与归因界面</text>
+<text x="639.0" y="320.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：ISA 工程师</text>
+<text x="639.0" y="338.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#7c3aed" text-anchor="start">UC-11　FR-7.4</text>
+<rect x="914.0" y="146.0" width="274.0" height="36.0" rx="6" fill="#b45309" stroke="#b45309" stroke-width="1.5"/>
+<text x="927.0" y="170.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#ffffff" text-anchor="start" font-weight="700">平台与管理域</text>
+<text x="1176.0" y="170.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#f3f4f6" text-anchor="end">4 个界面</text>
+<rect x="914.0" y="194.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#b45309" stroke-width="1.2"/>
+<rect x="919.0" y="202.0" width="3.6" height="58.0" rx="1.8" fill="#b45309" opacity="0.8"/>
+<text x="929.0" y="214.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start">UI-01　登录与注册界面</text>
+<text x="929.0" y="234.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：注册用户（全部四类）</text>
+<text x="929.0" y="252.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#b45309" text-anchor="start">UC-01　FR-9.4</text>
+<rect x="914.0" y="280.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#b45309" stroke-width="1.2"/>
+<rect x="919.0" y="288.0" width="3.6" height="58.0" rx="1.8" fill="#b45309" opacity="0.8"/>
+<text x="929.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start">UI-09　工作区管理界面</text>
+<text x="929.0" y="320.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：注册用户</text>
+<text x="929.0" y="338.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#b45309" text-anchor="start">UC-12　FR-9.3</text>
+<rect x="914.0" y="366.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#b45309" stroke-width="1.2"/>
+<rect x="919.0" y="374.0" width="3.6" height="58.0" rx="1.8" fill="#b45309" opacity="0.8"/>
+<text x="929.0" y="386.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start">UI-10　用户与配额管理界面</text>
+<text x="929.0" y="406.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：平台管理员</text>
+<text x="929.0" y="424.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#b45309" text-anchor="start">UC-14　FR-9.5 / 8.2</text>
+<rect x="914.0" y="452.0" width="274.0" height="74.0" rx="6" fill="#ffffff" stroke="#b45309" stroke-width="1.2"/>
+<rect x="919.0" y="460.0" width="3.6" height="58.0" rx="1.8" fill="#b45309" opacity="0.8"/>
+<text x="929.0" y="472.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.9" fill="#111827" text-anchor="start">UI-11　接口文档与示例界面</text>
+<text x="929.0" y="492.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">使用者：工业芯片工程师 · 外部集成方</text>
+<text x="929.0" y="510.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#b45309" text-anchor="start">FR-8.3</text>
+<text x="50.0" y="534.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#e5e7eb" text-anchor="start">—</text>
+<text x="340.0" y="362.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#e5e7eb" text-anchor="start">—</text>
+<text x="630.0" y="362.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#e5e7eb" text-anchor="start">—</text>
+<text x="920.0" y="534.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#e5e7eb" text-anchor="start">—</text>
+<rect x="44.0" y="566.0" width="566.0" height="66.0" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="60.0" y="588.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#111827" text-anchor="start" font-weight="700">非界面边界类（无人类界面）</text>
+<text x="60.0" y="606.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#4b5563" text-anchor="start">ApiEndpoint — 对外 HTTP / WebSocket 接口（UC-08、UC-13，由外部脚本与 CI 调用）</text>
+<text x="60.0" y="622.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#4b5563" text-anchor="start">ToolchainAdapter · RefSimAdapter — 系统对系统的交互界面（UC-03、UC-10，由控制类反向调用）</text>
+<rect x="622.0" y="566.0" width="566.0" height="66.0" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="638.0" y="588.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#111827" text-anchor="start" font-weight="700">界面来源</text>
+<text x="638.0" y="606.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#4b5563" text-anchor="start">9 个界面 —— 由用例交互模型中「人工执行者可达的边界类」直接导出（7 个边界类）</text>
+<text x="638.0" y="622.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#b45309" text-anchor="start">3 个界面 —— 需求直接要求但交互模型未建界面侧边界类：UI-05、UI-11、UI-12（见说明文档第四节）</text>
+<rect x="44.0" y="648.0" width="1144.0" height="58.0" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="60.0" y="670.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#111827" text-anchor="start" font-weight="700">图例</text>
+<rect x="106.0" y="659.0" width="14.0" height="12.0" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.2"/>
+<text x="128.0" y="670.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#4b5563" text-anchor="start">业务域配色（蓝＝调试与观测／青＝测试与验证／紫＝一致性对拍／琥珀＝平台与管理）</text>
+<text x="60.0" y="690.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#4b5563" text-anchor="start">说明：登录与注册界面为独立界面（不经应用外壳）；其余 11 个界面共用同一应用外壳（全局导航、当前工作区选择、账号菜单），外壳本身不计为一个界面。主界面的确定见下一步「建立界面跳转关系」。</text>
+</svg>

@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="990" viewBox="0 0 1240 990">
+<rect x="0" y="0" width="1240" height="990" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="a2" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+<marker id="a3" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="a4" viewBox="0 0 14 12" refX="1.6" refY="6" markerWidth="10" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M12.6,1 L2,6 L12.6,11" fill="none" stroke="#6b7280" stroke-width="1.5"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="19.0" fill="#111827" text-anchor="start" font-weight="700">ISA 模拟系统 · 用户界面风格规范</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#6b7280" text-anchor="start">uid 阶段三·精化设计　｜　色彩令牌 · 字体层级 · 图标 · 控件与反馈规范　（本规范对 12 个界面统一适用，前端以 CSS 变量落地）</text>
+<line x1="40.0" y1="80.0" x2="1200.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="40.0" y="100.0" width="340.0" height="680.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<rect x="41.0" y="101.0" width="338.0" height="30.0" rx="0" fill="#f8fafc" opacity="1.00"/>
+<line x1="41.0" y1="131.0" x2="379.0" y2="131.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<text x="53.0" y="121.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.5" fill="#334155" text-anchor="start" font-weight="700">一、色彩令牌</text>
+<text x="52.0" y="154.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#1d4ed8" text-anchor="start" font-weight="700">1.1　主色与语义色</text>
+<rect x="52.0" y="161.0" width="22.0" height="22.0" rx="4" fill="#2563eb" opacity="1.00"/>
+<rect x="52.0" y="161.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="176.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#111827" text-anchor="start" font-weight="700">主色</text>
+<text x="150.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#6b7280" text-anchor="start">#2563eb</text>
+<text x="238.0" y="176.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#4b5563" text-anchor="start">可操作、选中、链接</text>
+<rect x="52.0" y="191.0" width="22.0" height="22.0" rx="4" fill="#1d4ed8" opacity="1.00"/>
+<rect x="52.0" y="191.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="206.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#111827" text-anchor="start" font-weight="700">主色·深</text>
+<text x="150.0" y="206.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#6b7280" text-anchor="start">#1d4ed8</text>
+<text x="238.0" y="206.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#4b5563" text-anchor="start">悬停态、强调文字</text>
+<rect x="52.0" y="221.0" width="22.0" height="22.0" rx="4" fill="#16a34a" opacity="1.00"/>
+<rect x="52.0" y="221.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="236.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#111827" text-anchor="start" font-weight="700">成功</text>
+<text x="150.0" y="236.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#6b7280" text-anchor="start">#16a34a</text>
+<text x="238.0" y="236.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#4b5563" text-anchor="start">通过、一致、已保存</text>
+<rect x="52.0" y="251.0" width="22.0" height="22.0" rx="4" fill="#d97706" opacity="1.00"/>
+<rect x="52.0" y="251.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="266.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#111827" text-anchor="start" font-weight="700">警告</text>
+<text x="150.0" y="266.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#6b7280" text-anchor="start">#d97706</text>
+<text x="238.0" y="266.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#4b5563" text-anchor="start">降级模式、限额临近</text>
+<rect x="52.0" y="281.0" width="22.0" height="22.0" rx="4" fill="#dc2626" opacity="1.00"/>
+<rect x="52.0" y="281.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="296.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#111827" text-anchor="start" font-weight="700">危险</text>
+<text x="150.0" y="296.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#6b7280" text-anchor="start">#dc2626</text>
+<text x="238.0" y="296.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#4b5563" text-anchor="start">失败、分歧、危险操作</text>
+<rect x="52.0" y="311.0" width="22.0" height="22.0" rx="4" fill="#7c3aed" opacity="1.00"/>
+<rect x="52.0" y="311.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="326.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#111827" text-anchor="start" font-weight="700">对拍</text>
+<text x="150.0" y="326.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#6b7280" text-anchor="start">#7c3aed</text>
+<text x="238.0" y="326.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#4b5563" text-anchor="start">比对与分歧类标识</text>
+<text x="52.0" y="362.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#1d4ed8" text-anchor="start" font-weight="700">1.2　中性色</text>
+<rect x="52.0" y="369.0" width="22.0" height="22.0" rx="4" fill="#111827" opacity="1.00"/>
+<rect x="52.0" y="369.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="384.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#111827" text-anchor="start">#111827</text>
+<text x="150.0" y="384.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#4b5563" text-anchor="start">标题文字</text>
+<rect x="52.0" y="399.0" width="22.0" height="22.0" rx="4" fill="#1f2937" opacity="1.00"/>
+<rect x="52.0" y="399.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="414.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#111827" text-anchor="start">#1f2937</text>
+<text x="150.0" y="414.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#4b5563" text-anchor="start">正文文字</text>
+<rect x="52.0" y="429.0" width="22.0" height="22.0" rx="4" fill="#6b7280" opacity="1.00"/>
+<rect x="52.0" y="429.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="444.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#111827" text-anchor="start">#6b7280</text>
+<text x="150.0" y="444.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#4b5563" text-anchor="start">次要文字</text>
+<rect x="52.0" y="459.0" width="22.0" height="22.0" rx="4" fill="#e5e7eb" opacity="1.00"/>
+<rect x="52.0" y="459.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="474.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#111827" text-anchor="start">#e5e7eb</text>
+<text x="150.0" y="474.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#4b5563" text-anchor="start">边框与分隔</text>
+<rect x="52.0" y="489.0" width="22.0" height="22.0" rx="4" fill="#f9fafb" opacity="1.00"/>
+<rect x="52.0" y="489.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="504.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#111827" text-anchor="start">#f9fafb</text>
+<text x="150.0" y="504.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#4b5563" text-anchor="start">页面底色</text>
+<rect x="52.0" y="519.0" width="22.0" height="22.0" rx="4" fill="#ffffff" opacity="1.00"/>
+<rect x="52.0" y="519.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="534.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#111827" text-anchor="start">#ffffff</text>
+<text x="150.0" y="534.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#4b5563" text-anchor="start">卡片底色</text>
+<text x="52.0" y="570.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#1d4ed8" text-anchor="start" font-weight="700">1.3　视图专用语义色（调试视图）</text>
+<rect x="52.0" y="577.0" width="22.0" height="22.0" rx="4" fill="#fef3c7" opacity="1.00"/>
+<rect x="52.0" y="577.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="592.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">#fef3c7 / #b45309</text>
+<text x="238.0" y="592.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#4b5563" text-anchor="start">本步变化高亮底 / 字</text>
+<rect x="52.0" y="607.0" width="22.0" height="22.0" rx="4" fill="#dbeafe" opacity="1.00"/>
+<rect x="52.0" y="607.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="622.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">#dbeafe + 左 3px 主色</text>
+<text x="238.0" y="622.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#4b5563" text-anchor="start">当前 PC 行</text>
+<rect x="52.0" y="637.0" width="22.0" height="22.0" rx="4" fill="#fee2e2" opacity="1.00"/>
+<rect x="52.0" y="637.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="652.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">#fee2e2 + #dc2626 圆点</text>
+<text x="238.0" y="652.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#4b5563" text-anchor="start">断点行 / 断点标记</text>
+<rect x="52.0" y="667.0" width="22.0" height="22.0" rx="4" fill="#f3f4f6" opacity="1.00"/>
+<rect x="52.0" y="667.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="682.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">#f3f4f6</text>
+<text x="238.0" y="682.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#4b5563" text-anchor="start">表头底</text>
+<rect x="52.0" y="697.0" width="22.0" height="22.0" rx="4" fill="#eff6ff" opacity="1.00"/>
+<rect x="52.0" y="697.0" width="22.0" height="22.0" rx="4" fill="none" stroke="#00000022" stroke-width="1.0"/>
+<text x="82.0" y="712.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">#eff6ff</text>
+<text x="238.0" y="712.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#4b5563" text-anchor="start">选中卡片 / 选中行底</text>
+<rect x="404.0" y="100.0" width="340.0" height="680.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<rect x="405.0" y="101.0" width="338.0" height="30.0" rx="0" fill="#f8fafc" opacity="1.00"/>
+<line x1="405.0" y1="131.0" x2="743.0" y2="131.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<text x="417.0" y="121.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.5" fill="#334155" text-anchor="start" font-weight="700">二、字体、字号与图标</text>
+<text x="416.0" y="154.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#1d4ed8" text-anchor="start" font-weight="700">2.1　字体层级</text>
+<text x="416.0" y="178.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="20.0" fill="#111827" text-anchor="start" font-weight="700">调试工作台</text>
+<text x="732.0" y="178.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="end">20 / 700 · #111827 · 页面标题</text>
+<text x="416.0" y="210.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="16.0" fill="#111827" text-anchor="start">寄存器</text>
+<text x="732.0" y="210.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="end">16 / 600 · #111827 · 区块标题</text>
+<text x="416.0" y="242.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="14.0" fill="#111827" text-anchor="start">已执行 12 条指令</text>
+<text x="732.0" y="242.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="end">14 / 400 · #1f2937 · 正文</text>
+<text x="416.0" y="274.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start">最后更新 09:20</text>
+<text x="732.0" y="274.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="end">12 / 400 · #6b7280 · 辅助文字</text>
+<text x="416.0" y="306.0" font-family="Consolas, Courier New, monospace" font-size="13.0" fill="#111827" text-anchor="start">0x00001004</text>
+<text x="732.0" y="306.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="end">13 / 400 · 等宽 · 地址与寄存器</text>
+<text x="416.0" y="338.0" font-family="Consolas, Courier New, monospace" font-size="12.0" fill="#111827" text-anchor="start">addi x1, x0, 1</text>
+<text x="732.0" y="338.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="end">12 / 400 · 等宽 · 指令与机器码</text>
+<text x="416.0" y="386.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#1d4ed8" text-anchor="start" font-weight="700">2.2　等宽字体使用规则</text>
+<text x="416.0" y="408.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">· 地址一律 8 位十六进制大写，带 0x 前缀：0x00001000</text>
+<text x="416.0" y="428.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">· 寄存器一律 x0 ~ x31，不混用 ABI 助记名</text>
+<text x="416.0" y="448.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">· CSR 一律用规范名：mstatus / mcause / mtvec</text>
+<text x="416.0" y="468.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">· 指令与操作数一律小写：addi x1, x0, 1</text>
+<text x="416.0" y="488.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">· 机器码按字节分组显示：93 00 10 00</text>
+<text x="416.0" y="528.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#1d4ed8" text-anchor="start" font-weight="700">2.3　图标规范</text>
+<text x="416.0" y="550.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">· 线性图标 20 × 20，线宽 1.6，颜色继承文字色</text>
+<text x="416.0" y="570.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">· 仅 8 个图标：单步 / 运行 / 暂停 / 复位 / 断点 / 装载 / 保存 / 帮助</text>
+<text x="416.0" y="590.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">· 其余操作一律文字按钮，不新增图标</text>
+<text x="416.0" y="610.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">· 图标必须配文字标签或 tooltip，不单独出现</text>
+<rect x="412.0" y="634.0" width="34.0" height="30.0" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<path d="M420.0 643.0 L428.0 649.0 L420.0 655.0" fill="none" stroke="#374151" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<line x1="431.0" y1="643.0" x2="431.0" y2="655.0" stroke="#374151" stroke-width="1.6"/>
+<text x="429.0" y="676.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="middle">单步</text>
+<rect x="492.0" y="634.0" width="34.0" height="30.0" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<path d="M498.0 642.0 L510.0 649.0 L498.0 656.0" fill="none" stroke="#374151" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<text x="509.0" y="676.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="middle">运行</text>
+<rect x="572.0" y="634.0" width="34.0" height="30.0" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="579.0" y="643.0" width="3.5" height="12.0" rx="1" fill="#374151" opacity="1.00"/>
+<rect x="585.5" y="643.0" width="3.5" height="12.0" rx="1" fill="#374151" opacity="1.00"/>
+<text x="589.0" y="676.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="middle">暂停</text>
+<rect x="652.0" y="634.0" width="34.0" height="30.0" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<path d="M665.0 650.0 a7 7 0 1 1 -2.5 -5.2" fill="none" stroke="#374151" stroke-width="1.6"/>
+<path d="M659.0 642.0 L661.0 649.0" fill="none" stroke="#374151" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<text x="669.0" y="676.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="middle">复位</text>
+<rect x="412.0" y="680.0" width="34.0" height="30.0" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<circle cx="424.0" cy="695.0" r="5.5" fill="#dc2626"/>
+<text x="429.0" y="722.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="middle">断点</text>
+<rect x="492.0" y="680.0" width="34.0" height="30.0" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<line x1="504.0" y1="688.0" x2="504.0" y2="698.0" stroke="#374151" stroke-width="1.6"/>
+<path d="M499.5 694.0 l4.5 4.5 l4.5 -4.5" fill="none" stroke="#374151" stroke-width="1.6"/>
+<text x="509.0" y="722.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="middle">装载</text>
+<rect x="572.0" y="680.0" width="34.0" height="30.0" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="578.0" y="688.0" width="12.0" height="14.0" rx="2" fill="#ffffff" stroke="#374151" stroke-width="1.5"/>
+<rect x="581.0" y="690.0" width="6.0" height="4.0" rx="1" fill="#374151" opacity="1.00"/>
+<text x="589.0" y="722.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="middle">保存</text>
+<rect x="652.0" y="680.0" width="34.0" height="30.0" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<circle cx="664.0" cy="695.0" r="7" fill="none" stroke="#374151" stroke-width="1.5"/>
+<text x="664.0" y="699.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="middle" font-weight="700">?</text>
+<text x="669.0" y="722.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="middle">帮助</text>
+<rect x="768.0" y="100.0" width="432.0" height="680.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<rect x="769.0" y="101.0" width="430.0" height="30.0" rx="0" fill="#f8fafc" opacity="1.00"/>
+<line x1="769.0" y1="131.0" x2="1199.0" y2="131.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<text x="781.0" y="121.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.5" fill="#334155" text-anchor="start" font-weight="700">三、控件与反馈规范</text>
+<text x="780.0" y="154.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#1d4ed8" text-anchor="start" font-weight="700">3.1　按钮（三级 × 五态）</text>
+<rect x="780.0" y="168.0" width="96.0" height="30.0" rx="4" fill="#2563eb" opacity="1.00"/>
+<text x="828.0" y="188.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#ffffff" text-anchor="middle" font-weight="700">执行</text>
+<rect x="886.0" y="168.0" width="96.0" height="30.0" rx="4" fill="#ffffff" opacity="1.00"/>
+<rect x="886.0" y="168.0" width="96.0" height="30.0" rx="4" fill="none" stroke="#d1d5db" stroke-width="1.4"/>
+<text x="934.0" y="188.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#374151" text-anchor="middle">取消</text>
+<rect x="992.0" y="168.0" width="196.0" height="30.0" rx="4" fill="#ffffff" opacity="1.00"/>
+<rect x="992.0" y="168.0" width="196.0" height="30.0" rx="4" fill="none" stroke="#dc2626" stroke-width="1.4"/>
+<text x="1090.0" y="188.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#dc2626" text-anchor="middle">删除工作区（危险）</text>
+<text x="780.0" y="222.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">五态：默认 / 悬停（加深 8%）/ 激活（加深 15%）/ 禁用（灰底灰字，不可点）</text>
+<text x="780.0" y="238.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">尺寸：大 36 / 常规 32 / 小 26；图标按钮 32 × 32；同界面同等级尺寸一致</text>
+<text x="780.0" y="272.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#1d4ed8" text-anchor="start" font-weight="700">3.2　输入框与即时校验</text>
+<text x="780.0" y="296.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#6b7280" text-anchor="start" font-weight="700">标签</text>
+<rect x="780.0" y="304.0" width="150.0" height="30.0" rx="4" fill="#ffffff" opacity="1.00"/>
+<rect x="780.0" y="304.0" width="150.0" height="30.0" rx="4" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+<text x="790.0" y="324.0" font-family="Consolas, Courier New, monospace" font-size="12.0" fill="#1f2937" text-anchor="start">0x00001000</text>
+<text x="944.0" y="296.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#6b7280" text-anchor="start" font-weight="700">标签（错误态）</text>
+<rect x="944.0" y="304.0" width="150.0" height="30.0" rx="4" fill="#ffffff" opacity="1.00"/>
+<rect x="944.0" y="304.0" width="150.0" height="30.0" rx="4" fill="none" stroke="#dc2626" stroke-width="1.6"/>
+<text x="954.0" y="324.0" font-family="Consolas, Courier New, monospace" font-size="12.0" fill="#1f2937" text-anchor="start">0x00001ZZZ</text>
+<text x="944.0" y="348.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#dc2626" text-anchor="start">非法十六进制字符</text>
+<text x="780.0" y="366.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">聚焦：2px 主色描边；十六进制字段一律等宽 + 0x 前缀</text>
+<text x="780.0" y="382.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#1d4ed8" text-anchor="start" font-weight="700">3.3　数据表格</text>
+<rect x="780.0" y="396.0" width="316.0" height="26.0" rx="3" fill="#f3f4f6" opacity="1.00"/>
+<text x="788.0" y="413.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#6b7280" text-anchor="start" font-weight="700">地址</text>
+<text x="920.0" y="413.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#6b7280" text-anchor="start" font-weight="700">指令</text>
+<text x="1088.0" y="413.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#6b7280" text-anchor="start" font-weight="700">本步变化</text>
+<rect x="780.0" y="422.0" width="316.0" height="26.0" rx="0" fill="#eff6ff" opacity="1.00"/>
+<rect x="780.0" y="422.0" width="3.0" height="26.0" rx="0" fill="#2563eb" opacity="1.00"/>
+<text x="788.0" y="439.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#1f2937" text-anchor="start">0x00001000</text>
+<text x="920.0" y="439.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#1f2937" text-anchor="start">addi x1, x0, 1</text>
+<text x="1088.0" y="439.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#b45309" text-anchor="start">x1 = 0x00000001</text>
+<rect x="780.0" y="448.0" width="316.0" height="26.0" rx="0" fill="#fef3c7" opacity="1.00"/>
+<text x="788.0" y="465.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#1f2937" text-anchor="start">0x00001004</text>
+<text x="920.0" y="465.0" font-family="Consolas, Courier New, monospace" font-size="10.3" fill="#1f2937" text-anchor="start">sw x1, 0(x2)</text>
+<text x="1088.0" y="465.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.3" fill="#b45309" text-anchor="start">mem[0x2000] = 1</text>
+<text x="780.0" y="490.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">表头 32 高；行高 32（紧凑 28）；悬停 #f9fafb；选中行加左侧 3px 主色条</text>
+<text x="780.0" y="506.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">空状态：居中提示「当前没有数据」+ 一个主操作按钮（如「装载程序」）</text>
+<text x="780.0" y="540.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#1d4ed8" text-anchor="start" font-weight="700">3.4　反馈提示条与危险确认</text>
+<rect x="780.0" y="547.0" width="316.0" height="24.0" rx="4" fill="#f9fafb" opacity="1.00"/>
+<rect x="780.0" y="547.0" width="4.0" height="24.0" rx="2" fill="#16a34a" opacity="1.00"/>
+<text x="794.0" y="562.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="start">装载成功：映像 128 字节，入口 0x00001000</text>
+<text x="1096.0" y="562.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#9ca3af" text-anchor="end">成功 · 3 秒自动消失</text>
+<rect x="780.0" y="577.0" width="316.0" height="24.0" rx="4" fill="#f9fafb" opacity="1.00"/>
+<rect x="780.0" y="577.0" width="4.0" height="24.0" rx="2" fill="#dc2626" opacity="1.00"/>
+<text x="794.0" y="592.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="start">汇编失败：第 12 行缺少操作数</text>
+<text x="1096.0" y="592.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#9ca3af" text-anchor="end">失败 · 常驻并可关闭</text>
+<rect x="780.0" y="607.0" width="316.0" height="24.0" rx="4" fill="#f9fafb" opacity="1.00"/>
+<rect x="780.0" y="607.0" width="4.0" height="24.0" rx="2" fill="#d97706" opacity="1.00"/>
+<text x="794.0" y="622.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="start">参考模拟器不可用，可切换降级模式</text>
+<text x="1096.0" y="622.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#9ca3af" text-anchor="end">警告 · 常驻并可关闭</text>
+<rect x="780.0" y="637.0" width="316.0" height="24.0" rx="4" fill="#f9fafb" opacity="1.00"/>
+<rect x="780.0" y="637.0" width="4.0" height="24.0" rx="2" fill="#2563eb" opacity="1.00"/>
+<text x="794.0" y="652.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="start">已执行 12 条指令，用时 12 ms</text>
+<text x="1096.0" y="652.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#9ca3af" text-anchor="end">信息 · 3 秒自动消失</text>
+<rect x="780.0" y="686.0" width="316.0" height="74.0" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.6"/>
+<text x="796.0" y="706.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">确认删除工作区？</text>
+<text x="796.0" y="724.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#4b5563" text-anchor="start">该工作区内的程序、用例集与配置将一并删除，</text>
+<text x="796.0" y="739.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#4b5563" text-anchor="start">已生成的测试报告不受影响。此操作不可撤销。</text>
+<rect x="968.0" y="740.0" width="54.0" height="24.0" rx="4" fill="#ffffff" opacity="1.00"/>
+<rect x="968.0" y="740.0" width="54.0" height="24.0" rx="4" fill="none" stroke="#d1d5db" stroke-width="1.3"/>
+<text x="995.0" y="756.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="middle">取消</text>
+<rect x="1028.0" y="740.0" width="64.0" height="24.0" rx="4" fill="#dc2626" opacity="1.00"/>
+<text x="1060.0" y="756.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#ffffff" text-anchor="middle" font-weight="700">确认删除</text>
+<rect x="40.0" y="796.0" width="1160.0" height="170.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<rect x="41.0" y="797.0" width="1158.0" height="30.0" rx="0" fill="#f8fafc" opacity="1.00"/>
+<line x1="41.0" y1="827.0" x2="1199.0" y2="827.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<text x="53.0" y="817.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.5" fill="#334155" text-anchor="start" font-weight="700">四、间距、圆角与一致性检查清单</text>
+<text x="64.0" y="850.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#1d4ed8" text-anchor="start" font-weight="700">间距</text>
+<text x="64.0" y="870.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">基准 8 px，常用 4 / 8 / 16 / 24 / 32；表单行距 16，区块间距 24；</text>
+<text x="64.0" y="886.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">内容区最大宽 1440，左右内边距 24；卡片内边距 16。</text>
+<text x="64.0" y="912.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#1d4ed8" text-anchor="start" font-weight="700">圆角</text>
+<text x="64.0" y="932.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">卡片 8 / 按钮与输入框 4 / 标签与色块 4 / 对话框 8。</text>
+<text x="420.0" y="850.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.5" fill="#1d4ed8" text-anchor="start" font-weight="700">一致性检查清单（每增加一个界面都要过一遍）</text>
+<text x="420.0" y="870.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">① 术语：与附录术语表一致，同一概念只用一种说法</text>
+<text x="420.0" y="890.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">② 控件：只用本规范的 3 级按钮 + 5 类反馈，不自造样式</text>
+<text x="420.0" y="910.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">③ 数字：地址 8 位十六进制带 0x，寄存器 x0~x31，耗时以 ms 计</text>
+<text x="420.0" y="930.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">④ 反馈：可操作项必有结果反馈；超过 1 秒的操作必有进度或等待态</text>
+<text x="420.0" y="950.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">⑤ 危险：删除 / 复位 / 停用三类操作必须二次确认并说明影响</text>
+<text x="420.0" y="970.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#4b5563" text-anchor="start">⑥ 空态与错态：每个数据区域都要设计空态与加载失败态</text>
+</svg>

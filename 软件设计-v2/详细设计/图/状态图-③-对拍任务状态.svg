@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1010" viewBox="0 0 1400 1010">
+<rect x="0" y="0" width="1400" height="1010" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="a6" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#6b7280"/></marker>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">类对象状态图 ③　对拍任务（`JobEntry` / `JobHandle`）状态</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段三 · 类设计　｜　承载 FR-7.5（降级）、UI-07「取消对拍」的可中断要求（UID 阶段登记项）与 NFR-Q2（按用例顺序执行）</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<circle cx="400.0" cy="100.0" r="9.0" fill="#111827"/>
+<path d="M400.0 109.0 V146.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="408.0" y="122.3" width="289.9" height="12.8" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="412.0" y="130.5" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#475569" text-anchor="start">DiffService.start(DiffRequest, token) → 返回 JobHandle</text>
+<rect x="190.0" y="146.0" width="420.0" height="68.0" rx="11" fill="#f8fafc" stroke="#6b7280" stroke-width="1.8"/>
+<text x="400.0" y="167.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="middle" font-weight="700">排队 Queued</text>
+<text x="206.0" y="186.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#0e7490" text-anchor="start">entry / jobId = IIdGen.newJobId()</text>
+<text x="206.0" y="201.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#0e7490" text-anchor="start">do / 等前序任务结束（用例级顺序执行）</text>
+<path d="M400.0 214.0 V300.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="408.0" y="251.8" width="65.9" height="12.8" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="412.0" y="260.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#475569" text-anchor="start">调度到本任务</text>
+<rect x="190.0" y="300.0" width="420.0" height="83.0" rx="11" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="400.0" y="321.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="middle" font-weight="700">执行中 Running</text>
+<text x="206.0" y="340.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#0e7490" text-anchor="start">do / ① EmulatorCore.run(program, traceOn)</text>
+<text x="206.0" y="355.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#0e7490" text-anchor="start">do / ② RefSimAdapter.run(program)（子进程）</text>
+<text x="206.0" y="370.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#0e7490" text-anchor="start">do / ③ CompareEngine.compare(seqA, seqB, scope)</text>
+<path d="M400.0 383.0 V417.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<polygon points="400.0,417.0 570.0,456.0 400.0,495.0 230.0,456.0" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="400.0" y="459.4" font-family="Consolas, Courier New, monospace" font-size="9.2" fill="#92400e" text-anchor="middle">CancelToken 已置位？</text>
+<path d="M570.0 456.0 H980.0" fill="none" stroke="#dc2626" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="990.0" y="409.0" width="360.0" height="68.0" rx="11" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8"/>
+<text x="1170.0" y="430.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="middle" font-weight="700">已取消 Cancelled</text>
+<text x="1006.0" y="449.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#0e7490" text-anchor="start">entry / 内核在批次边界退出；kill(子进程)</text>
+<text x="1006.0" y="464.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#0e7490" text-anchor="start">// 不落库，只回推「已取消」</text>
+<rect x="996.0" y="437.4" width="18.9" height="13.2" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="1000.0" y="446.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#dc2626" text-anchor="start">是</text>
+<path d="M400.0 495.0 V535.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="408.0" y="509.8" width="123.5" height="12.8" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="412.0" y="518.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#475569" text-anchor="start">否 —— 双方序列比对完成</text>
+<rect x="190.0" y="535.0" width="420.0" height="68.0" rx="11" fill="#f0fdf4" stroke="#059669" stroke-width="1.8"/>
+<text x="400.0" y="556.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="middle" font-weight="700">已完成 Completed</text>
+<text x="206.0" y="575.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#0e7490" text-anchor="start">entry / firstDiff() → Divergence（可空）</text>
+<text x="206.0" y="590.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#0e7490" text-anchor="start">// 一致时无分歧记录，不给 J-27 入口</text>
+<path d="M400.0 603.0 V643.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="408.0" y="617.8" width="229.1" height="12.8" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="412.0" y="626.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#475569" text-anchor="start">分歧落库 IStore.saveDivergence + WS 回推结论</text>
+<rect x="190.0" y="643.0" width="420.0" height="68.0" rx="11" fill="#ecfeff" stroke="#0891b2" stroke-width="1.8"/>
+<text x="400.0" y="664.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="middle" font-weight="700">已收尾 Finalized</text>
+<text x="206.0" y="683.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#0e7490" text-anchor="start">do / 写 JobEntry 终态；释放 JobHandle</text>
+<text x="206.0" y="698.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#0e7490" text-anchor="start">// 界面可查详情、可归因（UC-11）</text>
+<path d="M400.0 711.0 V761.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<circle cx="400.0" cy="773.0" r="12.0" fill="none" stroke="#111827" stroke-width="1.8"/>
+<circle cx="400.0" cy="773.0" r="7.5" fill="#111827"/>
+<path d="M990.0 443.0 L620.0 443.0 L620.0 677.0 L610.0 677.0" fill="none" stroke="#dc2626" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="628.0" y="616.8" width="170.1" height="12.8" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="632.0" y="625.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#475569" text-anchor="start">取消后同样要收尾：明确告知用户结果</text>
+<rect x="40.0" y="820.0" width="1320.0" height="84.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="50.0" y="837.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【三条与需求直接相关的设计判断】</text>
+<text x="50.0" y="852.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">① **取消是协作式的**：`cancel(job)` 只置位 `CancelToken`，真正的退出由内核对（批次边界检查）与 `ProcRunner` 对（kill 子进程）完成。服务层无法中断一个已经进入 `run()` 的调用。</text>
+<text x="50.0" y="867.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">② **取消失败也要有明确结论**：`已取消` 必须经 `已收尾` 回推，不能让界面停在「执行中」—— 这是不做静默失败（FR-1.3 的精神）在任务生命周期上的推广。</text>
+<text x="50.0" y="882.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">③ **按用例顺序执行**（NFR-Q2）：`排队` 态的存在正是因为批量对拍不并行，单用例失败不牵连其余用例靠的是隔离，不是并行。</text>
+<text x="40.0" y="962.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `JobHandle` 是返回给调用方（`DiffView` / 集成 API 客户端）的只读句柄，暴露 `jobId` / `progress()` / `cancel()` 三个能力，不暴露内部状态迁移方法。</text>
+<text x="40.0" y="978.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 「执行中」的三个子步骤（本内核 → 参考方 → 比对）共享同一个 `CancelToken`：任一步被取消，后续步骤都不再启动。</text>
+<text x="40.0" y="994.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 降级（FR-7.5）不出现在本状态图上 —— 它不是任务状态的迁移，而是**执行中第 ② 步的结果**：`RefSimAdapter.run` 返回「不可用」后，比对改走终态断言模式，任务仍然正常走到 `已完成`。</text>
+</svg>

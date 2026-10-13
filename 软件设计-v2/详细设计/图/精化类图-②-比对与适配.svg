@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1080" viewBox="0 0 1400 1080">
+<rect x="0" y="0" width="1400" height="1080" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11" fill="none" stroke="#7c3aed" stroke-width="1.6"/></marker>
+<marker id="dt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">精化类图 ②　SS-3 比对 + SS-4 适配</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段三 · 类设计　｜　SS-3 无状态、纯函数式；SS-4 是本系统与外部进程之间唯一的适配边界（SA-06）</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="40.0" y="96.0" width="420.0" height="183.4" rx="7" fill="#ffffff" stroke="#475569" stroke-width="1.6"/>
+<path d="M40.0 126.0 H460.0" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«interface» SS-3 对外</text>
+<text x="50.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">ICompareService</text>
+<text x="52.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">（无属性 · 纯契约）</text>
+<path d="M40.0 155.6 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="172.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ compare(a: span&lt;const StepRecord&gt;,</text>
+<text x="52.0" y="186.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">          b: span&lt;const StepRecord&gt;,</text>
+<text x="52.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">          sc: const DiffScope&amp;, id: DivergenceId)</text>
+<text x="52.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : optional&lt;Divergence&gt;</text>
+<text x="52.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ compareFinal(a: const StateSnapshot&amp;,</text>
+<text x="52.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">               b: const StateSnapshot&amp;,</text>
+<text x="52.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">               sc: const DiffScope&amp;, id: DivergenceId)</text>
+<text x="52.0" y="267.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : optional&lt;Divergence&gt;</text>
+<rect x="485.0" y="96.0" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#c026d3" stroke-width="1.6"/>
+<path d="M485.0 126.0 H905.0" fill="none" stroke="#c026d3" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-3</text>
+<text x="895.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements ICompareService</text>
+<text x="495.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">CompareEngine</text>
+<text x="497.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">（无属性 —— 无状态，可被多服务共享）</text>
+<path d="M485.0 155.6 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="172.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ compare(a, b, sc, id)</text>
+<text x="497.0" y="186.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : optional&lt;Divergence&gt;      逐步比对（FR-7.2）</text>
+<text x="497.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ compareFinal(a, b, sc, id)</text>
+<text x="497.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : optional&lt;Divergence&gt;      终态比对（FR-6.5）</text>
+<text x="497.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- firstDiff(x: const StepRecord&amp;, y: const StepRecord&amp;,</text>
+<text x="497.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">            sc: const DiffScope&amp;) : vector&lt;FieldDiff&gt;</text>
+<rect x="930.0" y="96.0" width="420.0" height="169.8" rx="7" fill="#ffffff" stroke="#c026d3" stroke-width="1.6"/>
+<path d="M930.0 126.0 H1350.0" fill="none" stroke="#c026d3" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«entity» SS-3（值类型）</text>
+<text x="940.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">DiffScope</text>
+<text x="942.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- fields_ : FieldMask           = kPc|kGpr|kMem|kCsr</text>
+<text x="942.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- gprMask_: uint32_t               = 0xFFFFFFFF</text>
+<text x="942.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- mode_   : DiffMode                   = Stepwise</text>
+<path d="M930.0 182.8 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ configure(f: FieldMask, g: uint32_t,</text>
+<text x="942.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">            m: DiffMode) : void</text>
+<text x="942.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ includes(f: Field) : bool</text>
+<text x="942.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ mode() : DiffMode</text>
+<text x="942.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ static preset() : DiffScope   FR-7.2 的默认子集</text>
+<rect x="40.0" y="303.4" width="420.0" height="210.6" rx="7" fill="#ffffff" stroke="#c026d3" stroke-width="1.6"/>
+<path d="M40.0 333.4 H460.0" fill="none" stroke="#c026d3" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="317.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«entity» SS-3（数据对象）</text>
+<text x="50.0" y="329.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">Divergence</text>
+<text x="52.0" y="358.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ divId  : DivergenceId        （只读，构造注入）</text>
+<text x="52.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ stepNo : StepNo              （只读）</text>
+<text x="52.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ sideA  : StateSnapshot       （只读，本内核）</text>
+<text x="52.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ sideB  : StateSnapshot       （只读，参考方）</text>
+<text x="52.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- diffs_ : vector&lt;FieldDiff&gt;                 = {}</text>
+<text x="52.0" y="426.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- attr_  : optional&lt;Attribution&gt;         = nullopt</text>
+<text x="52.0" y="440.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- note_  : string                             = ""</text>
+<path d="M40.0 444.6 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ diffFields() : span&lt;const FieldDiff&gt;</text>
+<text x="52.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ update(c: AttributionCategory,</text>
+<text x="52.0" y="488.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">         note: string_view) : void</text>
+<text x="52.0" y="502.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ attributed() : bool</text>
+<rect x="485.0" y="303.4" width="420.0" height="169.8" rx="7" fill="#ffffff" stroke="#475569" stroke-width="1.6"/>
+<path d="M485.0 333.4 H905.0" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="317.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«interface» SS-4 对外</text>
+<text x="495.0" y="329.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">IAssembler　/　IRefSim</text>
+<text x="497.0" y="358.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">（无属性 · 两个纯契约）</text>
+<path d="M485.0 363.0 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="380.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">«IAssembler»</text>
+<text x="497.0" y="393.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ assemble(src: const SourceRef&amp;,</text>
+<text x="497.0" y="407.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">           tk: const CancelToken&amp;) : Result&lt;Image&gt;</text>
+<text x="497.0" y="420.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">«IRefSim»</text>
+<text x="497.0" y="434.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ run(p: const Program&amp;, sc: const DiffScope&amp;,</text>
+<text x="497.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">      tk: const CancelToken&amp;) : Result&lt;vector&lt;StepRecord&gt;&gt;</text>
+<text x="497.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ available() : bool</text>
+<rect x="930.0" y="303.4" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#65a30d" stroke-width="1.6"/>
+<path d="M930.0 333.4 H1350.0" fill="none" stroke="#65a30d" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="317.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-4</text>
+<text x="1340.0" y="317.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements IAssembler</text>
+<text x="940.0" y="329.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">ToolchainAdapter</text>
+<text x="942.0" y="358.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- runner_ : IProcessRunner*       ─ 依赖注入</text>
+<text x="942.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- spec_   : ToolchainSpec    （IConfig.toolchainPath）</text>
+<text x="942.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- cache_  : map&lt;Hash, Image&gt;                 = {}</text>
+<path d="M930.0 390.2 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="407.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ assemble(src: const SourceRef&amp;,</text>
+<text x="942.0" y="420.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">           tk: const CancelToken&amp;) : Result&lt;Image&gt;</text>
+<text x="942.0" y="434.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- parseErrors(stderr: string_view)</text>
+<text x="942.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : vector&lt;Issue&gt;          （映射到 UI-03 行号）</text>
+<rect x="40.0" y="538.0" width="420.0" height="169.8" rx="7" fill="#ffffff" stroke="#65a30d" stroke-width="1.6"/>
+<path d="M40.0 568.0 H460.0" fill="none" stroke="#65a30d" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="552.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-4</text>
+<text x="450.0" y="552.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements IRefSim</text>
+<text x="50.0" y="564.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">RefSimAdapter</text>
+<text x="52.0" y="593.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- runner_  : IProcessRunner*      ─ 依赖注入</text>
+<text x="52.0" y="606.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- path_    : Path              （IConfig.spikePath）</text>
+<text x="52.0" y="620.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- degraded_: bool                          = false</text>
+<path d="M40.0 624.8 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="641.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ run(p: const Program&amp;, sc: const DiffScope&amp;,</text>
+<text x="52.0" y="655.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">      tk: const CancelToken&amp;) : Result&lt;vector&lt;StepRecord&gt;&gt;</text>
+<text x="52.0" y="669.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ available() : bool</text>
+<text x="52.0" y="682.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- parseCommitLog(out: string_view)</text>
+<text x="52.0" y="696.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : vector&lt;StepRecord&gt;   提交日志 → 内部序列</text>
+<rect x="485.0" y="538.0" width="420.0" height="115.4" rx="7" fill="#ffffff" stroke="#475569" stroke-width="1.6"/>
+<path d="M485.0 568.0 H905.0" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="552.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«interface» SS-8 基础</text>
+<text x="495.0" y="564.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">IProcessRunner</text>
+<text x="497.0" y="593.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">（无属性 · 纯契约）</text>
+<path d="M485.0 597.6 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="614.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ run(spec: const RunSpec&amp;,</text>
+<text x="497.0" y="628.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">      tk: const CancelToken&amp;) : Result&lt;RunOutcome&gt;</text>
+<text x="497.0" y="641.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ kill(p: Pid) : void</text>
+<rect x="930.0" y="538.0" width="420.0" height="129.0" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.6"/>
+<path d="M930.0 568.0 H1350.0" fill="none" stroke="#64748b" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="552.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«concrete» SS-8 构件内部类</text>
+<text x="1340.0" y="552.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements IProcessRunner</text>
+<text x="940.0" y="564.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">ProcRunner</text>
+<text x="942.0" y="593.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- timeout_ : Duration          （每次调用即起即收）</text>
+<text x="942.0" y="606.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- spawn_   : SpawnFn*        （平台抽象：posix/win）</text>
+<path d="M930.0 611.2 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="628.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ run(spec, tk) : Result&lt;RunOutcome&gt;</text>
+<text x="942.0" y="641.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ kill(p: Pid) : void</text>
+<text x="942.0" y="655.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- waitFor(p: Pid, tk, timeout) : Outcome</text>
+<rect x="40.0" y="700.0" width="420.0" height="206.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="50.0" y="718.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【SS-4 的两条硬约束（SA-06）】</text>
+<text x="50.0" y="733.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">① 外部工具链与 Spike **一律以子进程方式**调用，本系统</text>
+<text x="50.0" y="748.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   不链接其二进制 —— 同时满足许可合规（LIM-04）、依赖</text>
+<text x="50.0" y="763.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   洁净度（LIM-05）。</text>
+<text x="50.0" y="778.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">② 两者**共用同一份进程管理实现**（`IProcessRunner` →</text>
+<text x="50.0" y="793.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   `ProcRunner`），因此「起进程 / 喂输入 / 读输出 / 超时</text>
+<text x="50.0" y="808.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   回收」的逻辑只存在一份。</text>
+<text x="50.0" y="823.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start"></text>
+<text x="50.0" y="838.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【降级留在适配器，不下沉基础服务】</text>
+<text x="50.0" y="853.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">`RefSimAdapter.available()` 为假时（FR-7.5）返回明确结果，</text>
+<text x="50.0" y="868.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">由 `DiffService` 转入断言比对模式；`IProcessRunner` 不感知</text>
+<text x="50.0" y="883.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">「参考模拟器」这一业务概念。</text>
+<rect x="485.0" y="700.0" width="420.0" height="176.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="495.0" y="718.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【SS-3 的两个设计判断】</text>
+<text x="495.0" y="733.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">① `CompareEngine` **无属性、无状态**，可被 `TestService`</text>
+<text x="495.0" y="748.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   与 `DiffService` 同时共享（SA-04 / FR-6.5）。</text>
+<text x="495.0" y="763.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">② 两种判定模式（逐条 / 终态）是**同一引擎的两个方法**，</text>
+<text x="495.0" y="778.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   由 `DiffScope.mode` 决定调用哪一个 —— 不是两个引擎。</text>
+<text x="495.0" y="793.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start"></text>
+<text x="495.0" y="808.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【`Divergence` 的三个只读字段】</text>
+<text x="495.0" y="823.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">`divId` / `stepNo` / `sideA` / `sideB` 由构造时注入且不再</text>
+<text x="495.0" y="838.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">变更（`+` 表示公开只读访问器）；唯一可变部分是归因标注，</text>
+<text x="495.0" y="853.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">经 `update` 单方法完成 —— UC-11 归类为「方式一」的依据。</text>
+<rect x="930.0" y="700.0" width="430.0" height="176.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="940.0" y="718.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【`IProcessRunner` 的签名含义】</text>
+<text x="940.0" y="733.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">`tk: const CancelToken&amp;` 是全系统统一的**协作式取消**入口</text>
+<text x="940.0" y="748.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">（本步引入）。它由 `DiffService.cancel` / `DebugService.cancel`</text>
+<text x="940.0" y="763.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">置位，内核主循环与子进程回收在**批次边界**检查一次 ——</text>
+<text x="940.0" y="778.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">不在每条指令上检查，以免破坏 NFR-Q1 的 10⁷ 条/秒。</text>
+<text x="940.0" y="793.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start"></text>
+<text x="940.0" y="808.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【为什么取消放在适配层与内核、不放服务层】</text>
+<text x="940.0" y="823.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">服务层无法中断一个已经进入 `run()` 的调用；能中断执行的</text>
+<text x="940.0" y="838.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">只有真正的执行者（内核主循环、子进程）。因此 `CancelToken`</text>
+<text x="940.0" y="853.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">必须沿调用链传到最内层。</text>
+<text x="40.0" y="1032.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `CompareEngine` 同时被 `TestService`（UC-08）与 `DiffService`（UC-10）使用：FR-6.5「两种判定模式复用同一比对引擎」的唯一落点（SA-04）。</text>
+<text x="40.0" y="1048.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· SS-4 的两个实现类**只依赖 `IProcessRunner` 接口**，不自行起进程 —— 进程管理逻辑仅存在一份（`ProcRunner`）。</text>
+<text x="40.0" y="1064.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `CancelToken` 是本步新引入的协作式取消原语，服务取消对拍（S 项）与中断长时间运行两个用途共用。</text>
+</svg>

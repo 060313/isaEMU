@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="986" viewBox="0 0 1460 986">
+<rect x="0" y="0" width="1460" height="986" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1.2 L11,6 L1,10.8" fill="none" stroke="#6b7280" stroke-width="1.7"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">用例设计顺序图 · UC-01 注册与登录</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段一 · 用例设计　｜　参与设计类：SS-7 SessionView / AppShell、SS-6 HttpGateway、SS-5 SessionService、SS-8 IStore / IIdGen</text>
+<line x1="40.0" y1="80.0" x2="1420.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="110.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="181.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«actor»</text>
+<text x="181.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">用户</text>
+<rect x="292.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="363.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«page» SS-7</text>
+<text x="363.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">SessionView</text>
+<rect x="474.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="545.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-7</text>
+<text x="545.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">AppShell</text>
+<rect x="656.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="727.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-6</text>
+<text x="727.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">HttpGateway</text>
+<rect x="838.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="909.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«service» SS-5</text>
+<text x="909.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">SessionService</text>
+<rect x="1020.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.6"/>
+<text x="1091.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«interface» SS-8</text>
+<text x="1091.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">IStore</text>
+<rect x="1202.0" y="112.0" width="142.0" height="54.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.6"/>
+<text x="1273.0" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«interface» SS-8</text>
+<text x="1273.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">IIdGen</text>
+<line x1="181.0" y1="166.0" x2="181.0" y2="838.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="363.0" y1="166.0" x2="363.0" y2="838.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="545.0" y1="166.0" x2="545.0" y2="838.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="727.0" y1="166.0" x2="727.0" y2="838.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="909.0" y1="166.0" x2="909.0" y2="838.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1091.0" y1="166.0" x2="1091.0" y2="838.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1273.0" y1="166.0" x2="1273.0" y2="838.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="1268.0" y="492.0" width="10.0" height="28.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="1086.0" y="374.0" width="10.0" height="182.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="904.0" y="338.0" width="10.0" height="254.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="722.0" y="302.0" width="10.0" height="326.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="540.0" y="266.0" width="10.0" height="540.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="358.0" y="184.0" width="10.0" height="622.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="176.0" y="184.0" width="10.0" height="28.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<path d="M193.0 200.0 H351.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="199.1" y="183.2" width="145.7" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="272.0" y="192.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">① 提交凭据（用户名、口令）</text>
+<path d="M370.0 236.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="413.0" y="240.4" width="214.7" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="417.0" y="249.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">② 界面内校验：非空 / 口令长度 / 二次一致</text>
+<path d="M375.0 282.0 H533.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="411.5" y="265.2" width="85.0" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="454.0" y="274.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">③ login(cred)</text>
+<path d="M557.0 318.0 H715.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="555.1" y="301.2" width="161.8" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="636.0" y="310.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">④ POST /api/sessions {cred}</text>
+<path d="M739.0 354.0 H897.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="775.5" y="337.2" width="85.0" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="818.0" y="346.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑤ login(cred)</text>
+<path d="M921.0 390.0 H1079.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="938.3" y="373.2" width="123.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="1000.0" y="382.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑥ findUser(username)</text>
+<path d="M1079.0 426.0 H921.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="955.1" y="409.2" width="89.8" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="1000.0" y="418.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">账号记录（或空）</text>
+<path d="M916.0 462.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="959.0" y="466.4" width="221.0" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="963.0" y="475.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑦ 校验口令哈希；失败记 ILogger 并返回原因</text>
+<path d="M921.0 508.0 H1261.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="1051.3" y="491.2" width="79.5" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="1091.0" y="500.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑧ newToken()</text>
+<path d="M921.0 544.0 H1079.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="875.2" y="527.2" width="249.6" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="1000.0" y="536.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑨ saveSession(session) / initWorkspace(uid)</text>
+<path d="M897.0 580.0 H739.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="730.5" y="563.2" width="174.9" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="818.0" y="572.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">会话令牌 + 工作区句柄 + 当前 ISA</text>
+<path d="M715.0 616.0 H557.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="557.4" y="599.2" width="157.2" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="636.0" y="608.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">200 {token, workspace, isa}</text>
+<path d="M552.0 652.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="595.0" y="656.4" width="180.6" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="599.0" y="665.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑩ 写入全局状态；切换路由到 /debug</text>
+<path d="M533.0 698.0 H375.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="429.3" y="681.2" width="49.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="454.0" y="690.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">登录成功</text>
+<path d="M370.0 734.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="413.0" y="738.4" width="178.8" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="417.0" y="747.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑪ 呈现结果提示条（成功 3 秒消失）</text>
+<path d="M375.0 794.0 H533.0" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#ab)"/>
+<rect x="315.2" y="777.2" width="277.6" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="454.0" y="786.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1d4ed8" text-anchor="middle">⑫ 跳转 J-01（替换）→ 进入主界面并触发 UC-06 取状态</text>
+<rect x="1090.0" y="636.0" width="210.0" height="48.0" rx="5" fill="#fffbeb" stroke="#b45309" stroke-width="1.3" stroke-dasharray="7 4"/>
+<text x="1100.0" y="656.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">⑯ 为「替换」方向：</text>
+<text x="1100.0" y="672.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">不保留 UI-01 的返回历史</text>
+<text x="40.0" y="890.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 实线黑＝设计类之间的调用；蓝色＝界面跳转（方向标注「替换 / 前进 / 返回」）；虚线开放箭头＝返回。编号对应用例交互模型的消息顺序。</text>
+<text x="40.0" y="906.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 与交互模型的差别：边界类与控制类之间插入 SS-6 的 HttpGateway（分析类 ApiEndpoint 与控制类 ApiController 合并），实体类按 SAD 5.4.3 落到对应子系统。</text>
+<text x="40.0" y="922.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 新增设计元素（TerminationGuard / AccessGuard / IStore / IIdGen / IProcessRunner 等 12 项）在图中以首次出现的调用标出，来源见 SAD 5.4.4。</text>
+<text x="40.0" y="938.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ⑧ 是「一项职责由一个设计元素的多个方法实现」（方式二）：`findUser` 与口令哈希校验两步，任一失败归入同一失败语义（账号不存在 / 口令错误 / 账号已停用）。</text>
+<text x="40.0" y="954.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ⑩ 是分析类 `SessionController.createWorkspace` 的落点，工作区隔离谓词由 IStore 在每条语句上附加（SA-05），不依赖数据库行级安全。</text>
+<text x="40.0" y="970.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 本地形态且鉴权关闭时，③~⑬ 由 AppShell 直接构造本地会话后执行 ⑯。</text>
+</svg>

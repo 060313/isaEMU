@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1300" viewBox="0 0 1400 1300">
+<rect x="0" y="0" width="1400" height="1300" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="a6" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#6b7280"/></marker>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">类方法活动图 ①　`EmulatorCore::run(mode, param, limit, tk)` 主循环</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段三 · 类设计　｜　承载 FR-3.1 ~ FR-3.5、FR-4.3（运行到地址 / 至边界）、NFR-Q1（10⁷ 条/秒）、SA-13（差分记录）</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<circle cx="380.0" cy="100.0" r="9.0" fill="#111827"/>
+<path d="M380.0 109.0 V138.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="100.0" y="138.0" width="560.0" height="44.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="380.0" y="163.4" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#1e3a8a" text-anchor="middle">前置断言：st_ == Ready 且 decode_ != nullptr（否则返回 Err(NotReady)）</text>
+<path d="M380.0 182.0 V218.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<polygon points="380.0,218.0 570.0,255.0 380.0,292.0 190.0,255.0" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="380.0" y="250.9" font-family="Consolas, Courier New, monospace" font-size="9.2" fill="#92400e" text-anchor="middle">steps_ &gt;= limit ？</text>
+<text x="380.0" y="265.9" font-family="Consolas, Courier New, monospace" font-size="9.2" fill="#92400e" text-anchor="middle">（limit == 0 表示不限）</text>
+<path d="M570.0 255.0 H980.0" fill="none" stroke="#dc2626" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="576.0" y="236.4" width="18.9" height="13.2" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="580.0" y="245.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#dc2626" text-anchor="start">是</text>
+<rect x="930.0" y="233.0" width="400.0" height="44.0" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+<text x="1130.0" y="258.4" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#1e3a8a" text-anchor="middle">返回 RunResult{ reason = HitLimit }</text>
+<path d="M380.0 292.0 V318.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="390.0" y="299.8" width="18.5" height="12.8" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="394.0" y="308.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#475569" text-anchor="start">否</text>
+<polygon points="380.0,318.0 590.0,355.0 380.0,392.0 170.0,355.0" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="380.0" y="350.9" font-family="Consolas, Courier New, monospace" font-size="9.2" fill="#92400e" text-anchor="middle">批次边界（steps_ % 4096 == 0）</text>
+<text x="380.0" y="365.9" font-family="Consolas, Courier New, monospace" font-size="9.2" fill="#92400e" text-anchor="middle">且 tk.isCancelled() ？</text>
+<path d="M590.0 355.0 H980.0" fill="none" stroke="#dc2626" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="596.0" y="336.4" width="18.9" height="13.2" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="600.0" y="345.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#dc2626" text-anchor="start">是</text>
+<rect x="930.0" y="333.0" width="400.0" height="44.0" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+<text x="1130.0" y="358.4" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#1e3a8a" text-anchor="middle">返回 RunResult{ reason = Cancelled }</text>
+<path d="M380.0 392.0 V418.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="390.0" y="399.8" width="18.5" height="12.8" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="394.0" y="408.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#475569" text-anchor="start">否</text>
+<polygon points="380.0,418.0 580.0,455.0 380.0,492.0 180.0,455.0" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="380.0" y="450.9" font-family="Consolas, Courier New, monospace" font-size="9.2" fill="#92400e" text-anchor="middle">guard_-&gt;check(...)</text>
+<text x="380.0" y="465.9" font-family="Consolas, Courier New, monospace" font-size="9.2" fill="#92400e" text-anchor="middle">判定 HALT / FAULT ？</text>
+<path d="M580.0 455.0 H980.0" fill="none" stroke="#dc2626" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="586.0" y="436.4" width="18.9" height="13.2" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="590.0" y="445.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#dc2626" text-anchor="start">是</text>
+<rect x="930.0" y="433.0" width="400.0" height="44.0" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+<text x="1130.0" y="458.4" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#1e3a8a" text-anchor="middle">返回 RunResult{ reason = Halted / Faulted }</text>
+<path d="M380.0 492.0 V518.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="390.0" y="499.8" width="18.5" height="12.8" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="394.0" y="508.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#475569" text-anchor="start">否</text>
+<polygon points="380.0,518.0 610.0,555.0 380.0,592.0 150.0,555.0" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="380.0" y="550.9" font-family="Consolas, Courier New, monospace" font-size="9.2" fill="#92400e" text-anchor="middle">满足 mode 的停止条件 ？</text>
+<text x="380.0" y="565.9" font-family="Consolas, Courier New, monospace" font-size="9.2" fill="#92400e" text-anchor="middle">RunN 步数 / UNTIL_ADDR 命中 / 离开映像区间</text>
+<path d="M610.0 555.0 H980.0" fill="none" stroke="#059669" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="616.0" y="536.4" width="18.9" height="13.2" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="620.0" y="545.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#059669" text-anchor="start">是</text>
+<rect x="930.0" y="533.0" width="400.0" height="44.0" rx="10" fill="#f0fdf4" stroke="#059669" stroke-width="1.6"/>
+<text x="1130.0" y="558.4" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#1e3a8a" text-anchor="middle">返回 RunResult{ reason = 由 mode 决定 }</text>
+<path d="M380.0 592.0 V618.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="390.0" y="599.8" width="18.5" height="12.8" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="394.0" y="608.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#475569" text-anchor="start">否</text>
+<rect x="100.0" y="618.0" width="560.0" height="44.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="380.0" y="643.4" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#1e3a8a" text-anchor="middle">ops = cycle()　取指 → 译码（decode_-&gt;lookup）→ 执行 → 写回</text>
+<path d="M380.0 662.0 V684.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="100.0" y="684.0" width="560.0" height="44.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="380.0" y="709.4" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#1e3a8a" text-anchor="middle">arch_-&gt;apply(ops)　按差分写操作更新 PC / GPR / CSR / 内存</text>
+<path d="M380.0 728.0 V750.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<polygon points="380.0,750.0 530.0,784.0 380.0,818.0 230.0,784.0" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="380.0" y="787.4" font-family="Consolas, Courier New, monospace" font-size="9.2" fill="#92400e" text-anchor="middle">traceOn_ ？</text>
+<path d="M530.0 784.0 H890.0" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="536.0" y="765.4" width="18.9" height="13.2" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="540.0" y="774.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#7c3aed" text-anchor="start">是</text>
+<rect x="890.0" y="762.0" width="400.0" height="44.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="1090.0" y="787.4" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#1e3a8a" text-anchor="middle">trace_-&gt;append(StepRecord{ ops, pc })</text>
+<path d="M1090.0 806.0 L1090.0 846.0 L380.0 846.0" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M380.0 818.0 V846.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="390.0" y="826.8" width="18.5" height="12.8" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="394.0" y="835.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#475569" text-anchor="start">否</text>
+<rect x="100.0" y="846.0" width="560.0" height="44.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="380.0" y="871.4" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#1e3a8a" text-anchor="middle">guard_-&gt;check(cur(), *arch_)　steps_++</text>
+<path d="M100.0 890.0 L120.0 890.0 L120.0 255.0 L190.0 255.0" fill="none" stroke="#2563eb" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="124.0" y="545.6" width="179.7" height="13.0" rx="2" fill="#ffffff" opacity="0.96"/>
+<text x="128.0" y="554.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#2563eb" text-anchor="start">回到循环入口（一次迭代 = 一条指令）</text>
+<rect x="40.0" y="1080.0" width="1320.0" height="129.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="50.0" y="1097.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【为什么取消检查在「批次边界」而不在每条指令】</text>
+<text x="50.0" y="1112.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">NFR-Q1 要求关闭轨迹时达到 10⁷ 条/秒。若每条指令都读一次原子标志，热路径会被一次内存屏障打断。取 4096 步一批，把检查成本摊到 1/4096，</text>
+<text x="50.0" y="1127.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">同时保证取消的响应延迟在亚毫秒级（10⁷ 条/秒 → 4096 步约 0.4 ms）。</text>
+<text x="50.0" y="1142.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start"></text>
+<text x="50.0" y="1157.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【轨迹开关与回退能力同开同关】</text>
+<text x="50.0" y="1172.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">`traceOn_` 为假时，`trace_-&gt;append` 被跳过，`rewindTo` 也随之不可用（SA-13）。这样关闭轨迹时的吞吐量不受影响，代价是该段执行历史不可回退 ——</text>
+<text x="50.0" y="1187.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">界面按 C-01 明确置灰，不静默失败。</text>
+<text x="40.0" y="1236.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 四个判定自上而下逐层收敛：**条数上限 → 取消 → 终止/异常 → 模式条件** —— 顺序不可颠倒（例如必须先判上限，才能保证「异常」不会被误判为「已达上限」）。</text>
+<text x="40.0" y="1252.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 循环体只有三个动作：`cycle()`（管道四段）、`arch_-&gt;apply(ops)`（差分写回）、`guard_-&gt;check()`（终止判定）—— 内核热路径上没有配额、没有断点、没有日志。</text>
+<text x="40.0" y="1268.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 每条迭代恰好产生**一条** `StepRecord`，它同时是 FR-3.3 的轨迹项、FR-4.4 的回退单位与 FR-7.2 的比对照 —— SA-13 的「一份记录三种用途」在此可见。</text>
+<text x="40.0" y="1284.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 本图为纯逻辑流程，未画异常线程（`FAULT` 经 `guard_-&gt;check` 的返回值处理，不抛异常）—— 热路径不用异常做控制流。</text>
+</svg>

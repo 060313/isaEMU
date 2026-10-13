@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="810" viewBox="0 0 1200 810">
+<rect x="0" y="0" width="1200" height="810" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="a2" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#ea580c"/></marker>
+<marker id="a3" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#0891b2"/></marker>
+<marker id="a4" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="a5" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="36.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="19.0" fill="#111827" text-anchor="start" font-weight="700">ISA 模拟系统 · 部署图（本地形态 · 单可执行文件）</text>
+<text x="36.0" y="66.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start">SAD 阶段四 · 与云端形态功能对等（FR-9.2）· 无公网、无容器运行时、数据不出本机</text>
+<rect x="36.0" y="104.0" width="1128.0" height="330.0" rx="7" fill="#ffffff" stroke="#1f2937" stroke-width="1.9"/>
+<text x="50.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.8" fill="#111827" text-anchor="start" font-weight="700">«device»　用户主机（Linux / Windows）</text>
+<text x="50.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#6b7280" text-anchor="start">单机部署：一个可执行文件 + 一个本地数据库文件，无外部服务依赖</text>
+<rect x="65.0" y="176.0" width="250.0" height="230.0" rx="7" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="77.0" y="202.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#2563eb" text-anchor="start">«executionEnvironment»</text>
+<text x="77.0" y="220.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#1f2937" text-anchor="start" font-weight="700">浏览器</text>
+<text x="77.0" y="244.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#374151" text-anchor="start">Chrome / Edge / Firefox</text>
+<text x="77.0" y="261.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#374151" text-anchor="start">最近两个大版本</text>
+<text x="77.0" y="278.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#374151" text-anchor="start">视口 1280×720 起</text>
+<text x="77.0" y="295.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#374151" text-anchor="start">经 127.0.0.1 访问</text>
+<text x="77.0" y="312.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#374151" text-anchor="start">无需公网</text>
+<text x="77.0" y="352.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#1d4ed8" text-anchor="start">界面与云端完全一致</text>
+<text x="77.0" y="370.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#1d4ed8" text-anchor="start">鉴权可关闭（FR-8.2）</text>
+<rect x="385.0" y="176.0" width="380.0" height="230.0" rx="7" fill="#ecfeff" stroke="#0891b2" stroke-width="1.5"/>
+<text x="397.0" y="202.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#155e75" text-anchor="start" font-weight="700">«executionEnvironment»　isa-sim 服务进程</text>
+<text x="397.0" y="220.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="start">单进程 · SS-1~SS-3、SS-5~SS-8 全部在内</text>
+<path d="M397.0,232.0 L743.0,232.0 L753.0,242.0 L753.0,262.0 L397.0,262.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M743.0,232.0 L743.0,242.0 L753.0,242.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="407.0" y="250.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">单可执行文件（内嵌前端静态资源）</text>
+<path d="M397.0,270.0 L743.0,270.0 L753.0,280.0 L753.0,300.0 L397.0,300.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M743.0,270.0 L743.0,280.0 L753.0,280.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="407.0" y="288.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">SQLite 驱动（默认存储）</text>
+<path d="M397.0,308.0 L743.0,308.0 L753.0,318.0 L753.0,338.0 L397.0,338.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M743.0,308.0 L743.0,318.0 L753.0,318.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="407.0" y="326.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">工作区数据库文件 workspace.db</text>
+<path d="M397.0,346.0 L743.0,346.0 L753.0,356.0 L753.0,376.0 L397.0,376.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M743.0,346.0 L743.0,356.0 L753.0,356.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="407.0" y="364.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">配置文件 config.toml</text>
+<text x="397.0" y="392.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#b91c1c" text-anchor="start">内核静态库链入同一进程（NFR-Q1 ≤ 100 毫秒）</text>
+<rect x="835.0" y="176.0" width="300.0" height="230.0" rx="7" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+<text x="847.0" y="202.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#9a3412" text-anchor="start" font-weight="700">外部依赖（同机安装 · 非链接）</text>
+<text x="847.0" y="220.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="start">用户自行安装，或随部署包提供（需求 2.8）</text>
+<text x="849.0" y="252.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#7c2d12" text-anchor="start">RV 汇编工具链</text>
+<text x="849.0" y="272.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#7c2d12" text-anchor="start">（riscv64-unknown-elf-gcc 等）</text>
+<text x="849.0" y="292.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#7c2d12" text-anchor="start">Spike 参考模拟器</text>
+<text x="849.0" y="312.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#7c2d12" text-anchor="start">（riscv-isa-sim）</text>
+<text x="847.0" y="362.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#b91c1c" text-anchor="start">缺失时由 FR-2.2 给出明确提示，</text>
+<text x="847.0" y="378.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#b91c1c" text-anchor="start">不静默失败</text>
+<line x1="315.0" y1="280.0" x2="383.0" y2="280.0" stroke="#2563eb" stroke-width="1.8" marker-end="url(#a5)"/>
+<text x="350.0" y="270.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#1d4ed8" text-anchor="middle" font-weight="700">HTTP/WS</text>
+<line x1="765.0" y1="280.0" x2="833.0" y2="280.0" stroke="#ea580c" stroke-width="1.8" stroke-dasharray="7 4" marker-end="url(#a2)"/>
+<text x="800.0" y="270.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#9a3412" text-anchor="middle" font-weight="700">子进程</text>
+<text x="350.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#6b7280" text-anchor="middle">127.0.0.1</text>
+<rect x="36.0" y="460.0" width="1128.0" height="68.0" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="52.0" y="482.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#111827" text-anchor="start" font-weight="700">一、部署环境说明</text>
+<text x="52.0" y="502.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 单可执行文件：前端构建产物内嵌进服务端可执行文件，由服务端自身托管静态资源，不引入 nginx（本地形态无多用户、无公网暴露）</text>
+<text x="52.0" y="520.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 存储默认 SQLite3（单文件、零安装）；如需与云端一致可切换 PostgreSQL，由 SS-8 的 DbDriver 双实现 + 配置项决定（FR-9.2 对等）</text>
+<rect x="36.0" y="538.0" width="1128.0" height="104.0" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="52.0" y="560.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#111827" text-anchor="start" font-weight="700">二、节点内通信方式</text>
+<text x="52.0" y="580.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 浏览器 ↔ 服务进程：HTTP / WS，环回地址 127.0.0.1（默认 8080），不经网络栈外部路径</text>
+<text x="52.0" y="598.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 服务进程 ↔ 数据库：SQLite 为进程内文件 I/O；改用 PostgreSQL 时为本地 TCP 5432</text>
+<text x="52.0" y="616.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 服务进程 → 工具链 / Spike：子进程 + 管道，与云端形态同一套 SS-4 / SS-8 实现，仅路径由配置提供</text>
+<text x="52.0" y="634.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 无容器、无反向代理、无跨主机通信——这是与云端形态唯一的结构差异</text>
+<rect x="36.0" y="652.0" width="1128.0" height="88.0" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="52.0" y="674.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#111827" text-anchor="start" font-weight="700">三、与云端形态的对等关系</text>
+<text x="52.0" y="694.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 同一套源码、同一套制品：仅由配置项（数据库驱动、鉴权开关、监听地址）区分为两种形态，不维护两套代码</text>
+<text x="52.0" y="712.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 对等的功能范围：除多用户隔离与配额（本地形态可关闭鉴权、以匿名会话运行）外，14 个用例全部可用</text>
+<text x="52.0" y="730.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 对不上的部分：本地形态无多用户并发，NFR-Q5 的配额与隔离在此形态下不适用（需求 3.2 已把 UC-14 降为 P3）</text>
+<rect x="36.0" y="750.0" width="1128.0" height="34.0" rx="5" fill="#ffffff" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="50.0" y="772.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="start">图例：深色框 = «device» 节点　｜　青色框 = 执行环境　｜　橙色框 = 外部依赖　｜　浅灰折角框 = «artifact» 部署制品　｜　橙色虚线 = 子进程调用</text>
+</svg>

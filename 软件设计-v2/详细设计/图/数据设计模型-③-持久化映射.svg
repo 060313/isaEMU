@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="870" viewBox="0 0 1400 870">
+<rect x="0" y="0" width="1400" height="870" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="as" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#94a3b8"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">数据设计模型 ③　持久化映射图</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段四 · 数据设计　｜　持久实体 ↔ 设计类 / 值类型 ↔ IStore 操作 ↔ 表；下半页是「明确不持久化」的 11 项</text>
+<rect x="40.0" y="104.0" width="1296.0" height="30.0" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="50.0" y="124.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#334155" text-anchor="start" font-weight="700">组</text>
+<text x="110.0" y="124.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#334155" text-anchor="start" font-weight="700">持久实体</text>
+<line x1="100.0" y1="104.0" x2="100.0" y2="134.0" stroke="#cbd5e1" stroke-width="1.0"/>
+<text x="312.0" y="124.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#334155" text-anchor="start" font-weight="700">设计类 / 值类型</text>
+<line x1="302.0" y1="104.0" x2="302.0" y2="134.0" stroke="#cbd5e1" stroke-width="1.0"/>
+<text x="618.0" y="124.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#334155" text-anchor="start" font-weight="700">IStore 操作</text>
+<line x1="608.0" y1="104.0" x2="608.0" y2="134.0" stroke="#cbd5e1" stroke-width="1.0"/>
+<text x="1020.0" y="124.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#334155" text-anchor="start" font-weight="700">表</text>
+<line x1="1010.0" y1="104.0" x2="1010.0" y2="134.0" stroke="#cbd5e1" stroke-width="1.0"/>
+<rect x="40.0" y="134.0" width="1296.0" height="48.0" rx="0" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="100.0" y1="134.0" x2="100.0" y2="182.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="302.0" y1="134.0" x2="302.0" y2="182.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="608.0" y1="134.0" x2="608.0" y2="182.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="1010.0" y1="134.0" x2="1010.0" y2="182.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<text x="50.0" y="162.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#64748b" text-anchor="start" font-weight="700">1</text>
+<text x="110.0" y="162.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#111827" text-anchor="start" font-weight="700">用户身份</text>
+<text x="312.0" y="162.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#1f2937" text-anchor="start">User(uid, name, role, quota, status)</text>
+<text x="618.0" y="162.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#0e7490" text-anchor="start">findUser / findUserByName / saveUser / queryUsers</text>
+<text x="1020.0" y="162.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">users　T-01</text>
+<rect x="40.0" y="182.0" width="1296.0" height="48.0" rx="0" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="100.0" y1="182.0" x2="100.0" y2="230.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="302.0" y1="182.0" x2="302.0" y2="230.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="608.0" y1="182.0" x2="608.0" y2="230.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="1010.0" y1="182.0" x2="1010.0" y2="230.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<text x="50.0" y="210.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#64748b" text-anchor="start" font-weight="700">2</text>
+<text x="110.0" y="210.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#111827" text-anchor="start" font-weight="700">用户凭据</text>
+<text x="312.0" y="210.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#1f2937" text-anchor="start">CredentialRow(uid, secretHash, salt, kdf, iterations)  ★新增</text>
+<text x="618.0" y="210.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#0e7490" text-anchor="start">findCredential  ★新增　（DD-1）</text>
+<text x="1020.0" y="210.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">credentials　T-02</text>
+<rect x="40.0" y="230.0" width="1296.0" height="48.0" rx="0" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="100.0" y1="230.0" x2="100.0" y2="278.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="302.0" y1="230.0" x2="302.0" y2="278.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="608.0" y1="230.0" x2="608.0" y2="278.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="1010.0" y1="230.0" x2="1010.0" y2="278.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<text x="50.0" y="258.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#64748b" text-anchor="start" font-weight="700">3</text>
+<text x="110.0" y="258.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#111827" text-anchor="start" font-weight="700">资源用量</text>
+<text x="312.0" y="258.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#1f2937" text-anchor="start">Usage(sessions, requests, instr, bytes)</text>
+<text x="618.0" y="258.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#0e7490" text-anchor="start">queryUsage　（sessions / bytes 为派生）</text>
+<text x="1020.0" y="258.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">usage_counters　T-03</text>
+<rect x="40.0" y="278.0" width="1296.0" height="48.0" rx="0" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="100.0" y1="278.0" x2="100.0" y2="326.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="302.0" y1="278.0" x2="302.0" y2="326.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="608.0" y1="278.0" x2="608.0" y2="326.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="1010.0" y1="278.0" x2="1010.0" y2="326.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<text x="50.0" y="306.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#64748b" text-anchor="start" font-weight="700">4</text>
+<text x="110.0" y="306.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#111827" text-anchor="start" font-weight="700">运行会话</text>
+<text x="312.0" y="306.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#1f2937" text-anchor="start">SessionRow(token, uid, wsId, isaId, createdAt, lastSeen)</text>
+<text x="618.0" y="306.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#0e7490" text-anchor="start">saveSession / dropSession</text>
+<text x="1020.0" y="306.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">sessions　T-04</text>
+<rect x="40.0" y="326.0" width="1296.0" height="48.0" rx="0" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="100.0" y1="326.0" x2="100.0" y2="374.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="302.0" y1="326.0" x2="302.0" y2="374.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="608.0" y1="326.0" x2="608.0" y2="374.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="1010.0" y1="326.0" x2="1010.0" y2="374.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<text x="50.0" y="354.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#64748b" text-anchor="start" font-weight="700">5</text>
+<text x="110.0" y="354.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#111827" text-anchor="start" font-weight="700">工作区</text>
+<text x="312.0" y="354.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#1f2937" text-anchor="start">Workspace / WorkspaceRow / WorkspaceBrief</text>
+<text x="618.0" y="354.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#0e7490" text-anchor="start">putWorkspace / getWorkspace / queryWorkspaces ★</text>
+<text x="1020.0" y="354.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">workspaces　T-05</text>
+<rect x="40.0" y="374.0" width="1296.0" height="48.0" rx="0" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="100.0" y1="374.0" x2="100.0" y2="422.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="302.0" y1="374.0" x2="302.0" y2="422.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="608.0" y1="374.0" x2="608.0" y2="422.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="1010.0" y1="374.0" x2="1010.0" y2="422.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<text x="50.0" y="402.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#64748b" text-anchor="start" font-weight="700">6</text>
+<text x="110.0" y="402.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#111827" text-anchor="start" font-weight="700">用例集</text>
+<text x="312.0" y="402.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#1f2937" text-anchor="start">TestSuite(suiteId, name, group, tags, checksum)</text>
+<text x="618.0" y="402.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#0e7490" text-anchor="start">随 putWorkspace / getWorkspace（同一事务）</text>
+<text x="1020.0" y="402.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">test_suites　T-06</text>
+<rect x="40.0" y="422.0" width="1296.0" height="48.0" rx="0" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="100.0" y1="422.0" x2="100.0" y2="470.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="302.0" y1="422.0" x2="302.0" y2="470.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="608.0" y1="422.0" x2="608.0" y2="470.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="1010.0" y1="422.0" x2="1010.0" y2="470.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<text x="50.0" y="450.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#64748b" text-anchor="start" font-weight="700">7</text>
+<text x="110.0" y="450.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#111827" text-anchor="start" font-weight="700">用例</text>
+<text x="312.0" y="450.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#1f2937" text-anchor="start">TestCase(caseId, name, program, timeoutSteps)</text>
+<text x="618.0" y="450.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#0e7490" text-anchor="start">同上（组合子表，R-07）</text>
+<text x="1020.0" y="450.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">test_cases　T-07</text>
+<rect x="40.0" y="470.0" width="1296.0" height="48.0" rx="0" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="100.0" y1="470.0" x2="100.0" y2="518.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="302.0" y1="470.0" x2="302.0" y2="518.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="608.0" y1="470.0" x2="608.0" y2="518.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="1010.0" y1="470.0" x2="1010.0" y2="518.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<text x="50.0" y="498.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#64748b" text-anchor="start" font-weight="700">8</text>
+<text x="110.0" y="498.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#111827" text-anchor="start" font-weight="700">测试报告</text>
+<text x="312.0" y="498.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#1f2937" text-anchor="start">TestReport(reportId, suiteId, owner, …)</text>
+<text x="618.0" y="498.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#0e7490" text-anchor="start">saveReport / getReport / queryReports ★</text>
+<text x="1020.0" y="498.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">test_reports　T-08</text>
+<rect x="40.0" y="518.0" width="1296.0" height="48.0" rx="0" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="100.0" y1="518.0" x2="100.0" y2="566.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="302.0" y1="518.0" x2="302.0" y2="566.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="608.0" y1="518.0" x2="608.0" y2="566.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="1010.0" y1="518.0" x2="1010.0" y2="566.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<text x="50.0" y="546.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#64748b" text-anchor="start" font-weight="700">9</text>
+<text x="110.0" y="546.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#111827" text-anchor="start" font-weight="700">用例结果</text>
+<text x="312.0" y="546.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#1f2937" text-anchor="start">CaseResult(caseId, passed, firstDiffAt, …)</text>
+<text x="618.0" y="546.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#0e7490" text-anchor="start">随 saveReport / getReport（组合子表，R-08）</text>
+<text x="1020.0" y="546.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">report_cases　T-09</text>
+<rect x="40.0" y="566.0" width="1296.0" height="48.0" rx="0" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="100.0" y1="566.0" x2="100.0" y2="614.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="302.0" y1="566.0" x2="302.0" y2="614.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="608.0" y1="566.0" x2="608.0" y2="614.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="1010.0" y1="566.0" x2="1010.0" y2="614.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<text x="50.0" y="594.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#64748b" text-anchor="start" font-weight="700">10</text>
+<text x="110.0" y="594.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#111827" text-anchor="start" font-weight="700">断点表</text>
+<text x="312.0" y="594.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#1f2937" text-anchor="start">BreakpointRow(owner, wsId, items) / Breakpoint</text>
+<text x="618.0" y="594.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#0e7490" text-anchor="start">saveBreakpoints / loadBreakpoints</text>
+<text x="1020.0" y="594.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">breakpoints　T-10</text>
+<rect x="40.0" y="614.0" width="1296.0" height="48.0" rx="0" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="100.0" y1="614.0" x2="100.0" y2="662.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="302.0" y1="614.0" x2="302.0" y2="662.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="608.0" y1="614.0" x2="608.0" y2="662.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<line x1="1010.0" y1="614.0" x2="1010.0" y2="662.0" stroke="#e5e7eb" stroke-width="0.9"/>
+<text x="50.0" y="642.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#64748b" text-anchor="start" font-weight="700">11</text>
+<text x="110.0" y="642.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#111827" text-anchor="start" font-weight="700">分歧与归因</text>
+<text x="312.0" y="642.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#1f2937" text-anchor="start">Divergence / DivergenceRow / Attribution</text>
+<text x="618.0" y="642.0" font-family="Consolas, Courier New, monospace" font-size="8.8" fill="#0e7490" text-anchor="start">saveDivergence / queryDivergence</text>
+<text x="1020.0" y="642.0" font-family="Consolas, Courier New, monospace" font-size="9.4" fill="#0f766e" text-anchor="start">divergences　T-11</text>
+<line x1="40.0" y1="662.0" x2="1336.0" y2="662.0" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="40.0" y="684.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#b45309" text-anchor="start">★ = 本步新增（DD-1 / DD-5）。其余 15 个方法是类设计 §5.3.8 已给的。</text>
+<rect x="40.0" y="702.0" width="660.0" height="116.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="50.0" y="720.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">明确不持久化的 11 项（2.3）</text>
+<text x="50.0" y="735.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">① ArchState（pc / gpr / csr / mem）—— 会话运行时状态，随会话销毁（SA-03）</text>
+<text x="50.0" y="750.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">② Trace.rec_（StepRecord / WriteOp）—— 有界内存缓冲（cap_ = 1 048 576），SA-13 的「可裁剪」</text>
+<text x="50.0" y="765.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">③ TerminationGuard —— 判定过程状态；FaultRecord 随报告 / 分歧带走</text>
+<text x="50.0" y="780.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">④ DecodeTable（rows_ / wide_）—— 可由 IsaSpec 重建（判据 ③）</text>
+<text x="50.0" y="795.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">⑤ IsaSpec 本体 —— 每次由源文件装载；会话只存 sessions.isa_id</text>
+<rect x="720.0" y="702.0" width="640.0" height="131.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="730.0" y="720.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">（续）</text>
+<text x="730.0" y="735.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">⑥ JobEntry / CancelToken —— 任务一次性，到 Finalized 即终结（状态图 ③）</text>
+<text x="730.0" y="750.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">⑦ ToolchainSpec / RunSpec / RunOutcome / Disasm —— 过程数据</text>
+<text x="730.0" y="765.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">⑧ HttpGateway.ws_ —— 进程内连接注册表，重连即重建</text>
+<text x="730.0" y="780.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">⑨ AccessGuard.rate_ —— 窗口内计数；跨窗口有意义的部分落 usage_counters</text>
+<text x="730.0" y="795.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">⑩ Router.table_ / schema_ —— 代码即配置，落库会引入版本不一致</text>
+<text x="730.0" y="810.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">⑪ 前端一切状态 —— 服务端状态的投影（令牌走 localStorage，不属服务端设计）</text>
+</svg>

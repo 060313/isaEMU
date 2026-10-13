@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1240" viewBox="0 0 1400 1240">
+<rect x="0" y="0" width="1400" height="1240" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11" fill="none" stroke="#7c3aed" stroke-width="1.6"/></marker>
+<marker id="dt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">精化类图 ③　SS-5 领域服务（7 个服务 + 会话上下文）</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段三 · 类设计　｜　服务一律无业务状态、依赖以接口注入；`SessionContext` 是本步明确化的结构（承载「每会话一个内核」SA-03）</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="40.0" y="96.0" width="420.0" height="224.2" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M40.0 126.0 H460.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="450.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements ISessionService</text>
+<text x="50.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">SessionService</text>
+<text x="52.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- store_ : IStore*          - ids_  : IIdGen*</text>
+<text x="52.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- cfg_   : IConfig*         - log_  : ILogger*</text>
+<text x="52.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- clock_ : Clock*</text>
+<text x="52.0" y="191.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- live_  : map&lt;Token, unique_ptr&lt;SessionContext&gt;&gt;</text>
+<text x="52.0" y="205.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">                                              ◇ 0..n</text>
+<path d="M40.0 210.0 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ login(c: const Credential&amp;) : Result&lt;LoginResult&gt;</text>
+<text x="52.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ logout(t: Token) : void</text>
+<text x="52.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ contextOf(t: Token) : SessionContext*   // 可空</text>
+<text x="52.0" y="267.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ reap() : void                空闲会话回收（NFR-Q5）</text>
+<text x="52.0" y="281.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ listUsers() : vector&lt;User&gt;</text>
+<text x="52.0" y="295.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ updateUser(u: UserId, p: const UserPatch&amp;) : void</text>
+<text x="52.0" y="308.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ queryUsage(u: UserId) : Usage</text>
+<rect x="485.0" y="96.0" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M485.0 126.0 H905.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="895.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements IIsaService</text>
+<text x="495.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">IsaService</text>
+<text x="497.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- prov_  : IIsaProvider*</text>
+<text x="497.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- store_ : IStore*      - log_ : ILogger*</text>
+<path d="M485.0 169.2 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="186.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ loadSpec(src: const SourceRef&amp;, u: UserId,</text>
+<text x="497.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">           t: Token) : Result&lt;LoadResult&gt;</text>
+<text x="497.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ validate(s: const IsaSpec&amp;) : vector&lt;Issue&gt;</text>
+<text x="497.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ current(u: UserId) : IsaSpec</text>
+<text x="497.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ switchTo(id: SpecId, t: Token) : Result&lt;void&gt;</text>
+<rect x="930.0" y="96.0" width="420.0" height="183.4" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M930.0 126.0 H1350.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="1340.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements ILoadService</text>
+<text x="940.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">LoadService</text>
+<text x="942.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- asm_   : IAssembler*</text>
+<text x="942.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- store_ : IStore*</text>
+<text x="942.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- sess_  : SessionService*</text>
+<path d="M930.0 182.8 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ assembleOnly(src: const SourceRef&amp;, t: Token)</text>
+<text x="942.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : Result&lt;Disasm&gt;        仅汇编，不装载</text>
+<text x="942.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ loadProgram(s: const LoadSpec&amp;, t: Token)</text>
+<text x="942.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : Result&lt;LoadResult&gt;</text>
+<text x="942.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ loadExample(id: ExampleId, t: Token)</text>
+<text x="942.0" y="267.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : Result&lt;LoadResult&gt;</text>
+<rect x="40.0" y="344.2" width="420.0" height="183.4" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M40.0 374.2 H460.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="358.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="450.0" y="358.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements IDebugService</text>
+<text x="50.0" y="370.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">DebugService</text>
+<text x="52.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- sess_ : SessionService*</text>
+<text x="52.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- log_  : ILogger*</text>
+<path d="M40.0 417.4 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="434.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ execute(m: RunMode, param: Addr, limit: uint64_t,</text>
+<text x="52.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">          t: Token) : Result&lt;RunReport&gt;</text>
+<text x="52.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ readState(sc: ReadScope, t: Token) : StateSnapshot</text>
+<text x="52.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ rollback(step: StepNo, t: Token) : Result&lt;void&gt;</text>
+<text x="52.0" y="488.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ registerBreakpoint(a: Addr, op: BpOp, t: Token)</text>
+<text x="52.0" y="502.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : vector&lt;Breakpoint&gt;</text>
+<text x="52.0" y="516.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ cancel(t: Token) : void</text>
+<rect x="485.0" y="344.2" width="420.0" height="183.4" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M485.0 374.2 H905.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="358.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="895.0" y="358.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements ITestService</text>
+<text x="495.0" y="370.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">TestService</text>
+<text x="497.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- sess_  : SessionService*</text>
+<text x="497.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- cmp_   : ICompareService*</text>
+<text x="497.0" y="426.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- store_ : IStore*</text>
+<text x="497.0" y="440.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- jobs_  : map&lt;JobId, JobEntry&gt;              ◇ 0..n</text>
+<path d="M485.0 444.6 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ runSuite(id: SuiteId, m: DiffMode, u: UserId,</text>
+<text x="497.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">           t: Token) : JobHandle</text>
+<text x="497.0" y="488.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ getReport(id: ReportId, u: UserId) : TestReport</text>
+<text x="497.0" y="502.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ snapshotOf(rep: ReportId, c: CaseId)</text>
+<text x="497.0" y="516.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : CaseSnapshot          只读失败现场</text>
+<rect x="930.0" y="344.2" width="420.0" height="197.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M930.0 374.2 H1350.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="358.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="1340.0" y="358.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements IDiffService</text>
+<text x="940.0" y="370.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">DiffService</text>
+<text x="942.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- sess_  : SessionService*</text>
+<text x="942.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- ref_   : IRefSim*         - cmp_ : ICompareService*</text>
+<text x="942.0" y="426.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- store_ : IStore*</text>
+<text x="942.0" y="440.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- jobs_  : map&lt;JobId, JobEntry&gt;              ◇ 0..n</text>
+<path d="M930.0 444.6 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ start(r: const DiffRequest&amp;, t: Token) : JobHandle</text>
+<text x="942.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ cancel(job: JobId) : void</text>
+<text x="942.0" y="488.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ diffDetail(id: DivergenceId) : Divergence</text>
+<text x="942.0" y="502.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ annotate(ids: span&lt;const DivergenceId&gt;,</text>
+<text x="942.0" y="516.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">           c: AttributionCategory, note: string_view)</text>
+<text x="942.0" y="529.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ degrade() : DegradeInfo          FR-7.5</text>
+<rect x="40.0" y="565.2" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M40.0 595.2 H460.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="579.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«service» SS-5</text>
+<text x="450.0" y="579.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements IWorkspaceService</text>
+<text x="50.0" y="591.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">WorkspaceService</text>
+<text x="52.0" y="620.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- store_ : IStore*</text>
+<text x="52.0" y="633.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- sess_  : SessionService*</text>
+<path d="M40.0 638.4 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="655.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ save(sel: SaveSelection, u: UserId, t: Token)</text>
+<text x="52.0" y="669.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : Result&lt;Version&gt;</text>
+<text x="52.0" y="682.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ load(id: WorkspaceId, u: UserId, t: Token)</text>
+<text x="52.0" y="696.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : Result&lt;void&gt;</text>
+<text x="52.0" y="709.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ list(u: UserId) : vector&lt;WorkspaceBrief&gt;</text>
+<rect x="485.0" y="565.2" width="420.0" height="224.2" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M485.0 595.2 H905.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="579.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«entity» SS-5（本步明确化）</text>
+<text x="495.0" y="591.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">SessionContext</text>
+<text x="497.0" y="620.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ token    : Token</text>
+<text x="497.0" y="633.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ uid      : UserId</text>
+<text x="497.0" y="647.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ ws       : WorkspaceId</text>
+<text x="497.0" y="661.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ isa      : SpecId</text>
+<text x="497.0" y="674.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ lastSeen : Timestamp</text>
+<text x="497.0" y="688.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- core_    : unique_ptr&lt;ICoreService&gt;       ◆ 1:1</text>
+<text x="497.0" y="701.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- bps_     : unique_ptr&lt;BreakpointTable&gt;    ◆ 1:1</text>
+<path d="M485.0 706.4 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="723.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ core() : ICoreService&amp;</text>
+<text x="497.0" y="737.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ breakpoints() : BreakpointTable&amp;</text>
+<text x="497.0" y="750.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ touch(now: Timestamp) : void</text>
+<text x="497.0" y="764.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ expired(now: Timestamp, ttl: Duration) : bool</text>
+<text x="497.0" y="777.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">// 析构即释放内核实例与内存映像（SA-03）</text>
+<rect x="930.0" y="565.2" width="420.0" height="183.4" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M930.0 595.2 H1350.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="579.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«entity» SS-5</text>
+<text x="940.0" y="591.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">BreakpointTable</text>
+<text x="942.0" y="620.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- items_ : map&lt;Addr, Breakpoint&gt;             = {}</text>
+<text x="942.0" y="633.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- on_    : set&lt;Addr&gt;                         = {}</text>
+<text x="942.0" y="647.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- gen_   : uint32_t                           = 0</text>
+<path d="M930.0 652.0 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="669.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ add(a: Addr, op: BpOp) : vector&lt;Breakpoint&gt;</text>
+<text x="942.0" y="682.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ remove(a: Addr) : void</text>
+<text x="942.0" y="696.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ toggle(a: Addr, en: bool) : void</text>
+<text x="942.0" y="709.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ clear() : void      + setAll(en: bool) : void</text>
+<text x="942.0" y="723.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ checkHit(pc: Addr) : const Breakpoint*</text>
+<text x="942.0" y="737.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ generation() : uint32_t    供前端增量同步</text>
+<rect x="40.0" y="990.0" width="1320.0" height="146.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="50.0" y="1008.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【本步的关键判断 · 会话 → 内核的解析路径】</text>
+<text x="50.0" y="1023.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">SAD 8.4 规定「每会话一个执行内核实例、随会话销毁」，8.1 又规定领域服务是「无状态单例」——</text>
+<text x="50.0" y="1038.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">两者之间必须有一个「会话 → 内核」的映射，否则无状态服务无从定位到属于本会话的内核。</text>
+<text x="50.0" y="1053.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">本步把它落在 **`SessionContext`**（`Session` 数据对象的扩展）上，而不是新增一个注册表构件：</text>
+<text x="50.0" y="1068.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">  ① 会话生命周期天然就是内核生命周期（SA-03 的空闲回收执行者正是会话管理）；</text>
+<text x="50.0" y="1083.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">  ② `Session` 数据对象本已存在，扩展字段不新增设计元素；</text>
+<text x="50.0" y="1098.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">  ③ 服务经 `SessionService.contextOf(token)` 拿上下文，再 `.core()` 取 `ICoreService&amp;`。</text>
+<text x="50.0" y="1113.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">代价：`DebugService` / `TestService` / `DiffService` / `LoadService` / `WorkspaceService` 都需先解析一次会话上下文（每次请求一跳，可在请求作用域内缓存）。收益：内核实例的生命周期有了唯一负责人，不会泄漏。</text>
+<text x="40.0" y="1192.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 7 个领域服务与 7 个控制类**一一对应**（SAD 5.4.1「按控制类归并」）；服务一律**不持有业务状态**，依赖（`IStore` / `ICoreService` / `ICompareService` / `IAssembler` / `IRefSim`）以接口注入。</text>
+<text x="40.0" y="1208.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `SessionContext` 是本步新增明确的结构（不是新构件）：它把 token / 用户 / 工作区 / 当前 ISA / **内核实例** / 断点表聚成一个会话作用域对象，并为 SA-03 的「空闲会话超时回收」提供唯一的析构点。</text>
+<text x="40.0" y="1224.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `BreakpointTable` 的 `gen_` 版本号供前端做增量同步：避免每次刷新都把整张断点表回推（NFR-Q3）。</text>
+</svg>

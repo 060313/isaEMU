@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ISA 模拟系统 · 用户界面原型（uid 阶段三）</title>
+<style>
+:root{
+  --primary:#2563eb; --primary-d:#1d4ed8; --success:#16a34a; --warn:#d97706;
+  --danger:#dc2626; --violet:#7c3aed; --t1:#111827; --t2:#1f2937; --t3:#6b7280;
+  --bd:#e5e7eb; --bg:#f9fafb; --card:#ffffff; --hi:#fef3c7; --hit:#b45309;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font:14px/1.55 "Microsoft YaHei","Segoe UI","PingFang SC",sans-serif;color:var(--t2);
+  background:var(--bg);padding-bottom:46px;
+}
+h1,h2,h3,h4{margin:0;font-weight:600;color:var(--t1)}
+code,.mono{font-family:Consolas,"Courier New",monospace}
+button{font-family:inherit;font-size:13px;cursor:pointer;border-radius:4px;border:1px solid var(--bd);
+  background:#fff;color:#374151;height:32px;padding:0 12px;transition:.12s}
+button:hover{border-color:#9ca3af}
+button:active{background:#f3f4f6}
+button.p{background:var(--primary);border-color:var(--primary);color:#fff}
+button.p:hover{background:var(--primary-d)}
+button.d{border-color:var(--danger);color:var(--danger)}
+button.d:hover{background:#fef2f2}
+button.sm{height:26px;padding:0 9px;font-size:12px}
+button:disabled{background:#e5e7eb;border-color:#e5e7eb;color:#9ca3af;cursor:not-allowed}
+input,select,textarea{font-family:inherit;font-size:13px;height:32px;padding:0 9px;border:1px solid var(--bd);
+  border-radius:4px;color:var(--t2);background:#fff;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 2px #2563eb22}
+input.mono{font-family:Consolas,monospace}
+input[type=checkbox],input[type=radio]{width:15px!important;height:15px!important;padding:0!important;border:0!important;
+  box-shadow:none!important;accent-color:var(--primary);vertical-align:-2px}
+label.f input[type=checkbox],label.f input[type=radio]{width:15px!important}
+a{color:var(--primary);cursor:pointer;text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ---------- 演示控制条 ---------- */
+#db{position:fixed;left:0;right:0;bottom:0;height:46px;background:#111827;color:#e5e7eb;z-index:99;
+  display:flex;align-items:center;gap:12px;padding:0 14px;font-size:12px}
+#db b{color:#fff}
+#db .tag{background:#2563eb;color:#fff;border-radius:3px;padding:2px 7px;font-weight:700}
+#db .jumps{flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:#9ca3af}
+#db .jumps i{font-style:normal;color:#7dd3fc;font-family:Consolas,monospace}
+#db button{background:#1f2937;border-color:#374151;color:#e5e7eb;height:26px;font-size:12px}
+#db button:hover{background:#374151}
+#db select{height:26px;font-size:12px;background:#1f2937;color:#e5e7eb;border-color:#374151}
+
+/* ---------- 外壳 ---------- */
+.topbar{height:56px;background:#fff;border-bottom:1px solid var(--bd);display:flex;align-items:center;
+  gap:8px;padding:0 18px;position:sticky;top:0;z-index:20}
+.brand{font-weight:700;font-size:15px;color:var(--t1);margin-right:10px;cursor:pointer}
+.topbar nav{display:flex;gap:2px}
+.topbar nav a{padding:7px 13px;border-radius:5px;color:#4b5563;font-size:13.5px;text-decoration:none}
+.topbar nav a.on{background:#eff6ff;color:var(--primary);font-weight:600}
+.topbar nav a:hover{background:#f3f4f6;text-decoration:none}
+.tbr{margin-left:auto;display:flex;align-items:center;gap:14px;font-size:12.5px;color:#4b5563}
+.tbr .sep{color:var(--bd)}
+.acct{position:relative}
+.acct .menu{position:absolute;right:0;top:30px;background:#fff;border:1px solid var(--bd);border-radius:6px;
+  box-shadow:0 6px 22px #0000001a;min-width:210px;padding:6px;display:none;z-index:30}
+.acct.open .menu{display:block}
+.acct .menu a{display:block;padding:8px 10px;border-radius:4px;color:#374151;font-size:13px}
+.acct .menu a:hover{background:#f3f4f6;text-decoration:none}
+.acct .menu hr{border:0;border-top:1px solid var(--bd);margin:5px 0}
+
+.layout{display:flex;min-height:calc(100vh - 102px)}
+.sidenav{width:210px;flex:none;background:#fff;border-right:1px solid var(--bd);padding:12px 0}
+.sidenav .grp{font-size:11px;color:#9ca3af;padding:8px 16px 4px;letter-spacing:.5px}
+.sidenav a{display:block;padding:7px 16px;color:#374151;font-size:13px}
+.sidenav a:hover{background:#f3f4f6;text-decoration:none}
+.sidenav a.on{background:#eff6ff;color:var(--primary);font-weight:600;border-right:3px solid var(--primary)}
+.sidenav .demo{margin-top:14px;border-top:1px dashed var(--bd);padding-top:8px}
+.sidenav .demo .grp{color:#c4b5fd}
+.sidenav .demo a{color:#6d28d9;font-size:12.5px}
+.main{flex:1;padding:18px 22px;min-width:0}
+
+/* ---------- 页面通用 ---------- */
+.hd{display:flex;align-items:flex-end;gap:12px;margin-bottom:14px}
+.hd h1{font-size:20px}
+.hd .crumb{font-size:12px;color:#9ca3af}
+.hd .ha{margin-left:auto;display:flex;gap:8px}
+.panel{background:#fff;border:1px solid var(--bd);border-radius:6px;margin-bottom:14px;overflow:hidden}
+.panel>header{display:flex;align-items:center;gap:10px;padding:9px 14px;background:#f8fafc;border-bottom:1px solid var(--bd)}
+.panel>header h3{font-size:13.5px}
+.panel>header .r{margin-left:auto;display:flex;gap:8px;align-items:center;font-size:12px;color:var(--t3)}
+.panel .pb{padding:14px}
+.panel>header .fold{cursor:pointer;color:#9ca3af;font-size:11px;padding:0 2px;user-select:none}
+.panel>header .fold:hover{color:var(--primary)}
+.panel.collapsed>.pb{display:none}
+.row{display:flex;gap:14px;align-items:flex-start}
+.col{flex:1;min-width:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.muted{color:var(--t3);font-size:12.5px}
+.hint{font-size:12px;color:var(--t3)}
+label.f{display:block;margin-bottom:10px}
+label.f span{display:block;font-size:12px;color:var(--t3);margin-bottom:4px}
+label.f input,label.f select{width:100%}
+.warn{border-color:var(--danger)}
+.err{font-size:12px;color:var(--danger);margin-top:3px}
+
+table.tbl{width:100%;border-collapse:collapse;font-size:13px}
+table.tbl th{background:#f3f4f6;color:var(--t3);font-weight:500;font-size:12px;text-align:left;padding:7px 10px;border-bottom:1px solid var(--bd)}
+table.tbl td{padding:7px 10px;border-bottom:1px solid #f3f4f6}
+table.tbl tr:hover td{background:#f9fafb}
+table.tbl tr.on td{background:#eff6ff;box-shadow:inset 3px 0 0 var(--primary)}
+table.tbl tr.hl td{background:var(--hi)}
+table.tbl tr.bp td{background:#fee2e2}
+td.mono,th.mono{font-family:Consolas,monospace}
+
+.toast{display:flex;align-items:center;gap:9px;background:#f9fafb;border-left:4px solid var(--primary);
+  border-radius:4px;padding:8px 12px;font-size:13px;margin-bottom:8px}
+.toast.ok{border-color:var(--success)} .toast.no{border-color:var(--danger)}
+.toast.wn{border-color:var(--warn)}
+.toast .x{margin-left:auto;color:#9ca3af;cursor:pointer;font-size:12px}
+.ph{border:1px dashed #cbd5e1;border-radius:5px;background:#f9fafb;color:#94a3b8;font-size:12px;
+  display:flex;align-items:center;justify-content:center;text-align:center;padding:8px}
+.chip{display:inline-block;padding:1px 7px;border-radius:3px;font-size:11.5px;background:#f3f4f6;color:#4b5563}
+.chip.b{background:#dbeafe;color:#1d4ed8} .chip.g{background:#dcfce7;color:#15803d}
+.chip.r{background:#fee2e2;color:#b91c1c} .chip.y{background:var(--hi);color:var(--hit)}
+.chip.v{background:#ede9fe;color:#6d28d9}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--bd);margin-bottom:12px}
+.tabs a{padding:7px 14px;color:#4b5563;font-size:13px;border-bottom:2px solid transparent}
+.tabs a.on{color:var(--primary);border-bottom-color:var(--primary);font-weight:600}
+.tabs a:hover{text-decoration:none;background:#f9fafb}
+.stat{background:#fff;border:1px solid var(--bd);border-radius:6px;padding:12px 14px}
+.stat .k{font-size:12px;color:var(--t3)}
+.stat .v{font-size:22px;font-weight:700;color:var(--t1);line-height:1.3}
+.stat .v small{font-size:13px;font-weight:400;color:var(--t3)}
+.bar{height:7px;border-radius:4px;background:#e5e7eb;overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;background:var(--success)}
+.bar i.b{background:var(--primary)}
+.dlg{position:fixed;inset:0;background:#11182755;display:flex;align-items:center;justify-content:center;z-index:60}
+.dlg .box{width:430px;background:#fff;border:1px solid var(--danger);border-radius:8px;padding:18px 20px}
+.dlg h4{font-size:15px;margin-bottom:8px}
+.dlg .acts{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+.cnt{text-align:center}
+
+/* ---------- 调试工作台 ---------- */
+.bar2{display:flex;align-items:center;gap:8px;background:#eff6ff;border:1px solid var(--primary);
+  border-radius:6px;padding:7px 12px;margin-bottom:12px}
+.bar2 .sep{width:1px;height:20px;background:#cbd5e1;margin:0 4px}
+.bar2 .rt{margin-left:auto;text-align:right;font-size:12px}
+.dbg{display:grid;grid-template-columns:210px minmax(0,1fr) 340px;grid-template-rows:auto auto;gap:12px}
+.dbg .p1{grid-column:1;grid-row:1} .dbg .p2{grid-column:2;grid-row:1}
+.dbg .p3{grid-column:3;grid-row:1} .dbg .p4{grid-column:2/4;grid-row:2}
+.statusbar{margin-top:12px;background:#1f2937;color:#e5e7eb;border-radius:6px;padding:7px 14px;
+  display:flex;align-items:center;gap:18px;font-size:12.5px}
+.statusbar .mono{color:#e5e7eb}
+.statusbar .dot{color:#4ade80}
+.statusbar .r{margin-left:auto;color:#9ca3af}
+.breaklist .b{background:#fee2e2;border-radius:4px;padding:6px 8px;margin-bottom:6px;font-size:12.5px;
+  display:flex;align-items:center;gap:8px}
+.breaklist .b .dotb{width:9px;height:9px;border-radius:50%;background:var(--danger);flex:none}
+.gutter{width:18px;color:#cbd5e1;font-size:11px;text-align:center}
+.code{font-family:Consolas,monospace;font-size:12.5px;background:#fbfdff;border:1px solid var(--bd);
+  border-radius:5px;padding:10px 12px;line-height:1.85;overflow:auto}
+.code .ln{color:#cbd5e1;display:inline-block;width:26px;text-align:right;margin-right:12px}
+.code .kw{color:#7c3aed} .code .rg{color:#0369a1} .code .imm{color:var(--hit)} .code .cm{color:#9ca3af}
+.steps{display:flex;align-items:center;gap:0;margin:6px 0 14px}
+.steps .s{flex:1;text-align:center;font-size:12.5px;color:var(--t3);position:relative;padding-top:26px}
+.steps .s:before{content:"";position:absolute;left:50%;top:6px;transform:translateX(-50%);width:14px;height:14px;
+  border-radius:50%;background:#fff;border:2px solid #cbd5e1}
+.steps .s:after{content:"";position:absolute;left:50%;top:12px;width:100%;height:2px;background:#e5e7eb;z-index:-1}
+.steps .s:last-child:after{display:none}
+.steps .s.on{color:var(--primary);font-weight:600}
+.steps .s.on:before{border-color:var(--primary);background:var(--primary)}
+.example{cursor:pointer;border:1px solid var(--bd);border-radius:6px;padding:12px 14px;background:#fff}
+.example:hover{border-color:var(--primary);background:#f8fbff}
+.example.on{border-color:var(--primary);background:#eff6ff}
+.example h4{font-size:13.5px;margin-bottom:5px}
+.example p{margin:0;font-size:12px;color:var(--t3)}
+</style>
+</head>
+<body>
+
+<div id="wrap"></div>
+
+<div id="db">
+  <span>界面原型 · uid 阶段三</span>
+  <span class="tag" id="db-cur">UI-02</span>
+  <span id="db-name">调试工作台（主界面）</span>
+  <select id="db-jump" title="演示用：直接切换界面（不计入跳转表）"></select>
+  <span class="jumps" id="db-log">尚未发生跳转</span>
+  <button onclick="resetDemo()">回到起点</button>
+</div>
+
+<script>
+/* =====================================================================
+   0. 元数据：12 个界面 / 28 条跳转
+   ===================================================================== */
+const META = {
+  'ui-01':['UI-01','登录与注册','平台与管理','独立界面'],
+  'ui-02':['UI-02','调试工作台（主界面）','调试与观测','主界面'],
+  'ui-03':['UI-03','程序装载与配置','调试与观测',''],
+  'ui-04':['UI-04','ISA 管理','调试与观测',''],
+  'ui-05':['UI-05','测试用例管理','测试与验证',''],
+  'ui-06':['UI-06','测试报告','测试与验证',''],
+  'ui-07':['UI-07','一致性对拍','一致性对拍',''],
+  'ui-08':['UI-08','分歧分析与归因','一致性对拍',''],
+  'ui-09':['UI-09','工作区管理','平台与管理',''],
+  'ui-10':['UI-10','用户与配额管理','平台与管理',''],
+  'ui-11':['UI-11','接口文档与示例','平台与管理',''],
+  'ui-12':['UI-12','内置示例与新手引导','调试与观测','']
+};
+const DOMAIN_OF = {'ui-02':'d1','ui-03':'d1','ui-04':'d1','ui-12':'d1',
+  'ui-05':'d2','ui-06':'d2','ui-07':'d3','ui-08':'d3',
+  'ui-01':'d4','ui-09':'d4','ui-10':'d4','ui-11':'d4'};
+
+/* 跳转表（编号 / 源 / 目标 / 触发元素）—— 与《界面跳转关系说明》J-01~J-28 一致 */
+const JT = {
+  'J-01':'ui-01→ui-02','J-02':'ui-01→ui-02','J-03':'ui-01→ui-02','J-04':'外壳→ui-01','J-05':'外壳→ui-01',
+  'J-06':'外壳→ui-02','J-07':'外壳→ui-05','J-08':'外壳→ui-07','J-09':'外壳→ui-09','J-10':'外壳→ui-10',
+  'J-11':'外壳→ui-11','J-12':'ui-02→ui-03','J-13':'ui-03→ui-02','J-14':'ui-02→ui-04','J-15':'ui-03→ui-04',
+  'J-16':'ui-04→ui-02','J-17':'ui-02→ui-12','J-18':'ui-03→ui-12','J-19':'ui-12→ui-03','J-20':'ui-12→ui-02',
+  'J-21':'ui-02→ui-09','J-22':'ui-09→ui-02','J-23':'ui-05→ui-06','J-24':'ui-05→ui-09','J-25':'ui-09→ui-05',
+  'J-26':'ui-06→ui-07','J-27':'ui-07→ui-08','J-28':'ui-08→ui-02',
+  'G-1':'外壳→ui-02','G-2':'返回来源'
+};
+
+let log = [];
+function pushLog(j){
+  const d = new Date();
+  const t = ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2);
+  log.unshift(t+' '+j+' '+(JT[j]||''));
+  if(log.length>14) log.pop();
+  document.getElementById('db-log').innerHTML = log.map(s=>{
+    const m = /^(\d\d:\d\d) (J-\d\d|G-\d) (.*)$/.exec(s);
+    return m ? m[1]+' <i>'+m[2]+'</i> '+m[3] : s;
+  }).join('　·　');
+}
+function resetDemo(){ location.hash='#ui-01'; log=[]; document.getElementById('db-log').textContent='尚未发生跳转'; }
+
+/* =====================================================================
+   1. 通用部件
+   ===================================================================== */
+const btn=(t,j,to,cls='')=>`<button class="${cls}" data-j="${j||''}" data-go="${to||''}">${t}</button>`;
+const btnS=(t,j,to,cls='sm')=>btn(t,j,to,cls);
+const link=(t,j,to)=>`<a data-j="${j||''}" data-go="${to||''}">${t}</a>`;
+const panel=(t,body,right='')=>`<section class="panel"><header><h3>${t}</h3><div class="r">${right}</div></header><div class="pb">${body}</div></section>`;
+const hd=(cur,title,crumb,actions='')=>`<div class="hd"><h1>${title}</h1><span class="crumb">${META[cur][2]} / ${crumb}</span><div class="ha">${actions}</div></div>`;
+const toast=(kind,text)=>`<div class="toast ${kind}">${text}<span class="x">×</span></div>`;
+
+const GLOBAL_TOAST = `<div id="shell-toast"></div>`;
+
+function shell(cur, body){
+  const on = DOMAIN_OF[cur];
+  const dm = {'d1':'调试与观测','d2':'测试与验证','d3':'一致性对拍','d4':'平台与管理'};
+  const nav = ['d1','d2','d3','d4'].map(k=>{
+    const j = {'d1':'J-06','d2':'J-07','d3':'J-08','d4':'J-09'}[k];
+    const to = {'d1':'ui-02','d2':'ui-05','d3':'ui-07','d4':'ui-09'}[k];
+    return `<a class="${on===k?'on':''}" data-j="${j}" data-go="${to}">${dm[k]}</a>`;
+  }).join('');
+  const sn = ['d1','d2','d3','d4'].map(k=>{
+    const items = Object.keys(META).filter(x=>DOMAIN_OF[x]===k)
+      .map(x=>`<a class="${cur===x?'on':''}" data-go="${x}">${META[x][0].slice(3)}　${META[x][1]}</a>`).join('');
+    return `<div class="grp">${dm[k]}</div>${items}`;
+  }).join('');
+  return `
+  <div class="topbar">
+    <span class="brand" data-j="G-1" data-go="ui-02">ISA 模拟系统</span>
+    <nav>${nav}</nav>
+    <div class="tbr">
+      <span>工作区：默认</span><span class="sep">|</span>
+      <span>ISA：RV32I</span><span class="sep">|</span>
+      <div class="acct" id="acct">
+        <a onclick="document.getElementById('acct').classList.toggle('open')">用户 ▾</a>
+        <div class="menu">
+          <a data-j="J-10" data-go="ui-10">用户与配额管理（平台管理员）</a>
+          <a data-go="ui-09" data-j="J-09">工作区管理</a>
+          <hr>
+          <a data-j="J-04" data-go="ui-01">登出</a>
+          <a data-j="J-05" data-go="ui-01">模拟会话空闲超时回收</a>
+        </div>
+      </div>
+      <a data-j="J-11" data-go="ui-11">帮助 · 接口文档</a>
+    </div>
+  </div>
+  <div class="layout">
+    <aside class="sidenav">
+      ${sn}
+      <div class="demo">
+        <div class="grp">演示说明</div>
+        <div style="padding:4px 16px 8px;font-size:11.5px;color:#9ca3af;line-height:1.75">
+          UI-01 是独立界面（不经外壳），已列在「平台与管理」组内。<br>
+          顶栏 Logo 与「调试与观测」随时回归主界面（G-1）；各界面「返回」按来源回归（G-2）。
+        </div>
+      </div>
+    </aside>
+    <main class="main">${GLOBAL_TOAST}${body}</main>
+  </div>`;
+}
+
+/* =====================================================================
+   2. 12 个界面
+   ===================================================================== */
+const P = {};
+
+/* ---- UI-01 登录与注册（模板 A，独立界面） ---- */
+P['ui-01'] = () => {
+  const form = `
+  <div style="width:400px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:22px">
+      <div style="font-size:22px;font-weight:700;color:#111827">ISA 模拟系统</div>
+      <div class="muted" style="margin-top:4px">指令级模拟与调试平台 · 3.0</div>
+    </div>
+    <div class="panel"><div class="pb">
+      ${toast('ok','部署形态：本地单机（鉴权可关闭）')}
+      <label class="f"><span>用户名</span><input value="sgyb" autocomplete="off"></label>
+      <label class="f"><span>口令</span><input type="password" value="········"></label>
+      <div id="pwd2" style="display:none">
+        <label class="f"><span>确认口令</span><input type="password" value="········"></label>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;margin-top:4px">
+        ${btn('登 录','J-01','ui-02','p')}
+        <span class="muted">没有账号？</span>${link('注册','','')}
+      </div>
+      <div class="hint" style="margin-top:14px;display:flex;justify-content:space-between">
+        <span>本地形态可用匿名会话</span>
+        <span>${link('以匿名会话进入','J-03','ui-02')}</span>
+      </div>
+    </div></div>
+    <div class="hint cnt" style="margin-top:10px">UC-01　FR-9.4 / FR-8.2　｜　登录成功后以「替换」方式跳转主界面（J-01）</div>
+  </div>`;
+  return hd('ui-01','登录与注册','登录', '') + form;
+};
+
+/* ---- UI-02 调试工作台（主界面） ---- */
+P['ui-02'] = () => {
+  const dis = `
+  <div class="bar2">
+    ${btn('运行','','','p')}${btn('单步','','','p')}
+    ${btn('运行')}<input class="mono" value="10" style="width:52px;height:32px">
+    ${btn('暂停')}${btn('复位','','','d')}
+    <span class="sep"></span>
+    <span class="muted">运行到地址</span><input class="mono" value="0x00001000" style="width:112px;height:32px">
+    ${btn('运行至边界')}
+    <div class="rt"><span class="chip g">本步 12 ms</span><br><span class="hint">上限 1 000 000 条</span></div>
+  </div>
+  <div class="dbg">
+    <section class="panel p1"><header><h3>断点</h3><div class="r">${btnS('全部启用')}${btnS('清空')}</div><span class="fold" data-fold>▾</span></header><div class="pb">
+      <div style="display:flex;gap:6px;margin-bottom:10px">
+        <input class="mono" value="0x00001008" style="flex:1;min-width:0"><button class="p" style="padding:0 9px">＋</button>
+      </div>
+      <div class="breaklist">
+        <div class="b"><span class="dotb"></span><span class="mono">0x00001008</span><span style="margin-left:auto" class="chip g">启用</span></div>
+        <div class="b"><span class="dotb"></span><span class="mono">0x00001014</span><span style="margin-left:auto" class="chip g">启用</span></div>
+      </div>
+      <div class="hint">点击反汇编沟槽或输入地址均可设断点</div>
+      <div style="border-top:1px solid var(--bd);margin-top:10px;padding-top:10px">
+        <div style="font-size:12.5px;font-weight:600;color:#111827;margin-bottom:6px">入口</div>
+        <div style="display:flex;flex-direction:column;gap:5px;font-size:13px">
+          ${link('装载程序','J-12','ui-03')}${link('切换 ISA','J-14','ui-04')}
+          ${link('内置示例与引导','J-17','ui-12')}${link('保存工作区','J-21','ui-09')}
+        </div>
+      </div>
+    </div></section>
+
+    <section class="panel p2"><header><h3>反汇编</h3><div class="r">
+      <span class="muted">跟随 PC ☑　显示符号 ☐</span></div><span class="fold" data-fold>▾</span></header><div class="pb" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th style="width:34px"></th><th class="mono">地址</th><th class="mono">机器码</th><th>指令</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td class="gutter">●</td><td class="mono">0x00001000</td><td class="mono">93 00 10 00</td><td class="mono">addi x1, x0, 1　<span class="chip y">当前 PC</span></td></tr>
+          <tr><td class="gutter">○</td><td class="mono">0x00001004</td><td class="mono">23 a0 10 00</td><td class="mono">sw x1, 0(x2)</td></tr>
+          <tr class="bp"><td class="gutter">●</td><td class="mono">0x00001008</td><td class="mono">03 21 01 00</td><td class="mono">lw x2, 0(x2)　<span class="chip r">断点</span></td></tr>
+          <tr><td class="gutter">○</td><td class="mono">0x0000100c</td><td class="mono">13 02 22 00</td><td class="mono">addi x4, x4, 2</td></tr>
+          <tr><td class="gutter">○</td><td class="mono">0x00001010</td><td class="mono">63 14 22 00</td><td class="mono">bne x4, x2, +8</td></tr>
+          <tr><td class="gutter">○</td><td class="mono">0x00001014</td><td class="mono">6f 00 80 00</td><td class="mono">j 0x0000101c</td></tr>
+        </tbody>
+      </table>
+    </div></section>
+
+    <section class="panel p3"><header><h3>寄存器（常驻）</h3><div class="r">GPR 32 · PC · CSR</div>
+      <span class="fold" data-fold>▾</span></header>
+      <div class="pb" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th class="mono">寄存器</th><th class="mono">值</th><th>本步变化</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td class="mono">pc</td><td class="mono">0x00001004</td><td class="mono" style="color:var(--hit)">1000 → 1004</td></tr>
+          <tr class="hl"><td class="mono">x1</td><td class="mono">0x00000001</td><td class="mono" style="color:var(--hit)">0 → 1</td></tr>
+          <tr><td class="mono">x2</td><td class="mono">0x00002000</td><td class="muted">—</td></tr>
+          <tr><td class="mono">x4</td><td class="mono">0x00000002</td><td class="muted">—</td></tr>
+          <tr class="hl"><td class="mono">mcause</td><td class="mono">0x00000000</td><td class="mono" style="color:var(--hit)">写入 0</td></tr>
+        </tbody>
+      </table>
+      <div class="pb hint">CSR：mstatus / mcause / mtvec / mepc　｜　琥珀底＝本步发生变化（NFR-Q3）</div>
+    </div></section>
+
+    <section class="panel p4"><header><h3>内存 / 轨迹</h3>
+      <div class="r"><span class="muted">粒度 字节 / 半字 / 字　｜　搜索　｜　编辑</span></div>
+      <span class="fold" data-fold>▾</span></header>
+      <div class="pb">
+      <div class="tabs" style="margin-bottom:8px"><a class="on">内存</a><a>轨迹</a><a>断点命中记录</a></div>
+      <div class="mono" style="font-size:12.5px;line-height:2">
+        0x00002000　<span style="background:var(--hi);color:var(--hit);padding:1px 4px;border-radius:3px">00 00 00 01</span>　
+        0x00002004　00 00 00 00　0x00002008　FF FF FF FF　0x0000200C　00 00 00 02
+      </div>
+      <div class="hint" style="margin-top:4px">本步被写：0x00002000 ← 0x00000001（琥珀底高亮）　｜　编辑内存见 S-1（需内核开放调试期写内存）</div>
+    </div></section>
+  </div>
+  <div class="statusbar">
+    <span class="dot">●</span><b style="color:#fff">就绪</b>
+    <span class="mono">PC = 0x00001004</span>
+    <span class="mono">已执行 12 / 1 000 000 条</span>
+    <span>ISA：RV32I（已校验）</span><span>退出码 —</span>
+    <span class="r">已连接 · 会话剩余 28 分　·　异常处置：暂停</span>
+  </div>`;
+  return hd('ui-02','调试工作台','主界面',
+    link('装载程序','J-12','ui-03')+'　'+link('查看轨迹')+'　'+link('单步说明')) + dis;
+};
+
+/* ---- UI-03 程序装载与配置 ---- */
+P['ui-03'] = () => `
+  ${hd('ui-03','程序装载与配置','装载', btn('装载并初始化','J-13','ui-02','p')+' '+btn('仅汇编不装载'))}
+  <div class="row">
+    <div class="col" style="flex:1.35">
+      ${panel('汇编源 / 机器码',`
+        <div class="tabs" style="margin-bottom:10px"><a class="on">汇编源</a><a>上传映像</a><a>从工作区选择</a></div>
+        <div class="code">
+          <div><span class="ln">1</span><span class="kw">.text</span></div>
+          <div><span class="ln">2</span><span class="kw">main:</span></div>
+          <div><span class="ln">3</span><span class="kw">addi</span> <span class="rg">x1</span>, <span class="rg">x0</span>, <span class="imm">1</span>　<span class="cm"># x1 = 1</span></div>
+          <div><span class="ln">4</span><span class="kw">la</span> <span class="rg">x2</span>, <span class="imm">buf</span></div>
+          <div style="background:#fef3c7"><span class="ln">5</span><span class="kw">sw</span> <span class="rg">x1</span>, <span class="imm">0</span>(<span class="rg">x2</span>)</div>
+          <div><span class="ln">6</span><span class="kw">lw</span> <span class="rg">x4</span>, <span class="imm">0</span>(<span class="rg">x2</span>)</div>
+          <div><span class="ln">7</span><span class="kw">beq</span> <span class="rg">x4</span>, <span class="rg">x1</span>, <span class="imm">done</span></div>
+          <div><span class="ln">8</span><span class="kw">j</span> <span class="imm">main</span></div>
+          <div><span class="ln">9</span><span class="kw">done:</span>　<span class="kw">ebreak</span></div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:10px;align-items:center">
+          ${btn('上传文件')}${btn('使用内置示例','J-18','ui-12')}
+          <span class="hint" style="margin-left:auto">支持 .S / .asm / .bin / .hex / ELF 可装载段</span>
+        </div>`)}
+      ${panel('装载结果', `
+        ${toast('ok','装载成功：机器码映像 128 字节，入口地址 0x00001000')}
+        <div class="mono hint" style="line-height:1.9">反汇编预览：addi x1, x0, 1　｜　la x2, buf　｜　sw x1, 0(x2)　｜　lw x4, 0(x2)　｜　…</div>
+        ${toast('no','（失败态示例）第 5 行：操作数超出 12 位立即数范围')}
+        <div class="hint">工具链缺失时会给出告警条而非静默失败（FR-2.2）</div>`)}
+    </div>
+    <div class="col">
+      ${panel('运行初态', `
+        <label class="f"><span>目标 ISA</span>
+          <div style="display:flex;gap:8px"><input value="RV32I（当前）" readonly style="flex:1">${link('切换 ISA','J-15','ui-04')}</div>
+        </label>
+        <label class="f"><span>装载基址（十六进制）</span><input class="mono" value="0x00001000"></label>
+        <label class="f"><span>起始 PC</span><input class="mono" value="0x00001000"></label>
+        <label class="f"><span>栈指针 SP</span><input class="mono" value="0x00008000"></label>
+        <label class="f"><span>内存初值（地址 = 值）</span></label>
+        <div style="display:flex;gap:6px;margin-bottom:6px"><input class="mono" value="0x00008000" style="flex:1"><input class="mono" value="0x0" style="width:90px"></div>
+        <div style="display:flex;gap:6px"><input class="mono" value="0x00002000" style="flex:1"><input class="mono" value="0x1" style="width:90px"></div>
+        <div style="margin-top:8px">${btnS('＋ 添加一行')} ${btnS('批量粘贴')}</div>
+        <div class="err" style="margin-top:10px">（示例）基址必须 4 字节对齐</div>
+        <div class="hint">校验：格式 / 对齐 / 映像范围，提交前实时进行</div>`)}
+    </div>
+  </div>`;
+
+/* ---- UI-04 ISA 管理 ---- */
+P['ui-04'] = () => {
+  const list = [['RV32I','1.0','47','32','8','当前'],['RV32IM','1.0','55','32','8','已装载'],
+    ['RV64I','0.9','51','32','8','已停用']];
+  return hd('ui-04','ISA 管理','ISA', btn('上传 ISA 描述文件')+' '+btn('装载并校验','J-16','ui-02','p'))
+  + `<div class="row">
+    <div class="col" style="flex:none;width:330px">
+      ${panel('已装载 ISA', `<table class="tbl">
+        <thead><tr><th>ISA</th><th>版本</th><th>指令</th><th>状态</th></tr></thead>
+        <tbody>${list.map((r,i)=>`<tr class="${i===0?'on':''}"><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td>
+          <td><span class="chip ${r[5]==='当前'?'g':'y'}">${r[5]}</span></td></tr>`).join('')}</tbody></table>
+        <div style="margin-top:10px;display:flex;gap:8px">${btnS('设为当前 ISA','J-16','ui-02','sm p')}${btnS('删除','','','sm d')}</div>`)}
+      ${panel('描述统计', `<div class="mono hint" style="line-height:1.9">指令 47 条　｜　寄存器 32 个　｜　编码字段 8 个<br>
+        描述文件：riscv-rv32i.yaml（4.2 KB）</div>${link('查看描述详情')}`)}
+    </div>
+    <div class="col">
+      ${panel('校验结果', `
+        <div style="margin-bottom:10px">${btn('重新校验')}<span class="hint" style="margin-left:10px">完备性 6 项 / 自洽性 4 项</span></div>
+        <table class="tbl">
+          <thead><tr><th>类别</th><th>问题</th><th>位置</th><th>严重度</th></tr></thead>
+          <tbody>
+            <tr><td>语义缺失</td><td>指令 <span class="mono">fence.i</span> 未绑定操作语义</td><td>instructions[42]</td><td><span class="chip y">警告</span></td></tr>
+            <tr><td>编码冲突</td><td><span class="mono">addi</span> 与 <span class="mono">slti</span> 的 funct3 重叠</td><td>encoding[3]</td><td><span class="chip r">错误</span></td></tr>
+            <tr><td>字段重叠</td><td>位域 <span class="mono">imm[11:0]</span> 跨出指令字</td><td>fields[6]</td><td><span class="chip r">错误</span></td></tr>
+          </tbody>
+        </table>
+        ${toast('wn','校验未通过：2 个错误、1 个警告，修正后可再次装载')}
+        ${toast('ok','（示例）RV32IM 校验通过并装载为当前 ISA')}`)}
+      ${panel('校验规则清单', `<div class="hint" style="line-height:2">
+        完备性：指令语义齐全 / 寄存器全覆盖 / 编码字段无遗漏 / 立即数范围声明 / 特权级声明 / 伪指令映射完整<br>
+        自洽性：编码不冲突 / 字段不重叠 / 位宽总和一致 / 语义与类别匹配</div>`)}
+    </div>
+  </div>`;
+};
+
+/* ---- UI-05 测试用例管理 ---- */
+P['ui-05'] = () => {
+  const tree = [['用例集：RV32I 基础',1],['　├ 冒泡排序',0],['　├ 斐波那契数列',0],['　└ 寄存器运算演示',0],
+    ['用例集：访存与对齐',1],['　├ 半字读写',0],['　└ 非对齐访问异常',0]];
+  return hd('ui-05','测试用例管理','用例', btn('导入用例')+' '+btn('另存到工作区','J-24','ui-09')+' '+btn('批量执行','J-23','ui-06','p'))
+  + `<div class="row">
+    <div class="col" style="flex:none;width:290px">
+      ${panel('用例集', tree.map(r=>`<div style="padding:5px 4px;font-size:13px;${r[1]?'font-weight:600;color:#111827':''}">${r[0]}</div>`).join('')
+        + `<div style="margin-top:10px">${btnS('＋ 新建用例')} ${btnS('复制')} ${btnS('删除','','','sm d')}</div>`)}
+      ${panel('分组与标签', `
+        <label class="f"><span>分组</span><select><option>RV32I 基础</option><option>访存与对齐</option></select></label>
+        <label class="f"><span>标签（多值）</span><input value="P0, 冒泡, 内存"></label>
+        <label class="f"><span>超时步数上限</span><input class="mono" value="1000000"></label>
+        <div>${btnS('保存到用例集')}</div>`)}
+    </div>
+    <div class="col">
+      ${panel('用例编辑：冒泡排序', `
+        <label class="f"><span>程序</span></label>
+        <div class="code" style="max-height:130px">
+          <div><span class="ln">1</span><span class="kw">main:</span>　<span class="kw">la</span> <span class="rg">x1</span>, <span class="imm">arr</span></div>
+          <div><span class="ln">2</span><span class="kw">li</span> <span class="rg">x2</span>, <span class="imm">0</span>　<span class="cm"># i = 0</span></div>
+          <div><span class="ln">3</span><span class="kw">loop:</span>　<span class="kw">lw</span> <span class="rg">x3</span>, <span class="imm">0</span>(<span class="rg">x1</span>)</div>
+          <div><span class="ln">4</span><span class="kw">bge</span> <span class="rg">x2</span>, <span class="rg">x5</span>, <span class="imm">done</span></div>
+          <div><span class="ln">5</span><span class="kw">addi</span> <span class="rg">x1</span>, <span class="rg">x1</span>, <span class="imm">4</span>　<span class="kw">j</span> <span class="imm">loop</span></div>
+        </div>`)}
+      ${panel('期望态与判定模式', `
+        <div class="tabs" style="margin-bottom:10px"><a class="on">终态快照</a><a>逐条提交日志</a></div>
+        <div class="hint" style="margin-bottom:8px">FR-6.5 的两种判定模式复用同一比对引擎（SS-3）</div>
+        <table class="tbl"><thead><tr><th>对象</th><th class="mono">期望值</th><th>命中时判定</th></tr></thead>
+          <tbody><tr><td class="mono">x5</td><td class="mono">0x00000005</td><td>相等</td></tr>
+          <tr><td class="mono">mem 0x00002000</td><td class="mono">00 00 00 01</td><td>相等</td></tr>
+          <tr><td class="mono">pc</td><td class="mono">0x00001020</td><td>相等</td></tr></tbody></table>
+        <div style="margin-top:10px">${btnS('＋ 添加期望项')} ${btnS('上传逐条提交日志')}</div>`)}
+      ${panel('执行结果', `
+        <div class="row"><div class="col">
+          <div class="muted">进度</div><div class="bar"><i class="b" style="width:100%"></i></div>
+          <div class="hint" style="margin-top:6px">5 / 5 用例执行完毕　·　通过 4　失败 1</div>
+        </div>
+        <div class="col cnt"><div class="muted">通过率</div><div style="font-size:24px;font-weight:700;color:var(--success)">80%</div></div>
+        <div class="col" style="flex:none">${btn('查看报告','J-23','ui-06','p')}</div></div>
+        ${toast('no','失败 1 例：非对齐访问异常（首个差异点：x7，第 42 步）')}
+        <div class="hint">单用例失败不影响其余用例（NFR-Q2）</div>`)}
+    </div>
+  </div>`;
+};
+
+/* ---- UI-06 测试报告 ---- */
+P['ui-06'] = () => `
+  ${hd('ui-06','测试报告','报告', btn('重新执行失败用例')+' '+btn('导出报告')+' '+link('去对拍复核','J-26','ui-07'))}
+  <div class="grid4" style="margin-bottom:14px">
+    <div class="stat"><div class="k">通过率</div><div class="v">80<small>%</small></div><div class="bar"><i style="width:80%"></i></div></div>
+    <div class="stat"><div class="k">用例总数</div><div class="v">5</div><div class="hint">通过 4 / 失败 1</div></div>
+    <div class="stat"><div class="k">判定模式</div><div class="v" style="font-size:15px;padding-top:5px">终态快照</div><div class="hint">FR-6.5 模式一</div></div>
+    <div class="stat"><div class="k">执行耗时</div><div class="v">1.84<small> s</small></div><div class="hint">报告 2026-10-13 09:12</div></div>
+  </div>
+  <div class="row">
+    <div class="col">
+      ${panel('报告列表', `<table class="tbl">
+        <thead><tr><th>报告</th><th>用例集</th><th>通过率</th><th>时间</th></tr></thead>
+        <tbody>
+          <tr class="on"><td>R-0142</td><td>RV32I 基础</td><td>80%</td><td class="mono">10-13 09:12</td></tr>
+          <tr><td>R-0141</td><td>RV32I 基础</td><td>100%</td><td class="mono">10-12 21:40</td></tr>
+          <tr><td>R-0140</td><td>访存与对齐</td><td>66%</td><td class="mono">10-12 20:05</td></tr>
+        </tbody></table>
+        <div style="margin-top:10px"><span class="muted">过滤：</span><select style="width:130px"><option>全部分组</option></select>
+        <select style="width:130px"><option>全部标签</option></select></div>`)}
+    </div>
+    <div class="col" style="flex:1.15">
+      ${panel('失败清单', `<table class="tbl">
+        <thead><tr><th>用例</th><th>分组</th><th>首个差异点</th><th>耗时</th></tr></thead>
+        <tbody><tr class="on"><td>非对齐访问异常</td><td>访存与对齐</td><td class="mono">x7 @ 第 42 步</td><td class="mono">0.31 s</td></tr></tbody>
+      </table>`)}
+      ${panel('失败现场快照（复用调试工作台的三类视图）', `
+        <div class="grid3">
+          <div><div class="hint" style="margin-bottom:5px">寄存器</div>
+            <table class="tbl"><tbody>
+              <tr class="hl"><td class="mono">x7</td><td class="mono">0x00002004</td></tr>
+              <tr><td class="mono">pc</td><td class="mono">0x00001028</td></tr>
+            </tbody></table></div>
+          <div><div class="hint" style="margin-bottom:5px">内存</div>
+            <div class="mono hint" style="line-height:1.9">0x2002 00 00<br>0x2004 00 01</div></div>
+          <div><div class="hint" style="margin-bottom:5px">轨迹（末 3 步）</div>
+            <div class="mono hint" style="line-height:1.9">0x1018 addi<br>0x101c lh<br>0x1020 sw</div></div>
+        </div>
+        <div style="margin-top:12px">${btn('在调试工作台中复现')}</div>`)}
+    </div>
+  </div>`;
+
+/* ---- UI-07 一致性对拍 ---- */
+P['ui-07'] = () => `
+  ${hd('ui-07','一致性对拍','对拍', btn('取消对拍')+' '+btn('发起对拍','J-27','ui-08','p'))}
+  <div class="row">
+    <div class="col" style="flex:none;width:360px">
+      ${panel('对拍配置', `
+        <label class="f"><span>程序</span><select><option>冒泡排序（已装载）</option><option>寄存器运算演示</option></select></label>
+        <label class="f"><span>参考模拟器</span>
+          <div style="display:flex;gap:8px;align-items:center"><select style="flex:1"><option>Spike 1.1.0</option><option>QEMU</option></select>
+          <span class="chip g">可用</span></div></label>
+        <label class="f"><span>比对子集（FR-7.2 默认四项）</span></label>
+        <div style="font-size:13px;line-height:2">
+          <label><input type="checkbox" checked> PC</label>　
+          <label><input type="checkbox" checked> 32 个 GPR</label><br>
+          <label><input type="checkbox" checked> 内存写</label>　
+          <label><input type="checkbox" checked> 被改 CSR</label>
+        </div>
+        <div style="margin-top:8px">${link('自定义比对字段（NFR-I1）')}</div>
+        <label class="f" style="margin-top:12px"><span>降级模式（FR-7.5）</span>
+          <div style="display:flex;gap:8px;align-items:center"><input type="checkbox"> 参考模拟器不可用时改用期望态快照断言
+          <span class="chip y">关</span></div></label>`)}
+    </div>
+    <div class="col">
+      ${panel('对拍执行', `
+        <div class="muted">进度</div>
+        <div class="bar" style="height:9px"><i class="b" style="width:100%"></i></div>
+        <div class="hint" style="margin-top:6px">双方各执行 1 000 000 步　·　已比对 1 000 000 步　·　耗时 4.6 s</div>`)}
+      ${panel('分歧报告', `
+        <div class="row" style="align-items:stretch">
+          <div class="col">
+            <div class="chip v">首个分歧点</div>
+            <div style="font-size:22px;font-weight:700;color:var(--t1);margin:6px 0">第 42 步</div>
+            <div class="mono hint">0x00001028　lh x7, 2(x2)</div>
+            <div style="margin-top:12px">${link('查看分歧现场并归因','J-27','ui-08')}</div>
+          </div>
+          <div class="col" style="flex:1.4">
+            <table class="tbl">
+              <thead><tr><th>字段</th><th class="mono">本内核</th><th class="mono">Spike</th><th>在子集内</th></tr></thead>
+              <tbody>
+                <tr class="hl"><td class="mono">x7</td><td class="mono" style="color:var(--danger)">0x00002004</td><td class="mono" style="color:var(--success)">0x00002001</td><td>☑</td></tr>
+                <tr><td class="mono">pc</td><td class="mono">0x0000102c</td><td class="mono">0x0000102c</td><td>☑</td></tr>
+                <tr><td class="mono">mcause</td><td class="mono">0x00000000</td><td class="mono">0x00000000</td><td>☑</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        ${toast('no','发现 1 处分歧（差异字段已高亮）；双方逐步一致时此处置为「未发现分歧」')}
+        <div class="hint">对拍链路：DiffService → 本内核执行 + 参考模拟器执行 → CompareEngine 逐步比对（SS-3，FR-6.5 共用引擎）</div>`)}
+    </div>
+  </div>`;
+
+/* ---- UI-08 分歧分析与归因 ---- */
+P['ui-08'] = () => `
+  ${hd('ui-08','分歧分析与归因','归因', btn('导出分歧记录')+' '+btn('提交归因','','','p')+' '+btn('定位到该步','J-28','ui-02'))}
+  <div class="row">
+    <div class="col" style="flex:none;width:310px">
+      ${panel('分歧记录', `<table class="tbl">
+        <thead><tr><th>ID</th><th>程序</th><th>状态</th></tr></thead>
+        <tbody>
+          <tr class="on"><td class="mono">DF-0031</td><td>冒泡排序</td><td><span class="chip y">未归因</span></td></tr>
+          <tr><td class="mono">DF-0030</td><td>冒泡排序</td><td><span class="chip g">已归因</span></td></tr>
+          <tr><td class="mono">DF-0029</td><td>寄存器运算</td><td><span class="chip g">已归因</span></td></tr>
+        </tbody></table>
+        <div style="margin-top:10px">${btnS('查看差异')}</div>`)}
+      ${panel('归因统计', `<div class="hint" style="line-height:2.1">
+        实现缺陷　　████████ 8<br>基准偏差　　████ 4<br>规范歧义　　██ 2</div>
+        <div class="hint" style="margin-top:8px">FR-7.4 要求区分三类，统计辅助研判</div>`)}
+    </div>
+    <div class="col">
+      ${panel('差异字段（DF-0031 · 第 42 步 · 0x00001028）', `
+        <table class="tbl">
+          <thead><tr><th>字段</th><th class="mono">本内核值</th><th class="mono">Spike 值</th><th>在比对子集内</th></tr></thead>
+          <tbody>
+            <tr class="hl"><td class="mono">x7</td><td class="mono" style="color:var(--danger)">0x00002004</td><td class="mono" style="color:var(--success)">0x00002001</td><td>☑</td></tr>
+            <tr><td class="mono">mem[0x00002002]</td><td class="mono">0x0004</td><td class="mono">0x0001</td><td>☑</td></tr>
+            <tr><td class="mono">pc</td><td class="mono">0x0000102c</td><td class="mono">0x0000102c</td><td>☑</td></tr>
+          </tbody></table>
+        <div class="hint" style="margin-top:10px">双方状态快照：寄存器 / 内存 / CSR 三视图对照（复用调试工作台视图组件）</div>`)}
+      ${panel('归因标注', `
+        <div style="font-size:13px;line-height:2.4">
+          <label><input type="radio" name="cat"> 实现缺陷</label>　　
+          <label><input type="radio" name="cat" checked> 基准偏差</label>　　
+          <label><input type="radio" name="cat"> 规范歧义</label>
+        </div>
+        <label class="f" style="margin-top:12px"><span>归因说明</span>
+          <textarea style="width:100%;height:64px;padding:8px">半字读（lh）的符号扩展时机与 Spike 不一致：本内核在写回阶段扩展，Spike 在访存阶段扩展，遇到地址非对齐时结果不同。</textarea></label>
+        <div style="display:flex;gap:8px;align-items:center">
+          ${btn('提交归因','','','p')}${btn('取消')}
+          <span class="hint" style="margin-left:auto">提交后写入 Divergence.attribution 并归档</span>
+        </div>
+        ${toast('ok','归档完成：DF-0031 已标注为「基准偏差」')}`)}
+    </div>
+  </div>`;
+
+/* ---- UI-09 工作区管理 ---- */
+P['ui-09'] = () => `
+  ${hd('ui-09','工作区管理','工作区', btn('新建工作区')+' '+btn('保存当前工作区'))}
+  <div class="row">
+    <div class="col">
+      ${panel('工作区列表', `<table class="tbl">
+        <thead><tr><th>名称</th><th>创建时间</th><th>大小</th><th>当前</th><th></th></tr></thead>
+        <tbody>
+          <tr class="on"><td><b>默认</b></td><td class="mono">10-12 20:14</td><td class="mono">2.4 MB</td><td><span class="chip g">是</span></td>
+            <td>${btnS('加载','J-22','ui-02')} ${btnS('删除','','','sm d')}</td></tr>
+          <tr><td>冒泡排序实验</td><td class="mono">10-13 08:40</td><td class="mono">1.1 MB</td><td><span class="chip">否</span></td>
+            <td>${btnS('加载','J-22','ui-02')} ${btnS('删除','','','sm d')}</td></tr>
+          <tr><td>RV32I 回归用例集</td><td class="mono">10-11 16:02</td><td class="mono">640 KB</td><td><span class="chip">否</span></td>
+            <td>${btnS('加载','J-25','ui-05')} ${btnS('删除','','','sm d')}</td></tr>
+        </tbody></table>`)}
+      ${panel('配额占用', `
+        <div class="muted">已用 4.1 MB / 上限 50 MB</div>
+        <div class="bar"><i class="b" style="width:8%"></i></div>
+        <div class="hint" style="margin-top:6px">FR-9.5：配额按用户设置，占用由持久化服务统计（算出来不记下来）</div>`)}
+    </div>
+    <div class="col" style="flex:none;width:330px">
+      ${panel('保存配置', `
+        <label class="f"><span>工作区名称</span><input value="默认"></label>
+        <label class="f"><span>保存内容</span></label>
+        <div style="font-size:13px;line-height:2.2">
+          <label><input type="checkbox" checked> 程序与初态</label><br>
+          <label><input type="checkbox" checked> 测试用例集</label><br>
+          <label><input type="checkbox" checked> 运行与比对配置</label>
+        </div>
+        <div style="margin-top:10px">${btn('保存当前工作区')} ${btn('重命名')}</div>
+        ${toast('ok','已保存：程序、用例集、配置已入库（2026-10-13 09:26）')}
+        <div class="hint">加载成功后回来源界面并刷新视图（J-22 / J-25）</div>`)}
+    </div>
+  </div>`;
+
+/* ---- UI-10 用户与配额管理 ---- */
+P['ui-10'] = () => `
+  ${hd('ui-10','用户与配额管理','配额', btn('刷新')+' '+btn('应用变更','','','p'))}
+  ${panel('用户与资源占用', `
+    <div style="display:flex;gap:8px;margin-bottom:10px;align-items:center">
+      <input placeholder="搜索用户名" style="width:180px">
+      <select style="width:130px"><option>全部角色</option><option>注册用户</option><option>平台管理员</option></select>
+      <select style="width:130px"><option>全部状态</option><option>正常</option><option>已停用</option></select>
+      <span class="hint" style="margin-left:auto">UC-14·1 查看用户列表与资源占用</span>
+    </div>
+    <table class="tbl">
+      <thead><tr><th>用户</th><th>角色</th><th>状态</th><th>并发会话</th><th>请求/分钟</th><th>指令条数上限</th><th>存储配额</th><th>占用</th></tr></thead>
+      <tbody>
+        <tr class="on"><td><b>sgyb</b></td><td>注册用户</td><td><span class="chip g">正常</span></td>
+          <td class="mono">4 / 8</td><td class="mono">120 / 300</td><td class="mono">1 000 000</td><td class="mono">50 MB</td><td class="mono">4.1 MB</td></tr>
+        <tr><td>zbh</td><td>注册用户</td><td><span class="chip g">正常</span></td>
+          <td class="mono">2 / 8</td><td class="mono">40 / 300</td><td class="mono">1 000 000</td><td class="mono">50 MB</td><td class="mono">12 MB</td></tr>
+        <tr><td>hzhx</td><td>注册用户</td><td><span class="chip y">已停用</span></td>
+          <td class="mono">0 / 4</td><td class="mono">0 / 120</td><td class="mono">100 000</td><td class="mono">20 MB</td><td class="mono">18.9 MB</td></tr>
+        <tr><td>admin</td><td>平台管理员</td><td><span class="chip g">正常</span></td>
+          <td class="mono">1 / 8</td><td class="mono">10 / 300</td><td class="mono">1 000 000</td><td class="mono">100 MB</td><td class="mono">0.2 MB</td></tr>
+      </tbody>
+    </table>`)}
+  <div class="row">
+    <div class="col">
+      ${panel('配额编辑（当前选中：sgyb）', `
+        <div class="grid3">
+          <label class="f"><span>并发会话数</span><input class="mono" value="8"></label>
+          <label class="f"><span>单位时间请求数 / 分钟</span><input class="mono" value="300"></label>
+          <label class="f"><span>单次请求指令条数</span><input class="mono" value="1000000"></label>
+        </div>
+        <label class="f" style="width:32%"><span>存储配额（MB）</span><input class="mono" value="50"></label>
+        ${toast('wn','设定值不能低于当前占用：hzhx 占用 18.9 MB，配额需 ≥ 19 MB')}
+        <label class="f"><span>账号状态</span>
+          <div style="display:flex;gap:8px;align-items:center"><input type="checkbox" checked> 启用
+          ${btn('重置口令','','','sm')}</div></label>
+        <div class="hint">限额在接入层前置检查（HttpGateway），不下到内核（SAD DD-13）</div>`)}
+    </div>
+    <div class="col" style="flex:none;width:330px">
+      ${panel('变更结果', `
+        ${toast('ok','已应用：sgyb 的并发会话数上限 8，请求上限 300/分')}
+        <div class="hint">UC-14·12 操作结果 / UC-14·13 确认</div>
+        <table class="tbl" style="margin-top:10px"><thead><tr><th>时间</th><th>操作</th><th>对象</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">09:26</td><td>调整配额</td><td>sgyb</td></tr>
+            <tr><td class="mono">09:04</td><td>停用账号</td><td>hzhx</td></tr>
+            <tr><td class="mono">08:51</td><td>重置口令</td><td>zbh</td></tr>
+          </tbody></table>`)}
+    </div>
+  </div>`;
+
+/* ---- UI-11 接口文档与示例 ---- */
+P['ui-11'] = () => `
+  ${hd('ui-11','接口文档与示例','接口', btn('下载 OpenAPI 描述文件'))}
+  <div class="row">
+    <div class="col" style="flex:none;width:280px">
+      ${panel('接口目录', `
+        <div style="font-size:13px;line-height:2.3">
+          <b>REST 端点</b><br>
+          <a class="on">POST /api/sessions　登录</a><br>
+          <a>POST /api/programs　装载</a><br>
+          <a>POST /api/executions/step　单步</a><br>
+          <a>POST /api/executions/run　连续运行</a><br>
+          <a>GET /api/state　读状态</a><br>
+          <a>POST /api/tests/run　执行测试</a><br>
+          <a>POST /api/diffs　发起对拍</a><br>
+          <b>WS 事件</b><br>
+          <a>state.changed　状态变化</a><br>
+          <a>execution.paused　断点命中</a><br>
+          <a>diff.progress　对拍进度</a>
+        </div>
+        <div style="margin-top:10px"><input placeholder="搜索端点" style="width:100%"></div>`)}
+    </div>
+    <div class="col">
+      ${panel('端点详情与示例', `
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+          <span class="chip b mono">POST</span><span class="mono" style="font-size:14px">/api/executions/step</span>
+          <span class="chip">需鉴权 Bearer</span><span class="chip">限额 300 / 分钟</span>
+        </div>
+        <div class="tabs" style="margin-bottom:10px"><a class="on">cURL</a><a>Python</a><a>JavaScript</a></div>
+        <div class="code">
+          <div>curl -X POST https://host/api/executions/step \</div>
+          <div>　-H <span class="kw">"Authorization: Bearer $TOKEN"</span> \</div>
+          <div>　-H <span class="kw">"Content-Type: application/json"</span> \</div>
+          <div>　-d <span class="kw">'{"sessionId":"s-7f2a","steps":1}'</span></div>
+        </div>
+        <h4 style="margin:14px 0 6px;font-size:13px">参数</h4>
+        <table class="tbl"><thead><tr><th>参数</th><th>类型</th><th>必填</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">sessionId</td><td>string</td><td>是</td><td>会话标识</td></tr>
+            <tr><td class="mono">steps</td><td>integer</td><td>是</td><td>执行步数，上限为 RunSpec.maxSteps</td></tr>
+          </tbody></table>
+        <h4 style="margin:14px 0 6px;font-size:13px">响应示例</h4>
+        <div class="code">
+          <div>{ <span class="rg">"pc"</span>: <span class="kw">"0x00001004"</span>,</div>
+          <div>　<span class="rg">"changed"</span>: { <span class="rg">"x1"</span>: <span class="kw">"0x1"</span>, <span class="rg">"x2"</span>: <span class="kw">"0x2000"</span> },</div>
+          <div>　<span class="rg">"memoryWrites"</span>: [ { <span class="rg">"addr"</span>: <span class="kw">"0x2000"</span>, <span class="rg">"value"</span>: <span class="kw">"0x1"</span> } ] }</div>
+        </div>
+        <div style="margin-top:10px">${btnS('复制 cURL')}${btnS('复制代码片段')}<span class="hint" style="margin-left:10px">契约版本 v1.4　·　与 SS-6 的 REST / WS 契约同步维护（FR-8.3）</span></div>`)}
+      ${panel('在线试调', `
+        <div style="display:flex;gap:8px;align-items:center">
+          <span class="muted">令牌</span><input class="mono" value="eyJhbGciOi..." style="width:240px">
+          ${btn('在线试调')}<span class="hint">剩余配额：280 / 300 次每分钟</span>
+        </div>
+        <div class="code" style="margin-top:10px">
+          <div><span class="chip g">200 OK</span>　耗时 18 ms</div>
+          <div>{ <span class="rg">"pc"</span>: <span class="kw">"0x00001004"</span>, <span class="rg">"changed"</span>: { <span class="rg">"x1"</span>: <span class="kw">"0x1"</span> } }</div>
+        </div>
+        <div class="hint" style="margin-top:8px">错误态：鉴权失败 / 限额用尽 / 参数非法都会在此回显</div>`)}
+    </div>
+  </div>`;
+
+/* ---- UI-12 内置示例与新手引导 ---- */
+P['ui-12'] = () => `
+  ${hd('ui-12','内置示例与新手引导','示例', btn('跳过引导','J-20','ui-02'))}
+  ${panel('新手引导（NFR-Q3：5 分钟内完成 装载 → 单步 → 观察寄存器变化）', `
+    <div class="steps">
+      <div class="s on">① 装载示例程序</div>
+      <div class="s">② 单步执行一步</div>
+      <div class="s">③ 观察寄存器与本步变化</div>
+    </div>
+    <div style="display:flex;gap:8px"><button>上一步</button><button class="p" data-j="J-20" data-go="ui-02">下一步 · 一键装载并进入调试</button>
+      <span class="hint" style="margin-left:auto">引导进行中会指向调试工作台内对应的按钮与视图（遮罩 + 指向标记）</span></div>`)}
+  <h3 style="font-size:14px;margin:4px 0 10px">示例程序集（覆盖 RV32I 常用指令与经典算法）</h3>
+  <div class="grid3">
+    ${[['寄存器运算演示','addi / and / or / xor · 观察 x1~x4 的逐位变化',1],
+       ['冒泡排序','lw / sw / bne / j · 观察内存写与循环',0],
+       ['斐波那契数列','递归与寄存器栈帧 · 观察 sp 与内存',0],
+       ['访存对齐演示','lh / sh 与非对齐访问异常 · 观察 mcause',0],
+       ['字符串拷贝','lb / sb 循环 · 观察字节粒度访存',0],
+       ['乘除与移位','mul / div / sll · 观察 hi/lo 与溢出',0]].map(x=>`
+      <div class="example ${x[2]?'on':''}">
+        <h4>${x[0]}</h4><p>${x[1]}</p>
+        <div style="margin-top:10px;display:flex;gap:8px">
+          ${x[2]?`<button class="sm p" data-j="J-20" data-go="ui-02">一键装载</button>`:`<button class="sm" data-j="J-20" data-go="ui-02">一键装载</button>`}
+          <button class="sm" data-j="J-19" data-go="ui-03">查看源码</button>
+        </div>
+      </div>`).join('')}
+  </div>
+  ${panel('知识点说明', `<div class="hint" style="line-height:2">
+    本示例用 <span class="mono">addi x1, x0, 1</span> 把 x1 置为 1，再用 <span class="mono">add x2, x1, x1</span> 得到 2，最后 <span class="mono">sw / lw</span> 经内存往返。
+    单步时应重点观察：① PC 是否每步 +4（分支与跳转除外）；② 被写的寄存器与内存单元格是否以琥珀底高亮；③ 轨迹视图是否逐步追加记录。</div>`)}
+  <div class="hint">J-18 从装载界面进入本界面；J-19「查看源码」回填装载界面的编辑器；J-20「一键装载」复用装载链路直接回主界面。</div>`;
+
+/* =====================================================================
+   3. 渲染与路由
+   ===================================================================== */
+function render(){
+  const id = (location.hash||'#ui-01').slice(1);
+  const cur = META[id] ? id : 'ui-01';
+  const inner = P[cur]();
+  document.getElementById('wrap').innerHTML = (cur==='ui-01' ? 
+    `<div style="padding:56px 20px 20px;min-height:calc(100vh - 46px)">${inner}</div>` : shell(cur, inner));
+  document.getElementById('db-cur').textContent = META[cur][0];
+  document.getElementById('db-name').textContent = META[cur][1] + (META[cur][3] ? '（'+META[cur][3]+'）' : '');
+  document.getElementById('db-jump').value = cur;
+  window.scrollTo(0,0);
+}
+
+/* 演示用直接切换器（不计入跳转表 J-xx） */
+function fillJump(){
+  const s = document.getElementById('db-jump');
+  ['ui-01','ui-02','ui-03','ui-04','ui-05','ui-06','ui-07','ui-08','ui-09','ui-10','ui-11','ui-12']
+    .forEach(k=>s.insertAdjacentHTML('beforeend', `<option value="${k}">${META[k][0]} ${META[k][1]}</option>`));
+  s.addEventListener('change', ()=>{ location.hash = '#'+s.value; });
+}
+
+document.addEventListener('click', e=>{
+  const f = e.target.closest('[data-fold]');
+  if(f){
+    const pn = f.closest('.panel');
+    pn.classList.toggle('collapsed');
+    f.textContent = pn.classList.contains('collapsed') ? '▸' : '▾';
+    return;
+  }
+  const t = e.target.closest('[data-go]');
+  if(!t) return;
+  const j = t.getAttribute('data-j');
+  const to = t.getAttribute('data-go');
+  if(!to) return;
+  e.preventDefault();
+  if(j) pushLog(j);
+  location.hash = '#'+to;
+  if(!j) pushLog('G-2');
+});
+
+window.addEventListener('hashchange', render);
+fillJump();
+render();
+</script>
+</body>
+</html>

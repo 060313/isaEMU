@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="810" viewBox="0 0 1280 810">
+<rect x="0" y="0" width="1280" height="810" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="a2" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#ea580c"/></marker>
+<marker id="a3" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#0891b2"/></marker>
+<marker id="a4" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+</defs>
+<text x="40.0" y="40.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="19.0" fill="#111827" text-anchor="start" font-weight="700">ISA 模拟系统 · 精化软件体系结构（构件视图）</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start">SAD 阶段三 · 35 个构件 · 子系统的职责来自其包含的构件职责</text>
+<rect x="40.0" y="104.0" width="384.0" height="190.0" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="54.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.8" fill="#111827" text-anchor="start" font-weight="700">SS-7　前端子系统</text>
+<text x="54.0" y="146.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#6b7280" text-anchor="start">L4 表示层</text>
+<text x="410.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#2563eb" text-anchor="end" font-weight="700">8</text>
+<rect x="54.0" y="156.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="61.0" y="173.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">应用外壳 (AppShell)</text>
+<rect x="248.0" y="156.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="255.0" y="173.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">会话视图 (SessionView)</text>
+<rect x="54.0" y="189.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="61.0" y="206.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">ISA 视图 (IsaView)</text>
+<rect x="248.0" y="189.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="255.0" y="206.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">装载视图 (LoadView)</text>
+<rect x="54.0" y="222.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="61.0" y="239.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">调试视图 (DebugView)</text>
+<rect x="248.0" y="222.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="255.0" y="239.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">测试视图 (TestView)</text>
+<rect x="54.0" y="255.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="61.0" y="272.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">对拍视图 (DiffView)</text>
+<rect x="248.0" y="255.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="255.0" y="272.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">工作区视图 (WorkspaceView)</text>
+<rect x="448.0" y="104.0" width="384.0" height="190.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<text x="462.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.8" fill="#111827" text-anchor="start" font-weight="700">SS-6　集成 API 子系统</text>
+<text x="462.0" y="146.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#6b7280" text-anchor="start">L3 应用服务层</text>
+<text x="818.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#0891b2" text-anchor="end" font-weight="700">4</text>
+<rect x="462.0" y="156.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="469.0" y="173.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">HTTP/WS 网关 (HttpGateway)</text>
+<rect x="656.0" y="156.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="663.0" y="173.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">请求路由分发 (Router)</text>
+<rect x="462.0" y="189.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="469.0" y="206.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">鉴权与配额检查 (AccessGuard)</text>
+<rect x="656.0" y="189.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="663.0" y="206.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">组合根 (Bootstrapper)</text>
+<rect x="856.0" y="104.0" width="384.0" height="190.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<text x="870.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.8" fill="#111827" text-anchor="start" font-weight="700">SS-5　领域服务子系统</text>
+<text x="870.0" y="146.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#6b7280" text-anchor="start">L3 应用服务层</text>
+<text x="1226.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#0891b2" text-anchor="end" font-weight="700">7</text>
+<rect x="870.0" y="156.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="877.0" y="173.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">会话服务 (SessionService)</text>
+<rect x="1064.0" y="156.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="1071.0" y="173.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">ISA 管理服务 (IsaService)</text>
+<rect x="870.0" y="189.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="877.0" y="206.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">装载服务 (LoadService)</text>
+<rect x="1064.0" y="189.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="1071.0" y="206.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">调试服务 (DebugService)</text>
+<rect x="870.0" y="222.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="877.0" y="239.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">测试服务 (TestService)</text>
+<rect x="1064.0" y="222.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="1071.0" y="239.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">对拍服务 (DiffService)</text>
+<rect x="870.0" y="255.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="877.0" y="272.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">工作区服务 (WorkspaceService)</text>
+<rect x="40.0" y="322.0" width="384.0" height="190.0" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<text x="54.0" y="348.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.8" fill="#111827" text-anchor="start" font-weight="700">SS-3　比对子系统</text>
+<text x="54.0" y="364.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#6b7280" text-anchor="start">L3 应用服务层</text>
+<text x="410.0" y="348.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#0891b2" text-anchor="end" font-weight="700">3</text>
+<rect x="54.0" y="374.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="61.0" y="391.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">比对引擎 (CompareEngine)</text>
+<rect x="248.0" y="374.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="255.0" y="391.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">比对子集 (DiffScope)</text>
+<rect x="54.0" y="407.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="61.0" y="424.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">分歧记录 (Divergence)</text>
+<rect x="448.0" y="322.0" width="384.0" height="190.0" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="462.0" y="348.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.8" fill="#111827" text-anchor="start" font-weight="700">SS-2　ISA 抽象子系统</text>
+<text x="462.0" y="364.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#6b7280" text-anchor="start">L2 ISA 抽象层</text>
+<text x="818.0" y="348.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#7c3aed" text-anchor="end" font-weight="700">2</text>
+<rect x="462.0" y="374.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="469.0" y="391.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">描述装载校验 (IsaLoader)</text>
+<rect x="656.0" y="374.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="663.0" y="391.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">译码表构建 (DecodeTable)</text>
+<rect x="856.0" y="322.0" width="384.0" height="190.0" rx="7" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<text x="870.0" y="348.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.8" fill="#111827" text-anchor="start" font-weight="700">SS-1　模拟执行内核子系统</text>
+<text x="870.0" y="364.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#6b7280" text-anchor="start">L1 执行内核层</text>
+<text x="1226.0" y="348.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#059669" text-anchor="end" font-weight="700">4</text>
+<rect x="870.0" y="374.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="877.0" y="391.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">执行内核 (EmulatorCore)</text>
+<rect x="1064.0" y="374.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="1071.0" y="391.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">架构状态 (ArchState)</text>
+<rect x="870.0" y="407.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="877.0" y="424.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">执行轨迹 (Trace)</text>
+<rect x="1064.0" y="407.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="1071.0" y="424.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">终止与异常 (TerminationGuard)</text>
+<rect x="40.0" y="540.0" width="384.0" height="190.0" rx="7" fill="#ffffff" stroke="#ea580c" stroke-width="1.5"/>
+<text x="54.0" y="566.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.8" fill="#111827" text-anchor="start" font-weight="700">SS-4　适配子系统</text>
+<text x="54.0" y="582.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#6b7280" text-anchor="start">跨层公共设施</text>
+<text x="410.0" y="566.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#ea580c" text-anchor="end" font-weight="700">2</text>
+<rect x="54.0" y="592.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="61.0" y="609.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">工具链适配器 (ToolchainAdapter)</text>
+<rect x="248.0" y="592.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="255.0" y="609.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">参考模拟器适配 (RefSimAdapter)</text>
+<rect x="448.0" y="540.0" width="384.0" height="190.0" rx="7" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+<text x="462.0" y="566.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.8" fill="#111827" text-anchor="start" font-weight="700">SS-8　基础服务</text>
+<text x="462.0" y="582.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#6b7280" text-anchor="start">跨层公共设施</text>
+<text x="818.0" y="566.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.0" fill="#6b7280" text-anchor="end" font-weight="700">5</text>
+<rect x="462.0" y="592.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="469.0" y="609.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">持久化服务 (PersistenceService)</text>
+<rect x="656.0" y="592.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="663.0" y="609.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">配置服务 (ConfigService)</text>
+<rect x="462.0" y="625.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="469.0" y="642.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">日志服务 (LogService)</text>
+<rect x="656.0" y="625.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="663.0" y="642.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">标识生成 (IdGenerator)</text>
+<rect x="462.0" y="658.0" width="170.0" height="26.0" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.0"/>
+<text x="469.0" y="675.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.4" fill="#374151" text-anchor="start">外部进程调用 (ProcessRunner)</text>
+<rect x="856.0" y="540.0" width="384.0" height="190.0" rx="7" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="870.0" y="566.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.8" fill="#111827" text-anchor="start" font-weight="700">构件分布与说明</text>
+<text x="870.0" y="590.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#374151" text-anchor="start">SS-1 内核 4 · SS-2 ISA 抽象 2</text>
+<text x="870.0" y="607.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#374151" text-anchor="start">SS-3 比对 3 · SS-5 领域服务 7</text>
+<text x="870.0" y="624.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#374151" text-anchor="start">SS-6 集成 API 4 · SS-7 前端 8</text>
+<text x="870.0" y="641.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#374151" text-anchor="start">SS-4 适配 2 · SS-8 基础服务 5</text>
+<text x="870.0" y="666.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#b91c1c" text-anchor="start" font-weight="700">合计 35 个构件</text>
+<text x="870.0" y="688.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#6b7280" text-anchor="start">调试视图内含寄存器 / 内存 / 反汇编 /</text>
+<text x="870.0" y="702.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#6b7280" text-anchor="start">轨迹四个子视图与汇编编辑器</text>
+<text x="870.0" y="720.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#6b7280" text-anchor="start">基础服务与适配器均以接口形式提供</text>
+<rect x="40.0" y="754.0" width="1200.0" height="40.0" rx="7" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="54.0" y="772.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">构件划分三原则：① 变更原因一致者合并（同一用例族的服务聚为一个子系统）　② 生命周期与资源边界不同者分离（内核可独立编译为库）　③ 复用关系不同者分离（比对引擎被两条业务线共用，独立成子系统）</text>
+<text x="54.0" y="787.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#b91c1c" text-anchor="start">SS-1 内核不链接任何第三方库；SS-3 比对引擎被 SS-5 的测试服务与对拍服务共同使用，不隶属任何一方</text>
+</svg>

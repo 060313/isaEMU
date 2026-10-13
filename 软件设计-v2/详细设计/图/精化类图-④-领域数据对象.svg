@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<rect x="0" y="0" width="1400" height="760" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11" fill="none" stroke="#7c3aed" stroke-width="1.6"/></marker>
+<marker id="dt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">精化类图 ④　SS-5 领域数据对象（持久化候选）</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段三 · 类设计　｜　本图 7 个类即「数据设计」阶段的建表候选；带 ◆ 的组合关系决定外键的落点</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="40.0" y="96.0" width="420.0" height="169.8" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M40.0 126.0 H460.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«entity» 值对象</text>
+<text x="50.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">Program</text>
+<text x="52.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ image    : Image            （机器码映像字节）</text>
+<text x="52.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ base     : Addr                （装载基址，4 字节对齐）</text>
+<text x="52.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ entryPc  : Addr               （起始 PC，落在映像内）</text>
+<text x="52.0" y="191.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ stackPtr : Addr               （栈指针，字对齐）</text>
+<text x="52.0" y="205.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ sourceRef: SourceRef          （源引用或示例 ID）</text>
+<path d="M40.0 210.0 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ bytes() : span&lt;const uint8_t&gt;</text>
+<text x="52.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ inRange(a: Addr) : bool       映像区间 [base, base+len)</text>
+<text x="52.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ end() : Addr</text>
+<rect x="485.0" y="96.0" width="420.0" height="183.4" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M485.0 126.0 H905.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«entity» 聚合根</text>
+<text x="495.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">Workspace</text>
+<text x="497.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ wsId    : WorkspaceId</text>
+<text x="497.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ owner   : UserId            （隔离谓词的依据，SA-05）</text>
+<text x="497.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ version : Version            （乐观并发）</text>
+<text x="497.0" y="191.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- program_ : optional&lt;Program&gt;</text>
+<text x="497.0" y="205.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- suite_   : optional&lt;TestSuite&gt;</text>
+<text x="497.0" y="219.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- config_  : SessionConfig      （初态 / 上限 / 轨迹开关）</text>
+<path d="M485.0 223.6 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ program() : const Program*        // 可空</text>
+<text x="497.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ suite() : const TestSuite*        // 可空</text>
+<text x="497.0" y="267.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ config() : const SessionConfig&amp;</text>
+<rect x="930.0" y="96.0" width="420.0" height="183.4" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M930.0 126.0 H1350.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«entity» 聚合根</text>
+<text x="940.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">TestSuite</text>
+<text x="942.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ suiteId : SuiteId</text>
+<text x="942.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ name    : string</text>
+<text x="942.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ group   : string               （功能组，UI-05 分组）</text>
+<text x="942.0" y="191.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ tags    : vector&lt;string&gt;</text>
+<text x="942.0" y="205.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- cases_  : vector&lt;TestCase&gt;              ◆ 1:n</text>
+<path d="M930.0 210.0 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ caseAt(i: size_t) : const TestCase&amp;</text>
+<text x="942.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ size() : size_t</text>
+<text x="942.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ find(id: CaseId) : const TestCase*</text>
+<text x="942.0" y="267.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ checksum() : Hash      完整性校验（C-12）</text>
+<rect x="40.0" y="303.4" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M40.0 333.4 H460.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="317.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«entity» 值对象</text>
+<text x="50.0" y="329.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">TestCase</text>
+<text x="52.0" y="358.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ caseId   : CaseId</text>
+<text x="52.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ name     : string</text>
+<text x="52.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ program  : ProgramRef        （指向 Workspace 内程序）</text>
+<text x="52.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- expect_  : ExpectedSpec      （终态断言 或 期望序列）</text>
+<text x="52.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ timeoutSteps : uint64_t      （用例级步数上限）</text>
+<path d="M40.0 417.4 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="434.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ expected() : const ExpectedSpec&amp;</text>
+<text x="52.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ mode() : DiffMode           由 expect_ 的形态决定</text>
+<rect x="485.0" y="303.4" width="420.0" height="183.4" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M485.0 333.4 H905.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="317.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«entity» 聚合根</text>
+<text x="495.0" y="329.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">TestReport</text>
+<text x="497.0" y="358.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ reportId : ReportId</text>
+<text x="497.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ suiteId  : SuiteId</text>
+<text x="497.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ owner    : UserId</text>
+<text x="497.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ startedAt / finishedAt : Timestamp</text>
+<text x="497.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- results_ : vector&lt;CaseResult&gt;           ◆ 1:n</text>
+<path d="M485.0 417.4 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="434.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ passRate() : double</text>
+<text x="497.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ failures() : span&lt;const CaseResult&gt;</text>
+<text x="497.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ resultOf(c: CaseId) : const CaseResult*</text>
+<text x="497.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ total() : size_t</text>
+<rect x="930.0" y="303.4" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#0891b2" stroke-width="1.6"/>
+<path d="M930.0 333.4 H1350.0" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="317.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«entity» 值对象</text>
+<text x="940.0" y="329.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">CaseResult</text>
+<text x="942.0" y="358.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ caseId    : CaseId</text>
+<text x="942.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ passed    : bool</text>
+<text x="942.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ firstDiffAt : optional&lt;StepNo&gt;</text>
+<text x="942.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">+ diffFields : vector&lt;FieldDiff&gt;</text>
+<text x="942.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- snapshot_ : optional&lt;StateSnapshot&gt;   （只读副本）</text>
+<path d="M930.0 417.4 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="434.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ snapshot() : const StateSnapshot*    // 可空</text>
+<text x="942.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ isFirstFailure() : bool</text>
+<rect x="930.0" y="430.0" width="430.0" height="161.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="940.0" y="448.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【关系与持久化的三条约定】</text>
+<text x="940.0" y="463.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">① `Workspace` → `Program` / `TestSuite` 是**可选组合**</text>
+<text x="940.0" y="478.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   （0..1）：选择性保存时两者可单独缺席。</text>
+<text x="940.0" y="493.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">② `TestSuite` ◆─ `TestCase`（1:n）与 `TestReport` ◆─</text>
+<text x="940.0" y="508.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   `CaseResult`（1:n）是**强组合**：子项不独立存在，</text>
+<text x="940.0" y="523.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   落库时以「子表 + 外键」实现。</text>
+<text x="940.0" y="538.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">③ 全系统**不存在 n:m 关系** —— 用例集与程序是一对多</text>
+<text x="940.0" y="553.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   （一个用例集绑定一个程序），因此数据设计阶段</text>
+<text x="940.0" y="568.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   不需要交叉表。</text>
+<text x="40.0" y="712.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 本图 7 个类均为**持久化候选**：`Workspace` / `TestSuite` / `TestReport` 是聚合根（各自独立存取），`Program` / `TestCase` / `CaseResult` 是值对象或子项（随聚合根存取）。</text>
+<text x="40.0" y="728.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 所有 `UserId` 字段（`Workspace.owner` / `TestReport.owner`）是 SA-05「逐语句用户谓词」的依据：`IStore` 的每个方法首参都是 `UserId`，由实现类在 SQL 上附加 `WHERE owner_id = :u`。</text>
+<text x="40.0" y="744.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 断点表（见前图）亦为每会话一份，随工作区持久化。</text>
+</svg>

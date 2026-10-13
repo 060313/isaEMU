@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+<rect x="0" y="0" width="1400" height="820" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11" fill="none" stroke="#7c3aed" stroke-width="1.6"/></marker>
+<marker id="dt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">精化类图 ⑥　SS-8 基础服务（接口 + 构件内部实现类）</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段三 · 类设计　｜　5 个接口型构件 + 5 个构件内部实现类；实现类不计入 35 个设计类，属构件内部构成</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="40.0" y="96.0" width="420.0" height="210.6" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.6"/>
+<path d="M40.0 126.0 H460.0" fill="none" stroke="#64748b" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«interface» 构件门面</text>
+<text x="50.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">IStore</text>
+<text x="52.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">（无属性）</text>
+<path d="M40.0 155.6 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="172.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ findUser(u: UserId) : optional&lt;User&gt;</text>
+<text x="52.0" y="186.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ saveUser(u: UserId, r: const User&amp;) : void</text>
+<text x="52.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ queryUsers() : vector&lt;User&gt;</text>
+<text x="52.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ queryUsage(u: UserId) : Usage</text>
+<text x="52.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ putWorkspace(u: UserId, w: const Workspace&amp;)</text>
+<text x="52.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : Version</text>
+<text x="52.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ getWorkspace(u: UserId, id: WorkspaceId)</text>
+<text x="52.0" y="267.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : optional&lt;Workspace&gt;</text>
+<text x="52.0" y="281.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ saveReport / getReport / saveBreakpoints</text>
+<text x="52.0" y="295.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ loadBreakpoints / saveDivergence / queryDivergence</text>
+<rect x="485.0" y="96.0" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.6"/>
+<path d="M485.0 126.0 H905.0" fill="none" stroke="#64748b" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«concrete» 构件内部类</text>
+<text x="895.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements IStore</text>
+<text x="495.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">DbStore</text>
+<text x="497.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- pool_    : ConnectionPool*</text>
+<text x="497.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- dialect_ : DbDriver*   （Postgres | Sqlite）</text>
+<text x="497.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- log_     : ILogger*</text>
+<path d="M485.0 182.8 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ 全部 IStore 方法（首参 u: UserId）</text>
+<text x="497.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- scoped(sql: string_view, u: UserId) : Statement</text>
+<text x="497.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">       每条语句附加 WHERE owner_id = :u  （SA-05）</text>
+<text x="497.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- tx(fn: Fn) : Result&lt;T&gt;</text>
+<rect x="930.0" y="96.0" width="420.0" height="197.0" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.6"/>
+<path d="M930.0 126.0 H1350.0" fill="none" stroke="#64748b" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«interface» 构件门面</text>
+<text x="940.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">IConfig</text>
+<text x="942.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">（无属性）</text>
+<path d="M930.0 155.6 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="172.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ dbDriver() : DriverKind</text>
+<text x="942.0" y="186.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ listenAddr() : Endpoint</text>
+<text x="942.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ authEnabled() : bool</text>
+<text x="942.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ instrLimit() : uint64_t</text>
+<text x="942.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ sessionTimeout() : Duration</text>
+<text x="942.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ maxSessions() : uint32_t</text>
+<text x="942.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ requestQuota() : uint32_t</text>
+<text x="942.0" y="267.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ traceCapacity() : size_t</text>
+<text x="942.0" y="281.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ toolchainPath() / spikePath() : Path</text>
+<rect x="40.0" y="330.6" width="420.0" height="210.6" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.6"/>
+<path d="M40.0 360.6 H460.0" fill="none" stroke="#64748b" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="344.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«interface» 构件门面</text>
+<text x="50.0" y="356.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">ILogger　/　IIdGen</text>
+<text x="52.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">（无属性）</text>
+<path d="M40.0 390.2 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="407.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">«ILogger»</text>
+<text x="52.0" y="420.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ log(l: Level, m: string_view, f: Fields) : void</text>
+<text x="52.0" y="434.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ debug / info / warn / error(...) : void</text>
+<text x="52.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ with(f: Fields) : ILogger&amp;</text>
+<text x="52.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">«IIdGen»</text>
+<text x="52.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ newToken() : Token</text>
+<text x="52.0" y="488.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ newWorkspaceId() : WorkspaceId</text>
+<text x="52.0" y="502.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ newReportId() : ReportId</text>
+<text x="52.0" y="516.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ newDivergenceId() : DivergenceId</text>
+<text x="52.0" y="529.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ newJobId() : JobId</text>
+<rect x="485.0" y="330.6" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.6"/>
+<path d="M485.0 360.6 H905.0" fill="none" stroke="#64748b" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="344.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«concrete» 构件内部类</text>
+<text x="895.0" y="344.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements IConfig / IIdGen</text>
+<text x="495.0" y="356.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">FileConfig　/　UuidGen</text>
+<text x="497.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- kv_  : map&lt;string, string&gt;        （配置文件 + 环境）</text>
+<text x="497.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- src_ : Path</text>
+<text x="497.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- rng_ : Random*                     （CSPRNG）</text>
+<path d="M485.0 417.4 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="434.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ （IConfig 的具名访问器，缺省值见文档 5.8.2）</text>
+<text x="497.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">  / （IIdGen 的 5 个生成方法）</text>
+<text x="497.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- 双形态差异：`dbDriver` 与 `authEnabled`</text>
+<text x="497.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">  是本地 / 云端唯一不同的两个配置项（FR-9.2）</text>
+<rect x="930.0" y="330.6" width="420.0" height="142.6" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.6"/>
+<path d="M930.0 360.6 H1350.0" fill="none" stroke="#64748b" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="344.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«concrete» 构件内部类</text>
+<text x="1340.0" y="344.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements ILogger</text>
+<text x="940.0" y="356.6" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">StdLogger</text>
+<text x="942.0" y="385.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- sink_ : Sink*              （控制台 / 文件 / 汇聚）</text>
+<text x="942.0" y="399.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- min_  : Level                       = kInfo</text>
+<text x="942.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- base_ : Fields                            = {}</text>
+<path d="M930.0 417.4 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="434.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ log / debug / info / warn / error</text>
+<text x="942.0" y="448.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ with(f: Fields) : ILogger&amp;</text>
+<text x="942.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">  结构化字段，供异常现场（FR-3.5）落盘</text>
+<rect x="40.0" y="620.0" width="1320.0" height="101.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="50.0" y="638.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">【为什么 SS-8 的构件是「接口 + 实现类」】</text>
+<text x="50.0" y="653.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">SAD 5.5.2 把 SS-8 的 5 个构件记为「持久化服务 / 配置服务 / 日志服务 / 标识生成 / 外部进程调用」，并以接口形式提供（`IStore` 等）。</text>
+<text x="50.0" y="668.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">本步把「接口」定为构件的**门面**（对外可见、跨层引用），把实现类定为**构件内部构成**（装配档，只被 `Bootstrapper` 看到）。</text>
+<text x="50.0" y="683.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">因此实现类 **`DbStore` / `FileConfig` / `StdLogger` / `UuidGen` / `ProcRunner` 不计入 35 个设计类** —— 35 个设计类与 SAD 的 35 个构件仍然一一对应。</text>
+<text x="50.0" y="698.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">这样处理的好处：跨层引用的一律是接口（信息隐藏），而替换实现（换数据库、换日志汇聚）不影响任何调用方。</text>
+<text x="40.0" y="772.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 5 个接口是**跨层引用**的唯一形态：SS-1 ~ SS-7 都只看到接口，看不到 `DbStore` / `FileConfig` 等实现类。</text>
+<text x="40.0" y="788.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `DbStore.scoped` 是 SA-05「每条语句带用户谓词」在代码层面的落点；`IStore` 每个方法首参为 `UserId` 使该约束由**类型系统**强制，写代码时无法遗漏。</text>
+<text x="40.0" y="804.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `IConfig` 的 `dbDriver` 与 `authEnabled` 是本地 / 云端形态唯一不同的两个配置项 —— 双形态共用一套源码（SA-09 / FR-9.2）。</text>
+</svg>

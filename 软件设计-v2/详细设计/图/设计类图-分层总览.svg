@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1010" viewBox="0 0 1400 1010">
+<rect x="0" y="0" width="1400" height="1010" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">设计类图（分层总览）</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段一 · 用例设计　｜　35 个设计类按 8 个子系统分层；箭头＝依赖方向（单向、无环）；虚线紫＝依赖倒置</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="40.0" y="96.0" width="1320.0" height="96.0" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="52.0" y="117.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#2563eb" text-anchor="start" font-weight="700">SS-7 前端</text>
+<rect x="58.0" y="128.0" width="150.0" height="52.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+<text x="133.0" y="145.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«page»</text>
+<text x="133.0" y="164.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">SessionView</text>
+<rect x="220.0" y="128.0" width="150.0" height="52.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+<text x="295.0" y="145.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«page»</text>
+<text x="295.0" y="164.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">IsaView</text>
+<rect x="382.0" y="128.0" width="150.0" height="52.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+<text x="457.0" y="145.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«page»</text>
+<text x="457.0" y="164.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">LoadView</text>
+<rect x="544.0" y="128.0" width="150.0" height="52.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+<text x="619.0" y="145.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«page»</text>
+<text x="619.0" y="164.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">DebugView</text>
+<rect x="706.0" y="128.0" width="150.0" height="52.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+<text x="781.0" y="145.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«page»</text>
+<text x="781.0" y="164.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">TestView</text>
+<rect x="868.0" y="128.0" width="150.0" height="52.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+<text x="943.0" y="145.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«page»</text>
+<text x="943.0" y="164.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">DiffView</text>
+<rect x="1030.0" y="128.0" width="150.0" height="52.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+<text x="1105.0" y="145.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«page»</text>
+<text x="1105.0" y="164.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">WorkspaceView</text>
+<rect x="1192.0" y="128.0" width="150.0" height="52.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+<text x="1267.0" y="145.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="1267.0" y="164.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">AppShell</text>
+<rect x="40.0" y="232.0" width="1320.0" height="96.0" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="52.0" y="253.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#7c3aed" text-anchor="start" font-weight="700">SS-6 集成 API</text>
+<rect x="58.0" y="264.0" width="312.0" height="52.0" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="214.0" y="281.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="214.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">HttpGateway</text>
+<rect x="382.0" y="264.0" width="312.0" height="52.0" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="538.0" y="281.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="538.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">Router</text>
+<rect x="706.0" y="264.0" width="312.0" height="52.0" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="862.0" y="281.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="862.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">AccessGuard</text>
+<rect x="1030.0" y="264.0" width="312.0" height="52.0" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="1186.0" y="281.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="1186.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">Bootstrapper</text>
+<rect x="40.0" y="368.0" width="1320.0" height="96.0" rx="9" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<text x="52.0" y="389.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#0891b2" text-anchor="start" font-weight="700">SS-5 领域服务</text>
+<rect x="58.0" y="400.0" width="173.1" height="52.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.2"/>
+<text x="144.6" y="417.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«service»</text>
+<text x="144.6" y="436.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">SessionService</text>
+<rect x="243.1" y="400.0" width="173.1" height="52.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.2"/>
+<text x="329.7" y="417.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«service»</text>
+<text x="329.7" y="436.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">IsaService</text>
+<rect x="428.3" y="400.0" width="173.1" height="52.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.2"/>
+<text x="514.9" y="417.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«service»</text>
+<text x="514.9" y="436.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">LoadService</text>
+<rect x="613.4" y="400.0" width="173.1" height="52.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.2"/>
+<text x="700.0" y="417.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«service»</text>
+<text x="700.0" y="436.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">DebugService</text>
+<rect x="798.6" y="400.0" width="173.1" height="52.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.2"/>
+<text x="885.1" y="417.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«service»</text>
+<text x="885.1" y="436.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">TestService</text>
+<rect x="983.7" y="400.0" width="173.1" height="52.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.2"/>
+<text x="1070.3" y="417.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«service»</text>
+<text x="1070.3" y="436.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">DiffService</text>
+<rect x="1168.9" y="400.0" width="173.1" height="52.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.2"/>
+<text x="1255.4" y="417.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«service»</text>
+<text x="1255.4" y="436.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">WorkspaceService</text>
+<rect x="40.0" y="504.0" width="620.0" height="96.0" rx="9" fill="#ffffff" stroke="#c026d3" stroke-width="1.5"/>
+<text x="52.0" y="525.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#c026d3" text-anchor="start" font-weight="700">SS-3 比对</text>
+<rect x="58.0" y="536.0" width="186.7" height="52.0" rx="6" fill="#fdf4ff" stroke="#c026d3" stroke-width="1.2"/>
+<text x="151.3" y="553.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="151.3" y="572.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">CompareEngine</text>
+<rect x="256.7" y="536.0" width="186.7" height="52.0" rx="6" fill="#fdf4ff" stroke="#c026d3" stroke-width="1.2"/>
+<text x="350.0" y="553.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«entity»</text>
+<text x="350.0" y="572.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">DiffScope</text>
+<rect x="455.3" y="536.0" width="186.7" height="52.0" rx="6" fill="#fdf4ff" stroke="#c026d3" stroke-width="1.2"/>
+<text x="548.7" y="553.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«entity»</text>
+<text x="548.7" y="572.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">Divergence</text>
+<rect x="700.0" y="504.0" width="660.0" height="96.0" rx="9" fill="#ffffff" stroke="#65a30d" stroke-width="1.5"/>
+<text x="712.0" y="525.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#65a30d" text-anchor="start" font-weight="700">SS-4 适配</text>
+<rect x="718.0" y="536.0" width="306.0" height="52.0" rx="6" fill="#f7fee7" stroke="#65a30d" stroke-width="1.2"/>
+<text x="871.0" y="553.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="871.0" y="572.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">ToolchainAdapter</text>
+<rect x="1036.0" y="536.0" width="306.0" height="52.0" rx="6" fill="#f7fee7" stroke="#65a30d" stroke-width="1.2"/>
+<text x="1189.0" y="553.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="1189.0" y="572.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">RefSimAdapter</text>
+<rect x="40.0" y="640.0" width="620.0" height="96.0" rx="9" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+<text x="52.0" y="661.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#0d9488" text-anchor="start" font-weight="700">SS-2 ISA 抽象</text>
+<rect x="58.0" y="672.0" width="286.0" height="52.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2"/>
+<text x="201.0" y="689.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="201.0" y="708.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">IsaLoader</text>
+<rect x="356.0" y="672.0" width="286.0" height="52.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2"/>
+<text x="499.0" y="689.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="499.0" y="708.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">DecodeTable</text>
+<rect x="700.0" y="640.0" width="660.0" height="96.0" rx="9" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+<text x="712.0" y="661.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#dc2626" text-anchor="start" font-weight="700">SS-1 模拟执行内核</text>
+<rect x="718.0" y="672.0" width="147.0" height="52.0" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
+<text x="791.5" y="689.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="791.5" y="708.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">EmulatorCore</text>
+<rect x="877.0" y="672.0" width="147.0" height="52.0" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
+<text x="950.5" y="689.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="950.5" y="708.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">ArchState</text>
+<rect x="1036.0" y="672.0" width="147.0" height="52.0" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
+<text x="1109.5" y="689.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="1109.5" y="708.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">Trace</text>
+<rect x="1195.0" y="672.0" width="147.0" height="52.0" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
+<text x="1268.5" y="689.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«component»</text>
+<text x="1268.5" y="708.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">TerminationGuard</text>
+<rect x="40.0" y="776.0" width="1320.0" height="96.0" rx="9" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="52.0" y="797.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#64748b" text-anchor="start" font-weight="700">SS-8 基础服务</text>
+<rect x="58.0" y="808.0" width="247.2" height="52.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.2"/>
+<text x="181.6" y="825.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«interface»</text>
+<text x="181.6" y="844.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">IStore</text>
+<rect x="317.2" y="808.0" width="247.2" height="52.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.2"/>
+<text x="440.8" y="825.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«interface»</text>
+<text x="440.8" y="844.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">IConfig</text>
+<rect x="576.4" y="808.0" width="247.2" height="52.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.2"/>
+<text x="700.0" y="825.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«interface»</text>
+<text x="700.0" y="844.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">ILogger</text>
+<rect x="835.6" y="808.0" width="247.2" height="52.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.2"/>
+<text x="959.2" y="825.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«interface»</text>
+<text x="959.2" y="844.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">IIdGen</text>
+<rect x="1094.8" y="808.0" width="247.2" height="52.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.2"/>
+<text x="1218.4" y="825.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#6b7280" text-anchor="middle">«interface»</text>
+<text x="1218.4" y="844.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.6" fill="#111827" text-anchor="middle" font-weight="700">IProcessRunner</text>
+<path d="M300.0 192.0 V232.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="310.0" y="207.0" width="76.9" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="314.0" y="215.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="start">REST / WS 契约</text>
+<path d="M300.0 328.0 V368.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="310.0" y="343.0" width="83.0" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="314.0" y="351.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="start">7 个领域服务接口</text>
+<path d="M300.0 464.0 V504.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="310.0" y="479.0" width="83.6" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="314.0" y="487.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="start">ICompareService</text>
+<path d="M1000.0 464.0 V504.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="982.0" y="479.0" width="108.8" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="986.0" y="487.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="start">IAssembler / IRefSim</text>
+<path d="M300.0 600.0 V640.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="310.0" y="615.0" width="68.5" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="314.0" y="623.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="start">IIsaProvider</text>
+<path d="M1000.0 600.0 V640.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="982.0" y="615.0" width="68.5" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="986.0" y="623.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="start">ICoreService</text>
+<path d="M680.0 464.0 V776.0" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<path d="M420.0 736.0 V776.0" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M1020.0 736.0 V776.0" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M662.0 712.0 H698.0" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#ab)"/>
+<rect x="642.3" y="618.0" width="75.3" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="680.0" y="626.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#7c3aed" text-anchor="middle">依赖倒置 SA-01</text>
+<text x="40.0" y="946.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 35 个设计类与 SAD 5.5.2 的构件清单**一一对应**：设计类名即构件名，本轮未新增、未删除任何设计元素。</text>
+<text x="40.0" y="962.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 依赖方向单向、无环：SS-7 → SS-6 → SS-5 → {SS-1, SS-3, SS-4, SS-8}；SS-2 → SS-1 是唯一的向上依赖，由 SA-01 的依赖倒置消解（译码契约由内核侧定义）。</text>
+<text x="40.0" y="978.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 图例：实线灰＝普通依赖；竖向灰色虚线＝各层对 SS-8 的**横切依赖**（5 个基础接口）；紫色虚线＝依赖倒置 SA-01（SS-2 的 `DecodeTable` 实现 SS-1 定义的 `IDecodeTable` 契约）。</text>
+<text x="40.0" y="994.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `«page»` 前端视图、`«component»` 可替换构件、`«service»` 领域服务、`«entity»` 领域数据、`«interface»` 基础服务接口。</text>
+</svg>

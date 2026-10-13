@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="880" viewBox="0 0 1480 880">
+<rect x="0" y="0" width="1480" height="880" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1.2 L11,6 L1,10.8" fill="none" stroke="#6b7280" stroke-width="1.7"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">界面顺序图 · UC-10 一致性对拍、UC-11 分歧归因与定位回主界面</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">uid 阶段三·精化设计　｜　参与界面：UI-07 一致性对拍、UI-08 分歧分析与归因、UI-02 调试工作台　｜　跳转：J-27 前进、J-28 返回　（编号对应《用户界面设计文档》第 6 章的跳转表）</text>
+<line x1="40.0" y1="80.0" x2="1440.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="25.0" y="110.0" width="130.0" height="52.0" rx="6" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="90.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«actor»</text>
+<text x="90.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">用户</text>
+<line x1="90.0" y1="162.0" x2="90.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="230.0" y="110.0" width="180.0" height="52.0" rx="6" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="320.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«page»</text>
+<text x="320.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">UI-07 一致性对拍</text>
+<line x1="320.0" y1="162.0" x2="320.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="495.0" y="110.0" width="190.0" height="52.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="590.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«page»</text>
+<text x="590.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">UI-08 分歧分析与归因</text>
+<line x1="590.0" y1="162.0" x2="590.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="770.0" y="110.0" width="180.0" height="52.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="860.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«service»</text>
+<text x="860.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">对拍服务 DiffService</text>
+<line x1="860.0" y1="162.0" x2="860.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="1015.0" y="110.0" width="170.0" height="52.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="1100.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«service»</text>
+<text x="1100.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">比对引擎 CompareEngine</text>
+<line x1="1100.0" y1="162.0" x2="1100.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="1245.0" y="110.0" width="190.0" height="52.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.6"/>
+<text x="1340.0" y="129.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«adapter»</text>
+<text x="1340.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.2" fill="#111827" text-anchor="middle" font-weight="700">参考模拟器适配器</text>
+<line x1="1340.0" y1="162.0" x2="1340.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="85.0" y="196.0" width="10.0" height="104.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<rect x="315.0" y="208.0" width="10.0" height="292.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<rect x="585.0" y="500.0" width="10.0" height="240.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<rect x="855.0" y="260.0" width="10.0" height="220.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<rect x="1095.0" y="400.0" width="10.0" height="40.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<rect x="1335.0" y="340.0" width="10.0" height="60.0" rx="2" fill="#bfdbfe" opacity="1.00"/>
+<path d="M102.0 200.0 H308.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="156.5" y="183.4" width="97.0" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="205.0" y="192.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">选定程序与比对子集</text>
+<path d="M332.0 236.0 H848.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="519.2" y="219.4" width="141.5" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="590.0" y="228.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">② start(program, subset)</text>
+<path d="M867.0 272.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="908.0" y="276.4" width="166.2" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="912.0" y="285.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">驱动本内核逐步执行，记录状态序列</text>
+<path d="M872.0 316.0 H1328.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="1008.5" y="299.4" width="183.0" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="1100.0" y="308.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">④ run(program)　子进程 + 提交日志</text>
+<path d="M1328.0 352.0 H872.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="1058.7" y="335.4" width="82.6" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="1100.0" y="344.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑤ 参考状态序列</text>
+<path d="M872.0 388.0 H1088.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="882.4" y="371.4" width="195.3" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="980.0" y="380.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑥ compare(seqCore, seqRef, subset)</text>
+<path d="M1088.0 424.0 H872.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="894.2" y="407.4" width="171.6" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="980.0" y="416.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑦ 首个分歧点（步序号、差异字段）</text>
+<path d="M848.0 460.0 H332.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="558.6" y="443.4" width="62.8" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="590.0" y="452.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑧ 分歧报告</text>
+<path d="M327.0 496.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="368.0" y="500.4" width="171.6" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="372.0" y="509.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑨ 呈现双方状态对照、差异字段高亮</text>
+<path d="M332.0 540.0 H578.0" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ab)"/>
+<rect x="367.5" y="523.4" width="175.0" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="455.0" y="532.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑩ 跳转 J-27（前进，携带分歧 ID）</text>
+<path d="M102.0 584.0 H578.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="225.9" y="567.4" width="228.1" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="340.0" y="576.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">选归因类别（实现缺陷 / 基准偏差 / 规范歧义）</text>
+<path d="M602.0 620.0 H848.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="638.1" y="603.4" width="173.8" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="725.0" y="612.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑫ annotate(id, category, note)</text>
+<path d="M848.0 656.0 H602.0" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="693.6" y="639.4" width="62.8" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="725.0" y="648.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">⑬ 归档完成</text>
+<path d="M102.0 692.0 H578.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="296.4" y="675.4" width="87.1" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="340.0" y="684.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">点「定位到该步」</text>
+<rect x="1010.0" y="684.0" width="430.0" height="64.0" rx="5" fill="#fffbeb" stroke="#2563eb" stroke-width="1.3" stroke-dasharray="7 4"/>
+<text x="1020.0" y="704.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">跳转 J-28（返回）：回到 UI-02 调试工作台，</text>
+<text x="1020.0" y="720.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">把架构状态回退到该分歧步序号，四类视图同步刷新；</text>
+<text x="1020.0" y="736.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">对应 UC-11·「定位到该步」→ UC-07 的差分回退链路。</text>
+<path d="M602.0 728.0 H848.0" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="646.8" y="711.4" width="156.3" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="725.0" y="720.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="middle">（经外壳）请求回退到目标步序号</text>
+<path d="M597.0 764.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="638.0" y="768.4" width="164.3" height="13.0" rx="0" fill="#ffffff" opacity="0.96"/>
+<text x="642.0" y="777.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑮ 跳转 J-28 并等待回退完成提示</text>
+<text x="40.0" y="818.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ③ 与 ④ 是两个执行方：本内核按程序逐步执行并记录状态序列（经 ICoreService），参考模拟器以子进程 + 提交日志方式运行（FR-7.1，经 SS-4 的适配器）。</text>
+<text x="40.0" y="834.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ⑥ 的比对子集来自 UI-07 的配置（默认 PC / 32 个 GPR / 内存写 / 被改 CSR），FR-7.2；比对引擎是 FR-6.5 要求的共用引擎，测试业务线也走它。</text>
+<text x="40.0" y="850.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· J-27 的方向是「前进」：仅当对拍产出分歧时出现该入口；双方逐步一致时给出「未发现分歧」结论，不出现归因入口。</text>
+<text x="40.0" y="866.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· J-28 的方向是「返回」：跳回主界面并把架构状态回退到该步（触发 UC-07 的差分回退链路），携带分歧 ID 与目标步序号。</text>
+</svg>

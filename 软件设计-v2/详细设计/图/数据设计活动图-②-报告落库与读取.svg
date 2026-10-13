@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="880" viewBox="0 0 1400 880">
+<rect x="0" y="0" width="1400" height="880" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="as" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#94a3b8"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">数据设计活动图 ②　报告落库与按需读取（UC-08 / UC-09）</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段四 · 数据设计　｜　左：事务 T-2 的原子写入；右：列表轻 / 详情重的三条读路径，snapshot_blob 只在③被取出</text>
+<circle cx="380.0" cy="109.0" r="9.0" fill="#4b5563"/>
+<rect x="80.0" y="130.0" width="600.0" height="46.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="380.0" y="157.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">TestService.runSuite：逐用例 core.load → run(ToBoundary) → cmp.compare</text>
+<path d="M380.0 176.0 V202.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="80.0" y="202.0" width="600.0" height="46.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="380.0" y="229.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">汇总 total / passed 与 CaseResult 列表（含失败现场的只读副本）</text>
+<path d="M380.0 248.0 V274.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="80.0" y="274.0" width="600.0" height="40.0" rx="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="380.0" y="298.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">BEGIN　事务 T-2</text>
+<path d="M380.0 314.0 V340.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="80.0" y="340.0" width="600.0" height="46.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="380.0" y="367.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">INSERT test_reports（汇总列：total / passed / started_at / finished_at）</text>
+<path d="M380.0 386.0 V412.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="80.0" y="412.0" width="600.0" height="46.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="380.0" y="439.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">批量 INSERT report_cases（含 snapshot_blob，单语句多值）</text>
+<path d="M380.0 458.0 V484.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="80.0" y="484.0" width="600.0" height="40.0" rx="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="380.0" y="508.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">COMMIT</text>
+<path d="M380.0 524.0 V550.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="80.0" y="550.0" width="600.0" height="44.0" rx="9" fill="#f0fdfa" stroke="#0f766e" stroke-width="1.4"/>
+<text x="380.0" y="576.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">HttpGateway.push：进度与结论经 WS 回推（FR-6.4）</text>
+<path d="M380.0 594.0 V620.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="80.0" y="620.0" width="600.0" height="42.0" rx="9" fill="#fffbeb" stroke="#b45309" stroke-width="1.4"/>
+<text x="380.0" y="645.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">报告已落库 —— 报告与明细的行数由事务保证一致</text>
+<polygon points="1010.0,210.0 1180.0,255.0 1010.0,300.0 840.0,255.0" fill="#fefce8" stroke="#ca8a04" stroke-width="1.4"/>
+<text x="1010.0" y="252.5" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#713f12" text-anchor="middle">读路径：</text>
+<text x="1010.0" y="265.5" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#713f12" text-anchor="middle">列表 / 清单 / 详情？</text>
+<rect x="780.0" y="300.0" width="460.0" height="66.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="1010.0" y="323.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">① queryReports　（UI-06 报告列表）</text>
+<text x="1010.0" y="337.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">SELECT report_id, suite_id, finished_at, total, passed</text>
+<text x="1010.0" y="351.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">ORDER BY finished_at DESC —— 不取明细，不取快照</text>
+<path d="M1010.0 300.0 V306.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="780.0" y="406.0" width="460.0" height="66.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="1010.0" y="429.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">② getReport　（失败清单）</text>
+<text x="1010.0" y="443.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">test_reports 一行 + report_cases 全量（仍不取 snapshot_blob）</text>
+<text x="1010.0" y="457.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">LEFT JOIN test_cases 补用例名；查不到则显示 case-&lt;id&gt;</text>
+<path d="M1010.0 366.0 V400.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="780.0" y="512.0" width="460.0" height="66.0" rx="9" fill="#fffbeb" stroke="#b45309" stroke-width="1.4"/>
+<text x="1010.0" y="535.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">③ 失败现场详情（点开某条失败）</text>
+<text x="1010.0" y="549.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">SELECT snapshot_blob WHERE report_id = :r AND case_id = :c</text>
+<text x="1010.0" y="563.2" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#1f2937" text-anchor="middle">整个报告只在这一步取出重字段 —— 这就是 DD-3 的目的</text>
+<path d="M1010.0 472.0 V506.0" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M680.0 641.0 L730.0 641.0 L730.0 162.0 L1010.0 162.0 L1010.0 206.0" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<rect x="698.2" y="392.0" width="63.6" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="730.0" y="400.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="middle">已提交的报告</text>
+<rect x="40.0" y="760.0" width="1300.0" height="56.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="50.0" y="778.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">为什么 test_reports.total 与 report_cases 的行数必须一致：UI-06 会同时显示「通过率概览」与「失败清单」，</text>
+<text x="50.0" y="793.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">两者来自不同的表。事务 T-2 是这对不变量唯一的强制点；不加事务就会看到「10 个用例、7 条明细」这种中间态。</text>
+</svg>

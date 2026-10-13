@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="800" viewBox="0 0 1080 800">
+<rect x="0" y="0" width="1080" height="800" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="a2" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#ea580c"/></marker>
+<marker id="a3" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#0891b2"/></marker>
+<marker id="a4" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+</defs>
+<text x="30.0" y="40.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="19.0" fill="#111827" text-anchor="start" font-weight="700">ISA 模拟系统 · 精化软件体系结构（子系统视图）</text>
+<text x="30.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start">SAD 阶段三 · 8 个子系统 / 跨层公共设施 · 由 14 个用例、8 个控制类、12 个实体类归并得到</text>
+<text x="30.0" y="144.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="14.0" fill="#2563eb" text-anchor="start" font-weight="700">L4</text>
+<text x="30.0" y="162.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">表示层</text>
+<text x="30.0" y="287.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="14.0" fill="#0891b2" text-anchor="start" font-weight="700">L3</text>
+<text x="30.0" y="305.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">应用服务层</text>
+<text x="30.0" y="428.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="14.0" fill="#7c3aed" text-anchor="start" font-weight="700">L2</text>
+<text x="30.0" y="446.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">ISA 抽象层</text>
+<text x="30.0" y="544.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="14.0" fill="#059669" text-anchor="start" font-weight="700">L1</text>
+<text x="30.0" y="562.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">执行内核层</text>
+<text x="30.0" y="686.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="14.0" fill="#ea580c" text-anchor="start" font-weight="700">跨层</text>
+<text x="30.0" y="704.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">公共设施</text>
+<rect x="360.0" y="104.0" width="420.0" height="80.0" rx="7" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="374.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.2" fill="#111827" text-anchor="start" font-weight="700">SS-7　前端子系统</text>
+<text x="374.0" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">四类状态视图 · 调试交互 · 报告与分歧呈现</text>
+<text x="766.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#2563eb" text-anchor="end" font-weight="700">8 构件</text>
+<rect x="150.0" y="232.0" width="260.0" height="110.0" rx="7" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="164.0" y="258.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.2" fill="#111827" text-anchor="start" font-weight="700">SS-6　集成 API 子系统</text>
+<text x="164.0" y="278.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">对外 HTTP / WebSocket 边界</text>
+<text x="164.0" y="294.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">鉴权与配额前置检查 · 请求分发</text>
+<text x="396.0" y="258.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#0891b2" text-anchor="end" font-weight="700">4 构件</text>
+<rect x="440.0" y="232.0" width="260.0" height="110.0" rx="7" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="454.0" y="258.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.2" fill="#111827" text-anchor="start" font-weight="700">SS-5　领域服务子系统</text>
+<text x="454.0" y="278.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">7 个应用服务，逐一对应用例分组</text>
+<text x="454.0" y="294.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">用例流程的编排者</text>
+<text x="686.0" y="258.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#0891b2" text-anchor="end" font-weight="700">7 构件</text>
+<rect x="730.0" y="232.0" width="260.0" height="110.0" rx="7" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="744.0" y="258.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.2" fill="#111827" text-anchor="start" font-weight="700">SS-3　比对子系统</text>
+<text x="744.0" y="278.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">FR-6.5 唯一落点</text>
+<text x="744.0" y="294.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">测试与对拍共用同一引擎</text>
+<text x="976.0" y="258.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#0891b2" text-anchor="end" font-weight="700">3 构件</text>
+<rect x="360.0" y="390.0" width="420.0" height="76.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="374.0" y="416.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.2" fill="#111827" text-anchor="start" font-weight="700">SS-2　ISA 抽象子系统</text>
+<text x="374.0" y="436.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">ISA 描述装载与校验 · 译码表构建</text>
+<text x="766.0" y="416.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#7c3aed" text-anchor="end" font-weight="700">2 构件</text>
+<rect x="360.0" y="506.0" width="420.0" height="76.0" rx="7" fill="#ecfdf5" stroke="#059669" stroke-width="1.6"/>
+<text x="374.0" y="532.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.2" fill="#111827" text-anchor="start" font-weight="700">SS-1　模拟执行内核子系统</text>
+<text x="374.0" y="552.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">取指—译码—执行—写回 · 架构状态 · 轨迹 · 终止与异常</text>
+<text x="766.0" y="532.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#059669" text-anchor="end" font-weight="700">4 构件</text>
+<rect x="150.0" y="634.0" width="400.0" height="90.0" rx="7" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="164.0" y="660.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.2" fill="#111827" text-anchor="start" font-weight="700">SS-4　适配子系统</text>
+<text x="164.0" y="680.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">端口—适配器隔离外部工具链与参考模拟器</text>
+<text x="164.0" y="696.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">不参与产品链接</text>
+<text x="536.0" y="660.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#ea580c" text-anchor="end" font-weight="700">2 构件</text>
+<rect x="590.0" y="634.0" width="400.0" height="90.0" rx="7" fill="#f9fafb" stroke="#6b7280" stroke-width="1.6"/>
+<text x="604.0" y="660.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.2" fill="#111827" text-anchor="start" font-weight="700">SS-8　基础服务</text>
+<text x="604.0" y="680.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">持久化 · 配置 · 日志 · 标识生成 · 外部进程调用</text>
+<text x="604.0" y="696.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#374151" text-anchor="start">以接口形式提供</text>
+<text x="976.0" y="660.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.0" fill="#6b7280" text-anchor="end" font-weight="700">5 构件</text>
+<polyline points="570.0,184.0 570.0,200.0 280.0,200.0 280.0,232.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#a1)"/>
+<text x="292.0" y="196.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#4b5563" text-anchor="start">HTTP / WebSocket</text>
+<polyline points="410.0,287.0 440.0,287.0" fill="none" stroke="#4b5563" stroke-width="1.6" marker-end="url(#a1)"/>
+<text x="412.0" y="279.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start">分发</text>
+<polyline points="700.0,287.0 730.0,287.0" fill="none" stroke="#0891b2" stroke-width="1.6" marker-end="url(#a3)"/>
+<text x="702.0" y="279.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#0891b2" text-anchor="start">比对</text>
+<polyline points="500.0,342.0 500.0,390.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#a1)"/>
+<text x="510.0" y="372.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#4b5563" text-anchor="start">ISA 与译码</text>
+<polyline points="680.0,342.0 680.0,360.0 1010.0,360.0 1010.0,544.0 780.0,544.0" fill="none" stroke="#4b5563" stroke-width="1.5" marker-end="url(#a1)"/>
+<text x="1016.0" y="470.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#4b5563" text-anchor="start">执行服务</text>
+<line x1="570.0" y1="466.0" x2="570.0" y2="506.0" stroke="#7c3aed" stroke-width="1.6" marker-start="url(#a4)" marker-end="url(#a4)"/>
+<text x="578.0" y="480.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#7c3aed" text-anchor="start">译码契约</text>
+<text x="578.0" y="494.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#7c3aed" text-anchor="start">（接口倒置）</text>
+<polyline points="460.0,342.0 460.0,362.0 100.0,362.0 100.0,634.0" fill="none" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="7 4" marker-end="url(#a2)"/>
+<text x="110.0" y="560.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#9a3412" text-anchor="start">调用外部工具链与参考模拟器</text>
+<polyline points="620.0,342.0 620.0,376.0 830.0,376.0 830.0,634.0" fill="none" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="7 4" marker-end="url(#a2)"/>
+<text x="840.0" y="560.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#9a3412" text-anchor="start">持久化 / 配置 / 日志</text>
+<rect x="30.0" y="744.0" width="1020.0" height="40.0" rx="7" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="44.0" y="762.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#4b5563" text-anchor="start">实线箭头：子系统间调用与依赖　|　紫色双箭头：依赖倒置（译码契约的接口由内核侧定义、实现由 ISA 抽象层提供）　|　橙色虚线：使用跨层公共设施</text>
+<text x="44.0" y="777.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#b91c1c" text-anchor="start">核心依赖链：SS-7 → SS-6 → SS-5 → { SS-1 执行 · SS-2 ISA · SS-3 比对 · SS-4 适配 · SS-8 基础服务 }</text>
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="916" viewBox="0 0 1520 916">
+<rect x="0" y="0" width="1520" height="916" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1.2 L11,6 L1,10.8" fill="none" stroke="#6b7280" stroke-width="1.7"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">用例设计顺序图 · UC-02 装载与管理 ISA 指令集</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段一 · 用例设计　｜　参与设计类：SS-7 IsaView / AppShell、SS-6 HttpGateway、SS-5 IsaService、SS-2 IsaLoader / DecodeTable、SS-8 IStore</text>
+<line x1="40.0" y1="80.0" x2="1480.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="102.4" y="112.0" width="142.0" height="54.0" rx="6" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="173.4" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«actor»</text>
+<text x="173.4" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">ISA 工程师</text>
+<rect x="269.1" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="340.1" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«page» SS-7</text>
+<text x="340.1" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">IsaView</text>
+<rect x="435.9" y="112.0" width="142.0" height="54.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="506.9" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-7</text>
+<text x="506.9" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">AppShell</text>
+<rect x="602.6" y="112.0" width="142.0" height="54.0" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="673.6" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-6</text>
+<text x="673.6" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">HttpGateway</text>
+<rect x="769.4" y="112.0" width="142.0" height="54.0" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="840.4" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«service» SS-5</text>
+<text x="840.4" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">IsaService</text>
+<rect x="936.1" y="112.0" width="142.0" height="54.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="1007.1" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-2</text>
+<text x="1007.1" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">IsaLoader</text>
+<rect x="1102.9" y="112.0" width="142.0" height="54.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="1173.9" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«component» SS-2</text>
+<text x="1173.9" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">DecodeTable</text>
+<rect x="1269.6" y="112.0" width="142.0" height="54.0" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.6"/>
+<text x="1340.6" y="131.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.8" fill="#6b7280" text-anchor="middle">«interface» SS-8</text>
+<text x="1340.6" y="150.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.4" fill="#111827" text-anchor="middle" font-weight="700">IStore</text>
+<line x1="173.4" y1="166.0" x2="173.4" y2="768.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="340.1" y1="166.0" x2="340.1" y2="768.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="506.9" y1="166.0" x2="506.9" y2="768.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="673.6" y1="166.0" x2="673.6" y2="768.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="840.4" y1="166.0" x2="840.4" y2="768.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1007.1" y1="166.0" x2="1007.1" y2="768.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1173.9" y1="166.0" x2="1173.9" y2="768.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<line x1="1340.6" y1="166.0" x2="1340.6" y2="768.0" stroke="#cbd5e1" stroke-width="1.0" stroke-dasharray="6 4"/>
+<rect x="1335.6" y="518.0" width="10.0" height="28.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="1168.9" y="446.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="1002.1" y="328.0" width="10.0" height="64.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="835.4" y="292.0" width="10.0" height="290.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="668.6" y="256.0" width="10.0" height="362.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="501.9" y="220.0" width="10.0" height="480.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="335.1" y="184.0" width="10.0" height="552.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<rect x="168.4" y="184.0" width="10.0" height="28.0" rx="#bfdbfe" fill="2" opacity="1.00"/>
+<path d="M185.4 200.0 H328.1" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="200.5" y="183.2" width="112.6" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="256.8" y="192.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">① 上传 ISA 描述文件</text>
+<path d="M352.1 236.0 H494.9" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="372.8" y="219.2" width="101.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="423.5" y="228.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">② loadSpec(file)</text>
+<path d="M518.9 272.0 H661.6" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="523.1" y="255.2" width="134.3" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="590.2" y="264.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">③ POST /api/isa {file}</text>
+<path d="M685.6 308.0 H828.4" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="706.3" y="291.2" width="101.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="757.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">④ loadSpec(file)</text>
+<path d="M852.4 344.0 H995.1" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="881.3" y="327.2" width="85.0" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="923.8" y="336.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑤ parse(file)</text>
+<path d="M995.1 380.0 H852.4" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="885.3" y="363.2" width="76.8" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="923.8" y="372.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">候选 ISA 描述</text>
+<path d="M847.4 416.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="890.4" y="420.4" width="264.2" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="894.4" y="429.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑥ 完备性与自洽性校验：指令集 / 寄存器 / 编码域三段</text>
+<path d="M852.4 462.0 H1161.9" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="909.7" y="445.2" width="194.9" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="1007.1" y="454.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑦ activate(spec)　构建 O(1) 译码表</text>
+<path d="M1161.9 498.0 H852.4" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="977.4" y="481.2" width="59.5" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="1007.1" y="490.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">译码表句柄</text>
+<path d="M852.4 534.0 H1328.6" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="1034.3" y="517.2" width="112.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="1090.5" y="526.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#1f2937" text-anchor="middle">⑧ saveActive(spec)</text>
+<path d="M828.4 570.0 H685.6" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="703.9" y="553.2" width="106.2" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="757.0" y="562.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">装载结果 + 问题清单</text>
+<path d="M661.6 606.0 H518.9" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="530.9" y="589.2" width="118.8" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="590.2" y="598.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">200 / 422 {issues[]}</text>
+<path d="M513.9 642.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="556.9" y="646.4" width="142.7" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="560.9" y="655.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑨ 更新全局状态 currentIsa</text>
+<path d="M494.9 688.0 H352.1" fill="none" stroke="#6b7280" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#ao)"/>
+<rect x="398.8" y="671.2" width="49.4" height="13.2" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="423.5" y="680.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="middle">装载结果</text>
+<path d="M347.1 724.0 h38 v18 h-38" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-linejoin="round" marker-end="url(#a1)"/>
+<rect x="390.1" y="728.4" width="248.9" height="13.0" rx="0" fill="#ffffff" opacity="0.97"/>
+<text x="394.1" y="737.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#1f2937" text-anchor="start">⑩ 呈现结果提示条或问题清单（C-10 重新校验入口）</text>
+<rect x="1150.0" y="560.0" width="230.0" height="48.0" rx="5" fill="#fffbeb" stroke="#dc2626" stroke-width="1.3" stroke-dasharray="7 4"/>
+<text x="1160.0" y="580.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">失败分支：422 + 问题清单 →</text>
+<text x="1160.0" y="596.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#92400e" text-anchor="start">停留 UI-04，不切换当前 ISA</text>
+<text x="40.0" y="820.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 实线黑＝设计类之间的调用；蓝色＝界面跳转（方向标注「替换 / 前进 / 返回」）；虚线开放箭头＝返回。编号对应用例交互模型的消息顺序。</text>
+<text x="40.0" y="836.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 与交互模型的差别：边界类与控制类之间插入 SS-6 的 HttpGateway（分析类 ApiEndpoint 与控制类 ApiController 合并），实体类按 SAD 5.4.3 落到对应子系统。</text>
+<text x="40.0" y="852.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 新增设计元素（TerminationGuard / AccessGuard / IStore / IIdGen / IProcessRunner 等 12 项）在图中以首次出现的调用标出，来源见 SAD 5.4.4。</text>
+<text x="40.0" y="868.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 分析类 `IsaSpec` 在此**一拆为二**（方式三）：`IsaLoader` 承担描述装载与校验（启动期、一次性），`DecodeTable` 承担译码表构建与按编码查询（热路径、O(1)）——拆分理由见 SAD 5.4.4。</text>
+<text x="40.0" y="884.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· ⑧ 触发 SA-01 的依赖倒置：译码契约 `IDecodeTable` 由 SS-1 定义、`DecodeTable` 实现之，内核不依赖 ISA 抽象层。</text>
+<text x="40.0" y="900.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.8" fill="#6b7280" text-anchor="start">· 失败分支（FR-1.3）：校验不通过时返回 422 与问题清单，停留在 UI-04，**不切换当前 ISA**（上一套可用 ISA 保持生效）。</text>
+</svg>

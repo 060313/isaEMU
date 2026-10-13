@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1160" viewBox="0 0 1400 1160">
+<rect x="0" y="0" width="1400" height="1160" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11" fill="none" stroke="#7c3aed" stroke-width="1.6"/></marker>
+<marker id="dt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">精化类图 ①　SS-1 模拟执行内核 + SS-2 ISA 抽象</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段三 · 类设计　｜　`+` 公开 / `-` 私有 / `#` 受保护；`:` 后为类型，`=` 后为初始值；◆＝组合 1:1，──▷＝实现契约</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<rect x="40.0" y="96.0" width="420.0" height="210.6" rx="7" fill="#ffffff" stroke="#475569" stroke-width="1.6"/>
+<path d="M40.0 126.0 H460.0" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«interface» SS-1 定义</text>
+<text x="50.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">ICoreService</text>
+<text x="52.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">（无属性 · 纯契约）</text>
+<path d="M40.0 155.6 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="172.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ load(image: const Image&amp;, base: Addr,</text>
+<text x="52.0" y="186.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        init: const InitState&amp;) : void</text>
+<text x="52.0" y="199.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ attachDecodeTable(dt: const IDecodeTable&amp;) : void</text>
+<text x="52.0" y="213.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ step(n: uint32_t = 1) : StepDelta</text>
+<text x="52.0" y="227.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ run(m: RunMode, param: Addr, limit: uint64_t,</text>
+<text x="52.0" y="240.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">      tk: const CancelToken&amp;) : RunResult</text>
+<text x="52.0" y="254.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ pause() : void      + reset() : void</text>
+<text x="52.0" y="267.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ state() : RunState</text>
+<text x="52.0" y="281.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ reads(scope: ReadScope) : StateSnapshot</text>
+<text x="52.0" y="295.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ restore(s: const StateSnapshot&amp;) : void</text>
+<rect x="485.0" y="96.0" width="420.0" height="101.8" rx="7" fill="#ffffff" stroke="#475569" stroke-width="1.6"/>
+<path d="M485.0 126.0 H905.0" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«interface» SS-1 定义</text>
+<text x="495.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">IDecodeTable</text>
+<text x="497.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">（无属性 · 纯契约）</text>
+<path d="M485.0 155.6 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="172.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ lookup(enc: Enc) : const Instruction&amp;</text>
+<text x="497.0" y="186.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ width() : unsigned</text>
+<rect x="930.0" y="96.0" width="420.0" height="237.8" rx="7" fill="#ffffff" stroke="#dc2626" stroke-width="1.6"/>
+<path d="M930.0 126.0 H1350.0" fill="none" stroke="#dc2626" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-1</text>
+<text x="1340.0" y="110.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements ICoreService</text>
+<text x="940.0" y="122.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">EmulatorCore</text>
+<text x="942.0" y="151.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- arch_   : unique_ptr&lt;ArchState&gt;            ◆</text>
+<text x="942.0" y="164.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- trace_  : unique_ptr&lt;Trace&gt;                 ◆</text>
+<text x="942.0" y="178.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- guard_  : unique_ptr&lt;TerminationGuard&gt;      ◆</text>
+<text x="942.0" y="191.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- decode_ : const IDecodeTable*          = nullptr</text>
+<text x="942.0" y="205.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- image_  : ImageDesc            （含 [lo_, hi_]）</text>
+<text x="942.0" y="219.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- st_     : RunState                     = Idle</text>
+<text x="942.0" y="232.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- steps_  : uint64_t                         = 0</text>
+<text x="942.0" y="246.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- traceOn_: bool                          = false</text>
+<path d="M930.0 250.8 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="267.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ load / attachDecodeTable / step / run /</text>
+<text x="942.0" y="281.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">  pause / reset / state / reads / restore</text>
+<text x="942.0" y="295.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- cycle() : WriteOpList         取指—译码—执行—写回</text>
+<text x="942.0" y="308.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- atBoundary() : bool           映像端点判定（FR-4.3）</text>
+<text x="942.0" y="322.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- deliver(d: const StepDelta&amp;) : void</text>
+<rect x="40.0" y="357.8" width="420.0" height="197.0" rx="7" fill="#ffffff" stroke="#dc2626" stroke-width="1.6"/>
+<path d="M40.0 387.8 H460.0" fill="none" stroke="#dc2626" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="371.8" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-1</text>
+<text x="50.0" y="383.8" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">ArchState</text>
+<text x="52.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- pc_  : Addr                     = 0x00000000</text>
+<text x="52.0" y="426.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- gpr_ : Word[32]                    = { 0 … 0 }</text>
+<text x="52.0" y="440.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- csr_ : CsrFile                            = {}</text>
+<text x="52.0" y="453.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- mem_ : MemImage          （稀疏页，按需分配）</text>
+<path d="M40.0 458.2 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ apply(w: span&lt;const WriteOp&gt;) : void   差分写</text>
+<text x="52.0" y="488.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ snapshot(scope: ReadScope) : StateSnapshot</text>
+<text x="52.0" y="502.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ restore(s: const StateSnapshot&amp;) : void</text>
+<text x="52.0" y="516.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ read(a: Addr, n: size_t) : Bytes</text>
+<text x="52.0" y="529.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ write(a: Addr, b: span&lt;const uint8_t&gt;) : void</text>
+<text x="52.0" y="543.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ reset(init: const InitState&amp;) : void</text>
+<rect x="485.0" y="357.8" width="420.0" height="210.6" rx="7" fill="#ffffff" stroke="#dc2626" stroke-width="1.6"/>
+<path d="M485.0 387.8 H905.0" fill="none" stroke="#dc2626" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="371.8" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-1</text>
+<text x="495.0" y="383.8" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">Trace</text>
+<text x="497.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- rec_  : deque&lt;StepRecord&gt;                  = {}</text>
+<text x="497.0" y="426.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- cap_  : size_t                     = 1'048'576</text>
+<text x="497.0" y="440.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- base_ : StepNo                              = 0</text>
+<text x="497.0" y="453.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- on_   : bool                            = false</text>
+<path d="M485.0 458.2 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ enable(on: bool) : void</text>
+<text x="497.0" y="488.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ append(r: const StepRecord&amp;) : void</text>
+<text x="497.0" y="502.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ query(a: StepNo, b: StepNo) : span&lt;const StepRecord&gt;</text>
+<text x="497.0" y="516.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ rewindTo(t: StepNo) : Result&lt;StateSnapshot&gt;</text>
+<text x="497.0" y="529.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ trim() : void        按 cap_ 丢弃最旧不可回退段</text>
+<text x="497.0" y="543.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ earliest() : StepNo   + latest() : StepNo</text>
+<text x="497.0" y="556.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ size() : size_t</text>
+<rect x="930.0" y="357.8" width="420.0" height="169.8" rx="7" fill="#ffffff" stroke="#dc2626" stroke-width="1.6"/>
+<path d="M930.0 387.8 H1350.0" fill="none" stroke="#dc2626" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="371.8" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-1</text>
+<text x="940.0" y="383.8" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">TerminationGuard</text>
+<text x="942.0" y="412.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- last_  : array&lt;Enc, 3&gt;                     = {}</text>
+<text x="942.0" y="426.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- halted_: bool                           = false</text>
+<text x="942.0" y="440.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- fault_ : optional&lt;FaultRecord&gt;       = nullopt</text>
+<path d="M930.0 444.6 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="461.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ check(r: const StepRecord&amp;,</text>
+<text x="942.0" y="475.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        s: const ArchState&amp;) : GuardVerdict</text>
+<text x="942.0" y="488.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ captureFault(k: FaultKind,</text>
+<text x="942.0" y="502.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">               s: const ArchState&amp;) : FaultRecord</text>
+<text x="942.0" y="516.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ reset() : void      + halted() : bool</text>
+<rect x="40.0" y="592.4" width="420.0" height="142.6" rx="7" fill="#ffffff" stroke="#475569" stroke-width="1.6"/>
+<path d="M40.0 622.4 H460.0" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="606.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«interface» SS-2 对外</text>
+<text x="50.0" y="618.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">IIsaProvider</text>
+<text x="52.0" y="647.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">（无属性 · 纯契约）</text>
+<path d="M40.0 652.0 H460.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="52.0" y="669.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ load(src: const SourceRef&amp;) : Result&lt;IsaSpec&gt;</text>
+<text x="52.0" y="682.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ validate(s: const IsaSpec&amp;) : vector&lt;Issue&gt;</text>
+<text x="52.0" y="696.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ buildDecodeTable(s: const IsaSpec&amp;)</text>
+<text x="52.0" y="709.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : const IDecodeTable&amp;</text>
+<text x="52.0" y="723.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ available() : vector&lt;IsaSpec&gt;</text>
+<rect x="485.0" y="592.4" width="420.0" height="156.2" rx="7" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<path d="M485.0 622.4 H905.0" fill="none" stroke="#0d9488" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="495.0" y="606.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-2</text>
+<text x="895.0" y="606.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements IIsaProvider</text>
+<text x="495.0" y="618.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">IsaLoader</text>
+<text x="497.0" y="647.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- tables_ : map&lt;SpecId, unique_ptr&lt;DecodeTable&gt;&gt;</text>
+<text x="497.0" y="661.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">                                               ◆ 0..n</text>
+<text x="497.0" y="674.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- issues_ : vector&lt;Issue&gt;                    = {}</text>
+<text x="497.0" y="688.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- active_ : SpecId                     （无会话态）</text>
+<path d="M485.0 692.8 H905.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="497.0" y="709.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ load / validate / buildDecodeTable / available</text>
+<text x="497.0" y="723.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- threeStage(s: const IsaSpec&amp;) : vector&lt;Issue&gt;</text>
+<text x="497.0" y="737.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">     ① 指令集完备性 ② 寄存器定义 ③ 编码域自洽</text>
+<rect x="930.0" y="592.4" width="420.0" height="169.8" rx="7" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<path d="M930.0 622.4 H1350.0" fill="none" stroke="#0d9488" stroke-width="1.2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="940.0" y="606.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#6b7280" text-anchor="start">«component» SS-2</text>
+<text x="1340.0" y="606.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.3" fill="#7c3aed" text-anchor="end">implements IDecodeTable</text>
+<text x="940.0" y="618.4" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="11.6" fill="#111827" text-anchor="start" font-weight="700">DecodeTable</text>
+<text x="942.0" y="647.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- spec_ : IsaSpec            （不可变，构造即冻结）</text>
+<text x="942.0" y="661.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- wide_ : BitMask                  （编码宽度位图）</text>
+<text x="942.0" y="674.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#1f2937" text-anchor="start">- rows_ : vector&lt;Instruction&gt;       （2^k 直表）</text>
+<path d="M930.0 679.2 H1350.0" fill="none" stroke="#e5e7eb" stroke-width="1.0" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="942.0" y="696.2" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">- DecodeTable(s: const IsaSpec&amp;)        私有构造</text>
+<text x="942.0" y="709.8" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ static build(s: const IsaSpec&amp;)</text>
+<text x="942.0" y="723.4" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">        : unique_ptr&lt;DecodeTable&gt;</text>
+<text x="942.0" y="737.0" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ lookup(enc: Enc) : const Instruction&amp;   O(1)</text>
+<text x="942.0" y="750.6" font-family="Consolas, Courier New, monospace" font-size="8.6" fill="#0e7490" text-anchor="start">+ width() : unsigned</text>
+<text x="40.0" y="1096.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `ICoreService` / `IDecodeTable` 由 **SS-1 定义**（SA-01 依赖倒置）：`EmulatorCore` 与 `DecodeTable` 实现它们，因此 SS-2 依赖 SS-1 而非反向。</text>
+<text x="40.0" y="1112.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `EmulatorCore` 以 ◆ **组合**持有 `ArchState` / `Trace` / `TerminationGuard`（1:1，生命周期一致）；对 `IDecodeTable` 只持**只读指针**（0..1 关联）。</text>
+<text x="40.0" y="1128.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· `ArchState.apply` 收的是**差分写操作**而非全量状态；`Trace` 记的也是同一份 —— SA-13 在类图上的落点（一份记录服务 FR-3.3 / FR-4.4 / FR-7.2）。</text>
+<text x="40.0" y="1144.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 本图 6 个类均**不可跨子系统直接引用**：SS-5 只经 `ICoreService` / `IIsaProvider` 调用，具体的 `EmulatorCore` / `ArchState` / `Trace` / `DecodeTable` 属「装配可见」档。</text>
+</svg>

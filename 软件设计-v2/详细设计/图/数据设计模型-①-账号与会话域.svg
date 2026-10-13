@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="790" viewBox="0 0 1400 790">
+<rect x="0" y="0" width="1400" height="790" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="as" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#94a3b8"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">数据设计模型 ①　账号与会话域（T-01 ~ T-05、T-10）</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段四 · 数据设计　｜　11 张表中的六张；连线标重数，1:1 外键落依赖侧、1:n 外键落 n 端（技能规定）</text>
+<rect x="40.0" y="110.0" width="340.0" height="184.4" rx="6" fill="#ffffff" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="40.0" y="110.0" width="340.0" height="34.0" rx="6" fill="#f0fdfa" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="40.0" y="136.0" width="340.0" height="8.0" rx="0" fill="#f0fdfa" stroke="#f0fdfa" stroke-width="1.6"/>
+<path d="M43.0 144.0 H377.0" fill="none" stroke="#0f766e" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="127.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">users</text>
+<text x="370.0" y="127.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#4b5563" text-anchor="end">T-01 用户身份</text>
+<text x="52.0" y="158.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">uid</text>
+<text x="368.0" y="158.0" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="72.6" y="158.0" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#b91c1c" text-anchor="start" font-weight="700">PK</text>
+<text x="52.0" y="173.6" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">username</text>
+<text x="368.0" y="173.6" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">VARCHAR(64)</text>
+<text x="97.0" y="173.6" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#047857" text-anchor="start" font-weight="700">U</text>
+<text x="52.0" y="189.2" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">role</text>
+<text x="368.0" y="189.2" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">SMALLINT</text>
+<text x="77.5" y="189.2" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="52.0" y="204.8" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">q_sessions</text>
+<text x="368.0" y="204.8" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">INTEGER</text>
+<text x="106.7" y="204.8" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="52.0" y="220.4" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">q_requests</text>
+<text x="368.0" y="220.4" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">INTEGER</text>
+<text x="106.7" y="220.4" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="52.0" y="236.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">q_instr</text>
+<text x="368.0" y="236.0" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="92.1" y="236.0" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="52.0" y="251.6" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">q_bytes</text>
+<text x="368.0" y="251.6" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="92.1" y="251.6" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="52.0" y="267.2" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">status</text>
+<text x="368.0" y="267.2" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">SMALLINT</text>
+<text x="87.2" y="267.2" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="52.0" y="282.8" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">created_at</text>
+<text x="368.0" y="282.8" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">TIMESTAMPTZ</text>
+<rect x="520.0" y="110.0" width="340.0" height="137.6" rx="6" fill="#ffffff" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="520.0" y="110.0" width="340.0" height="34.0" rx="6" fill="#f0fdfa" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="520.0" y="136.0" width="340.0" height="8.0" rx="0" fill="#f0fdfa" stroke="#f0fdfa" stroke-width="1.6"/>
+<path d="M523.0 144.0 H857.0" fill="none" stroke="#0f766e" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="530.0" y="127.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">credentials</text>
+<text x="850.0" y="127.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#4b5563" text-anchor="end">T-02 凭据（1:1）</text>
+<text x="532.0" y="158.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">uid</text>
+<text x="848.0" y="158.0" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="552.6" y="158.0" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#b91c1c" text-anchor="start" font-weight="700">PK,FK</text>
+<text x="532.0" y="173.6" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">secret_hash</text>
+<text x="848.0" y="173.6" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BYTEA(32)</text>
+<text x="591.6" y="173.6" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="532.0" y="189.2" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">salt</text>
+<text x="848.0" y="189.2" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BYTEA(16)</text>
+<text x="557.5" y="189.2" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="532.0" y="204.8" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">kdf</text>
+<text x="848.0" y="204.8" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">VARCHAR(16)</text>
+<text x="552.6" y="204.8" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="532.0" y="220.4" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">iterations</text>
+<text x="848.0" y="220.4" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">INTEGER</text>
+<text x="586.7" y="220.4" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="532.0" y="236.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">updated_at</text>
+<text x="848.0" y="236.0" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">TIMESTAMPTZ</text>
+<rect x="1000.0" y="110.0" width="360.0" height="106.4" rx="6" fill="#ffffff" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="1000.0" y="110.0" width="360.0" height="34.0" rx="6" fill="#f0fdfa" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="1000.0" y="136.0" width="360.0" height="8.0" rx="0" fill="#f0fdfa" stroke="#f0fdfa" stroke-width="1.6"/>
+<path d="M1003.0 144.0 H1357.0" fill="none" stroke="#0f766e" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="1010.0" y="127.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">usage_counters</text>
+<text x="1350.0" y="127.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#4b5563" text-anchor="end">T-03 窗口用量（1:1）</text>
+<text x="1012.0" y="158.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">uid</text>
+<text x="1348.0" y="158.0" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="1032.6" y="158.0" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#b91c1c" text-anchor="start" font-weight="700">PK,FK</text>
+<text x="1012.0" y="173.6" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">win_start</text>
+<text x="1348.0" y="173.6" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">TIMESTAMPTZ</text>
+<text x="1061.8" y="173.6" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="1012.0" y="189.2" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">requests</text>
+<text x="1348.0" y="189.2" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">INTEGER</text>
+<text x="1057.0" y="189.2" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="1012.0" y="204.8" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">instr</text>
+<text x="1348.0" y="204.8" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="1042.4" y="204.8" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<rect x="406.0" y="150.0" width="88.0" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="450.0" y="158.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#1d4ed8" text-anchor="middle">1:1　外键落依赖侧</text>
+<path d="M380 172 H520" fill="none" stroke="#1d4ed8" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M200 110 V88 H1180 V110" fill="none" stroke="#1d4ed8" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="561.8" y="74.0" width="256.5" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="690.0" y="82.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#1d4ed8" text-anchor="middle">1:1　窗口计数与身份分离（热路径写入 vs 低频身份写入）</text>
+<rect x="40.0" y="340.0" width="340.0" height="184.4" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="40.0" y="340.0" width="340.0" height="34.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="40.0" y="366.0" width="340.0" height="8.0" rx="0" fill="#eff6ff" stroke="#eff6ff" stroke-width="1.6"/>
+<path d="M43.0 374.0 H377.0" fill="none" stroke="#2563eb" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="50.0" y="357.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">workspaces</text>
+<text x="370.0" y="357.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#4b5563" text-anchor="end">T-05 工作区</text>
+<text x="52.0" y="388.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">ws_id</text>
+<text x="368.0" y="388.0" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="82.4" y="388.0" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#b91c1c" text-anchor="start" font-weight="700">PK</text>
+<text x="52.0" y="403.6" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">owner_id</text>
+<text x="368.0" y="403.6" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="97.0" y="403.6" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#1d4ed8" text-anchor="start" font-weight="700">FK</text>
+<text x="52.0" y="419.2" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">name</text>
+<text x="368.0" y="419.2" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">VARCHAR(128)</text>
+<text x="77.5" y="419.2" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#047857" text-anchor="start" font-weight="700">U</text>
+<text x="52.0" y="434.8" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">version</text>
+<text x="368.0" y="434.8" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">INTEGER</text>
+<text x="92.1" y="434.8" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="52.0" y="450.4" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">program_blob</text>
+<text x="368.0" y="450.4" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">JSONB</text>
+<text x="116.5" y="450.4" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="52.0" y="466.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">config_blob</text>
+<text x="368.0" y="466.0" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">JSONB</text>
+<text x="111.6" y="466.0" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="52.0" y="481.6" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">size_bytes</text>
+<text x="368.0" y="481.6" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="106.7" y="481.6" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="52.0" y="497.2" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">created_at</text>
+<text x="368.0" y="497.2" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">TIMESTAMPTZ</text>
+<text x="106.7" y="497.2" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="52.0" y="512.8" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">updated_at</text>
+<text x="368.0" y="512.8" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">TIMESTAMPTZ</text>
+<path d="M200 294 V340" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="202.4" y="313.0" width="23.1" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="214.0" y="321.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="middle">1:n</text>
+<rect x="520.0" y="290.0" width="340.0" height="168.8" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="520.0" y="290.0" width="340.0" height="34.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="520.0" y="316.0" width="340.0" height="8.0" rx="0" fill="#eff6ff" stroke="#eff6ff" stroke-width="1.6"/>
+<path d="M523.0 324.0 H857.0" fill="none" stroke="#2563eb" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="530.0" y="307.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">sessions</text>
+<text x="850.0" y="307.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#4b5563" text-anchor="end">T-04 会话审计</text>
+<text x="532.0" y="338.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">token</text>
+<text x="848.0" y="338.0" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">CHAR(43)</text>
+<text x="562.4" y="338.0" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#b91c1c" text-anchor="start" font-weight="700">PK</text>
+<text x="532.0" y="353.6" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">owner_id</text>
+<text x="848.0" y="353.6" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="577.0" y="353.6" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#1d4ed8" text-anchor="start" font-weight="700">FK</text>
+<text x="532.0" y="369.2" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">ws_id</text>
+<text x="848.0" y="369.2" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="562.4" y="369.2" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#1d4ed8" text-anchor="start" font-weight="700">FK</text>
+<text x="532.0" y="384.8" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">isa_id</text>
+<text x="848.0" y="384.8" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">VARCHAR(64)</text>
+<text x="567.2" y="384.8" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="532.0" y="400.4" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">created_at</text>
+<text x="848.0" y="400.4" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">TIMESTAMPTZ</text>
+<text x="586.7" y="400.4" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="532.0" y="416.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">last_seen</text>
+<text x="848.0" y="416.0" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">TIMESTAMPTZ</text>
+<text x="581.8" y="416.0" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#7c3aed" text-anchor="start" font-weight="700">IX</text>
+<text x="532.0" y="431.6" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">expires_at</text>
+<text x="848.0" y="431.6" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">TIMESTAMPTZ</text>
+<text x="586.7" y="431.6" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#7c3aed" text-anchor="start" font-weight="700">IX</text>
+<text x="532.0" y="447.2" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">ended_at</text>
+<text x="848.0" y="447.2" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">TIMESTAMPTZ</text>
+<path d="M300 294 V318 H520" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="398.4" y="304.0" width="23.1" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="410.0" y="312.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="middle">1:n</text>
+<path d="M380 400 H520" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="404.4" y="383.0" width="91.2" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="450.0" y="391.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="middle">1:n　(ws_id 可空)</text>
+<rect x="520.0" y="500.0" width="340.0" height="122.0" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="520.0" y="500.0" width="340.0" height="34.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="520.0" y="526.0" width="340.0" height="8.0" rx="0" fill="#eff6ff" stroke="#eff6ff" stroke-width="1.6"/>
+<path d="M523.0 534.0 H857.0" fill="none" stroke="#2563eb" stroke-width="1.3" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="530.0" y="517.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.0" fill="#111827" text-anchor="start" font-weight="700">breakpoints</text>
+<text x="850.0" y="517.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.6" fill="#4b5563" text-anchor="end">T-10 断点表</text>
+<text x="532.0" y="548.0" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">owner_id</text>
+<text x="848.0" y="548.0" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="577.0" y="548.0" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#b91c1c" text-anchor="start" font-weight="700">PK,FK</text>
+<text x="532.0" y="563.6" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">ws_id</text>
+<text x="848.0" y="563.6" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="562.4" y="563.6" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#b91c1c" text-anchor="start" font-weight="700">PK</text>
+<text x="532.0" y="579.2" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">addr</text>
+<text x="848.0" y="579.2" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BIGINT</text>
+<text x="557.5" y="579.2" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#b91c1c" text-anchor="start" font-weight="700">PK</text>
+<text x="532.0" y="594.8" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">action</text>
+<text x="848.0" y="594.8" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">SMALLINT</text>
+<text x="567.2" y="594.8" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<text x="532.0" y="610.4" font-family="Consolas, Courier New, monospace" font-size="8.7" fill="#1f2937" text-anchor="start">enabled</text>
+<text x="848.0" y="610.4" font-family="Consolas, Courier New, monospace" font-size="8.2" fill="#6b7280" text-anchor="end">BOOLEAN</text>
+<text x="572.1" y="610.4" font-family="Consolas, Courier New, monospace" font-size="7.4" fill="#64748b" text-anchor="start" font-weight="700"> </text>
+<path d="M380 505 H520" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ar)"/>
+<rect x="416.2" y="488.0" width="67.7" height="12.4" rx="2" fill="#ffffff" opacity="0.97"/>
+<text x="450.0" y="496.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4b5563" text-anchor="middle">1:n　(ws_id)</text>
+<rect x="1000.0" y="260.0" width="360.0" height="161.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="1010.0" y="278.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">本域的三条约定</text>
+<text x="1010.0" y="293.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">① users 是全库的隔离根：5 张表的 owner_id / uid</text>
+<text x="1010.0" y="308.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   均指向它；DbStore::scoped 一律追加</text>
+<text x="1010.0" y="323.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   AND owner_id = :u（SA-05）。</text>
+<text x="1010.0" y="338.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">② credentials / usage_counters 是 1:1，外键与</text>
+<text x="1010.0" y="353.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   父表主键同值；sessions / workspaces /</text>
+<text x="1010.0" y="368.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   breakpoints 是 1:n，外键落 n 端。</text>
+<text x="1010.0" y="383.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">③ sessions 只作审计与统计——不参与活跃判定，</text>
+<text x="1010.0" y="398.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">   live_ 恒空启动（避免「有会话无内核」）。</text>
+<rect x="40.0" y="635.0" width="1320.0" height="71.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="50.0" y="653.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">外键 14 个（本域 6 个）：credentials.uid / usage_counters.uid / sessions.owner_id / workspaces.owner_id /</text>
+<text x="50.0" y="668.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">breakpoints.owner_id → users(uid)；sessions.ws_id → workspaces(ws_id)。另一域的 7 个见「测试与对拍域」图。</text>
+<text x="50.0" y="683.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#475569" text-anchor="start">级联：删用户一律 CASCADE（UC-14 只提供停用、不提供删除，级联仅为完整性兜底）；删工作区时 sessions.ws_id 与 test_suites.ws_id 置 NULL —— 会话与用例集不应随之消失。</text>
+</svg>

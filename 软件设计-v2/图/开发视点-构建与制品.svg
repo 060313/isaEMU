@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660">
+<rect x="0" y="0" width="1200" height="660" fill="#ffffff"/>
+<defs>
+<marker id="a1" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="a2" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#ea580c"/></marker>
+<marker id="a3" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#0891b2"/></marker>
+<marker id="a4" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#6366f1"/></marker>
+<marker id="a5" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+<marker id="a6" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+</defs>
+<text x="36.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="19.0" fill="#111827" text-anchor="start" font-weight="700">ISA 模拟系统 · 开发视点的体系结构（源码 — 构建 — 制品）</text>
+<text x="36.0" y="66.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start">SAD 阶段五 · 单一 Git 仓库按子系统划分目录，两条构建链产出三种制品</text>
+<rect x="36.0" y="104.0" width="340.0" height="340.0" rx="7" fill="#f9fafb" stroke="#6b7280" stroke-width="1.6"/>
+<text x="50.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.4" fill="#111827" text-anchor="start" font-weight="700">源码与配置</text>
+<text x="50.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#6b7280" text-anchor="start">单一 Git 仓库（Gitee / Github）</text>
+<path d="M50.0,166.0 L352.0,166.0 L362.0,176.0 L362.0,194.0 L50.0,194.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M352.0,166.0 L352.0,176.0 L362.0,176.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="60.0" y="183.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">core/ —— SS-1 执行内核（C++17，零第三方链接）</text>
+<path d="M50.0,200.0 L352.0,200.0 L362.0,210.0 L362.0,228.0 L50.0,228.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M352.0,200.0 L352.0,210.0 L362.0,210.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="60.0" y="217.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">isa/ —— SS-2 ISA 抽象 + RV32I 描述文件</text>
+<path d="M50.0,234.0 L352.0,234.0 L362.0,244.0 L362.0,262.0 L50.0,262.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M352.0,234.0 L352.0,244.0 L362.0,244.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="60.0" y="251.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">compare/ —— SS-3 比对引擎（两条业务线共用）</text>
+<path d="M50.0,268.0 L352.0,268.0 L362.0,278.0 L362.0,296.0 L50.0,296.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M352.0,268.0 L352.0,278.0 L362.0,278.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="60.0" y="285.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">server/ —— SS-5 领域服务 · SS-6 集成 API · SS-8 基础服务</text>
+<path d="M50.0,302.0 L352.0,302.0 L362.0,312.0 L362.0,330.0 L50.0,330.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M352.0,302.0 L352.0,312.0 L362.0,312.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="60.0" y="319.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">adapters/ —— SS-4 适配（工具链 / 参考模拟器）</text>
+<path d="M50.0,336.0 L352.0,336.0 L362.0,346.0 L362.0,364.0 L50.0,364.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M352.0,336.0 L352.0,346.0 L362.0,346.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="60.0" y="353.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">web/ —— SS-7 前端（Vue 3 + TypeScript）</text>
+<path d="M50.0,370.0 L352.0,370.0 L362.0,380.0 L362.0,398.0 L50.0,398.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M352.0,370.0 L352.0,380.0 L362.0,380.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="60.0" y="387.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">tests/ —— 内核单元测试与基准（GoogleTest / Benchmark）</text>
+<path d="M50.0,404.0 L352.0,404.0 L362.0,414.0 L362.0,432.0 L50.0,432.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M352.0,404.0 L352.0,414.0 L362.0,414.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="60.0" y="421.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">third_party/ —— 依赖清单与许可证归档</text>
+<rect x="432.0" y="104.0" width="340.0" height="340.0" rx="7" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="446.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.4" fill="#111827" text-anchor="start" font-weight="700">构建</text>
+<text x="446.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#6b7280" text-anchor="start">CMake + Vite + Dockerfile</text>
+<path d="M446.0,166.0 L748.0,166.0 L758.0,176.0 L758.0,194.0 L446.0,194.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M748.0,166.0 L748.0,176.0 L758.0,176.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="456.0" y="183.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">CMake → libisa_core.a（SS-1，零第三方链接检查）</text>
+<path d="M446.0,200.0 L748.0,200.0 L758.0,210.0 L758.0,228.0 L446.0,228.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M748.0,200.0 L748.0,210.0 L758.0,210.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="456.0" y="217.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">CMake → isa-sim-server（链接内核静态库）</text>
+<path d="M446.0,234.0 L748.0,234.0 L758.0,244.0 L758.0,262.0 L446.0,262.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M748.0,234.0 L748.0,244.0 L758.0,244.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="456.0" y="251.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">Vite → dist/（SS-7 前端静态资源包）</text>
+<path d="M446.0,268.0 L748.0,268.0 L758.0,278.0 L758.0,296.0 L446.0,296.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M748.0,268.0 L748.0,278.0 L758.0,278.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="456.0" y="285.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">CMake → 单元测试与基准（GoogleTest / Benchmark）</text>
+<path d="M446.0,302.0 L748.0,302.0 L758.0,312.0 L758.0,330.0 L446.0,330.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M748.0,302.0 L748.0,312.0 L758.0,312.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="456.0" y="319.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">构建脚本检查依赖方向（仅相邻层、禁止反向）</text>
+<path d="M446.0,336.0 L748.0,336.0 L758.0,346.0 L758.0,364.0 L446.0,364.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M748.0,336.0 L748.0,346.0 L758.0,346.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="456.0" y="353.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">Dockerfile ×3 → 边缘 / 应用 / 数据容器镜像</text>
+<path d="M446.0,370.0 L748.0,370.0 L758.0,380.0 L758.0,398.0 L446.0,398.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M748.0,370.0 L748.0,380.0 L758.0,380.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="456.0" y="387.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">（可选）本地部署包打包脚本</text>
+<rect x="828.0" y="104.0" width="340.0" height="340.0" rx="7" fill="#ecfdf5" stroke="#059669" stroke-width="1.6"/>
+<text x="842.0" y="130.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="12.4" fill="#111827" text-anchor="start" font-weight="700">制品与发布</text>
+<text x="842.0" y="148.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.2" fill="#6b7280" text-anchor="start">两种形态共用同一套制品</text>
+<path d="M842.0,166.0 L1144.0,166.0 L1154.0,176.0 L1154.0,194.0 L842.0,194.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M1144.0,166.0 L1144.0,176.0 L1154.0,176.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="852.0" y="183.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">isa-sim-server 可执行文件（含内核静态库）</text>
+<path d="M842.0,200.0 L1144.0,200.0 L1154.0,210.0 L1154.0,228.0 L842.0,228.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M1144.0,200.0 L1144.0,210.0 L1154.0,210.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="852.0" y="217.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">dist/ 前端静态资源包（本地形态内嵌）</text>
+<path d="M842.0,234.0 L1144.0,234.0 L1154.0,244.0 L1154.0,262.0 L842.0,262.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M1144.0,234.0 L1144.0,244.0 L1154.0,244.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="852.0" y="251.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">容器镜像 ×3：edge / app / db</text>
+<path d="M842.0,268.0 L1144.0,268.0 L1154.0,278.0 L1154.0,296.0 L842.0,296.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M1144.0,268.0 L1144.0,278.0 L1154.0,278.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="852.0" y="285.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">本地部署包：可执行 + 配置样例 + SQLite 模板</text>
+<path d="M842.0,302.0 L1144.0,302.0 L1154.0,312.0 L1154.0,330.0 L842.0,330.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M1144.0,302.0 L1144.0,312.0 L1154.0,312.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="852.0" y="319.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">接口文档（按 FR-8.3 提供文档与调用示例）</text>
+<path d="M842.0,336.0 L1144.0,336.0 L1154.0,346.0 L1154.0,364.0 L842.0,364.0 Z" fill="#f9fafb" stroke="#9ca3af" stroke-width="1"/>
+<path d="M1144.0,336.0 L1144.0,346.0 L1154.0,346.0 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+<text x="852.0" y="353.9" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="8.2" fill="#374151" text-anchor="start">测试报告与构建产物归档（NFR-C5 交付物）</text>
+<line x1="376.0" y1="274.0" x2="426.0" y2="274.0" stroke="#6366f1" stroke-width="1.8" marker-end="url(#a4)"/>
+<text x="401.0" y="264.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#4338ca" text-anchor="middle" font-weight="700">构建</text>
+<line x1="772.0" y1="274.0" x2="822.0" y2="274.0" stroke="#059669" stroke-width="1.8" marker-end="url(#a6)"/>
+<text x="797.0" y="264.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.0" fill="#047857" text-anchor="middle" font-weight="700">产出</text>
+<rect x="36.0" y="462.0" width="1128.0" height="76.0" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="52.0" y="484.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#111827" text-anchor="start" font-weight="700">一、版本控制与协作</text>
+<text x="52.0" y="504.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 单一 Git 仓库，按 SS-1~SS-8 划分源码子目录，使目录结构与子系统边界一致（NFR-C2）</text>
+<text x="52.0" y="522.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 5 人并行：迭代一先冻结对外接口（UC-13），此后前端组与内核组分头推进，接口变更加闸（NFR-C3）</text>
+<rect x="36.0" y="550.0" width="1128.0" height="76.0" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="52.0" y="572.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.4" fill="#111827" text-anchor="start" font-weight="700">二、构建期硬规则与许可合规</text>
+<text x="52.0" y="592.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 两条构建期硬规则：仅相邻层可依赖（越层与反向依赖由构建脚本检查）、内核层零第三方链接（NFR-I2 / NFR-I3）</text>
+<text x="52.0" y="610.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.4" fill="#374151" text-anchor="start">· 许可合规（NFR-C4）：产品链接链路全为 MIT / BSD / BSL-1.0 / PostgreSQL / 公有领域；GPLv2 的 riscv-gnu-toolchain 与 BSD-3 的 Spike 仅作外部进程调用，不链接、不分发</text>
+</svg>

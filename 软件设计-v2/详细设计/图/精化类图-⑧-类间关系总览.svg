@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<rect x="0" y="0" width="1400" height="900" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#7c3aed"/></marker>
+<marker id="ag" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+<marker id="ao" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11" fill="none" stroke="#7c3aed" stroke-width="1.6"/></marker>
+<marker id="dt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="strokeWidth"><path d="M1,1 L11,6 L1,11 z" fill="#4b5563"/></marker>
+</defs>
+<text x="40.0" y="42.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="18.0" fill="#111827" text-anchor="start" font-weight="700">精化类图 ⑧　类间关系总览（语义关系与数量对应关系）</text>
+<text x="40.0" y="64.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="10.2" fill="#6b7280" text-anchor="start">sdd 阶段三 · 类设计　｜　◆ 组合 / ◇ 聚合 / ─ 关联 / ─▷ 实现 / ---&gt; 依赖；标注为「源端重数 : 目标端重数」</text>
+<line x1="40.0" y1="80.0" x2="1360.0" y2="80.0" stroke="#e5e7eb" stroke-width="1.0"/>
+<text x="52.0" y="104.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start" font-weight="700">源</text>
+<text x="300.0" y="104.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start" font-weight="700">语义关系</text>
+<text x="430.0" y="104.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start" font-weight="700">目标</text>
+<text x="920.0" y="104.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start" font-weight="700">数量对应关系</text>
+<line x1="40.0" y1="112.0" x2="1360.0" y2="112.0" stroke="#9ca3af" stroke-width="1.2"/>
+<text x="52.0" y="132.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">EmulatorCore</text>
+<text x="300.0" y="132.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4c1d95" text-anchor="start" font-weight="700">◆ 组合</text>
+<text x="430.0" y="132.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">ArchState</text>
+<text x="920.0" y="132.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1  （生命周期一致，随内核销毁）</text>
+<rect x="40.0" y="144.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="156.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">EmulatorCore</text>
+<text x="300.0" y="156.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4c1d95" text-anchor="start" font-weight="700">◆ 组合</text>
+<text x="430.0" y="156.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">Trace</text>
+<text x="920.0" y="156.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1</text>
+<text x="52.0" y="180.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">EmulatorCore</text>
+<text x="300.0" y="180.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4c1d95" text-anchor="start" font-weight="700">◆ 组合</text>
+<text x="430.0" y="180.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">TerminationGuard</text>
+<text x="920.0" y="180.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1</text>
+<rect x="40.0" y="192.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="204.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">EmulatorCore</text>
+<text x="300.0" y="204.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start" font-weight="700">─ 关联（只读）</text>
+<text x="430.0" y="204.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">IDecodeTable</text>
+<text x="920.0" y="204.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 0..1  （切换 ISA 时整体替换）</text>
+<text x="52.0" y="228.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">EmulatorCore</text>
+<text x="300.0" y="228.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#7c3aed" text-anchor="start" font-weight="700">─▷ 实现</text>
+<text x="430.0" y="228.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">ICoreService</text>
+<text x="920.0" y="228.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1</text>
+<rect x="40.0" y="240.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="252.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">DecodeTable</text>
+<text x="300.0" y="252.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#7c3aed" text-anchor="start" font-weight="700">─▷ 实现</text>
+<text x="430.0" y="252.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">IDecodeTable</text>
+<text x="920.0" y="252.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1</text>
+<text x="52.0" y="276.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">IsaLoader</text>
+<text x="300.0" y="276.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#7c3aed" text-anchor="start" font-weight="700">─▷ 实现</text>
+<text x="430.0" y="276.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">IIsaProvider</text>
+<text x="920.0" y="276.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1</text>
+<rect x="40.0" y="288.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="300.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">IsaLoader</text>
+<text x="300.0" y="300.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4c1d95" text-anchor="start" font-weight="700">◆ 组合</text>
+<text x="430.0" y="300.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">DecodeTable</text>
+<text x="920.0" y="300.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 0..n  （每套已装载 ISA 一个）</text>
+<text x="52.0" y="324.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">CompareEngine</text>
+<text x="300.0" y="324.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#7c3aed" text-anchor="start" font-weight="700">─▷ 实现</text>
+<text x="430.0" y="324.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">ICompareService</text>
+<text x="920.0" y="324.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1</text>
+<rect x="40.0" y="336.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="348.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">ToolchainAdapter</text>
+<text x="300.0" y="348.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#7c3aed" text-anchor="start" font-weight="700">─▷ 实现</text>
+<text x="430.0" y="348.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">IAssembler</text>
+<text x="920.0" y="348.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1</text>
+<text x="52.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">RefSimAdapter</text>
+<text x="300.0" y="372.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#7c3aed" text-anchor="start" font-weight="700">─▷ 实现</text>
+<text x="430.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">IRefSim</text>
+<text x="920.0" y="372.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1</text>
+<rect x="40.0" y="384.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="396.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">ToolchainAdapter</text>
+<text x="300.0" y="396.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start" font-weight="700">─ 关联</text>
+<text x="430.0" y="396.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">IProcessRunner</text>
+<text x="920.0" y="396.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">n : 1  （两个适配器共用一份实现）</text>
+<text x="52.0" y="420.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">SessionService</text>
+<text x="300.0" y="420.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#0e7490" text-anchor="start" font-weight="700">◇ 聚合</text>
+<text x="430.0" y="420.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">SessionContext</text>
+<text x="920.0" y="420.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 0..n  （随会话建立与回收）</text>
+<rect x="40.0" y="432.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="444.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">SessionContext</text>
+<text x="300.0" y="444.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4c1d95" text-anchor="start" font-weight="700">◆ 组合</text>
+<text x="430.0" y="444.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">ICoreService</text>
+<text x="920.0" y="444.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1  （SA-03 每会话一个内核）</text>
+<text x="52.0" y="468.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">SessionContext</text>
+<text x="300.0" y="468.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4c1d95" text-anchor="start" font-weight="700">◆ 组合</text>
+<text x="430.0" y="468.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">BreakpointTable</text>
+<text x="920.0" y="468.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1  （断点表不进内核）</text>
+<rect x="40.0" y="480.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="492.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">TestService</text>
+<text x="300.0" y="492.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start" font-weight="700">─ 关联</text>
+<text x="430.0" y="492.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">ICompareService</text>
+<text x="920.0" y="492.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">n : 1  （SS-3 单例，与 DiffService 共享）</text>
+<text x="52.0" y="516.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">DiffService</text>
+<text x="300.0" y="516.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start" font-weight="700">─ 关联</text>
+<text x="430.0" y="516.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">ICompareService</text>
+<text x="920.0" y="516.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">n : 1</text>
+<rect x="40.0" y="528.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="540.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">DiffService</text>
+<text x="300.0" y="540.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#0e7490" text-anchor="start" font-weight="700">◇ 聚合</text>
+<text x="430.0" y="540.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">Divergence</text>
+<text x="920.0" y="540.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 0..n  （一次对拍可产生多条分歧）</text>
+<text x="52.0" y="564.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">Divergence</text>
+<text x="300.0" y="564.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4b5563" text-anchor="start" font-weight="700">─ 关联</text>
+<text x="430.0" y="564.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">DiffScope</text>
+<text x="920.0" y="564.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">n : 1  （比对子集随请求传入）</text>
+<rect x="40.0" y="576.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="588.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">Workspace</text>
+<text x="300.0" y="588.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4c1d95" text-anchor="start" font-weight="700">◆ 组合</text>
+<text x="430.0" y="588.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">Program</text>
+<text x="920.0" y="588.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 0..1  （选择性保存时可缺）</text>
+<text x="52.0" y="612.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">Workspace</text>
+<text x="300.0" y="612.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4c1d95" text-anchor="start" font-weight="700">◆ 组合</text>
+<text x="430.0" y="612.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">TestSuite</text>
+<text x="920.0" y="612.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 0..1</text>
+<rect x="40.0" y="624.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="636.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">TestSuite</text>
+<text x="300.0" y="636.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4c1d95" text-anchor="start" font-weight="700">◆ 组合</text>
+<text x="430.0" y="636.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">TestCase</text>
+<text x="920.0" y="636.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1..n</text>
+<text x="52.0" y="660.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">TestReport</text>
+<text x="300.0" y="660.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4c1d95" text-anchor="start" font-weight="700">◆ 组合</text>
+<text x="430.0" y="660.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">CaseResult</text>
+<text x="920.0" y="660.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 1..n</text>
+<rect x="40.0" y="672.0" width="1320.0" height="20.0" rx="0" fill="#f8fafc" stroke="#ffffff" stroke-width="0.0"/>
+<text x="52.0" y="684.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">AppShell</text>
+<text x="300.0" y="684.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#4c1d95" text-anchor="start" font-weight="700">◆ 组合</text>
+<text x="430.0" y="684.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">7 个 «page»</text>
+<text x="920.0" y="684.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : 7  （外壳与页面同生共死）</text>
+<text x="52.0" y="708.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">Bootstrapper</text>
+<text x="300.0" y="708.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#0e7490" text-anchor="start" font-weight="700">◇ 聚合</text>
+<text x="430.0" y="708.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#111827" text-anchor="start">全部单例</text>
+<text x="920.0" y="708.0" font-family="Consolas, Courier New, monospace" font-size="9.6" fill="#0e7490" text-anchor="start">1 : n  （组合根持有对象图）</text>
+<line x1="40.0" y1="724.0" x2="1360.0" y2="724.0" stroke="#9ca3af" stroke-width="1.2"/>
+<text x="40.0" y="756.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 全表 **没有 n:m 关系**：唯一可能成为多对多的是「用例集 ↔ 程序」，但设计上用例集绑定单一程序（`TestSuite` 的用例共享同一 `ProgramRef`），故为 n:1。</text>
+<text x="40.0" y="776.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 依赖关系（`---&gt;`）数量最多，不逐一列出，见第 4 章关系清单与各子系统类图；本表只列**长期持有引用**的组合 / 聚合 / 关联三类。</text>
+<text x="40.0" y="796.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 「强内聚」的落点：`EmulatorCore` 的三个 ◆ 内部件、`SessionContext` 的两个 ◆ 内部件、`TestSuite` / `TestReport` 的子项集合，都是「不独立存在」的部分整体关系。</text>
+<text x="40.0" y="816.0" font-family="Microsoft YaHei, Segoe UI, PingFang SC, sans-serif" font-size="9.6" fill="#6b7280" text-anchor="start">· 「松耦合」的落点：跨子系统的 7 处引用**全部是关联到接口**（`ICoreService` / `ICompareService` / `IProcessRunner` / `IStore` …），无一处关联到具体实现类。</text>
+</svg>
