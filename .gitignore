@@ -1,0 +1,76 @@
+# ============================================================================
+# ISA 模拟系统 —— 仓库忽略规则
+#
+# 设计依据：《软件体系结构设计文档》7.1（源码组织）、7.2（构建与制品）
+# 原则：只忽略「可由源码再生成」与「本机私有」的东西。
+#       所有交付物一律入库 —— 源码、头文件、DDL、构建脚本、图件（.svg）、
+#       文档（.md）、配置示例（*.example.*）。
+# ============================================================================
+
+# ---------------- C++ 构建产物 ----------------
+build/
+cmake-build-*/
+out/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.pdb
+*.ilk
+*.exp
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+
+# ---------------- 前端（SS-7）产物与依赖 ----------------
+node_modules/
+dist/
+*.tsbuildinfo
+.npm/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------------- 数据库文件（本地形态运行时生成） ----------------
+# 注意：*.db 会顺带匹配 docker/Dockerfile.db，故将其显式排除在下一条。
+*.db
+!Dockerfile.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# ---------------- Python（_gen/ 生成器） ----------------
+__pycache__/
+*.py[cod]
+
+# ---------------- 本机私有配置与凭据（配置示例必须入库） ----------------
+.env
+.env.*
+config.toml
+!.env.example
+!config.example.toml
+
+# ---------------- 编辑器与操作系统 ----------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------- 临时与自检产物 ----------------
+*.tmp
+*.log
+_selfcheck/

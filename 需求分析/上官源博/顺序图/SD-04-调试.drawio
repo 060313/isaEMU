@@ -1,0 +1,344 @@
+<mxfile host="Electron" agent="WorkBuddy">
+  <diagram name="sd 用例四　调试" id="04">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1554" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ll1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=48;fillColor=#F5F3FF;strokeColor=#7C3AED;fontColor=#333333;" value="&lt;font style=&quot;font-size:9px;color:#6D28D9&quot;&gt;«外部执行者»&lt;/font&gt;&lt;br&gt;&lt;b&gt;用户&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1424" width="140" x="20" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="ll2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=48;fillColor=#FFFBEB;strokeColor=#D97706;fontColor=#333333;" value="&lt;font style=&quot;font-size:9px;color:#B45309&quot;&gt;«边界类»&lt;/font&gt;&lt;br&gt;&lt;b&gt;DebugInterface&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1424" width="140" x="200" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="ll3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=48;fillColor=#EFF6FF;strokeColor=#3B82F6;fontColor=#333333;" value="&lt;font style=&quot;font-size:9px;color:#1D4ED8&quot;&gt;«控制类»&lt;/font&gt;&lt;br&gt;&lt;b&gt;DebugManager&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1424" width="140" x="380" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="ll4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=48;fillColor=#F0FDF4;strokeColor=#059669;fontColor=#333333;" value="&lt;font style=&quot;font-size:9px;color:#047857&quot;&gt;«实体类»&lt;/font&gt;&lt;br&gt;&lt;b&gt;会话&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1424" width="140" x="560" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="ll5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=48;fillColor=#F0FDF4;strokeColor=#059669;fontColor=#333333;" value="&lt;font style=&quot;font-size:9px;color:#047857&quot;&gt;«实体类»&lt;/font&gt;&lt;br&gt;&lt;b&gt;断点表&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1424" width="140" x="740" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="ll6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=48;fillColor=#F0FDF4;strokeColor=#059669;fontColor=#333333;" value="&lt;font style=&quot;font-size:9px;color:#047857&quot;&gt;«实体类»&lt;/font&gt;&lt;br&gt;&lt;b&gt;模拟器实例&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1424" width="140" x="920" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="ll7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=48;fillColor=#F0FDF4;strokeColor=#059669;fontColor=#333333;" value="&lt;font style=&quot;font-size:9px;color:#047857&quot;&gt;«实体类»&lt;/font&gt;&lt;br&gt;&lt;b&gt;符号与反汇编&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1424" width="140" x="1100" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="ll8" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=48;fillColor=#FFFBEB;strokeColor=#D97706;fontColor=#333333;" value="&lt;font style=&quot;font-size:9px;color:#B45309&quot;&gt;«边界类»&lt;/font&gt;&lt;br&gt;&lt;b&gt;toolInterface&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1424" width="140" x="1280" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="ll9" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=48;fillColor=#F5F3FF;strokeColor=#7C3AED;fontColor=#333333;" value="&lt;font style=&quot;font-size:9px;color:#6D28D9&quot;&gt;«外部执行者»&lt;/font&gt;&lt;br&gt;&lt;b&gt;工具链系统&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1424" width="140" x="1460" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="act1" parent="ll1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="1208" width="10" x="65" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="act2" parent="ll2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="1236" width="10" x="65" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="act3" parent="ll3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="1264" width="10" x="65" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="act4" parent="ll4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="1236" width="10" x="65" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="act5" parent="ll5" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="838" width="10" x="65" y="386" as="geometry" />
+        </mxCell>
+        <mxCell id="act6" parent="ll6" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="446" width="10" x="65" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="act7" parent="ll7" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="166" width="10" x="65" y="722" as="geometry" />
+        </mxCell>
+        <mxCell id="act8" parent="ll8" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="110" width="10" x="65" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="act9" parent="ll9" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="54" width="10" x="65" y="778" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" parent="ll1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="发起调试" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="100" as="sourcePoint" />
+            <mxPoint x="245" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" parent="ll2" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="转交调试请求" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="128" as="sourcePoint" />
+            <mxPoint x="245" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="请求建立调试会话" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="156" as="sourcePoint" />
+            <mxPoint x="245" y="156" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" parent="ll4" style="html=1;verticalAlign=bottom;align=center;endArrow=block;edgeStyle=orthogonalEdgeStyle;rounded=0;" value="核对调试能力与状&lt;br&gt;态" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="75" y="184" as="sourcePoint" />
+            <mxPoint x="75" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="127" y="184" />
+              <mxPoint x="127" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" parent="ll4" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="会话标识与调试能力" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="246" as="sourcePoint" />
+            <mxPoint x="-105" y="246" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="会话标识与调试能力" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="274" as="sourcePoint" />
+            <mxPoint x="-105" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" parent="ll2" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="会话标识与调试能力" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="302" as="sourcePoint" />
+            <mxPoint x="-105" y="302" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" parent="ll1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="设置断点或观察点" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="330" as="sourcePoint" />
+            <mxPoint x="245" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9" parent="ll2" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="转交断点请求" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="358" as="sourcePoint" />
+            <mxPoint x="245" y="358" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="请求登记或撤销断点" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="386" as="sourcePoint" />
+            <mxPoint x="425" y="386" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m11" parent="ll5" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="断点表项" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="414" as="sourcePoint" />
+            <mxPoint x="-285" y="414" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m12" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="操作结果" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="442" as="sourcePoint" />
+            <mxPoint x="-105" y="442" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m13" parent="ll2" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="操作结果" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="470" as="sourcePoint" />
+            <mxPoint x="-105" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m14" parent="ll1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="继续运行" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="498" as="sourcePoint" />
+            <mxPoint x="245" y="498" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m15" parent="ll2" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="转交继续请求" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="526" as="sourcePoint" />
+            <mxPoint x="245" y="526" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m16" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="请求会话上下文" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="554" as="sourcePoint" />
+            <mxPoint x="245" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m17" parent="ll4" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="实例句柄" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="582" as="sourcePoint" />
+            <mxPoint x="-105" y="582" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m18" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="请求执行（会话上下文）" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="610" as="sourcePoint" />
+            <mxPoint x="605" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m19" parent="ll6" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="查询断点条件" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="638" as="sourcePoint" />
+            <mxPoint x="-105" y="638" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m20" parent="ll5" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="断点条件" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="666" as="sourcePoint" />
+            <mxPoint x="245" y="666" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m21" parent="ll6" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="停下原因与现场" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="694" as="sourcePoint" />
+            <mxPoint x="-465" y="694" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m22" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="请求解析停下现场" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="722" as="sourcePoint" />
+            <mxPoint x="785" y="722" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m23" parent="ll7" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="请求反汇编与符号解析" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="750" as="sourcePoint" />
+            <mxPoint x="245" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m24" parent="ll8" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="调用汇编器反汇编" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="778" as="sourcePoint" />
+            <mxPoint x="245" y="778" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m25" parent="ll9" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="反汇编文本与符号名" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="806" as="sourcePoint" />
+            <mxPoint x="-105" y="806" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m26" parent="ll8" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="反汇编文本与符号名" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="834" as="sourcePoint" />
+            <mxPoint x="-105" y="834" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m27" parent="ll7" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="停下现场（源码位置）" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="862" as="sourcePoint" />
+            <mxPoint x="-645" y="862" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m28" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="停下现场" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="890" as="sourcePoint" />
+            <mxPoint x="-105" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m29" parent="ll2" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="停下现场" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="918" as="sourcePoint" />
+            <mxPoint x="-105" y="918" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m30" parent="ll1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="读写寄存器与内存" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="946" as="sourcePoint" />
+            <mxPoint x="245" y="946" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m31" parent="ll2" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="转交读写请求" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="974" as="sourcePoint" />
+            <mxPoint x="245" y="974" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m32" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="请求读写寄存器与内存" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="1002" as="sourcePoint" />
+            <mxPoint x="605" y="1002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m33" parent="ll6" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="寄存器与内存数据" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="1030" as="sourcePoint" />
+            <mxPoint x="-465" y="1030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m34" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="寄存器与内存数据" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="1058" as="sourcePoint" />
+            <mxPoint x="-105" y="1058" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m35" parent="ll2" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="寄存器与内存数据" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="1086" as="sourcePoint" />
+            <mxPoint x="-105" y="1086" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m36" parent="ll1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="增删断点或观察点" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="1114" as="sourcePoint" />
+            <mxPoint x="245" y="1114" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m37" parent="ll2" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="转交断点请求" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="1142" as="sourcePoint" />
+            <mxPoint x="245" y="1142" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m38" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="请求登记或撤销断点" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="1170" as="sourcePoint" />
+            <mxPoint x="425" y="1170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m39" parent="ll5" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="断点表项" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="1198" as="sourcePoint" />
+            <mxPoint x="-285" y="1198" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m40" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="操作结果" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="1226" as="sourcePoint" />
+            <mxPoint x="-105" y="1226" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m41" parent="ll2" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="操作结果" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="1254" as="sourcePoint" />
+            <mxPoint x="-105" y="1254" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m42" parent="ll1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="结束调试" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="1282" as="sourcePoint" />
+            <mxPoint x="245" y="1282" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m43" parent="ll2" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="转交结束请求" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="1310" as="sourcePoint" />
+            <mxPoint x="245" y="1310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m44" parent="ll3" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="结束会话并回收" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="1338" as="sourcePoint" />
+            <mxPoint x="245" y="1338" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m45" parent="ll4" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;align=center;" value="已回收" edge="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="1366" as="sourcePoint" />
+            <mxPoint x="-105" y="1366" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bar" parent="1" vertex="1" style="rounded=0;html=1;fillColor=none;strokeColor=#94A3B8;strokeWidth=1;" value="">
+          <mxGeometry height="786" width="1" x="1626" y="584" as="geometry" />
+        </mxCell>
+        <mxCell id="note1" parent="1" vertex="1" style="text;html=1;align=left;verticalAlign=top;spacing=0;" value="&lt;span style=&quot;font-size:11px;color:#475569&quot;&gt;〔循环〕3.1～3.4&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#64748B&quot;&gt;重复至结束调试或运行终止&lt;/span&gt;">
+          <mxGeometry height="44" width="170" x="1634" y="582" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
